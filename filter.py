@@ -13,37 +13,43 @@ lock = threading.Lock()
 
 def check_protocol_reachability(url, protocol):
     try:
-        print(f"Checking for this {protocol} URL: {url}")
-        response = requests.get(f"{protocol}://{url}", timeout=5, verify=False)
+        print(f"Checking for this {protocol} URL: {url}") 
+        response = requests.get(f"{protocol}://{url}", timeout=3, verify=False)
+        print(f"Success: {url}")
         return True
     except requests.exceptions.ConnectionError:
-        print(f"Failed to connect to {url} due to a connection error.")
+        pass
+        # print(f"Failed to connect to {url} due to a connection error.")
     except requests.exceptions.RequestException as e:
-        print(f"Error occurred when connecting to {url} using {protocol}: {e}")
+        pass
+        # print(f"Error occurred when connecting to {url} using {protocol}: {e}")
     return False
 
-def reachable(url, good_csv):
+def reachable(url, good_csv, label):
     protocols = ["https", "http"]
     for protocol in protocols:
         if check_protocol_reachability(url, protocol):
             with lock:  # Ensure only one thread writes to the file at a time.
-                good_csv.write(f"{url}\n")
+                good_csv.write(f"{url} \ {label}")
             return
 
 def find_reachable_links(name):
-    with open("fixed_url.csv", 'a') as good_csv:
+    with open("labeled.csv", 'a') as good_csv:
         with open(name, 'r') as url_csv: 
             lines = url_csv.readlines()
             threads = []
             
             for line in lines:
                 result = line.split(',')
-                url = result[0]
-                
-                if url == "URL" or len(result) > 2:
-                    continue
 
-                thread = threading.Thread(target=reachable, args=(url, good_csv))
+                if len(result) != 2:
+                    continue
+                url = result[0]
+                if url == 'URL': 
+                    continue
+                label = result[1] # label for good or bad
+
+                thread = threading.Thread(target=reachable, args=(url, good_csv, label))
                 threads.append(thread)
                 thread.start()
 
