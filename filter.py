@@ -2,7 +2,7 @@ import csv
 import requests
 import threading
 
-FILE_NAME = "url.csv"
+FILE_NAME = "dataset/dataset.csv"
 MAX_THREADS = 10  # You can adjust this number based on your machine's capabilities.
 
 # Disable the warnings about not verifying the certificate
@@ -30,11 +30,11 @@ def reachable(url, good_csv, label):
     for protocol in protocols:
         if check_protocol_reachability(url, protocol):
             with lock:  # Ensure only one thread writes to the file at a time.
-                good_csv.write(f"{url} \ {label}")
+                good_csv.write(f"{protocol}://{url} \ {label}")
             return
 
 def find_reachable_links(name):
-    with open("labeled.csv", 'a') as good_csv:
+    with open("labeled_correct.csv", 'a') as good_csv:
         with open(name, 'r') as url_csv: 
             lines = url_csv.readlines()
             threads = []
