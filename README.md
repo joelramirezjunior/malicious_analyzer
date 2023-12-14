@@ -37,3 +37,7 @@ The extension, powered by a machine learning model, aims to:
 By combining machine learning with user-friendly design, we aim to offer a tool that not only protects but also educates and empowers users to navigate the web safely.
 
  
+## Notes
+
+Durring the feature extraction, the current way of giving importance to words is a bit 
+Ad Hoc. Later in the research, once we are able to train a model we should be able to optimize for these features (aka word choice see *feature_extractor.py*). 
