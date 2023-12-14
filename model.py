@@ -27,26 +27,25 @@ import pandas as pd
 #y is the actual answer!
 #y -> the type of plant it is
 
-
-df = pd.read_csv('./dataset/data.csv', sep=',', header=None)
+df = pd.read_csv('processed_dataset.csv', sep=',', header=None)
 df = df.to_numpy()
 num_features = len(df[0]) - 1
 
-X = df[:,0:num_features]
-y = df[:,num_features]
+X = df[1:,1:num_features]
+y = df[1:,num_features]
 
 print(X)
 print(y)
 
-# make train and test data 
+# # make train and test data 
 X_train, X_test, y_train, y_test = train_test_split(X, y, test_size = .2)
 
-# print("X_train: ", X_train)
-# print("X_test: ", X_test)
-# print("y_train: ", y_train)
-# print("y_test: ", y_test)
+print("X_train: ", X_train)
+print("X_test: ", X_test)
+print("y_train: ", y_train)
+print("y_test: ", y_test)
 
-# fit the model (training)
+# # fit the model (training)
 logistic_regression = LogisticRegression(random_state=42)
 
 logistic_regression.fit(X_train, y_train)
