@@ -1,63 +1,50 @@
-# Train a model! 
-# Logistic Regression
-
-
-# Import the libaries
-
+import numpy as np 
+import pandas as pd
 from sklearn.linear_model import LogisticRegression
 from sklearn.model_selection import train_test_split
 from sklearn.metrics import accuracy_score
-import numpy as np 
-import pandas as pd
 
+def load_data(filename):
+    """Load dataset from a file and split it into features and labels."""
+    df = pd.read_csv(filename, sep=',', header=None)
+    df = df.to_numpy()
+    num_features = len(df[0]) - 1
+    X = df[1:, 1:num_features]  # All rows, all columns except the last one
+    y = df[1:, num_features]    # All rows, only the last column
+    return X, y
 
-# load your data
+def split_data(X, y, test_size=0.2):
+    """Split the data into training and testing sets."""
+    return train_test_split(X, y, test_size=test_size)
 
-# set x and y
-# trying to classify the type of plant
-#X is going to be what the model will use to learn how to predict
-#X is a matrix of values
+def train_model(X_train, y_train):
+    """Train a Logistic Regression model with the training data."""
+    model = LogisticRegression(random_state=42)
+    model.fit(X_train, y_train)
+    return model
 
+def evaluate_model(model, X_test, y_test):
+    """Evaluate the trained model using the testing data."""
+    y_pred = model.predict(X_test)
+    accuracy = accuracy_score(y_test, y_pred)
+    return accuracy
 
-#x1 -> length of stem
-#x2 -> length of the petal
-#x3 -> the color of the flower 
-#x4 -> the width of the petal
+# Main execution
+def main():
+    # Load the data
+    X, y = load_data('processed_dataset.csv')
 
-#y is the actual answer!
-#y -> the type of plant it is
+    # Split the data into training and testing sets
+    X_train, X_test, y_train, y_test = split_data(X, y)
 
-df = pd.read_csv('processed_dataset.csv', sep=',', header=None)
-df = df.to_numpy()
-num_features = len(df[0]) - 1
+    # Train the model
+    model = train_model(X_train, y_train)
 
-X = df[1:,1:num_features]
-y = df[1:,num_features]
+    # Evaluate the model
+    accuracy = evaluate_model(model, X_test, y_test)
 
-print(X)
-print(y)
+    # Print the accuracy
+    print("Model Accuracy:", accuracy)
 
-# # make train and test data 
-X_train, X_test, y_train, y_test = train_test_split(X, y, test_size = .2)
-
-print("X_train: ", X_train)
-print("X_test: ", X_test)
-print("y_train: ", y_train)
-print("y_test: ", y_test)
-
-# # fit the model (training)
-logistic_regression = LogisticRegression(random_state=42)
-
-logistic_regression.fit(X_train, y_train)
-
-# predict using the model
-y_pred = logistic_regression.predict(X_test)
-
-# print out predictions and get the Accuracy!
-accuracy = accuracy_score(y_test, y_pred)
-print(accuracy)
-
-
-
-
-
+if __name__ == "__main__":
+    main()
