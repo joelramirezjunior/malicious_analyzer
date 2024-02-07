@@ -37,7 +37,12 @@ def check_protocol_reachability(url, protocol):
 
 # Find reachable links
 def find_reachable_links(name):
+
+    #opens a new file called "labeled_correct"
     with open("labeled_correct.csv", 'a') as good_csv:
+
+        #we open the file with the "url", "label"
+        #before we have even filtered for the ones that are even available.
         with open(name, 'r') as url_csv: 
             lines = url_csv.readlines()
             threads = []
@@ -94,9 +99,22 @@ def extract_features():
     dataframe = pd.DataFrame(dataset, columns=list(features.keys()) + ["y"])
     dataframe.to_csv("processed_dataset.csv")
 
+# Download HTML documents from reachable URLs
+def download_html_documents(reachable_urls):
+    counter = 0
+    for url, label in reachable_urls:
+        print(url)
+        driver = init_browser(url)
+        time.sleep(2)
+        with open(f"./dataset/{counter}_{label}.html", "w", encoding='utf-8') as f:
+             f.write(driver.page_source)
+             counter += 1
+        driver.quit()
+        
 # Main execution
 def main():
-    find_reachable_links(FILE_NAME)
+    reachable_urls = find_reachable_links(FILE_NAME)
+    download_html_documents(reachable_urls)
     extract_features()
 
 if __name__ == "__main__":
