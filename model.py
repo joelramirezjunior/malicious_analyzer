@@ -1,12 +1,15 @@
-import numpy as np 
-import pandas as pd
-from sklearn.linear_model import LogisticRegression
-from sklearn.model_selection import train_test_split
-from sklearn.metrics import accuracy_score, confusion_matrix, ConfusionMatrixDisplay
 import matplotlib.pyplot as plt
-from imblearn.over_sampling import SMOTE
+from sklearn.metrics import confusion_matrix, ConfusionMatrixDisplay, accuracy_score
+from sklearn.model_selection import train_test_split
+from sklearn.linear_model import LogisticRegression
 from sklearn.pipeline import make_pipeline
 from sklearn.preprocessing import StandardScaler
+import pandas as pd
+from imblearn.over_sampling import SMOTE
+import joblib
+# Assume load_data and other necessary imports are defined elsewhere
+
+
 
 
 def load_data(filename):
@@ -44,58 +47,49 @@ def train_model(X_train, y_train):
 
 def evaluate_model(model, X_test, y_test):
     """Evaluate the trained model using the testing data."""
-    y_pred = model.predict(X_test)
-    # cm = confusion_matrix(y_test, y_pred, labels = model.classes_)
-    # disp = ConfusionMatrixDisplay(confusion_matrix=cm, display_labels= model.classes_)
-    # disp.plot()
-    # plt.show()
-    accuracy = accuracy_score(y_test, y_pred)
-    return accuracy
-
+    return model.predict(X_test)
 
 def feature_weights(model, features):
-
     feature_weight_pairs = zip(features.flatten(), model[1].coef_.flatten())
     feature_weight_pairs = sorted(feature_weight_pairs, key=lambda x: x[1])
-
     return feature_weight_pairs
-   
 
-# Main execution
 def run_model():
-    X, y, col_names = load_data('processed_dataset.csv')
-
-    # Split the data into training and testing sets
+    X, y, col_names = load_data('new_processed_dataset.csv')
     X_train, X_test, y_train, y_test = split_data(X, y)
-
     pipe = make_pipeline(StandardScaler(), LogisticRegression())
-
     pipe.fit(X_train, y_train)  # apply scaling on training data
-    
-    # Evaluate the model
-    accuracy = evaluate_model(pipe, X_test, y_test)
-
-
-    # Print the accuracy
-    # print("Model Accuracy:", accuracy)
-
-    return accuracy, feature_weights(pipe, col_names)
+    y_pred = evaluate_model(pipe, X_test, y_test)
+    cm = confusion_matrix(y_test, y_pred, labels=pipe.classes_)
+    accuracy = accuracy_score(y_test, y_pred)
+    return accuracy, feature_weights(pipe, col_names), cm, pipe.classes_, pipe  # Return confusion matrix and labels
 
 def main():
-    # Load the data
     acc = 0
-    fw = None
+    best_cm = None
+    best_labels = None
+    best_fw = None
+    best_model = None
 
     for i in range(1000):
-        acc_new, fw_new = run_model()
-        if(acc_new > acc):
-            fw = fw_new
+        acc_new, fw_new, cm_new, labels_new, _pipe = run_model()
+        if acc_new > acc:
             acc = acc_new
+            best_cm = cm_new
+            best_labels = labels_new
+            best_fw = fw_new
+            best_model = _pipe
 
-    print(f"Best Accuracy: {acc}")
-    for pair in fw:
-        print(f"Feature: {pair[0]} \n \t weight: {pair[1]}")
+    joblib.dump(best_model, "model.pkl") 
     
+    print(f"Best Accuracy: {acc}")
+
+    for label, weight in best_fw:
+        print(f"{label}, {weight}")
+    # Display the confusion matrix of the best model
+    disp = ConfusionMatrixDisplay(confusion_matrix=best_cm, display_labels=best_labels)
+    disp.plot()
+    plt.show()
 
 if __name__ == "__main__":
     main()
