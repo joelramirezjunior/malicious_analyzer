@@ -1,17 +1,26 @@
-// This code will be executed in the context of the webpage
+chrome.runtime.onMessage.addListener((message, sender, sendResponse) => {
+  if (message.action === "fetchData") {
+    // Execute the API call to get the prediction
+    const htmlContent = document.documentElement.innerHTML;
 
-const htmlContent = document.documentElement.innerHTML;
+    fetch('http://localhost:5000/predict', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify({html: htmlContent}),
+    })
+    .then(response => response.json())
+    .then(data => {
+      console.log('Prediction:', data.prediction);
+      // Send the prediction back to the background script
+      sendResponse({prediction: data.prediction});
+    })
+    .catch(error => {
+      console.error('Error fetching prediction:', error);
+      sendResponse({error: 'Failed to fetch prediction'});
+    });
 
-fetch('http://localhost:5000/predict', {
-  method: 'POST',
-  headers: {
-    'Content-Type': 'application/json',
-  },
-  body: JSON.stringify({html: htmlContent}),
-})
-.then(response => response.json())
-.then(data => {
-  console.log('Prediction:', data.prediction);
-  chrome.runtime.sendMessage({action: "showPrediction", prediction: data.prediction});
+    return true; // Indicates that the response is sent asynchronously
+  }
 });
-
