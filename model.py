@@ -15,9 +15,9 @@ import tensorflowjs as tfjs
 def load_data(filename):
     """Load dataset from a file and split it into features and labels, then apply SMOTE."""
     df = pd.read_csv(filename, sep=',', dtype=float)
-    X = df.iloc[:, :-1].values
+    X = df.iloc[:, 1:-1].values
     y = df.iloc[:, -1].values
-
+    
     sm = SMOTE(random_state=1341938091)
     X_res, y_res = sm.fit_resample(X, y)
     return X_res, y_res, df.columns[:-1]
@@ -53,7 +53,6 @@ def create_model(input_shape):
 def create_simplified_model(input_shape):
     model = Sequential([
         InputLayer(input_shape=(input_shape,)),
-        
         # Reduced the complexity of the model by decreasing the number of neurons
         Dense(64, activation='relu', kernel_regularizer=l2(0.0005)), # Reduced regularization strength
         Dropout(0.1),  # Slightly reduced dropout rate
