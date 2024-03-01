@@ -1,6 +1,40 @@
-<html>
-  <body>
-    <h1>Hello Extensions, hi!</h1>
-    <h1>Hi Shreya!</h1>
-  </body>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prediction Result</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 10px;
+            background-color: #f4f4f4;
+            color: #333;
+            min-width: 300px; /* Minimum width to ensure larger content area */
+        }
+
+        #prediction {
+            background-color: #fff;
+            border-left: 5px solid #0078d4;
+            padding: 10px;
+            margin: 10px 0;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+            white-space: nowrap; /* Prevent text wrapping */
+            overflow: hidden; /* Hide overflow text */
+            text-overflow: ellipsis; /* Add ellipsis for overflow text */
+        }
+
+        h1 {
+            color: #0078d4;
+            font-size: 18px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Prediction Result</h1>
+    <div id="prediction">Waiting for prediction...</div>
+
+    <script src="popup.js"></script>
+</body>
 </html>
