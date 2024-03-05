@@ -1,4 +1,4 @@
-// In background.js
+
 chrome.runtime.onMessage.addListener((message, sender, sendResponse) => {
   if (message.action === "requestClass") {
     // Relay this request to the content script

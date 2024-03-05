@@ -1,57 +1,57 @@
-"# Improving the Analysis of Malicious Websites using Machine Learning
+# Enhancing Web Security through Machine Learning-Based Analysis of Malicious Websites
 
-## Objectives
+## Project Objectives
 
-This browser extension leverages a machine learning model to enhance web browsing safety by analyzing and identifying potentially malicious websites in real-time. Here's what it aims to achieve:
+This innovative browser extension is engineered to bolster web security by utilizing a sophisticated machine learning model to analyze and identify potential threats on websites in real-time. The core objectives of this extension are to:
 
-- **Identify Malicious Websites**: Automatically assesses each visited website to determine if it poses any threat, such as phishing attempts, malware presence, or unwanted adware.
+- **Detect Malicious Websites**: Automatically evaluates each accessed website to ascertain potential risks, identifying threats like phishing, malware, and intrusive adware.
 
-- **Inform the User**: Provides detailed feedback on the nature of the threat, including the type of malicious activity detected and possible reasons why the site was flagged.
+- **User Notification**: Delivers comprehensive insights on detected threats, elucidating the type of malicious activities identified and the rationale behind the website's classification.
 
-- **Transparency**: Clarifies the reasoning behind the model's decision by highlighting specific factors or indicators that contributed to the website's evaluation.
+- **Decision Transparency**: Provides a clear exposition of the factors and indicators analyzed, offering users a deeper understanding of the assessment outcomes.
 
-- **Intelligent Redirection**: Offers the option to navigate away from potential threats by redirecting users to their intended or safer alternative websites.
+- **Proactive User Guidance**: Facilitates safer web navigation by suggesting redirection away from harmful sites towards safer alternatives.
 
-- **Enhanced Privacy**: Ensures user privacy by blocking tracking requests from suspicious sites, maintaining user anonymity and data protection.
+- **Privacy Assurance**: Enhances user privacy by obstructing tracking attempts from dubious sources, thereby safeguarding user data and anonymity.
 
-## What Makes This Different?
+## Distinctive Features
 
-### Conventional Solutions
-1. Depend mainly on static databases for URL threat assessment.
-2. Provide limited or no explanation for the security assessment.
-3. Lack features for redirecting users to safe alternatives.
+### Traditional Methods
+1. Rely predominantly on static databases for threat identification.
+2. Offer scant or no explanation regarding the security evaluations.
+3. Do not support user redirection to safer web alternatives.
 
-### Our Approach
-1. **Comprehensive Identification**: Utilizes a dynamic machine learning model to analyze and identify a broad spectrum of online threats in real time.
-2. **Descriptive Analysis**: Offers a detailed breakdown of why a website is considered unsafe, providing users with context and understanding.
-3. **User-Centric Information**: Delivers insights about potential tracking and the website's background, enhancing user awareness and decision-making.
-4. **Intelligent Redirection**: Proactively assists users by suggesting safer navigational options.
-5. **Enhanced Privacy Features**: Actively blocks tracking mechanisms on suspicious websites, reinforcing user privacy.
+### Our Innovative Approach
+1. **Dynamic Threat Identification**: Employs an advanced, real-time machine learning model to discern a wide array of online threats, enhancing detection capabilities.
+2. **In-depth Threat Analysis**: Provides detailed explanations for a website's risk assessment, granting users clarity and insight.
+3. **Informative User Experience**: Shares detailed information about potential tracking and the website's history, boosting user knowledge and decision-making.
+4. **Smart Navigation Assistance**: Actively suggests safer browsing alternatives, promoting user safety.
+5. **Robust Privacy Protection**: Blocks tracking technologies on suspect sites, reinforcing the user's digital privacy.
 
-Our extension is designed to be a proactive web safety tool that not only detects threats but also educates users, offering a more informed and secure browsing experience.
+This extension is crafted to be an active web security tool, distinguishing threats while educating users, thereby fostering a safer and more informed browsing experience.
 
-## Extension Architecture and Message Passing Model
+## Extension Architecture and Communication Flow
 
-### Architecture Overview
+### Architectural Overview
 
-The extension consists of several components working in harmony to analyze and respond to web content:
+The extension integrates several key components that collaboratively analyze and act upon web content:
 
-- **Content Script (`content.js`)**: Directly interacts with the web page's content, extracting HTML and other relevant information for analysis.
+- **Content Script (`content.js`)**: Engages directly with the webpage, extracting HTML and pertinent data for subsequent analysis.
 
-- **Background Script (`background.js`)**: Serves as the central hub for message coordination between the content script, popup, and potentially external servers for model prediction.
+- **Background Script (`background.js`)**: Operates as the message orchestration center, coordinating interactions between the content script, popup interface, and external model prediction servers.
 
-- **Popup Script (`popup.js`)**: Provides a user interface for real-time feedback and allows users to interact with the extension's features.
+- **Popup Script (`popup.js`)**: Offers a user interface that displays real-time analysis results and facilitates user interaction with the extension's functionalities.
 
-### Message Passing Model
+### Communication Model
 
-1. **From Popup to Background**: When the user opens the extension popup, `popup.js` sends a message to `background.js` requesting the latest analysis or prediction for the current tab.
+1. **User Interface to Background**: Upon user interaction with the extension popup, `popup.js` communicates with `background.js` to request the current or a new analysis for the active webpage.
 
-2. **From Background to Content**: `background.js` forwards this request to `content.js`, prompting it to fetch and send the current webpage content or trigger a new analysis.
+2. **Background to Content Script**: `background.js` dispatches the analysis request to `content.js`, instructing it to collate and forward the webpage's content or to initiate a fresh analysis.
 
-3. **From Content to API and Back**: `content.js` performs an API call to a machine learning model server with the extracted webpage content, receives the prediction, and sends this information back to `background.js`.
+3. **Content Script to Server Interaction**: `content.js` consults the machine learning model server via API, transmitting the webpage data, receiving the analysis, and subsequently relaying this data back to `background.js`.
 
-4. **From Background to Popup**: Finally, `background.js` relays the received prediction data to `popup.js`, which then updates the popup UI to display the analysis results to the user.
+4. **Background to User Interface**: `background.js` conveys the analytical findings to `popup.js`, which then updates the UI to present the analysis results to the user.
 
-## Notes on Feature Extraction
+## Insights on Feature Extraction
 
-During the initial phase, feature extraction relies on identifying key terms and elements within the webpage content. This process is currently guided by predefined criteria but is expected to evolve. Future iterations will aim to refine these extraction methods based on model feedback and learning, optimizing the relevance and accuracy of the features used for analysis (see `feature_extractor.py` for the current methodology)."
+The feature extraction phase is foundational to the analysis process, targeting key words and structural elements within the webpage content. Initially anchored in a set of predefined parameters, this process is designed to evolve through continuous refinement and enhancement, informed by the model's feedback and adaptive learning. The ongoing development aims to augment the precision and relevance of the extracted features, thereby improving the analytical accuracy (refer to `feature_extractor.py` for the current implementation details).

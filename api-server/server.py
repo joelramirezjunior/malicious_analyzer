@@ -37,22 +37,36 @@ def extract_features(html_content):
     return dataframe
 
 
+'''
+Disclaimer: These explanations are for a student of mine.
+
+app.route -> will tell the app this is a "route" or path' that it will be listening on for a request. 
+The only thing that should be asking for a request is the extension itself as this point. It might not make sense that the 
+extension has the ability to send a request (as if it were on the internet). But, something that you should know is that your computer is 
+"local host". This means that any browser running on your computer can send and recieves requests from the 'localhost'/your machine itself. 
+
+This program runs on your machine, and will respond to requests from the extension on the chrome broswer.
+'''
+
+#This tells you what will function will be called when local host (on port 5000) recieves a request with path predict and method "post"
+#If you'd like, review and see what Post, Get, Delete, Etc mean in the context of HTTPS.
 @app.route('/predict', methods=['POST'])
 def predict():
+    #request, although not declared here, is a global object that allows you to see the contents of the request 
+    #sent from the extension.
+
     data = request.json['html'] #this will grab the HTML sent over by the chrome content.js
     print("Recieved the information from the extension.")
-    # print(data)
+
     if data is None:
         print("Data was empty.")
+        return jsonify({'error': "Request body was empty. No HTML sent."})
 
-    prediction = "Good"
+                   #this is where were preprocess the HTML to format it to be inserted into the model. 
     features_df = extract_features(data)
-    prediction = model.predict(features_df)[0]
+    prediction = model.predict(features_df)[0]  #We will change this to be logistic regression. For the sake of brevity, I didn't refactor the code. 
     predicted_class = 'Good' if prediction < 0.5 else 'Bad'  # Assuming a binary classification: 0 is 'Good', 1 is 'Bad'
-    return jsonify({'prediction': predicted_class})
-
-    #what the server returns as a response to the request made by the content.js
-
+    return jsonify({'prediction': predicted_class}) #This is what is sent back to the chrome extension. 
 
 
 if __name__ == '__main__':
