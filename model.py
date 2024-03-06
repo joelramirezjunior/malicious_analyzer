@@ -11,6 +11,13 @@ from tensorflow.keras.regularizers import l2
 from tensorflow.keras.optimizers.legacy import Adam
 from tensorflow.keras.callbacks import EarlyStopping, ModelCheckpoint
 import tensorflowjs as tfjs
+import shap 
+import argparse
+import os
+
+tf.compat.v1.disable_v2_behavior()
+
+features = ["Scam", "scam", "McAfee", "bank", "password", "SSN", "Address", "Virus", "virus", "immediate", "credit card", "Credit Card", "Credit card", "Name", "Download", "Free", "free", "Hacked", "hack", "hacked", "malware", "Malware", "phishing", "Phishing", "affiliate", "afid", "extension", "Extension", "safe", "Form", "Survey", "number_of_divs", "number_of_scripts_in_divs", "number_of_scripts", "number_of_links", "number_of_forms"]
 
 def load_data(filename):
     """Load dataset from a file and split it into features and labels, then apply SMOTE."""
@@ -71,35 +78,48 @@ def create_simplified_model(input_shape):
     
     return model
 
-def main(iterations=1000, target_accuracy=0.95):
+def explainer(model, X_train, X_test):
+    # Assuming `X_train` is your training data and `model` is your trained Keras model
+    explainer = shap.DeepExplainer(model, X_train)
+    shap_values = explainer.shap_values(X_test)
+
+    # Summarize the effects of all the features
+    shap.summary_plot(shap_values, X_test, feature_names=features)
+
+def main(iterations=1000, target_accuracy=0.95, load_model_path=None):
     X, y, col_names = load_data('new_processed_dataset.csv')
     X_train, X_test, y_train, y_test = split_data(X, y)
 
-    model = create_model(X_train.shape[1])
-    
-    # Setup callbacks
-    early_stopping = EarlyStopping(monitor='val_accuracy', patience=10, verbose=1, mode='max', restore_best_weights=True)
-    model_checkpoint = ModelCheckpoint('best_model.h5', monitor='val_accuracy', save_best_only=True, verbose=1, mode='max')
-    
-    # Train the model with validation data and callbacks
-    history = model.fit(X_train, y_train, validation_data=(X_test, y_test), epochs=iterations, batch_size=32, verbose=1, callbacks=[early_stopping, model_checkpoint])
-    
-    # Load the best model saved by ModelCheckpoint
-    model.load_weights('best_model.h5')
-    
+    if load_model_path:
+        if not os.path.isfile(load_model_path):
+            print(f"Error: The specified model file path does not exist: {load_model_path}")
+            return
+        print(f"Loading model from {load_model_path}")
+        model = tf.keras.models.load_model(load_model_path)
+    else:
+        model = create_model(X_train.shape[1])
+        # Setup callbacks
+        early_stopping = EarlyStopping(monitor='val_accuracy', patience=10, verbose=1, mode='max', restore_best_weights=True)
+        model_checkpoint = ModelCheckpoint('best_model.h5', monitor='val_accuracy', save_best_only=True, verbose=1, mode='max')
+        # Train the model
+        history = model.fit(X_train, y_train, validation_data=(X_test, y_test), epochs=iterations, batch_size=32, verbose=1, callbacks=[early_stopping, model_checkpoint])
+        model.load_weights('best_model.h5')
+
     # Evaluate the model
     y_pred = (model.predict(X_test) > 0.5).astype("int32")
     cm = confusion_matrix(y_test, y_pred)
     accuracy = accuracy_score(y_test, y_pred)
-    
     print(f"Best Accuracy: {accuracy}")
     disp = ConfusionMatrixDisplay(confusion_matrix=cm)
     disp.plot()
     plt.show()
 
-    # Save the best model for TensorFlow.js
-    tfjs.converters.save_keras_model(model, './new_model')
-
+    explainer(model, X_train, X_test)
+    if not load_model_path:
+        tfjs.converters.save_keras_model(model, './new_model')
 
 if __name__ == "__main__":
-    main()
+    parser = argparse.ArgumentParser(description="Run the neural network model training or load an existing model.")
+    parser.add_argument('--load_model_path', type=str, help='Path to the model to be loaded instead of training.')
+    args = parser.parse_args()
+    main(load_model_path=args.load_model_path)
