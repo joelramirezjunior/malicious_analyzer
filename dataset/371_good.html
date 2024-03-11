@@ -1,0 +1,2142 @@
+<html><head lang="en"><script type="text/javascript" async="" src="https://static.criteo.net/js/ld/publishertag.prebid.144.js"></script><link href="https://fonts.googleapis.com/css?family=Archivo:400,500|Arimo:400,500|Bitter:400,500|EB+Garamond:400,500|Lato|Libre+Baskervill|Libre+Franklin:400,500|Lora:400,500|Google+Sans:regular,medium:400,500|Material+Icons|Google+Symbols|Merriweather|Montserrat:400,500|Mukta:400,500|Muli:400,500|Nunito:400,500|Open+Sans:400,500,600|Open+Sans+Condensed:400,600|Oswald:500|Playfair+Display:400,500|Poppins:400,500|Raleway:400,500|Roboto:400,500|Roboto+Condensed:400,500|Roboto+Slab:400,500|Slabo+27px|Source+Sans+Pro|Ubuntu:400,500|Volkhov&amp;display=swap" rel="stylesheet"><script async="" src="https://secure.cdn.fastclick.net/js/cnvr-coreid/latest/coreid.min.js"></script><script async="" src="https://secure.cdn.fastclick.net/js/cnvr-launcher/latest/launcher.min.js"></script><script src="https://rules.quantcount.com/rules-p-mEzuYq24VEJ-3.js" async=""></script>
+            <!-- Google tag (gtag.js) -->
+            <script async="" src="https://sb.scorecardresearch.com/cs/38282685/beacon.js"></script><script src="https://secure.quantserve.com/quant.js" async="" type="text/javascript"></script><script async="" src="//www.google-analytics.com/analytics.js"></script><script async="" src="https://ml314.com/tag.aspx?92"></script><script async="" src="https://vi.ml314.com/get?eid=90820&amp;tk=wh2f3nQiCsEF22bcOc3am6J9QS7SqBu7WCIKhTJmEBRc03d&amp;fp="></script><script async="" src="https://www.googletagmanager.com/gtag/js?id=G-XPPLXMRF6Z"></script>
+            <script>
+                // Used for Video players on Tropes
+                var tropes_videos_commands = tropes_videos_commands || [];
+
+                window.dataLayer = window.dataLayer || [];
+                function gtag(){dataLayer.push(arguments);}
+                gtag('js', new Date());
+                gtag('config', 'G-XPPLXMRF6Z');
+
+                window.googletag = window.googletag || {cmd: []};
+            </script>
+
+                        <script>
+                function object(objectId) {
+                    if (document.getElementById && document.getElementById(objectId)) {
+                        return document.getElementById(objectId);
+                    } else if (document.all && document.all(objectId)) {
+                        return document.all(objectId);
+                    } else if (document.layers && document.layers[objectId]) {
+                        return document.layers[objectId];
+                    } else {
+                        return false;
+                    }
+                }
+
+                // JAVASCRIPT COOKIES CODE: for getting and setting user viewing preferences
+                var cookies = {
+                    create: function (name, value, days2expire, path) {
+                        var date = new Date();
+                        date.setTime(date.getTime() + (days2expire * 24 * 60 * 60 * 1000));
+                        var expires = date.toUTCString();
+                        document.cookie = name + '=' + value + ';' + 'expires=' + expires + ';domain=.tvtropes.org;' + 'path=' + path + ';';
+                    },
+										createWithExpire: function(name, value, expires, path) {
+												document.cookie = name + '=' + value + ';' + 'expires=' + expires + ';domain=.tvtropes.org;' + 'path=' + path + ';';
+										},
+                    read: function (name) {
+                        var cookie_value = "",
+                            current_cookie = "",
+                            name_expr = name + "=",
+                            all_cookies = document.cookie.split(';'),
+                            n = all_cookies.length;
+
+                        for (var i = 0; i < n; i++) {
+                            current_cookie = all_cookies[i].trim();
+                            if (current_cookie.indexOf(name_expr) === 0) {
+                                cookie_value = current_cookie.substring(name_expr.length, current_cookie.length);
+                                break;
+                            }
+                        }
+                        return cookie_value;
+                    },
+                    update: function (name, val) {
+                        this.create(name, val, 300, "/");
+                    },
+                    remove: function (name) {
+                        //delete cookie with and without domain setting
+                        document.cookie = name + "=; expires=Thu, 01 Jan 1970 00:00:00 GMT; domain=.tvtropes.org; path=/;";
+                        document.cookie = name + "=; expires=Thu, 01 Jan 1970 00:00:00 GMT; path=/;";
+                    }
+                };
+
+                function updateUserPrefs() {
+                    //GENERAL: detect and set browser, if not cookied (will be treated like a user-preference and added to the #user-pref element)
+                    if( !cookies.read('user-browser') ){
+                        var broswer = '';
+
+                        if(navigator.userAgent.match(/iPhone/i) || navigator.userAgent.match(/iPod/i) ){
+                            browser = 'iOS';
+                        } else if (/Opera[\/\s](\d+\.\d+)/.test(navigator.userAgent)) {
+                            browser = 'opera';
+                        } else if (/MSIE (\d+\.\d+);/.test(navigator.userAgent)) {
+                            browser = 'MSIE';
+                        } else if (/Navigator[\/\s](\d+\.\d+)/.test(navigator.userAgent)) {
+                            browser = 'netscape';
+                        } else if (/Chrome[\/\s](\d+\.\d+)/.test(navigator.userAgent)) {
+                            browser = 'chrome';
+                        } else if (/Safari[\/\s](\d+\.\d+)/.test(navigator.userAgent)) {
+                            browser = 'safari';
+                            /Version[\/\s](\d+\.\d+)/.test(navigator.userAgent);
+                            browserVersion = new Number(RegExp.$1);
+                        } else if (/Firefox[\/\s](\d+\.\d+)/.test(navigator.userAgent)) {
+                            browser = 'firefox';
+                        } else {
+                            browser = 'internet_explorer';
+                        }
+                        cookies.create('user-browser',browser,1,'/');
+                        document.getElementById('user-prefs').classList.add('browser-' + browser);
+                    } else {
+                        document.getElementById('user-prefs').classList.add('browser-' + cookies.read('user-browser'));
+                    }
+                    //update user preference settings
+                    if (cookies.read('wide-load') !== '') document.getElementById('user-prefs').classList.add('wide-load');
+                    if (cookies.read('mono-font') !== '') document.getElementById('user-prefs').classList.add('mono-font');
+                    if (cookies.read('night-vision') !== '') document.getElementById('user-prefs').classList.add('night-vision');
+                    if (cookies.read('sticky-header') !== '') document.getElementById('user-prefs').classList.add('sticky-header');
+                    if (cookies.read('show-spoilers') !== '') document.getElementById('user-prefs').classList.add('show-spoilers');
+                    if (cookies.read('folders-open') !== '') document.getElementById('user-prefs').classList.add('folders-open');
+                    if (cookies.read('lefthand-sidebar') !== '') document.getElementById('user-prefs').classList.add('lefthand-sidebar');
+                    if (cookies.read('highlight-links') !== '') document.getElementById('user-prefs').classList.add('highlight-links');
+                    if (cookies.read('forum-gingerbread') !== '') document.getElementById('user-prefs').classList.add('forum-gingerbread');
+                    //if the user is logged in, update cookies based on their database settings
+                                        //updates element
+                    if(cookies.read('shared-avatars') !== '') document.getElementById('user-prefs').classList.add('shared-avatars');
+                    if(cookies.read('new-search') !== '') document.getElementById('user-prefs').classList.add('new-search');
+                    if(cookies.read('stop-auto-play-video') !== '') document.getElementById('user-prefs').classList.add('stop-auto-play-video');
+                    //desktop view on mobile
+                    if (cookies.read('desktop-on-mobile') !== ''){
+                        document.getElementById('user-prefs').classList.add('desktop-on-mobile');
+
+                        var viewport = document.querySelector("meta[name=viewport]");
+                        viewport.setAttribute('content', 'width=1000');
+                    }
+
+                }
+
+                function updateDesktopPrefs() {
+                    if (cookies.read('wide-load') !== '') document.getElementById('sidebar-toggle-wideload').classList.add('active');
+                    if (cookies.read('night-vision') !== '') document.getElementById('sidebar-toggle-nightvision').classList.add('active');
+                    if (cookies.read('sticky-header') !== '') document.getElementById('sidebar-toggle-stickyheader').classList.add('active');
+                    if (cookies.read('show-spoilers') !== '') document.getElementById('sidebar-toggle-showspoilers').classList.add('active');
+
+                }
+
+                function updateMobilePrefs() {
+                    if (cookies.read('show-spoilers') !== '') document.getElementById('mobile-toggle-showspoilers').classList.add('active');
+                    if (cookies.read('night-vision') !== '') document.getElementById('mobile-toggle-nightvision').classList.add('active');
+                    if (cookies.read('sticky-header') !== '') document.getElementById('mobile-toggle-stickyheader').classList.add('active');
+                    if (cookies.read('highlight-links') !== '') document.getElementById('mobile-toggle-highlightlinks').classList.add('active');
+
+                }
+
+                function is_mobile() {
+	                if(document.body.clientWidth && document.body.clientWidth<=768) return true;
+	                else return false;
+                }
+
+            </script>
+			
+						<script type="text/javascript">
+                var country_code_list = ['AT','BE','BG','CH','CY','CZ','DE','DK','EE','ES','FI','FR','GB','GF','GP','GR','HR','HU','IC','IE','IS','IT','LI','LT','LU','LV','MF','MQ','MT','NL','NO','PL','PT','RE','RO','SE','SI','SK','SX','YT'];
+                
+                var site_htl_settings = {
+                        "adx"              : "yes", // yes/no if we should include adx on page
+                        "groupname"        : "Home", // track groupname in htl/gam
+                        "has_folders"      : "unknown", // track folder pages in htl/gam
+                        "user_type"        : "guest", // track member/guest in htl/gam
+                        "is_testing"       : "no", // yes/no if in testing mode
+                        "split_testing"    : "1", // 0/1, 0=control, 1=test, for a/b testing
+                        "send_reports"     : "1", // true/false if reports should be sent for logging in DataBricks
+                        "report_url"       : "https://analytics.tvtropes.org/analytics-data/tvtropes/", // Endpoint for logging (data stream)
+                        "logging_turned_on": "1", // true/false if console logging should be turned on
+                        "site_name"        : "tvtropes", // Site name for display in logging
+                        "sticky_slot_names": ["tvtropes_dt_sticky", "tvtropes_m_sticky"], // Possible slot names for the sticky slot
+                }
+			</script>
+
+            
+			
+											<script>
+					// Create the ad project
+var ads_project = (function(sent_in_settings){
+    var is_mobile = (document.innerWidth <= 768) ? true : false;
+
+    //default settings
+    var setting_defaults = {
+        "adx"              : "yes",
+        "groupname"        : "",
+        "has_folders"      : "unknown",
+        "user_type"        : "guest",
+        "is_testing"       : "no",
+        "split_testing"    : "0",
+        "send_reports"     : "0",
+        "logging_turned_on": "false",
+        "site_name"        : "site_name",
+        "report_url"       : "",
+        "page_template"    : "",
+        "sticky_slot_names": []
+    }
+
+    // Combine defaults with sent in parameters
+    var project_settings = {...setting_defaults, ...sent_in_settings};
+
+    /***************************************
+    --------------- AD CODE ---------------
+    ***************************************/
+    
+    // Variables for refresh logic (sticky)
+    var refresh = true;
+    var sticky_refresh_counter = 1;
+    var refresh_timer;
+    var global_ad_slot_name = "";
+    var global_bidder_name = "";
+    var last_refresh_time = "";
+    var unfilled_count = 0;
+    
+    window.htlbid = window.htlbid || {};
+    htlbid.cmd = htlbid.cmd || [];
+
+    // If user type is a member
+    if(project_settings.user_type == "member"){
+        // Check for UID2 cookie
+        var uid2_cookie = cookies.read('uid2_identity');
+        var json_cookie = (uid2_cookie) ? JSON.parse(uid2_cookie) : "";
+        
+        // If UID2 cookie exists and it's not in the banned country list, set UID2
+        if(!uid2_cookie || (json_cookie && json_cookie.response)){
+            var request = new XMLHttpRequest();
+        
+            request.open("post", "/ajax/uid2_creation.php", 1);
+
+            request.setRequestHeader("Content-Type", "application/json; charset=UTF-8")
+
+            request.onload = function(){
+                if(request.status == 200){
+                    var json = JSON.parse(request.responseText);
+                    // Create cookie with response from request
+                    cookies.create('uid2_identity', json.response, 7, '/');
+
+                    output_logging("UID2 cookie created");
+
+                    // Refresh specific modules
+                    pbjs.refreshUserIds({ submoduleNames: ['uid2'] });
+                }
+                else output_logging("Failed to create UID2 cookie");
+            }
+
+            request.send();
+        }
+    }
+
+    htlbid.cmd.push(function() {
+        htlbid.layout('universal');
+        
+        // Only set these if given in settings
+        if(project_settings.groupname != "") htlbid.setTargeting("groupname", project_settings.groupname);
+        if(project_settings.page_template != "") htlbid.setTargeting("page_template", project_settings.page_template);
+
+        htlbid.setTargeting("adx", project_settings.adx);
+        //htlbid.setTargeting('is_testing', project_settings.is_testing);
+        //htlbid.setTargeting('split_testing', project_settings.split_testing);
+        htlbid.setTargeting('website', project_settings.site_name);
+        htlbid.setTargeting('user_type', project_settings.user_type);
+        htlbid.setTargeting('has_folders', project_settings.has_folders);
+
+        // On slot rendering (or unfilled)
+        googletag.pubads().addEventListener('slotRenderEnded', function(event){
+            var slot_targeting = event.slot.getTargetingMap();
+            
+            var bidder_name, size = 0;
+            
+            // If it's empty, no bids?
+            var cpm = (slot_targeting["hb_pb"]) ? slot_targeting["hb_pb"][0] : 0;
+            
+            // In case there is no size from anywhere
+            if(event.size && event.size.length > 0) size = event.size[0]+"x"+event.size[1];
+            
+            // Either Amazon/ADX or Unfilled
+            if(event.advertiserId != 5363417171){
+                if(event.advertiserId == 4430894621){
+                    bidder_name = "adx";
+                    
+                    if(cpm == 0) cpm = 0.11;
+                }
+                else if(event.advertiserId == 4470907880){
+                    bidder_name = "amazon";
+                    
+                    if(cpm == 0) cpm = 0.11;
+                }
+                else if(event.advertiserId == 4440668109) bidder_name = "house";
+                else if(!event.advertiserId || event.isEmpty) bidder_name = "unfilled";
+                else bidder_name = "unknown";
+                
+                if(bidder_name != "unknown" && bidder_name != "unfilled") output_logging("ADX/Amazon bid report");
+                else output_logging("unknown/unfilled bid report");
+            }
+            // Bidder won the auction
+            else{
+                output_logging("Bidders bid report");
+                
+                bidder_name = (slot_targeting["hb_bidder"]) ? slot_targeting["hb_bidder"][0] : "unknown";
+            }
+            
+            var slot = {
+                "slotName"  : validate_value(event.slot.getAdUnitPath().replace("/1005222/", ""), "string", 50),
+                "cpm"       : validate_value(parseFloat(cpm), "number"),
+                "bidder"    : validate_value(bidder_name, "string", 50),
+                "size"      : validate_value(size, "string", 50),
+                "adUnitCode": validate_value(event.slot.getSlotId().getDomId(), "string", 50),
+                "empty"     : validate_value(event.isEmpty, "boolean")
+            };
+
+            var slot_tracking = Object.assign({}, page_tracking_data);
+            
+            // Override ad-unit with this ad unit to send reporting data
+            slot_tracking.ad_unit = slot;
+            
+            // Loggin out bid report
+            output_logging(slot_tracking);
+            output_logging(slot_tracking.ad_unit.slotName + " "+ slot_tracking.ad_unit.bidder + ", "+ slot_tracking.ad_unit.cpm);
+            
+            if(project_settings.send_reports == "1"){
+                try{
+                    // Send actual bid report
+                    send_bid_report(slot_tracking);
+                }
+                catch(e){
+                    output_logging("Bid report error");
+                }
+            }
+            
+            // Sticky changes
+            if(project_settings.sticky_slot_names.includes(slot_tracking.ad_unit.slotName)){
+                // Check if the bidder is one of these bidders, if so, hide the sticky container
+                if(["gumgum", "kargo", "unknown", "unfilled"].includes(bidder_name)){
+                    document.getElementById("outer_sticky").style.display = "none";
+                }
+                // All other bidders use our sticky container, show it
+                else{
+                    document.getElementById("outer_sticky").style.display = "";
+                }
+
+                // Unfilled slot
+                if(bidder_name == "unfilled"){
+                    unfilled_count++;
+                    
+                    // Stop refreshing after 3 unfilled impressions
+                    if(unfilled_count >= 3){
+                        refresh = false;
+                        
+                        console.log("Refreshed turned off after 3 unfilled impressions");
+                    }
+                }
+                // Reset unfilled count if it's not in a row
+                else if(bidder_name != "house") unfilled_count = 0;
+                
+                // Start refresh check after every sticky ad has been filled (refreshed)
+                start_refresh(slot_tracking.ad_unit.adUnitCode, bidder_name);
+            }
+        });
+    });
+    
+    // Functions for Refresh
+    function start_refresh(ad_slot_name, bidder_name){
+        // Remove old listener before adding a new one
+        document.removeEventListener("visibilitychange", visibility_change_logic);
+        
+        // Stop here if we don't need to refresh the sticky (or max number of refreshes has been reached)
+        if(!refresh || sticky_refresh_counter > 10){
+            output_logging("no timer needed");
+            refresh = false;
+            return;
+        }
+        
+        global_ad_slot_name = ad_slot_name;
+        global_bidder_name = bidder_name;
+        
+        document.addEventListener("visibilitychange", visibility_change_logic);
+        
+        output_logging('refresh timer started');
+
+        // Use 35 second tracker on mobile, 40 on desktop
+        if(is_mobile) refresh_timer = refresh_timer_tracker(35, refresh_sticky);
+        else refresh_timer = refresh_timer_tracker(40, refresh_sticky);
+    }
+    // Logic for visibility change
+    function visibility_change_logic(){
+        // Pause refresh timer
+        if(document.hidden){
+            refresh_timer.pause()
+        }
+        // Start refresh timer
+        else if(refresh){
+            refresh_timer.resume();
+        }
+    }
+    // Timer ended, do refresh
+    function refresh_sticky(){
+        // If you aren't supposed to refresh
+        output_logging('refresh timer ended');
+        refresh_timer.delete();
+        
+        // Kargo
+        if(global_bidder_name == "kargo"){
+            //close if Kargo container exists, otherwise don't refresh (must have been manually closed)
+            if(window.Kargo) Kargo.CreativeRegister.getCreativesOfType('Hover')[0].destroy();
+            else refresh = false;
+        }
+        // Gumgum 
+        else if(global_bidder_name == "gumgum") {
+            //close if GumGum container exists, otherwise don't refresh (must have been manually closed)
+            if(document.getElementById("GG_PXS") && document.getElementById("GG_PXS").parentNode){
+                document.getElementById("GG_PXS").parentNode.remove();
+            }
+            else refresh = false;
+        }
+        // Ogury
+        else if(global_bidder_name == "ogury"){
+            if(document.getElementById("ogy-ad-slot")){
+                window.top.dispatchEvent(new Event('ogy_hide'));
+
+                if(document.getElementById("ogy-ad-slot")) document.getElementById("ogy-ad-slot").remove();
+            }
+            else refresh=false;
+        }
+        
+        // Refresh slot (if container wasn't manually closed)
+        if(refresh){
+            sticky_refresh_counter++;
+            
+            //safeguards (max refresh check, minimum time between refreshes)
+            if(sticky_refresh_counter > 12){
+                refresh = false;
+                refresh_timer.delete();
+                document.removeEventListener("visibilitychange", visibility_change_logic);
+                
+                return;
+            }
+            
+            if(last_refresh_time != ""){
+                var current_time = new Date().getTime();
+                var diff_time = current_time - last_refresh_time;
+                
+                if(diff_time<(30*1000)){
+                    output_logging(diff_time + " less than 30 seconds since last refresh, something wrong with timer");
+                    refresh = false;
+                    
+                    refresh_timer.delete();
+                    document.removeEventListener("visibilitychange", visibility_change_logic);
+                    
+                    return;
+                }
+            }
+
+            last_refresh_time = new Date().getTime();
+            output_logging("slot "+global_ad_slot_name+" refreshed");
+
+            var sticky_refresh_counter_display = (sticky_refresh_counter < 10) ? "0"+sticky_refresh_counter : sticky_refresh_counter;
+            
+            if(document.getElementById('sticky_ad_container')) document.getElementById('sticky_ad_container').dataset.targeting="{\"sticky_refresh\":\""+sticky_refresh_counter_display+"\"}";
+            htlbid.forceRefresh([global_ad_slot_name]);
+        }
+        else{
+            output_logging('no refresh - container must have been closed')
+        }
+    }
+    // Force close sticky area
+    function close_sticky(){
+        document.getElementById('outer_sticky').remove();
+        refresh = false;
+        
+        output_logging('refresh timer ended');
+        refresh_timer.delete();
+    }
+    
+    /***************************************
+    ------------ REPORTING CODE ------------
+    ***************************************/
+    // Get $_GET variables
+    var uri = decodeURIComponent(window.location.search.substring(1)).split('&');
+
+    var get_vars = {};
+    for(var x = 0; x < uri.length; x++){
+        var parts = uri[x].split('=');
+        get_vars[parts[0]] = parts[1];
+    }
+
+    // UTM options we track
+    var utm_vars  = [
+          'utm_medium',
+          'utm_source',
+          'utm_campaign',
+          'utm_term',
+          'utm_content',
+          'utm_template',
+          'utm_referrer',
+          'utm_adset',
+          'utm_subid',
+          'gclid',
+          'fbclid'
+    ];
+
+    var utm_confirmed = {}, this_utm_var;
+
+    // See if any UTM variables are defined in the query parameters or session storage
+    utm_vars.forEach(function(utm_var){
+        // (can be blank, so check for null (not set))
+        if(sessionStorage.getItem(utm_var) !== null) this_utm_var = sessionStorage.getItem(utm_var);
+        else{
+            this_utm_var = (typeof get_vars[utm_var] == 'undefined') ? "" : get_vars[utm_var];
+            sessionStorage.setItem(utm_var, this_utm_var);
+        }
+        
+        utm_confirmed[utm_var] = this_utm_var;
+    });
+
+    // Determine browser
+    var browser = '';
+    
+    if(navigator.userAgent.match(/iPhone/i) || navigator.userAgent.match(/iPod/i)) browser = 'iOS';
+    else if(/Opera[\/\s](\d+\.\d+)/.test(navigator.userAgent)) browser = 'opera';
+    else if(/MSIE (\d+\.\d+);/.test(navigator.userAgent)) browser = 'MSIE';
+    else if(/Navigator[\/\s](\d+\.\d+)/.test(navigator.userAgent)) browser = 'netscape';
+    else if(/Chrome[\/\s](\d+\.\d+)/.test(navigator.userAgent)) browser = 'chrome';
+    else if(/Safari[\/\s](\d+\.\d+)/.test(navigator.userAgent)) browser = 'safari';
+    else if(/Firefox[\/\s](\d+\.\d+)/.test(navigator.userAgent)) browser = 'firefox';
+    else browser = 'internet_explorer';
+    
+    var session_guid, session_referrer;
+    // Check for session guid in session storage
+    if(sessionStorage.getItem("session_guid")) session_guid = sessionStorage.getItem("session_guid");
+    else{
+        session_guid = generate_uuid();
+        sessionStorage.setItem("session_guid", session_guid);
+    }
+
+    // Check for referrer in session storage (can be blank, so check for null (not set))
+    if(sessionStorage.getItem("session_referrer") !== null) session_referrer = sessionStorage.getItem("session_referrer");
+    else{
+        session_referrer = document.referrer || "";
+        sessionStorage.setItem("session_referrer", session_referrer);
+    }
+
+    var page_tracking_data = {
+        "referrer"          : validate_value(session_referrer, "string"),
+        // UTM variables
+        "utm_variables" : {
+            "utm_source"        : validate_value(utm_confirmed.utm_source,   "string", 100),
+            "utm_campaign"      : validate_value(utm_confirmed.utm_campaign, "string"),
+            "utm_medium"        : validate_value(utm_confirmed.utm_medium,   "string", 100),
+            "utm_term"          : validate_value(utm_confirmed.utm_term,     "string", 100),
+            "utm_content"       : validate_value(utm_confirmed.utm_content,  "string", 100),
+            "utm_template"      : validate_value(utm_confirmed.utm_template, "string", 100),
+            "utm_referrer"      : validate_value(utm_confirmed.utm_referrer, "string", 100),
+            "utm_adset"         : validate_value(utm_confirmed.utm_adset,    "string", 100),
+            "utm_subid"         : validate_value(utm_confirmed.utm_subid,    "string", 100) 
+        },
+        // User information
+        "user"              : {
+            "session_guid"      : validate_value(session_guid,                       "string"),
+            "os"                : validate_value(get_os(),                           "string", 50),
+            "browser"           : validate_value(browser,                            "string", 50),
+            "device"            : validate_value((is_mobile ? "mobile" : "desktop"), "string", 15),
+            "country"           : ""
+        },
+        // Page information
+        "page"              : {
+            "page_guid"         : validate_value(generate_uuid(),          "string"),
+            "url"               : validate_value(window.location.href,     "string"),
+            "url_path"          : validate_value(window.location.pathname, "string", 200)
+            // "editor"            : validate_value(properPage.page_meta.editor, "string", 150),
+            // "writer"            : validate_value(properPage.page_meta.writer, "string", 150)
+        },
+        // Ad unit information
+        "ad_unit"          : {}
+
+
+
+
+
+        // Not sure if we are going to use these, comment out for now
+        // "category"          : validate_value(page_meta.category),
+        // "tags"              : validate_value(page_meta.tags.join(",")),
+        // "website"           : validate_value(site_name),
+        // "is_mobile"         : validate_value(device_type),
+        // "is_isolated"       : validate_value(isolated),
+        // "session_depth"     : validate_value(sessionData.depth),
+        // "page_type"         : validate_value(page_meta.page_type),
+        // "custom"            : validateCustom(page_meta.custom),
+        // 
+        // "use_ssl"           : validate_value(use_ssl),
+        // "resolution_width"  : validate_value(width),
+        // "resolution_height" : validate_value(height),
+        // "gclid"              : validate_value(sessionData.gclid),
+        // "fbclid"            : validate_value(sessionData.fbclid),
+        // "buyer"             : validate_value(page_meta.buyer),
+        // "split"             : validate_value(page_meta.split),
+        // "adblock"           : validate_value(adblock.detected)
+    };
+    
+    // Logging
+    function output_logging(content){
+        if(project_settings.logging_turned_on){
+            if(typeof content == "string") console.log(project_settings.site_name + " Ads: " + content);
+            else console.log(content);
+        }
+    }
+    // Get OS
+    function get_os(){
+        var os = navigator.userAgent;
+        
+        var return_os = "";
+        
+        if(os.search('Windows') !== -1) return_os = "Windows";
+        else if(os.search('Mac') !== -1) return_os = "MacOS";
+        else if(os.search('X11') !== -1 && !(os.search('Linux') !== -1)) return_os = "UNIX";
+        else if(os.search('Linux') !== -1 && os.search('X11') !== -1) return_os = "Linux"
+        
+        return return_os;
+    }
+    // Validate any value benig sent in reporting
+    function validate_value(value, type, max_length = 255){
+        // Validate string logic
+        if(type == "string"){
+            // Convert number to string
+            if(typeof value === 'number') value = value.toString();
+            
+            // If it's not a string, make it empty by default
+            if(typeof value !== 'string') value = "";
+            
+            // Trim max length
+            if(value.length > max_length) value = value.substring(0, max_length);
+        }
+        // Validate number logic
+        else if(type == "number"){
+            // Convert string to number
+            if(typeof value === 'string') value = value.toString();
+            
+            // If it's not a number, make it 0 by default
+            if(typeof value !== 'number') value = 0;
+        }
+        // Validate boolean logic
+        else if(type == "boolean"){
+            // Convert string to boolean
+            if(typeof value === 'string'){
+                if(['false', '0'].includes(value)) value = false;
+                else if(['true', '1'].includes(value)) value = true;
+            }
+            // Convert number to boolean
+            else if(typeof value === 'number'){
+                if(value == 0) value = false;
+                else if(value == 1) value = true;
+            }
+            
+            // If it's not a boolean, make it false by default
+            if(typeof value !== 'boolean') value = false;
+        }
+        
+        return value;
+    }
+    // Generate UUID (unique ID)
+    function generate_uuid(){
+        var d = new Date().getTime();
+
+        // Use high-precision timer if available (time on page)
+        if(window.performance && typeof window.performance.now === "function"){
+            d += performance.now();
+        }
+
+        var uuid = 'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'.replace(/[xy]/g, function(c) {
+            var r = (d + Math.random()*16)%16 | 0;
+            d = Math.floor(d/16);
+
+            return (c == 'x' ? r : (r&0x3|0x8)).toString(16);
+        });
+
+        return uuid;
+    }
+    // Function to send Requests for data logging
+    function send_bid_report(data){
+        return; // Turn off analytics for now, it's not used anymore
+
+        // // If there is no report endpoint
+        // if(project_settings.report_url == "") return;
+        
+        // var request = new XMLHttpRequest();
+        
+        // request.open("post", project_settings.report_url, 1);
+
+        // request.setRequestHeader("Content-Type", "application/json; charset=UTF-8")
+
+        // request.onload = function(){
+        //     if(request.status == 200) output_logging("Bid Report sent");
+        //     else output_logging("Failed to send bid report");
+        // }
+
+        // request.send(JSON.stringify(data));
+    }
+    // Timer for leaving the page and pausing refresh
+    function refresh_timer_tracker(seconds, oncomplete){
+        console.log('refresh_timer_tracker: called');
+        var timerId, start, remaining = parseInt(seconds)*1000;
+
+        this.pause = function() {
+            window.clearTimeout(timerId);
+            timerId = null;
+            remaining -= Date.now() - start;
+            output_logging('refresh_timer_tracker: pause = '+remaining);
+        };
+
+        this.resume = function() {
+            if (timerId) return;
+
+            start = Date.now();
+            timerId = window.setTimeout(oncomplete, remaining);
+            output_logging('refresh_timer_tracker: resume = '+remaining);
+        };
+
+        this.delete = function(){
+            if (!timerId) return;
+            clearInterval(timerId);
+            output_logging('refresh_timer_tracker: delete');
+        }
+
+
+        this.resume();
+
+        return this;
+    }
+    
+    return {
+        data: page_tracking_data,
+        close_sticky: close_sticky
+    };
+})(site_htl_settings);				</script>
+
+                                <script>
+                    // Add second script to the head
+                    var htl_script = document.createElement('script');
+                    htl_script.async = "async";
+
+                    //pull separate HTL version for browsi
+                    if(typeof tropes_browsi!="undefined" && tropes_browsi==1) htl_script.src = "https://htlbid.com/stage/v3/tvtropes.org/htlbid.js";
+                    else htl_script.src = "https://htlbid.com/v3/tvtropes.org/htlbid.js";
+                                        
+                    // Add both scripts to head
+                    document.head.appendChild(htl_script);
+                </script>
+                                    <script>
+                        // If this script fails to load, load funding choices
+                        htl_script.onerror = function() {
+                            // Add the fundingchoices script to the head
+                            var script = document.createElement('script');
+                                script.src = "https://fundingchoicesmessages.google.com/i/pub-6608306193529351?ers=1";
+                                script.async = true;
+                                script.nonce = "rczD8qB5ececf2fL1Vj9XQ";
+                            
+                            // Add second script to the head
+                            var script2 = document.createElement('script');
+                                script2.nonce = "rczD8qB5ececf2fL1Vj9XQ";
+                                script2.innerHTML = "(function() {function signalGooglefcPresent() {if (!window.frames['googlefcPresent']) {if (document.body) {const iframe = document.createElement('iframe'); iframe.style = 'width: 0; height: 0; border: none; z-index: -1000; left: -1000px; top: -1000px;'; iframe.style.display = 'none'; iframe.name = 'googlefcPresent'; document.body.appendChild(iframe);} else {setTimeout(signalGooglefcPresent, 0);}}}signalGooglefcPresent();})();";
+                            
+                            // Add both scripts to head
+                            document.head.appendChild(script);
+                            document.head.appendChild(script2);
+                        }
+                    </script>
+                
+                                <script>
+                    // Add HTL script to head
+                    document.head.appendChild(htl_script);
+                </script><script async="" src="https://htlbid.com/v3/tvtropes.org/htlbid.js"></script>
+
+				<!-- Bombora -->
+				<script>
+				!function(e,t,c,n,o,a,m){e._bmb||(o=e._bmb=function(){o.x?o.x.apply(o,arguments):o.q.push(arguments)},o.q=[],a=t.createElement(c),a.async=true,a.src="https://vi.ml314.com/get?eid=90820&tk=wh2f3nQiCsEF22bcOc3am6J9QS7SqBu7WCIKhTJmEBRc03d&fp="+(e.localStorage&&e.localStorage.getItem(n)||""),m=t.getElementsByTagName(c)[0],m.parentNode.insertBefore(a,m))}(window,document,"script","_ccmaid");
+
+				window.googletag = window.googletag || {cmd: []};
+				googletag.cmd.push(function() {
+					_bmb('vi', function(data){
+						if (data != null) {
+							var tmpSegment = [
+								data.industry_id,
+								data.revenue_id,
+								data.size_id,
+								data.functional_area_id,
+								data.professional_group_id,
+								data.seniority_id,
+								data.decision_maker_id,
+								data.install_data_id,
+								data.topic_id,
+								data.interest_group_id,
+								data.segment,
+								data.b2b_interest_cluster_id
+								].filter(Boolean).join(',');
+
+							tmpSegment != '' && googletag.pubads().setTargeting("bmb",tmpSegment.split(','));
+						}
+					});
+				});
+				</script>
+				<script>
+				(function (w,d,t) {
+					_ml = w._ml || {};
+					_ml.eid = '90820';
+					var s, cd, tag; s = d.getElementsByTagName(t)[0]; cd = new Date();
+					tag = d.createElement(t); tag.async = 1;
+					tag.src = 'https://ml314.com/tag.aspx?' + cd.getDate() + cd.getMonth();
+					s.parentNode.insertBefore(tag, s);
+				})(window,document,'script');
+				</script>
+				<!-- Bombora -->
+
+						
+			
+											<script>(function(){/*
+							 Copyright The Closure Library Authors.
+							 SPDX-License-Identifier: Apache-2.0
+							*/
+							'use strict';var aa=function(a){var b=0;return function(){return b<a.length?{done:!1,value:a[b++]}:{done:!0}}},ba="function"==typeof Object.create?Object.create:function(a){var b=function(){};b.prototype=a;return new b},k;if("function"==typeof Object.setPrototypeOf)k=Object.setPrototypeOf;else{var m;a:{var ca={a:!0},n={};try{n.__proto__=ca;m=n.a;break a}catch(a){}m=!1}k=m?function(a,b){a.__proto__=b;if(a.__proto__!==b)throw new TypeError(a+" is not extensible");return a}:null}
+							var p=k,q=function(a,b){a.prototype=ba(b.prototype);a.prototype.constructor=a;if(p)p(a,b);else for(var c in b)if("prototype"!=c)if(Object.defineProperties){var d=Object.getOwnPropertyDescriptor(b,c);d&&Object.defineProperty(a,c,d)}else a[c]=b[c];a.v=b.prototype},r=this||self,da=function(){},t=function(a){return a};var u;var w=function(a,b){this.g=b===v?a:""};w.prototype.toString=function(){return this.g+""};var v={},x=function(a){if(void 0===u){var b=null;var c=r.trustedTypes;if(c&&c.createPolicy){try{b=c.createPolicy("goog#html",{createHTML:t,createScript:t,createScriptURL:t})}catch(d){r.console&&r.console.error(d.message)}u=b}else u=b}a=(b=u)?b.createScriptURL(a):a;return new w(a,v)};var A=function(){return Math.floor(2147483648*Math.random()).toString(36)+Math.abs(Math.floor(2147483648*Math.random())^Date.now()).toString(36)};var B={},C=null;var D="function"===typeof Uint8Array;function E(a,b,c){return"object"===typeof a?D&&!Array.isArray(a)&&a instanceof Uint8Array?c(a):F(a,b,c):b(a)}function F(a,b,c){if(Array.isArray(a)){for(var d=Array(a.length),e=0;e<a.length;e++){var f=a[e];null!=f&&(d[e]=E(f,b,c))}Array.isArray(a)&&a.s&&G(d);return d}d={};for(e in a)Object.prototype.hasOwnProperty.call(a,e)&&(f=a[e],null!=f&&(d[e]=E(f,b,c)));return d}
+							function ea(a){return F(a,function(b){return"number"===typeof b?isFinite(b)?b:String(b):b},function(b){var c;void 0===c&&(c=0);if(!C){C={};for(var d="ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789".split(""),e=["+/=","+/","-_=","-_.","-_"],f=0;5>f;f++){var h=d.concat(e[f].split(""));B[f]=h;for(var g=0;g<h.length;g++){var l=h[g];void 0===C[l]&&(C[l]=g)}}}c=B[c];d=Array(Math.floor(b.length/3));e=c[64]||"";for(f=h=0;h<b.length-2;h+=3){var y=b[h],z=b[h+1];l=b[h+2];g=c[y>>2];y=c[(y&3)<<
+							4|z>>4];z=c[(z&15)<<2|l>>6];l=c[l&63];d[f++]=""+g+y+z+l}g=0;l=e;switch(b.length-h){case 2:g=b[h+1],l=c[(g&15)<<2]||e;case 1:b=b[h],d[f]=""+c[b>>2]+c[(b&3)<<4|g>>4]+l+e}return d.join("")})}var fa={s:{value:!0,configurable:!0}},G=function(a){Array.isArray(a)&&!Object.isFrozen(a)&&Object.defineProperties(a,fa);return a};var H;var J=function(a,b,c){var d=H;H=null;a||(a=d);d=this.constructor.u;a||(a=d?[d]:[]);this.j=d?0:-1;this.h=null;this.g=a;a:{d=this.g.length;a=d-1;if(d&&(d=this.g[a],!(null===d||"object"!=typeof d||Array.isArray(d)||D&&d instanceof Uint8Array))){this.l=a-this.j;this.i=d;break a}void 0!==b&&-1<b?(this.l=Math.max(b,a+1-this.j),this.i=null):this.l=Number.MAX_VALUE}if(c)for(b=0;b<c.length;b++)a=c[b],a<this.l?(a+=this.j,(d=this.g[a])?G(d):this.g[a]=I):(d=this.l+this.j,this.g[d]||(this.i=this.g[d]={}),(d=this.i[a])?
+							G(d):this.i[a]=I)},I=Object.freeze(G([])),K=function(a,b){if(-1===b)return null;if(b<a.l){b+=a.j;var c=a.g[b];return c!==I?c:a.g[b]=G([])}if(a.i)return c=a.i[b],c!==I?c:a.i[b]=G([])},M=function(a,b){var c=L;if(-1===b)return null;a.h||(a.h={});if(!a.h[b]){var d=K(a,b);d&&(a.h[b]=new c(d))}return a.h[b]};J.prototype.toJSON=function(){var a=N(this,!1);return ea(a)};
+							var N=function(a,b){if(a.h)for(var c in a.h)if(Object.prototype.hasOwnProperty.call(a.h,c)){var d=a.h[c];if(Array.isArray(d))for(var e=0;e<d.length;e++)d[e]&&N(d[e],b);else d&&N(d,b)}return a.g},O=function(a,b){H=b=b?JSON.parse(b):null;a=new a(b);H=null;return a};J.prototype.toString=function(){return N(this,!1).toString()};var P=function(a){J.call(this,a)};q(P,J);function ha(a){var b,c=(a.ownerDocument&&a.ownerDocument.defaultView||window).document,d=null===(b=c.querySelector)||void 0===b?void 0:b.call(c,"script[nonce]");(b=d?d.nonce||d.getAttribute("nonce")||"":"")&&a.setAttribute("nonce",b)};var Q=function(a,b){b=String(b);"application/xhtml+xml"===a.contentType&&(b=b.toLowerCase());return a.createElement(b)},R=function(a){this.g=a||r.document||document};R.prototype.appendChild=function(a,b){a.appendChild(b)};var S=function(a,b,c,d,e,f){try{var h=a.g,g=Q(a.g,"SCRIPT");g.async=!0;g.src=b instanceof w&&b.constructor===w?b.g:"type_error:TrustedResourceUrl";ha(g);h.head.appendChild(g);g.addEventListener("load",function(){e();d&&h.head.removeChild(g)});g.addEventListener("error",function(){0<c?S(a,b,c-1,d,e,f):(d&&h.head.removeChild(g),f())})}catch(l){f()}};var ia=r.atob("aHR0cHM6Ly93d3cuZ3N0YXRpYy5jb20vaW1hZ2VzL2ljb25zL21hdGVyaWFsL3N5c3RlbS8xeC93YXJuaW5nX2FtYmVyXzI0ZHAucG5n"),ja=r.atob("WW91IGFyZSBzZWVpbmcgdGhpcyBtZXNzYWdlIGJlY2F1c2UgYWQgb3Igc2NyaXB0IGJsb2NraW5nIHNvZnR3YXJlIGlzIGludGVyZmVyaW5nIHdpdGggdGhpcyBwYWdlLg=="),ka=r.atob("RGlzYWJsZSBhbnkgYWQgb3Igc2NyaXB0IGJsb2NraW5nIHNvZnR3YXJlLCB0aGVuIHJlbG9hZCB0aGlzIHBhZ2Uu"),la=function(a,b,c){this.h=a;this.j=new R(this.h);this.g=null;this.i=[];this.l=!1;this.o=b;this.m=c},V=function(a){if(a.h.body&&!a.l){var b=
+							function(){T(a);r.setTimeout(function(){return U(a,3)},50)};S(a.j,a.o,2,!0,function(){r[a.m]||b()},b);a.l=!0}},T=function(a){for(var b=W(1,5),c=0;c<b;c++){var d=X(a);a.h.body.appendChild(d);a.i.push(d)}b=X(a);b.style.bottom="0";b.style.left="0";b.style.position="fixed";b.style.width=W(100,110).toString()+"%";b.style.zIndex=W(2147483544,2147483644).toString();b.style["background-color"]=ma(249,259,242,252,219,229);b.style["box-shadow"]="0 0 12px #888";b.style.color=ma(0,10,0,10,0,10);b.style.display=
+							"flex";b.style["justify-content"]="center";b.style["font-family"]="Roboto, Arial";c=X(a);c.style.width=W(80,85).toString()+"%";c.style.maxWidth=W(750,775).toString()+"px";c.style.margin="24px";c.style.display="flex";c.style["align-items"]="flex-start";c.style["justify-content"]="center";d=Q(a.j.g,"IMG");d.className=A();d.src=ia;d.style.height="24px";d.style.width="24px";d.style["padding-right"]="16px";var e=X(a),f=X(a);f.style["font-weight"]="bold";f.textContent=ja;var h=X(a);h.textContent=ka;Y(a,
+							e,f);Y(a,e,h);Y(a,c,d);Y(a,c,e);Y(a,b,c);a.g=b;a.h.body.appendChild(a.g);b=W(1,5);for(c=0;c<b;c++)d=X(a),a.h.body.appendChild(d),a.i.push(d)},Y=function(a,b,c){for(var d=W(1,5),e=0;e<d;e++){var f=X(a);b.appendChild(f)}b.appendChild(c);c=W(1,5);for(d=0;d<c;d++)e=X(a),b.appendChild(e)},W=function(a,b){return Math.floor(a+Math.random()*(b-a))},ma=function(a,b,c,d,e,f){return"rgb("+W(Math.max(a,0),Math.min(b,255)).toString()+","+W(Math.max(c,0),Math.min(d,255)).toString()+","+W(Math.max(e,0),Math.min(f,
+							255)).toString()+")"},X=function(a){a=Q(a.j.g,"DIV");a.className=A();return a},U=function(a,b){0>=b||null!=a.g&&0!=a.g.offsetHeight&&0!=a.g.offsetWidth||(na(a),T(a),r.setTimeout(function(){return U(a,b-1)},50))},na=function(a){var b=a.i;var c="undefined"!=typeof Symbol&&Symbol.iterator&&b[Symbol.iterator];b=c?c.call(b):{next:aa(b)};for(c=b.next();!c.done;c=b.next())(c=c.value)&&c.parentNode&&c.parentNode.removeChild(c);a.i=[];(b=a.g)&&b.parentNode&&b.parentNode.removeChild(b);a.g=null};var pa=function(a,b,c,d,e){var f=oa(c),h=function(l){l.appendChild(f);r.setTimeout(function(){f?(0!==f.offsetHeight&&0!==f.offsetWidth?b():a(),f.parentNode&&f.parentNode.removeChild(f)):a()},d)},g=function(l){document.body?h(document.body):0<l?r.setTimeout(function(){g(l-1)},e):b()};g(3)},oa=function(a){var b=document.createElement("div");b.className=a;b.style.width="1px";b.style.height="1px";b.style.position="absolute";b.style.left="-10000px";b.style.top="-10000px";b.style.zIndex="-10000";return b};var L=function(a){J.call(this,a)};q(L,J);var qa=function(a){J.call(this,a)};q(qa,J);var ra=function(a,b){this.l=a;this.m=new R(a.document);this.g=b;this.i=K(this.g,1);b=M(this.g,2);this.o=x(K(b,4)||"");this.h=!1;b=M(this.g,13);b=x(K(b,4)||"");this.j=new la(a.document,b,K(this.g,12))};ra.prototype.start=function(){sa(this)};
+							var sa=function(a){ta(a);S(a.m,a.o,3,!1,function(){a:{var b=a.i;var c=r.btoa(b);if(c=r[c]){try{var d=O(P,r.atob(c))}catch(e){b=!1;break a}b=b===K(d,1)}else b=!1}b?Z(a,K(a.g,14)):(Z(a,K(a.g,8)),V(a.j))},function(){pa(function(){Z(a,K(a.g,7));V(a.j)},function(){return Z(a,K(a.g,6))},K(a.g,9),K(a.g,10),K(a.g,11))})},Z=function(a,b){a.h||(a.h=!0,a=new a.l.XMLHttpRequest,a.open("GET",b,!0),a.send())},ta=function(a){var b=r.btoa(a.i);a.l[b]&&Z(a,K(a.g,5))};(function(a,b){r[a]=function(c){for(var d=[],e=0;e<arguments.length;++e)d[e-0]=arguments[e];r[a]=da;b.apply(null,d)}})("__h82AlnkH6D91__",function(a){"function"===typeof window.atob&&(new ra(window,O(qa,window.atob(a)))).start()});}).call(this);
+
+							window.__h82AlnkH6D91__("WyJwdWItMjU3NTc4ODY5MDc5ODI4MiIsW251bGwsbnVsbCxudWxsLCJodHRwczovL2Z1bmRpbmdjaG9pY2VzbWVzc2FnZXMuZ29vZ2xlLmNvbS9iL3B1Yi0yNTc1Nzg4NjkwNzk4MjgyIl0sbnVsbCxudWxsLCJodHRwczovL2Z1bmRpbmdjaG9pY2VzbWVzc2FnZXMuZ29vZ2xlLmNvbS9lbC9BR1NLV3hWV0tMOXhFeS1ZVk1sOTdzcC10MW5mbkxvWmZweWVjaGRJdUxJU244LXpjbUwxM1R5Mlhhb2RoQTJFU3VNS3ljQm1kVHgxSUNlMVBrX2hIeUxHa1ZZNHJ3XHUwMDNkXHUwMDNkP3RlXHUwMDNkVE9LRU5fRVhQT1NFRCIsImh0dHBzOi8vZnVuZGluZ2Nob2ljZXNtZXNzYWdlcy5nb29nbGUuY29tL2VsL0FHU0tXeFZCeVhDdDlWajY1eXNrMWFHVW9LUUpLdktrTlh4WVdlRDBhYnhmS3RVUi00eDZfRTNWOXpqSm5vYkFfVzIxeGNDb3F3M1RmN1dYRmxXZFZaazVMMFlQQ2dcdTAwM2RcdTAwM2Q/YWJcdTAwM2QxXHUwMDI2c2JmXHUwMDNkMSIsImh0dHBzOi8vZnVuZGluZ2Nob2ljZXNtZXNzYWdlcy5nb29nbGUuY29tL2VsL0FHU0tXeFV4bEsxQ0dxcEpGY3lvcXZXZ0ZnWWRBRjhMMzBOU0Y1ci1paGZSd1VRNzV4YmF6NGxydWVfRUhoWmU1ai00UUhRYXc4MUVZREFkQ2pBN21Tb1BxUUsxaFFcdTAwM2RcdTAwM2Q/YWJcdTAwM2QyXHUwMDI2c2JmXHUwMDNkMSIsImh0dHBzOi8vZnVuZGluZ2Nob2ljZXNtZXNzYWdlcy5nb29nbGUuY29tL2VsL0FHU0tXeFZJUWxpOV9jN0NuWWlHWkU3S2xIV2JWVi10NlpYQ2hQTnlHVTRobGhmSjdLQnJnNjllSFhHYm9aSXRqRm42MDViNWpuaG5KYkxCcU1ySURyY2lLVEk0VmdcdTAwM2RcdTAwM2Q/c2JmXHUwMDNkMiIsImRpdi1ncHQtYWQiLDIwLDEwMCwiY0hWaUxUSTFOelUzT0RnMk9UQTNPVGd5T0RJXHUwMDNkIixbbnVsbCxudWxsLG51bGwsImh0dHBzOi8vd3d3LmdzdGF0aWMuY29tLzBlbW4vZi9wL3B1Yi0yNTc1Nzg4NjkwNzk4MjgyLmpzP3VzcXBcdTAwM2RDQkEiXSwiaHR0cHM6Ly9mdW5kaW5nY2hvaWNlc21lc3NhZ2VzLmdvb2dsZS5jb20vZWwvQUdTS1d4V1hNUEJXZjVaNURyT1VGdDZwVVR5eGh1YzBFNlVGQnJJZUhuUUNCMVlUOWVtYlJTbGxYQ3F6NDV5ODdqT3RVWC1SX3JkcmdudFdjejdtazA2WkZYWDQyd1x1MDAzZFx1MDAzZCJd");
+					</script><script async="" src="https://fundingchoicesmessages.google.com/b/pub-2575788690798282"></script>
+						<meta http-equiv="X-UA-Compatible" content="IE=edge">
+			<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+
+			<title>TV Tropes</title>
+            <meta name="description" content="TV Tropes, the all-devouring pop-culture wiki, catalogs and cross-references recurrent plot devices, archetypes, and tropes in all forms of media.">
+            
+
+                        <link rel="shortcut icon" href="https://assets.tvtropes.org/img/icons/favicon.ico" type="image/x-icon">
+
+                        <meta name="twitter:card" content="summary_large_image">
+            <meta name="twitter:site" content="@tvtropes">
+            <meta name="twitter:owner" content="@tvtropes">
+            <meta name="twitter:title" content="TV Tropes">
+            <meta name="twitter:description" content="TV Tropes, the all-devouring pop-culture wiki, catalogs and cross-references recurrent plot devices, archetypes, and tropes in all forms of media.">
+			            	<meta name="twitter:image:src" content="https://static.tvtropes.org/logo_blue_small.png">
+	        
+                        <meta property="og:site_name" content="TV Tropes">
+            <meta property="og:locale" content="en_US">
+            <meta property="article:publisher" content="https://www.facebook.com/tvtropes">
+			<meta property="og:title" content="TV Tropes">
+			<meta property="og:type" content="website">
+							<meta property="og:url" content="https://tvtropes.org/">
+			
+			<meta property="og:image" content="https://static.tvtropes.org/logo_blue_small.png">
+			<meta property="og:description" content="TV Tropes, the all-devouring pop-culture wiki, catalogs and cross-references recurrent plot devices, archetypes, and tropes in all forms of media.">
+
+						
+
+			            <link rel="apple-touch-icon" sizes="57x57" href="https://assets.tvtropes.org/img/icons/apple-icon-57x57.png" type="image/png">
+            <link rel="apple-touch-icon" sizes="60x60" href="https://assets.tvtropes.org/img/icons/apple-icon-60x60.png" type="image/png">
+            <link rel="apple-touch-icon" sizes="72x72" href="https://assets.tvtropes.org/img/icons/apple-icon-72x72.png" type="image/png">
+            <link rel="apple-touch-icon" sizes="76x76" href="https://assets.tvtropes.org/img/icons/apple-icon-76x76.png" type="image/png">
+            <link rel="apple-touch-icon" sizes="114x114" href="https://assets.tvtropes.org/img/icons/apple-icon-114x114.png" type="image/png">
+            <link rel="apple-touch-icon" sizes="120x120" href="https://assets.tvtropes.org/img/icons/apple-icon-120x120.png" type="image/png">
+            <link rel="apple-touch-icon" sizes="144x144" href="https://assets.tvtropes.org/img/icons/apple-icon-144x144.png" type="image/png">
+            <link rel="apple-touch-icon" sizes="152x152" href="https://assets.tvtropes.org/img/icons/apple-icon-152x152.png" type="image/png">
+            <link rel="apple-touch-icon" sizes="180x180" href="https://assets.tvtropes.org/img/icons/apple-icon-180x180.png" type="image/png">
+            <link rel="icon" sizes="16x16" href="https://assets.tvtropes.org/img/icons/favicon-16x16.png" type="image/png">
+            <link rel="icon" sizes="32x32" href="https://assets.tvtropes.org/img/icons/favicon-32x32.png" type="image/png">
+            <link rel="icon" sizes="96x96" href="https://assets.tvtropes.org/img/icons/favicon-96x96.png" type="image/png">
+            <link rel="icon" sizes="192x192" href="https://assets.tvtropes.org/img/icons/favicon-192x192.png" type="image/png">
+
+                        
+
+						<meta id="viewport" name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+                        <link rel="stylesheet" href="https://assets.tvtropes.org/design/assets/bundle.css?rev=457c3126c794172cd32651e95c6816619910a291">
+
+                                                
+                        
+                        
+                        						
+                        <script type="text/javascript">
+
+                var tvtropes_config = {
+                    asteri_stream_enabled : "1",
+                    is_logged_in         : "",
+                    handle               : "",
+                    get_asteri_stream     : "",
+                    revnum               : "457c3126c794172cd32651e95c6816619910a291",
+                    img_domain           : "https://static.tvtropes.org",
+                    adblock              : "1",
+                    adblock_url          : "propermessage.io",
+                    universal_page_type  : "HomePage",
+                    pause_editing        : "0",
+                    pause_editing_msg    : "",
+                    pause_site_changes   : "0",
+                    assets_domain        : "https://assets.tvtropes.org"
+                };
+
+                // This will track the total number of ads inserted over time
+                var globalAdInsertionCount = 0;
+            </script>
+						
+                        						
+												<script type="text/javascript">
+						  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+						  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+						  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+						  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+						  ga('create', 'UA-3821842-1', 'auto');
+						  ga('send', 'pageview');
+						</script>
+
+						        <meta http-equiv="origin-trial" content="AymqwRC7u88Y4JPvfIF2F37QKylC04248hLCdJAsh8xgOfe/dVJPV3XS3wLFca1ZMVOtnBfVjaCMTVudWM//5g4AAAB7eyJvcmlnaW4iOiJodHRwczovL3d3dy5nb29nbGV0YWdtYW5hZ2VyLmNvbTo0NDMiLCJmZWF0dXJlIjoiUHJpdmFjeVNhbmRib3hBZHNBUElzIiwiZXhwaXJ5IjoxNjk1MTY3OTk5LCJpc1RoaXJkUGFydHkiOnRydWV9"><script async="" src="https://assets.tvtropes.org/design/assets/bundle.js?rev=457c3126c794172cd32651e95c6816619910a291"></script><script src="https://lh.bigcrunch.com/main.js" type="text/javascript" id="bigcrunchtag" data-property-id="34a5ddec-697b-424e-81d2-e6bb46a1b83e"></script><script src="https://securepubads.g.doubleclick.net/tag/js/gpt.js" async=""></script><style type="text/css">/*div.ams-sticky[data-bidder=kargo] a.ams-sticky-close { display:none; }
+*/</style><link href="https://go.automatad.com/geo/9phJIZ/afihbs.js" as="script" rel="preload"><link href="https://go.automatad.com" rel="preconnect"><script src="https://go.automatad.com/geo/9phJIZ/afihbs.js" async=""></script><script src="https://c.amazon-adsystem.com/aax2/apstag.js" async=""></script><script src="https://scripts.atmtd.com/js/prebid_analytics/prebid_analytics.js" type="text/javascript"></script><style>.bigcrunch-unit.bigcrunch-unit-sticky{position:fixed}.bigcrunch-unit.collapsed{max-height:0px !important}.bigcrunch-unit.expanded{max-height:1000px}.bigcrunch-unit.bigcrunch-outstream-wrapper{position:relative;display:block;z-index:100000;width:300px;aspect-ratio:16/9;margin-bottom:10px;background:#000}.bigcrunch-unit.bigcrunch-outstream-wrapper.expandable{-webkit-transition:max-height .75s ease-in-out;transition:max-height .75s ease-in-out;overflow:hidden;max-height:1000px}.bigcrunch-unit.bigcrunch-outstream-wrapper #ad-container>div{width:100%;height:100%}.bigcrunch-unit.bigcrunch-outstream-wrapper video{position:absolute}.bigcrunch-unit.bigcrunch-outstream-wrapper:hover #control_bar{opacity:1}.bigcrunch-unit.bigcrunch-outstream-wrapper #control_bar{height:43px;background-image:linear-gradient(180deg, rgba(255, 255, 255, 0), rgba(0, 0, 0, 0.56));bottom:-1px;opacity:0;position:absolute;-webkit-transition:opacity .5s ease-in-out;transition:opacity .3s ease-in-out;width:100%;z-index:4;right:0;left:0}.bigcrunch-unit.bigcrunch-outstream-wrapper #control_bar .top-progress-bar{left:15px;position:absolute;top:0px;width:calc(100% - 30px);z-index:9}.bigcrunch-unit.bigcrunch-outstream-wrapper #control_bar .top-progress-bar #progress_bar{-webkit-appearance:none;background:none;background-color:rgba(222,222,222,.7019607843);background-image:-webkit-gradient(linear, 50% 0, 50% 100%, color-stop(0, #ef2b1d), color-stop(100%, #ef2b1d));background-repeat:no-repeat;background-size:0% 100%;cursor:pointer;display:block;height:4px;margin:0;padding:0;width:100%;transition:height .3s ease-in-out}.bigcrunch-unit.bigcrunch-outstream-wrapper #control_bar .top-progress-bar #progress_bar:hover::-webkit-slider-thumb{opacity:1;visibility:visible}.bigcrunch-unit.bigcrunch-outstream-wrapper #control_bar .top-progress-bar #progress_bar::-webkit-slider-thumb{-webkit-appearance:none;visibility:hidden;opacity:0;width:14px;height:14px;border-radius:50px;background:#ef2b1d;margin-left:-2px;transition:opacity .3s ease-in-out}.bigcrunch-unit.bigcrunch-outstream-wrapper #control_bar .bottom-controls{bottom:2px;display:flex;height:36px;justify-content:space-between;position:absolute;width:100%}.bigcrunch-unit.bigcrunch-outstream-wrapper #control_bar .bottom-controls .left-group{align-items:center;display:flex;height:100%}.bigcrunch-unit.bigcrunch-outstream-wrapper #control_bar .bottom-controls button{align-items:center;background:rgba(0,0,0,0);border:none;color:#fff;cursor:pointer;display:flex;font-size:16px;height:30px;justify-content:center;opacity:.8;padding:0;width:30px}.bigcrunch-unit.bigcrunch-outstream-wrapper #control_bar .bottom-controls button#play_button{margin:0 8px 0 14px}.bigcrunch-unit.bigcrunch-outstream-wrapper #control_bar .bottom-controls button:hover{opacity:1}.bigcrunch-unit.bigcrunch-outstream-wrapper #control_bar .bottom-controls button svg{width:15px;height:15px}.bigcrunch-unit.bigcrunch-outstream-wrapper #control_bar #right-group{align-items:center;display:flex;margin-right:14px;padding-right:30px}.bigcrunch-unit.bigcrunch-outstream-wrapper #control_bar #time span{color:#fff;opacity:.8;font-size:13px}.bigcrunch-unit.bigcrunch-outstream-wrapper #time_progress_finish_top{color:#fff;opacity:.8;font-size:15px;top:0px;padding:8px;position:absolute;background:rgba(0,0,0,.5)}.bigcrunch-unit.bigcrunch-outstream-wrapper #volume-group{bottom:11px;line-height:normal;position:absolute;right:18px;z-index:5;display:flex;align-items:center}.bigcrunch-unit.bigcrunch-outstream-wrapper #volume-group button{background:rgba(0,0,0,0);border:none;color:#fff;cursor:pointer;padding:0;width:20px;height:18px}.bigcrunch-unit.bigcrunch-outstream-wrapper #volume-group button svg{height:18px;width:18px}.bigcrunch-unit.bigcrunch-outstream-wrapper #volume-group button.mute_icon{height:14px;margin-right:2px;margin-top:2px}.bigcrunch-unit.bigcrunch-outstream-wrapper #volume-group input{-webkit-appearance:none;background:#fff;bottom:70px;cursor:pointer;height:3px;opacity:0;padding:0;position:absolute;right:-29px;transform:rotate(-90deg);transition:visibility .5s,opacity .5s linear;vertical-align:middle;visibility:hidden;width:75px}.bigcrunch-unit.bigcrunch-outstream-wrapper #volume-group input::-webkit-slider-thumb{-webkit-appearance:none;width:12px;height:12px;border-radius:50px;background:#ef2b1d;margin-right:-3px}.bigcrunch-unit.bigcrunch-outstream-wrapper #volume-group:hover input{opacity:1;visibility:visible}.bigcrunch-unit.bigcrunch-outstream-wrapper #overlay_container{width:100%;background-image:linear-gradient(180deg, rgba(255, 255, 255, 0), #000);position:absolute;top:0;bottom:0;left:0;right:0;display:flex;align-items:center;z-index:4;justify-content:center;cursor:pointer;-webkit-transition:opacity .5s ease-in-out;transition:opacity .3s ease-in-out;opacity:0}.bigcrunch-unit.bigcrunch-outstream-wrapper #overlay_container svg{width:50px;height:50px;color:#fff}.bigcrunch-unit.bigcrunch-outstream-wrapper:hover{opacity:1}.bigcrunch-unit.bigcrunch-outstream-wrapper:hover #title_container{opacity:1}@media(min-width: 941px){.bigcrunch-unit .close-btn-group{display:none}}@media(max-width: 940px){.bigcrunch-unit.bigcrunch-outstream-wrapper{display:flex;justify-content:center;align-items:center;position:fixed !important;bottom:0px !important;right:0 !important;width:100%;left:0;margin-bottom:0px;background-color:rgba(255,255,255,.8705882353);background-image:url(https://snopes.com/favicon-32x32.png),linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5));background-blend-mode:overlay;background-repeat:repeat,repeat;border-top:5px solid #fbd458;border-left:5px solid #fbd458;border-right:5px solid #fbd458;border-radius:25px 25px 0px 0px;aspect-ratio:unset}.bigcrunch-unit.bigcrunch-outstream-wrapper .bigcrunch-video-wrapper{width:200px;aspect-ratio:16/9;position:relative;left:0;right:0}.bigcrunch-unit.bigcrunch-outstream-wrapper .bigcrunch-video-meta{width:50%;min-width:200px;position:relative;padding:0px 10px;display:none}.bigcrunch-unit.bigcrunch-outstream-wrapper .bigcrunch-video-title{font-weight:bold;margin:.2rem 0px;display:none}.bigcrunch-unit.bigcrunch-outstream-wrapper .bigcrunch-video-description{color:gray;font-size:small;-webkit-line-clamp:4;-webkit-box-orient:vertical;overflow:hidden;margin:.1rem;display:none}.bigcrunch-unit.bigcrunch-outstream-wrapper .bigcrunch-video-wrapper #volume-group:hover input{display:none}.bigcrunch-unit.bigcrunch-outstream-wrapper .close-btn-group{align-items:center;cursor:pointer;display:flex;justify-content:center;position:fixed;right:15px;bottom:85px;width:20px;height:20px}.bigcrunch-unit.bigcrunch-outstream-wrapper .close-btn-group svg{color:#000;height:90%;width:90%}}
+/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIndlYnBhY2s6Ly8uL3NyYy9zdHlsZXMvc2Fzcy9fb3V0c3RyZWFtU3R5bGUuc2FzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFDQSxzQ0FDSSxjQUFBLENBRUosMEJBQ0kseUJBQUEsQ0FFSix5QkFDSSxpQkFBQSxDQUVKLDRDQUdJLGlCQUFBLENBQ0EsYUFBQSxDQUNBLGNBQUEsQ0FDQSxXQUFBLENBQ0EsaUJBQUEsQ0FDQSxrQkFBQSxDQUNBLGVBQUEsQ0FFQSx1REFDSSw4Q0FBQSxDQUNBLHNDQUFBLENBQ0EsZUFBQSxDQUNBLGlCQUFBLENBR0EsOERBQ0ksVUFBQSxDQUNBLFdBQUEsQ0FFUixrREFDSSxpQkFBQSxDQUdBLCtEQUNJLFNBQUEsQ0FFUix5REFDSSxXQUFBLENBQ0EscUZBQUEsQ0FDQSxXQUFBLENBQ0EsU0FBQSxDQUNBLGlCQUFBLENBQ0EsMENBQUEsQ0FDQSxrQ0FBQSxDQUNBLFVBQUEsQ0FDQSxTQUFBLENBQ0EsT0FBQSxDQUNBLE1BQUEsQ0FFQSwyRUFDSSxTQUFBLENBQ0EsaUJBQUEsQ0FDQSxPQUFBLENBQ0EsdUJBQUEsQ0FDQSxTQUFBLENBR0EseUZBQ0ksdUJBQUEsQ0FDQSxlQUFBLENBQ0EsOENBQUEsQ0FDQSw2R0FBQSxDQUNBLDJCQUFBLENBQ0EsdUJBQUEsQ0FDQSxjQUFBLENBQ0EsYUFBQSxDQUNBLFVBQUEsQ0FDQSxRQUFBLENBQ0EsU0FBQSxDQUNBLFVBQUEsQ0FDQSxpQ0FBQSxDQUVBLHFIQUNJLFNBQUEsQ0FDQSxrQkFBQSxDQUVKLCtHQUNJLHVCQUFBLENBQ0EsaUJBQUEsQ0FDQSxTQUFBLENBQ0EsVUFBQSxDQUNBLFdBQUEsQ0FDQSxrQkFBQSxDQUNBLGtCQUFBLENBQ0EsZ0JBQUEsQ0FDQSxrQ0FBQSxDQUVaLDBFQUNJLFVBQUEsQ0FDQSxZQUFBLENBQ0EsV0FBQSxDQUNBLDZCQUFBLENBQ0EsaUJBQUEsQ0FDQSxVQUFBLENBRUEsc0ZBQ0ksa0JBQUEsQ0FDQSxZQUFBLENBQ0EsV0FBQSxDQUVKLGlGQUNJLGtCQUFBLENBQ0Esd0JBQUEsQ0FDQSxXQUFBLENBQ0EsVUFBQSxDQUNBLGNBQUEsQ0FDQSxZQUFBLENBQ0EsY0FBQSxDQUNBLFdBQUEsQ0FDQSxzQkFBQSxDQUNBLFVBQUEsQ0FDQSxTQUFBLENBQ0EsVUFBQSxDQUVBLDZGQUNJLG1CQUFBLENBRUosdUZBQ0ksU0FBQSxDQUVKLHFGQUNJLFVBQUEsQ0FDQSxXQUFBLENBRVosc0VBQ0ksa0JBQUEsQ0FDQSxZQUFBLENBQ0EsaUJBQUEsQ0FDQSxrQkFBQSxDQUdKLG9FQUNJLFVBQUEsQ0FDQSxVQUFBLENBQ0EsY0FBQSxDQUVSLHNFQUNJLFVBQUEsQ0FDQSxVQUFBLENBQ0EsY0FBQSxDQUNBLE9BQUEsQ0FDQSxXQUFBLENBQ0EsaUJBQUEsQ0FDQSx5QkFBQSxDQUVKLDBEQUNJLFdBQUEsQ0FDQSxrQkFBQSxDQUNBLGlCQUFBLENBQ0EsVUFBQSxDQUNBLFNBQUEsQ0FDQSxZQUFBLENBQ0Esa0JBQUEsQ0FFQSxpRUFDSSx3QkFBQSxDQUNBLFdBQUEsQ0FDQSxVQUFBLENBQ0EsY0FBQSxDQUNBLFNBQUEsQ0FDQSxVQUFBLENBQ0EsV0FBQSxDQUVBLHFFQUNJLFdBQUEsQ0FDQSxVQUFBLENBRUosMkVBQ0ksV0FBQSxDQUNBLGdCQUFBLENBQ0EsY0FBQSxDQUVSLGdFQUNJLHVCQUFBLENBQ0EsZUFBQSxDQUNBLFdBQUEsQ0FDQSxjQUFBLENBQ0EsVUFBQSxDQUNBLFNBQUEsQ0FDQSxTQUFBLENBQ0EsaUJBQUEsQ0FDQSxXQUFBLENBQ0Esd0JBQUEsQ0FDQSw0Q0FBQSxDQUNBLHFCQUFBLENBQ0EsaUJBQUEsQ0FDQSxVQUFBLENBRUEsc0ZBQ0ksdUJBQUEsQ0FDQSxVQUFBLENBQ0EsV0FBQSxDQUNBLGtCQUFBLENBQ0Esa0JBQUEsQ0FDQSxpQkFBQSxDQUVSLHNFQUNJLFNBQUEsQ0FDQSxrQkFBQSxDQUVSLCtEQUNJLFVBQUEsQ0FDQSxzRUFBQSxDQUNBLGlCQUFBLENBQ0EsS0FBQSxDQUNBLFFBQUEsQ0FDQSxNQUFBLENBQ0EsT0FBQSxDQUNBLFlBQUEsQ0FDQSxrQkFBQSxDQUNBLFNBQUEsQ0FDQSxzQkFBQSxDQUNBLGNBQUEsQ0FDQSwwQ0FBQSxDQUNBLGtDQUFBLENBQ0EsU0FBQSxDQUVBLG1FQUNJLFVBQUEsQ0FDQSxXQUFBLENBQ0EsVUFBQSxDQUVSLGtEQUNJLFNBQUEsQ0FFQSxtRUFDSSxTQUFBLENBR1oseUJBRVEsaUNBQ0ksWUFBQSxDQUFBLENBSVoseUJBQ0ksNENBQ0ksWUFBQSxDQUNBLHNCQUFBLENBQ0Esa0JBQUEsQ0FDQSx5QkFBQSxDQUNBLHFCQUFBLENBQ0Esa0JBQUEsQ0FDQSxVQUFBLENBQ0EsTUFBQSxDQUNBLGlCQUFBLENBQ0EsOENBQUEsQ0FFQSw4SEFBQSxDQUNBLDZCQUFBLENBQ0EsK0JBQUEsQ0FDQSw0QkFBQSxDQUNBLDZCQUFBLENBQ0EsOEJBQUEsQ0FDQSwrQkFBQSxDQUNBLGtCQUFBLENBRUEscUVBQ0ksV0FBQSxDQUNBLGlCQUFBLENBQ0EsaUJBQUEsQ0FDQSxNQUFBLENBQ0EsT0FBQSxDQUVKLGtFQUNJLFNBQUEsQ0FDQSxlQUFBLENBQ0EsaUJBQUEsQ0FDQSxnQkFBQSxDQUNBLFlBQUEsQ0FFSixtRUFDSSxnQkFBQSxDQUNBLGdCQUFBLENBQ0EsWUFBQSxDQUVKLHlFQUNJLFVBQUEsQ0FDQSxlQUFBLENBQ0Esb0JBQUEsQ0FDQSwyQkFBQSxDQUNBLGVBQUEsQ0FDQSxZQUFBLENBQ0EsWUFBQSxDQUVKLCtGQUNJLFlBQUEsQ0FHSiw2REFDSSxrQkFBQSxDQUNBLGNBQUEsQ0FDQSxZQUFBLENBQ0Esc0JBQUEsQ0FDQSxjQUFBLENBQ0EsVUFBQSxDQUNBLFdBQUEsQ0FDQSxVQUFBLENBQ0EsV0FBQSxDQUVBLGlFQUNJLFVBQUEsQ0FDQSxVQUFBLENBQ0EsU0FBQSxDQUFBIiwic291cmNlc0NvbnRlbnQiOlsiXG4uYmlnY3J1bmNoLXVuaXQuYmlnY3J1bmNoLXVuaXQtc3RpY2t5XG4gICAgcG9zaXRpb246IGZpeGVkXG5cbi5iaWdjcnVuY2gtdW5pdC5jb2xsYXBzZWRcbiAgICBtYXgtaGVpZ2h0OiAwcHggIWltcG9ydGFudFxuXG4uYmlnY3J1bmNoLXVuaXQuZXhwYW5kZWRcbiAgICBtYXgtaGVpZ2h0OiAxMDAwcHhcblxuLmJpZ2NydW5jaC11bml0LmJpZ2NydW5jaC1vdXRzdHJlYW0td3JhcHBlclxuICAgIC8vIHBvc2l0aW9uOiBmaXhlZFxuICAgIC8vIGJvdHRvbTogMHB4XG4gICAgcG9zaXRpb246IHJlbGF0aXZlXG4gICAgZGlzcGxheTogYmxvY2tcbiAgICB6LWluZGV4OiAxMDAwMDBcbiAgICB3aWR0aDogMzAwcHhcbiAgICBhc3BlY3QtcmF0aW86IDE2LzlcbiAgICBtYXJnaW4tYm90dG9tOiAxMHB4XG4gICAgYmFja2dyb3VuZDogYmxhY2tcblxuICAgICYuZXhwYW5kYWJsZVxuICAgICAgICAtd2Via2l0LXRyYW5zaXRpb246IG1heC1oZWlnaHQgLjc1cyBlYXNlLWluLW91dFxuICAgICAgICB0cmFuc2l0aW9uOiBtYXgtaGVpZ2h0IC43NXMgZWFzZS1pbi1vdXRcbiAgICAgICAgb3ZlcmZsb3c6IGhpZGRlblxuICAgICAgICBtYXgtaGVpZ2h0OiAxMDAwcHhcblxuICAgICNhZC1jb250YWluZXIgXG4gICAgICAgID4gZGl2XG4gICAgICAgICAgICB3aWR0aDogMTAwJVxuICAgICAgICAgICAgaGVpZ2h0OiAxMDAlXG5cbiAgICB2aWRlb1xuICAgICAgICBwb3NpdGlvbjogYWJzb2x1dGVcblxuICAgICY6aG92ZXIgXG4gICAgICAgICNjb250cm9sX2JhclxuICAgICAgICAgICAgb3BhY2l0eTogMVxuXG4gICAgI2NvbnRyb2xfYmFyXG4gICAgICAgIGhlaWdodDogNDNweFxuICAgICAgICBiYWNrZ3JvdW5kLWltYWdlOiBsaW5lYXItZ3JhZGllbnQoMTgwZGVnLCByZ2JhKDI1NSwgMjU1LCAyNTUsIDApLCByZ2JhKDAsIDAsIDAsIC41NikpXG4gICAgICAgIGJvdHRvbTogLTFweFxuICAgICAgICBvcGFjaXR5OiAwXG4gICAgICAgIHBvc2l0aW9uOiBhYnNvbHV0ZVxuICAgICAgICAtd2Via2l0LXRyYW5zaXRpb246IG9wYWNpdHkgMC41cyBlYXNlLWluLW91dFxuICAgICAgICB0cmFuc2l0aW9uOiBvcGFjaXR5IDAuM3MgZWFzZS1pbi1vdXRcbiAgICAgICAgd2lkdGg6IDEwMCVcbiAgICAgICAgei1pbmRleDogNFxuICAgICAgICByaWdodDogMFxuICAgICAgICBsZWZ0OiAwICAgICAgICBcblxuICAgICAgICAudG9wLXByb2dyZXNzLWJhclxuICAgICAgICAgICAgbGVmdDogMTVweFxuICAgICAgICAgICAgcG9zaXRpb246IGFic29sdXRlXG4gICAgICAgICAgICB0b3A6IDBweFxuICAgICAgICAgICAgd2lkdGg6IGNhbGMoMTAwJSAtIDMwcHgpXG4gICAgICAgICAgICB6LWluZGV4OiA5XG5cbiAgICAgICAgLnRvcC1wcm9ncmVzcy1iYXIgXG4gICAgICAgICAgICAjcHJvZ3Jlc3NfYmFyXG4gICAgICAgICAgICAgICAgLXdlYmtpdC1hcHBlYXJhbmNlOiBub25lXG4gICAgICAgICAgICAgICAgYmFja2dyb3VuZDogbm9uZVxuICAgICAgICAgICAgICAgIGJhY2tncm91bmQtY29sb3I6ICNkZWRlZGViM1xuICAgICAgICAgICAgICAgIGJhY2tncm91bmQtaW1hZ2U6IC13ZWJraXQtZ3JhZGllbnQobGluZWFyLCA1MCUgMCwgNTAlIDEwMCUsIGNvbG9yLXN0b3AoMCwgI2VmMmIxZCksIGNvbG9yLXN0b3AoMTAwJSwgI2VmMmIxZCkpXG4gICAgICAgICAgICAgICAgYmFja2dyb3VuZC1yZXBlYXQ6IG5vLXJlcGVhdFxuICAgICAgICAgICAgICAgIGJhY2tncm91bmQtc2l6ZTogMCUgMTAwJVxuICAgICAgICAgICAgICAgIGN1cnNvcjogcG9pbnRlclxuICAgICAgICAgICAgICAgIGRpc3BsYXk6IGJsb2NrXG4gICAgICAgICAgICAgICAgaGVpZ2h0OiA0cHhcbiAgICAgICAgICAgICAgICBtYXJnaW46IDBcbiAgICAgICAgICAgICAgICBwYWRkaW5nOiAwXG4gICAgICAgICAgICAgICAgd2lkdGg6IDEwMCVcbiAgICAgICAgICAgICAgICB0cmFuc2l0aW9uOiBoZWlnaHQgMC4zcyBlYXNlLWluLW91dFxuXG4gICAgICAgICAgICAgICAgJjpob3Zlcjo6LXdlYmtpdC1zbGlkZXItdGh1bWJcbiAgICAgICAgICAgICAgICAgICAgb3BhY2l0eTogMVxuICAgICAgICAgICAgICAgICAgICB2aXNpYmlsaXR5OiB2aXNpYmxlXG5cbiAgICAgICAgICAgICAgICAmOjotd2Via2l0LXNsaWRlci10aHVtYlxuICAgICAgICAgICAgICAgICAgICAtd2Via2l0LWFwcGVhcmFuY2U6IG5vbmVcbiAgICAgICAgICAgICAgICAgICAgdmlzaWJpbGl0eTogaGlkZGVuXG4gICAgICAgICAgICAgICAgICAgIG9wYWNpdHk6IDBcbiAgICAgICAgICAgICAgICAgICAgd2lkdGg6IDE0cHhcbiAgICAgICAgICAgICAgICAgICAgaGVpZ2h0OiAxNHB4XG4gICAgICAgICAgICAgICAgICAgIGJvcmRlci1yYWRpdXM6IDUwcHhcbiAgICAgICAgICAgICAgICAgICAgYmFja2dyb3VuZDogI2VmMmIxZFxuICAgICAgICAgICAgICAgICAgICBtYXJnaW4tbGVmdDogLTJweFxuICAgICAgICAgICAgICAgICAgICB0cmFuc2l0aW9uOiBvcGFjaXR5IDAuM3MgZWFzZS1pbi1vdXRcblxuICAgICAgICAuYm90dG9tLWNvbnRyb2xzXG4gICAgICAgICAgICBib3R0b206IDJweFxuICAgICAgICAgICAgZGlzcGxheTogZmxleFxuICAgICAgICAgICAgaGVpZ2h0OiAzNnB4XG4gICAgICAgICAgICBqdXN0aWZ5LWNvbnRlbnQ6IHNwYWNlLWJldHdlZW5cbiAgICAgICAgICAgIHBvc2l0aW9uOiBhYnNvbHV0ZVxuICAgICAgICAgICAgd2lkdGg6IDEwMCVcblxuICAgICAgICAgICAgLmxlZnQtZ3JvdXBcbiAgICAgICAgICAgICAgICBhbGlnbi1pdGVtczogY2VudGVyXG4gICAgICAgICAgICAgICAgZGlzcGxheTogZmxleFxuICAgICAgICAgICAgICAgIGhlaWdodDogMTAwJVxuICAgICAgICAgICAgXG4gICAgICAgICAgICBidXR0b25cbiAgICAgICAgICAgICAgICBhbGlnbi1pdGVtczogY2VudGVyXG4gICAgICAgICAgICAgICAgYmFja2dyb3VuZDogdHJhbnNwYXJlbnRcbiAgICAgICAgICAgICAgICBib3JkZXI6IG5vbmVcbiAgICAgICAgICAgICAgICBjb2xvcjogI2ZmZlxuICAgICAgICAgICAgICAgIGN1cnNvcjogcG9pbnRlclxuICAgICAgICAgICAgICAgIGRpc3BsYXk6IGZsZXhcbiAgICAgICAgICAgICAgICBmb250LXNpemU6IDE2cHhcbiAgICAgICAgICAgICAgICBoZWlnaHQ6IDMwcHhcbiAgICAgICAgICAgICAgICBqdXN0aWZ5LWNvbnRlbnQ6IGNlbnRlclxuICAgICAgICAgICAgICAgIG9wYWNpdHk6IDAuOFxuICAgICAgICAgICAgICAgIHBhZGRpbmc6IDBcbiAgICAgICAgICAgICAgICB3aWR0aDogMzBweFxuXG4gICAgICAgICAgICAgICAgJiNwbGF5X2J1dHRvblxuICAgICAgICAgICAgICAgICAgICBtYXJnaW46IDAgOHB4IDAgMTRweFxuICAgICAgICAgICAgICAgIFxuICAgICAgICAgICAgICAgICY6aG92ZXJcbiAgICAgICAgICAgICAgICAgICAgb3BhY2l0eTogMVxuXG4gICAgICAgICAgICAgICAgc3ZnXG4gICAgICAgICAgICAgICAgICAgIHdpZHRoOiAxNXB4XG4gICAgICAgICAgICAgICAgICAgIGhlaWdodDogMTVweFxuXG4gICAgICAgICNyaWdodC1ncm91cFxuICAgICAgICAgICAgYWxpZ24taXRlbXM6IGNlbnRlclxuICAgICAgICAgICAgZGlzcGxheTogZmxleFxuICAgICAgICAgICAgbWFyZ2luLXJpZ2h0OiAxNHB4XG4gICAgICAgICAgICBwYWRkaW5nLXJpZ2h0OiAzMHB4XG5cbiAgICAgICAgXG4gICAgICAgICN0aW1lIHNwYW5cbiAgICAgICAgICAgIGNvbG9yOiAjZmZmXG4gICAgICAgICAgICBvcGFjaXR5OiAwLjhcbiAgICAgICAgICAgIGZvbnQtc2l6ZTogMTNweFxuXG4gICAgI3RpbWVfcHJvZ3Jlc3NfZmluaXNoX3RvcFxuICAgICAgICBjb2xvcjogI2ZmZlxuICAgICAgICBvcGFjaXR5OiAwLjhcbiAgICAgICAgZm9udC1zaXplOiAxNXB4XG4gICAgICAgIHRvcDogMHB4XG4gICAgICAgIHBhZGRpbmc6IDhweFxuICAgICAgICBwb3NpdGlvbjogYWJzb2x1dGVcbiAgICAgICAgYmFja2dyb3VuZDogcmdiKDAgMCAwIC8gNTAlKVxuXG4gICAgI3ZvbHVtZS1ncm91cFxuICAgICAgICBib3R0b206IDExcHhcbiAgICAgICAgbGluZS1oZWlnaHQ6IG5vcm1hbFxuICAgICAgICBwb3NpdGlvbjogYWJzb2x1dGVcbiAgICAgICAgcmlnaHQ6IDE4cHhcbiAgICAgICAgei1pbmRleDogNVxuICAgICAgICBkaXNwbGF5OiBmbGV4XG4gICAgICAgIGFsaWduLWl0ZW1zOiBjZW50ZXJcblxuICAgICAgICBidXR0b25cbiAgICAgICAgICAgIGJhY2tncm91bmQ6IHRyYW5zcGFyZW50XG4gICAgICAgICAgICBib3JkZXI6IG5vbmVcbiAgICAgICAgICAgIGNvbG9yOiAjZmZmXG4gICAgICAgICAgICBjdXJzb3I6IHBvaW50ZXJcbiAgICAgICAgICAgIHBhZGRpbmc6IDBcbiAgICAgICAgICAgIHdpZHRoOiAyMHB4XG4gICAgICAgICAgICBoZWlnaHQ6IDE4cHhcblxuICAgICAgICAgICAgc3ZnXG4gICAgICAgICAgICAgICAgaGVpZ2h0OiAxOHB4XG4gICAgICAgICAgICAgICAgd2lkdGg6IDE4cHhcblxuICAgICAgICAgICAgJi5tdXRlX2ljb25cbiAgICAgICAgICAgICAgICBoZWlnaHQ6IDE0cHhcbiAgICAgICAgICAgICAgICBtYXJnaW4tcmlnaHQ6IDJweFxuICAgICAgICAgICAgICAgIG1hcmdpbi10b3A6IDJweFxuXG4gICAgICAgIGlucHV0XG4gICAgICAgICAgICAtd2Via2l0LWFwcGVhcmFuY2U6IG5vbmVcbiAgICAgICAgICAgIGJhY2tncm91bmQ6ICNmZmZcbiAgICAgICAgICAgIGJvdHRvbTogNzBweFxuICAgICAgICAgICAgY3Vyc29yOiBwb2ludGVyXG4gICAgICAgICAgICBoZWlnaHQ6IDNweFxuICAgICAgICAgICAgb3BhY2l0eTogMFxuICAgICAgICAgICAgcGFkZGluZzogMFxuICAgICAgICAgICAgcG9zaXRpb246IGFic29sdXRlXG4gICAgICAgICAgICByaWdodDogLTI5cHhcbiAgICAgICAgICAgIHRyYW5zZm9ybTogcm90YXRlKC05MGRlZylcbiAgICAgICAgICAgIHRyYW5zaXRpb246IHZpc2liaWxpdHkgMC41cywgb3BhY2l0eSAwLjVzIGxpbmVhclxuICAgICAgICAgICAgdmVydGljYWwtYWxpZ246IG1pZGRsZVxuICAgICAgICAgICAgdmlzaWJpbGl0eTogaGlkZGVuXG4gICAgICAgICAgICB3aWR0aDogNzVweFxuXG4gICAgICAgICAgICAmOjotd2Via2l0LXNsaWRlci10aHVtYlxuICAgICAgICAgICAgICAgIC13ZWJraXQtYXBwZWFyYW5jZTogbm9uZVxuICAgICAgICAgICAgICAgIHdpZHRoOiAxMnB4XG4gICAgICAgICAgICAgICAgaGVpZ2h0OiAxMnB4XG4gICAgICAgICAgICAgICAgYm9yZGVyLXJhZGl1czogNTBweFxuICAgICAgICAgICAgICAgIGJhY2tncm91bmQ6ICNlZjJiMWRcbiAgICAgICAgICAgICAgICBtYXJnaW4tcmlnaHQ6IC0zcHhcblxuICAgICAgICAmOmhvdmVyIGlucHV0XG4gICAgICAgICAgICBvcGFjaXR5OiAxXG4gICAgICAgICAgICB2aXNpYmlsaXR5OiB2aXNpYmxlXG5cbiAgICAjb3ZlcmxheV9jb250YWluZXJcbiAgICAgICAgd2lkdGg6IDEwMCVcbiAgICAgICAgYmFja2dyb3VuZC1pbWFnZTogbGluZWFyLWdyYWRpZW50KDE4MGRlZywgcmdiYSgyNTUsIDI1NSwgMjU1LCAwKSwgIzAwMClcbiAgICAgICAgcG9zaXRpb246IGFic29sdXRlXG4gICAgICAgIHRvcDogMFxuICAgICAgICBib3R0b206IDBcbiAgICAgICAgbGVmdDogMFxuICAgICAgICByaWdodDogMFxuICAgICAgICBkaXNwbGF5OiBmbGV4XG4gICAgICAgIGFsaWduLWl0ZW1zOiBjZW50ZXJcbiAgICAgICAgei1pbmRleDogNFxuICAgICAgICBqdXN0aWZ5LWNvbnRlbnQ6IGNlbnRlclxuICAgICAgICBjdXJzb3I6IHBvaW50ZXJcbiAgICAgICAgLXdlYmtpdC10cmFuc2l0aW9uOiBvcGFjaXR5IDAuNXMgZWFzZS1pbi1vdXRcbiAgICAgICAgdHJhbnNpdGlvbjogb3BhY2l0eSAwLjNzIGVhc2UtaW4tb3V0XG4gICAgICAgIG9wYWNpdHk6IDBcblxuICAgICAgICBzdmdcbiAgICAgICAgICAgIHdpZHRoOiA1MHB4XG4gICAgICAgICAgICBoZWlnaHQ6IDUwcHhcbiAgICAgICAgICAgIGNvbG9yOiB3aGl0ZVxuXG4gICAgJjpob3ZlclxuICAgICAgICBvcGFjaXR5OiAxXG5cbiAgICAgICAgI3RpdGxlX2NvbnRhaW5lclxuICAgICAgICAgICAgb3BhY2l0eTogMVxuXG5cbkBtZWRpYShtaW4td2lkdGg6IDk0MXB4KVxuICAgIC5iaWdjcnVuY2gtdW5pdCBcbiAgICAgICAgLmNsb3NlLWJ0bi1ncm91cFxuICAgICAgICAgICAgZGlzcGxheTogbm9uZVxuICAgIFxuXG5cbkBtZWRpYShtYXgtd2lkdGg6IDk0MHB4KVxuICAgIC5iaWdjcnVuY2gtdW5pdC5iaWdjcnVuY2gtb3V0c3RyZWFtLXdyYXBwZXJcbiAgICAgICAgZGlzcGxheTogZmxleFxuICAgICAgICBqdXN0aWZ5LWNvbnRlbnQ6IGNlbnRlclxuICAgICAgICBhbGlnbi1pdGVtczogY2VudGVyXG4gICAgICAgIHBvc2l0aW9uOiBmaXhlZCAhaW1wb3J0YW50XG4gICAgICAgIGJvdHRvbTogMHB4ICFpbXBvcnRhbnRcbiAgICAgICAgcmlnaHQ6IDAgIWltcG9ydGFudFxuICAgICAgICB3aWR0aDogMTAwJVxuICAgICAgICBsZWZ0OiAwXG4gICAgICAgIG1hcmdpbi1ib3R0b206IDBweFxuICAgICAgICBiYWNrZ3JvdW5kLWNvbG9yOiAjZmZmZmZmZGVcbiAgICAgICAgLy8gYmFja2dyb3VuZC1pbWFnZTogcmFkaWFsLWdyYWRpZW50KHdoaXRlIDUwJSwgcmdiKDI1NSAyNTUgMjU1IC8gMCUpKVxuICAgICAgICBiYWNrZ3JvdW5kLWltYWdlOiB1cmwoaHR0cHM6Ly9zbm9wZXMuY29tL2Zhdmljb24tMzJ4MzIucG5nKSwgbGluZWFyLWdyYWRpZW50KHJnYigyNTUgMjU1IDI1NSAvIDUwJSksIHJnYigyNTUgMjU1IDI1NSAvIDUwJSkpXG4gICAgICAgIGJhY2tncm91bmQtYmxlbmQtbW9kZTogb3ZlcmxheVxuICAgICAgICBiYWNrZ3JvdW5kLXJlcGVhdDogcmVwZWF0LCByZXBlYXRcbiAgICAgICAgYm9yZGVyLXRvcDogNXB4IHNvbGlkICNmYmQ0NThcbiAgICAgICAgYm9yZGVyLWxlZnQ6IDVweCBzb2xpZCAjZmJkNDU4XG4gICAgICAgIGJvcmRlci1yaWdodDogNXB4IHNvbGlkICNmYmQ0NThcbiAgICAgICAgYm9yZGVyLXJhZGl1czogMjVweCAyNXB4IDBweCAwcHhcbiAgICAgICAgYXNwZWN0LXJhdGlvOiB1bnNldFxuXG4gICAgICAgIC5iaWdjcnVuY2gtdmlkZW8td3JhcHBlclxuICAgICAgICAgICAgd2lkdGg6IDIwMHB4XG4gICAgICAgICAgICBhc3BlY3QtcmF0aW86IDE2LzlcbiAgICAgICAgICAgIHBvc2l0aW9uOiByZWxhdGl2ZVxuICAgICAgICAgICAgbGVmdDogMFxuICAgICAgICAgICAgcmlnaHQ6IDBcbiAgICAgICAgXG4gICAgICAgIC5iaWdjcnVuY2gtdmlkZW8tbWV0YVxuICAgICAgICAgICAgd2lkdGg6IDUwJVxuICAgICAgICAgICAgbWluLXdpZHRoOiAyMDBweFxuICAgICAgICAgICAgcG9zaXRpb246IHJlbGF0aXZlXG4gICAgICAgICAgICBwYWRkaW5nOiAwcHggMTBweFxuICAgICAgICAgICAgZGlzcGxheTogbm9uZVxuXG4gICAgICAgIC5iaWdjcnVuY2gtdmlkZW8tdGl0bGUgXG4gICAgICAgICAgICBmb250LXdlaWdodDogYm9sZFxuICAgICAgICAgICAgbWFyZ2luOiAwLjJyZW0gMHB4XG4gICAgICAgICAgICBkaXNwbGF5OiBub25lXG5cbiAgICAgICAgLmJpZ2NydW5jaC12aWRlby1kZXNjcmlwdGlvblxuICAgICAgICAgICAgY29sb3I6IGdyYXlcbiAgICAgICAgICAgIGZvbnQtc2l6ZTogc21hbGxcbiAgICAgICAgICAgIC13ZWJraXQtbGluZS1jbGFtcDogNFxuICAgICAgICAgICAgLXdlYmtpdC1ib3gtb3JpZW50OiB2ZXJ0aWNhbFxuICAgICAgICAgICAgb3ZlcmZsb3c6IGhpZGRlblxuICAgICAgICAgICAgbWFyZ2luOiAwLjFyZW1cbiAgICAgICAgICAgIGRpc3BsYXk6IG5vbmVcblxuICAgICAgICAuYmlnY3J1bmNoLXZpZGVvLXdyYXBwZXIgI3ZvbHVtZS1ncm91cDpob3ZlciBpbnB1dFxuICAgICAgICAgICAgZGlzcGxheTogbm9uZVxuICAgIFxuXG4gICAgICAgIC5jbG9zZS1idG4tZ3JvdXBcbiAgICAgICAgICAgIGFsaWduLWl0ZW1zOiBjZW50ZXJcbiAgICAgICAgICAgIGN1cnNvcjogcG9pbnRlclxuICAgICAgICAgICAgZGlzcGxheTogZmxleFxuICAgICAgICAgICAganVzdGlmeS1jb250ZW50OiBjZW50ZXJcbiAgICAgICAgICAgIHBvc2l0aW9uOiBmaXhlZFxuICAgICAgICAgICAgcmlnaHQ6IDE1cHhcbiAgICAgICAgICAgIGJvdHRvbTogODVweFxuICAgICAgICAgICAgd2lkdGg6IDIwcHhcbiAgICAgICAgICAgIGhlaWdodDogMjBweFxuICAgIFxuICAgICAgICAgICAgc3ZnXG4gICAgICAgICAgICAgICAgY29sb3I6IGJsYWNrXG4gICAgICAgICAgICAgICAgaGVpZ2h0OiA5MCVcbiAgICAgICAgICAgICAgICB3aWR0aDogOTAlIl0sInNvdXJjZVJvb3QiOiIifQ== */</style><meta http-equiv="origin-trial" content="As0hBNJ8h++fNYlkq8cTye2qDLyom8NddByiVytXGGD0YVE+2CEuTCpqXMDxdhOMILKoaiaYifwEvCRlJ/9GcQ8AAAB8eyJvcmlnaW4iOiJodHRwczovL2RvdWJsZWNsaWNrLm5ldDo0NDMiLCJmZWF0dXJlIjoiV2ViVmlld1hSZXF1ZXN0ZWRXaXRoRGVwcmVjYXRpb24iLCJleHBpcnkiOjE3MTk1MzI3OTksImlzU3ViZG9tYWluIjp0cnVlfQ=="><meta http-equiv="origin-trial" content="AgRYsXo24ypxC89CJanC+JgEmraCCBebKl8ZmG7Tj5oJNx0cmH0NtNRZs3NB5ubhpbX/bIt7l2zJOSyO64NGmwMAAACCeyJvcmlnaW4iOiJodHRwczovL2dvb2dsZXN5bmRpY2F0aW9uLmNvbTo0NDMiLCJmZWF0dXJlIjoiV2ViVmlld1hSZXF1ZXN0ZWRXaXRoRGVwcmVjYXRpb24iLCJleHBpcnkiOjE3MTk1MzI3OTksImlzU3ViZG9tYWluIjp0cnVlfQ=="><meta http-equiv="origin-trial" content="A/ERL66fN363FkXxgDc6F1+ucRUkAhjEca9W3la6xaLnD2Y1lABsqmdaJmPNaUKPKVBRpyMKEhXYl7rSvrQw+AkAAACNeyJvcmlnaW4iOiJodHRwczovL2RvdWJsZWNsaWNrLm5ldDo0NDMiLCJmZWF0dXJlIjoiRmxlZGdlQmlkZGluZ0FuZEF1Y3Rpb25TZXJ2ZXIiLCJleHBpcnkiOjE3MTkzNTk5OTksImlzU3ViZG9tYWluIjp0cnVlLCJpc1RoaXJkUGFydHkiOnRydWV9"><meta http-equiv="origin-trial" content="A6OdGH3fVf4eKRDbXb4thXA4InNqDJDRhZ8U533U/roYjp4Yau0T3YSuc63vmAs/8ga1cD0E3A7LEq6AXk1uXgsAAACTeyJvcmlnaW4iOiJodHRwczovL2dvb2dsZXN5bmRpY2F0aW9uLmNvbTo0NDMiLCJmZWF0dXJlIjoiRmxlZGdlQmlkZGluZ0FuZEF1Y3Rpb25TZXJ2ZXIiLCJleHBpcnkiOjE3MTkzNTk5OTksImlzU3ViZG9tYWluIjp0cnVlLCJpc1RoaXJkUGFydHkiOnRydWV9"><script src="https://securepubads.g.doubleclick.net/pagead/managed/js/gpt/m202403050101/pubads_impl.js" async=""></script><script async="" src="https://fundingchoicesmessages.google.com/i/1005222?ers=3"></script><script async="" src="https://fundingchoicesmessages.google.com/f/AGSKWxU6ig8nYPHNjrLsDxQ5sQwLKo-DnB0HJlTpP6l_U9cwSNH-OIIUB_o0KjzcjM-i60-QlKGU_fP2QlYzTRUKHuJKu8AEYJTDU_C49mUqkI2Vt4yIDuww8BTcMYEjd2O2i-aXsZ7P0w==?fccs=W251bGwsbnVsbCxudWxsLG51bGwsbnVsbCxudWxsLFsxNzEwMDUxOTI3LDY3OTAwMDAwMF0sbnVsbCxudWxsLG51bGwsW251bGwsWzddXSwiaHR0cHM6Ly90dnRyb3Blcy5vcmcvIixudWxsLFtbOCwiYndyTWNzNlpjWWciXSxbOSwiZW4tVVMiXSxbNywiMTciXSxbMTEsIltdIl0sWzE5LCIyIl1dXQ"></script><script src="https://config.aps.amazon-adsystem.com/configs/9a4e12c4-dac3-4120-848e-f397156425c3" type="text/javascript" async="async"></script><script src="//secure.cdn.fastclick.net/js/pubcid/latest/pubcid.min.js"></script><script type="text/javascript" async="" src="https://secure.cdn.fastclick.net/js/cnvr-launcher/latest/launcher-stub.min.js"></script><style>div.fc-ccpa-root, .fc-ccpa-root a:link, .fc-ccpa-root div,.fc-ccpa-root h1,.fc-ccpa-root h2,.fc-ccpa-root a,.fc-ccpa-root p,.fc-ccpa-root button,.fc-ccpa-root i,.fc-ccpa-root input,.fc-ccpa-root label,.fc-ccpa-root span,.fc-ccpa-root ul,.fc-ccpa-root li,.fc-ccpa-root hr,.fc-ccpa-root img,.fc-ccpa-root br,.fc-ccpa-root footer{-webkit-app-region: none; -webkit-appearance: none; -webkit-border-horizontal-spacing: 0; -webkit-border-image: none; -webkit-border-vertical-spacing: 0; -webkit-box-align: stretch; -webkit-box-decoration-break: slice; -webkit-box-direction: normal; -webkit-box-flex: 0; -webkit-box-ordinal-group: 1; -webkit-box-orient: horizontal; -webkit-box-pack: start; -webkit-box-reflect: none; -webkit-font-smoothing: auto; -webkit-highlight: none; -webkit-hyphenate-character: auto; -webkit-line-break: auto; -webkit-line-clamp: none; -webkit-locale: auto; -webkit-margin-after-collapse: collapse; -webkit-margin-before-collapse: collapse; -webkit-mask-box-image-outset: 0; -webkit-mask-box-image-repeat: stretch; -webkit-mask-box-image-slice: 0 fill; -webkit-mask-box-image-source: none; -webkit-mask-box-image-width: auto; -webkit-mask-box-image: none; -webkit-mask-clip: border-box; -webkit-mask-composite: source-over; -webkit-mask-image: none; -webkit-mask-origin: border-box; -webkit-mask-position: 0% 0%; -webkit-mask-repeat: repeat; -webkit-mask-size: auto; -webkit-print-color-adjust: economy; -webkit-rtl-ordering: logical; -webkit-tap-highlight-color: rgba(0, 0, 0, 0.4); -webkit-text-combine: none; -webkit-text-decorations-in-effect: none; -webkit-text-emphasis-color: rgb(0, 0, 0); -webkit-text-emphasis-position: over right; -webkit-text-emphasis-style: none; -webkit-text-orientation: vertical-right; -webkit-text-security: none; -webkit-text-stroke-color: rgb(0, 0, 0); -webkit-text-stroke-width: 0; -webkit-user-drag: auto; -webkit-writing-mode: horizontal-tb; align-content: normal; align-items: normal; align-self: auto; alignment-baseline: auto; animation-delay: 0s; animation-direction: normal; animation-duration: 0s; animation-fill-mode: none; animation-iteration-count: 1; animation-name: none; animation-play-state: running; animation-timing-function: ease; backdrop-filter: none; backface-visibility: visible; background-attachment: scroll; background-blend-mode: normal; background-clip: border-box; background-color: rgba(0, 0, 0, 0); background-image: none; background-origin: padding-box; background-position: 0% 0%; background-repeat: repeat; background-size: auto; baseline-shift: 0; border-bottom-color: rgb(0, 0, 0); border-bottom-left-radius: 0; border-bottom-right-radius: 0; border-bottom-style: none; border-bottom-width: 0; border-collapse: separate; border-image-outset: 0; border-image-repeat: stretch; border-image-slice: 100%; border-image-source: none; border-image-width: 1; border-left-color: rgb(0, 0, 0); border-left-style: none; border-left-width: 0; border-right-color: rgb(0, 0, 0); border-right-style: none; border-right-width: 0; border-top-color: rgb(0, 0, 0); border-top-left-radius: 0; border-top-right-radius: 0; border-top-style: none; border-top-width: 0; bottom: auto; box-shadow: none; box-sizing: content-box; break-after: auto; break-before: auto; break-inside: auto; buffered-rendering: auto; caption-side: top; caret-color: rgb(0, 0, 0); clear: none; clip-path: none; clip-rule: nonzero; clip: auto; color-interpolation-filters: linearrgb; color-interpolation: srgb; color-rendering: auto; color: rgb(0, 0, 0); column-count: auto; column-gap: normal; column-rule-color: rgb(0, 0, 0); column-rule-style: none; column-rule-width: 0; column-span: none; column-width: auto; content: normal; cursor: auto; cx: 0; cy: 0; d: none; display: inline; dominant-baseline: auto; empty-cells: show; fill-opacity: 1; fill-rule: nonzero; fill: rgb(0; 0; 0); filter: none; flex-basis: auto; flex-direction: row; flex-grow: 0; flex-shrink: 1; flex-wrap: nowrap; float: none; flood-color: rgb(0, 0, 0); flood-opacity: 1; font-kerning: auto; font-optical-sizing: auto; font-size: 16px; font-stretch: 100%; font-style: normal; font-variant-caps: normal; font-variant-east-asian: normal; font-variant-ligatures: normal; font-variant-numeric: normal; font-variant: normal; font-weight: 400; grid-auto-columns: auto; grid-auto-flow: row; grid-auto-rows: auto; grid-column-end: auto; grid-column-start: auto; grid-row-end: auto; grid-row-start: auto; grid-template-areas: none; grid-template-columns: none; grid-template-rows: none; height: auto; hyphens: manual; image-rendering: auto; isolation: auto; justify-content: normal; justify-items: normal; justify-self: auto; left: auto; letter-spacing: normal; lighting-color: rgb(255, 255, 255); line-break: auto; line-height: normal; list-style-image: none; list-style-position: outside; list-style-type: disc; margin-bottom: 0; margin-left: 0; margin-right: 0; margin-top: 0; marker-end: none; marker-mid: none; marker-start: none; mask-type: luminance; mask: none; max-height: none; max-width: none; min-height: 0; min-width: 0; mix-blend-mode: normal; object-fit: fill; object-position: 50% 50%; offset-distance: 0; offset-path: none; offset-rotate: auto 0deg; opacity: 1; order: 0; orphans: 2; outline-color: rgb(0, 0, 0); outline-offset: 0; outline-style: none; outline-width: 0; overflow-anchor: auto; overflow-wrap: normal; overflow-x: visible; overflow-y: visible; padding-bottom: 0; padding-left: 0; padding-right: 0; padding-top: 0; paint-order: normal; perspective-origin: 0 0; perspective: none; pointer-events: auto; position: static; r: 0; resize: none; right: auto; row-gap: normal; rx: auto; ry: auto; scroll-behavior: auto; shape-image-threshold: 0; shape-margin: 0; shape-outside: none; shape-rendering: auto; speak: normal; stop-color: rgb(0, 0, 0); stop-opacity: 1; stroke-dasharray: none; stroke-dashoffset: 0; stroke-linecap: butt; stroke-linejoin: miter; stroke-miterlimit: 4; stroke-opacity: 1; stroke-width: 1px; stroke: none; tab-size: 8; table-layout: auto; text-align-last: auto; text-align: start; text-anchor: start; text-decoration-color: rgb(0, 0, 0); text-decoration-line: none; text-decoration-skip-ink: auto; text-decoration-style: solid; text-decoration: none solid rgb(0, 0, 0); text-indent: 0; text-overflow: clip; text-rendering: auto; text-shadow: none; text-size-adjust: auto; text-transform: none; text-underline-position: auto; top: auto; touch-action: auto; transform-origin: 0 0; transform-style: flat; transform: none; transition-delay: 0s; transition-duration: 0s; transition-property: all; transition-timing-function: ease; unicode-bidi: normal; user-select: auto; vector-effect: none; vertical-align: baseline; visibility: visible; white-space: normal; widows: 2; width: auto; will-change: auto; word-break: normal; word-spacing: 0; writing-mode: horizontal-tb; x: 0; y: 0; z-index: auto; zoom: 1;}div.fc-ccpa-root, .fc-ccpa-root div, .fc-ccpa-root h1, .fc-ccpa-root h2, .fc-ccpa-root p {display: block;}.fc-ccpa-root, .fc-ccpa-root h1, .fc-ccpa-root h2, .fc-ccpa-root p {-moz-font-feature-settings: "kern" 1; -moz-osx-font-smoothing: grayscale; -webkit-font-feature-settings: "kern" 1; -webkit-font-smoothing: antialiased; font-feature-settings: "kern" 1; font-kerning: normal; text-rendering: optimizelegibility;}.fc-ccpa-root a, .fc-ccpa-root a p {cursor: pointer;}.fc-ccpa-root button, .fc-ccpa-root button div, .fc-ccpa-root button p, .fc-ccpa-root .fc-button, .fc-ccpa-root .fc-button div, .fc-ccpa-root .fc-button p {cursor: pointer;}.fc-ccpa-root a:hover {filter: brightness(80%);}.fc-ccpa-root button:focus p:not(.fc-button-text), .fc-ccpa-root .fc-button:focus .fc-button-label {outline: auto;}.fc-ccpa-root button:focus:not(:focus-visible) p .fc-ccpa-root .fc-button:focus:not(:focus-visible) .fc-button-label {outline: none;}.fc-ccpa-root .fc-dns-dialog .fc-dns-link, .fc-ccpa-root .fc-confirmation-dialog .fc-confirmation-dialog-content, .fc-ccpa-root .fc-cta-button {outline: 1px solid transparent;}div.fc-ccpa-root {position: relative; z-index: 2147483644;}div.fc-ccpa-root {direction: ltr;}.fc-ccpa-root .fc-dialog-container {width: 100%;}.fc-ccpa-root .fc-dns-dialog {display: flex;}.fc-ccpa-root .fc-dns-dialog .fc-dns-link {flex: 1;padding-left: 1em; padding-right: 1em;padding-top: 0.75em; padding-bottom: 0.75em;}.fc-ccpa-root .fc-dns-dialog .fc-dns-link {position: relative; z-index: 1;}.fc-ccpa-root .fc-dns-dialog .fc-dns-link .fc-button-background {height: 100%; left: 0; top: 0; position: absolute; width: 100%; z-index: -1;background: #4A4A4A;border-radius: 0em;}.fc-ccpa-root .fc-dns-dialog .fc-dns-link:hover .fc-button-background{filter: brightness(90%);}.fc-ccpa-root .fc-dns-dialog .fc-dns-link p {overflow-wrap: break-word;font-weight: normal;font-style: normal;text-decoration: initial;text-align: center;font-family: 'Open Sans';color: #ffffff;font-size: 0.85em;}.fc-ccpa-root .fc-dns-dialog .fc-dns-link.disabled .fc-button-background {filter: brightness(90%);}.fc-ccpa-root .fc-dns-dialog .fc-dns-link.disabled, .fc-ccpa-root .fc-dns-dialog .fc-dns-link.disabled p {cursor: default;}.fc-ccpa-root .slide-out-link-animation {animation: slide-out-collapse  300ms ease-out  600ms 1 none;}
+    @keyframes slide-out-collapse {
+      /* Use transform to displace the element its full height, effectively pushing the link out of
+       * view, as it's already appended at the bottom. Since the link does not have fixed
+       * positioning, we cannot animate on positioning.
+       */
+      0%   {
+        transform: translateY(0%);
+      }
+      100% {
+        transform: translateY(100%);
+      }
+    }
+  .fc-ccpa-root .fc-confirmation-dialog {z-index: 1;align-items: center; display: flex; height: 100%; justify-content: center; left: 0; position: fixed; top: 0; width: 100%;}.fc-ccpa-root .fc-confirmation-dialog .fc-dialog-overlay {background-color: black; height: 100%; left: 0; opacity: 0.64; position: fixed; top: 0; width: 100%; z-index: -1;}.fc-ccpa-root .fc-header-image-container {margin-bottom: 16px; margin-top: 0; max-height: 60px; min-height: 40px;display: flex; flex-direction: row;justify-content: center;}.fc-ccpa-root .fc-placeholder-image {border: 1px solid #dadce0; border-radius: 4px; box-sizing: border-box; padding: 12px 100px;}.fc-ccpa-root .fc-header-image {display: block; max-width: 100%; text-align: center;}.fc-ccpa-root .fc-confirmation-dialog .fc-confirmation-dialog-content {padding-left: 2em; padding-right: 2em;padding-top: 2em; padding-bottom: 2em;background: #ffffff;border: 2px solid  #3f4b5e;border-radius: 1.5em;}.fc-ccpa-root .fc-confirmation-dialog .fc-dialog-header {font-size: inherit;}.fc-ccpa-root .fc-confirmation-dialog .fc-dialog-header h1 {overflow-wrap: break-word;font-weight: 700;font-style: normal;text-decoration: initial;text-align: center;font-family: 'Open Sans';color: #3f4b5e;font-size: 1.25em;}.fc-ccpa-root .fc-confirmation-dialog .fc-dialog-body {font-size: inherit;}.fc-ccpa-root .fc-confirmation-dialog .fc-dialog-body p {overflow-wrap: break-word;font-weight: normal;font-style: normal;text-decoration: initial;text-align: center;font-family: 'Open Sans';color: #3f4b5e;font-size: 1em;margin: 1.25em 0 2em;}.fc-ccpa-root .fc-footer-buttons {display: flex; justify-content: space-between;}.fc-ccpa-root .fc-cta-button {height: 100%; line-height: 20px; width: 48%;}.fc-ccpa-root .fc-cta-button .fc-button-label {margin: 10px 0;}.fc-ccpa-root .fc-confirmation-dialog .fc-cta-close {position: relative; z-index: 1;}.fc-ccpa-root .fc-confirmation-dialog .fc-cta-close .fc-button-background {height: 100%; left: 0; top: 0; position: absolute; width: 100%; z-index: -1;background: #3f4b5e;border-radius: 1.5em;}.fc-ccpa-root .fc-confirmation-dialog .fc-cta-close:hover .fc-button-background{filter: brightness(90%);}.fc-ccpa-root .fc-confirmation-dialog .fc-cta-close {padding-left: 0em; padding-right: 0em;padding-top: 0em; padding-bottom: 0em;}.fc-ccpa-root .fc-confirmation-dialog .fc-cta-close .fc-button-label {overflow-wrap: break-word;font-weight: 700;font-style: normal;text-decoration: initial;text-align: center;font-family: 'Open Sans';color: #ffffff;font-size: 1em;}.fc-ccpa-root .fc-confirmation-dialog .fc-cta-opt-out {position: relative; z-index: 1;}.fc-ccpa-root .fc-confirmation-dialog .fc-cta-opt-out .fc-button-background {height: 100%; left: 0; top: 0; position: absolute; width: 100%; z-index: -1;background: #3f4b5e;border-radius: 1.5em;}.fc-ccpa-root .fc-confirmation-dialog .fc-cta-opt-out:hover .fc-button-background{filter: brightness(90%);}.fc-ccpa-root .fc-confirmation-dialog .fc-cta-opt-out {padding-left: 0em; padding-right: 0em;padding-top: 0em; padding-bottom: 0em;}.fc-ccpa-root .fc-footer-buttons, .fc-ccpa-root .fc-footer-buttons button {font-size: inherit;}.fc-ccpa-root .fc-confirmation-dialog .fc-cta-opt-out .fc-button-label {overflow-wrap: break-word;font-weight: 700;font-style: normal;text-decoration: initial;text-align: center;font-family: 'Open Sans';color: #ffffff;font-size: 1em;}@media screen and (max-width: 479px){.fc-ccpa-root .fc-confirmation-dialog .fc-confirmation-dialog-container {width: 80%;}.fc-ccpa-root .fc-confirmation-dialog .fc-confirmation-dialog-content  {font-size: 13px; padding: 24x 24px 32px;}}@media screen and (min-width: 480px) and (max-width: 640px) {.fc-ccpa-root .fc-confirmation-dialog .fc-confirmation-dialog-container {width: 80%;}.fc-ccpa-root .fc-confirmation-dialog .fc-confirmation-dialog-content  {font-size: 14px; padding: 24x 24px 32px;}}@media screen and (min-width: 640px) {.fc-ccpa-root .fc-confirmation-dialog .fc-confirmation-dialog-container {max-width: 512px;}}</style><script async="" src="https://fundingchoicesmessages.google.com/f/AGSKWxUtRYGr5xfUnNo6E7zBAb5Q-o7GL59WCC93b3OZXQ0bvEnwS_W6WKrDS_awBh3cB9kVpuCW5LUkX26fCL1D8zOJKS_aGTUj_dK2eyWNwvqa3wf5EG-q-ePVfSrJdeqGuAXKpAdQFQ==?fccs=W251bGwsbnVsbCxudWxsLG51bGwsbnVsbCxudWxsLFsxNzEwMDUxOTI3LDc4NzAwMDAwMF0sbnVsbCxudWxsLG51bGwsW251bGwsWzcsMTFdXSwiaHR0cHM6Ly90dnRyb3Blcy5vcmcvIixudWxsLFtbOCwiYndyTWNzNlpjWWciXSxbOSwiZW4tVVMiXSxbNywiMTciXSxbMTEsIltdIl0sWzE5LCIyIl0sWzEzLCJbXCJEQkFCQmd-QlVvQUFBQ0FcIixbWzgsWzE3MTAwNTE5MjcsNzAwMTk4MDAwXV1dXSJdXV0"></script><style media="screen" data-id="htlad-1-gpt-stickycss"></style><script async="" src="https://fundingchoicesmessages.google.com/f/AGSKWxVWFE0PgyxpxikzsJs4hrvceXYOsxl86pXOifsHJsM552e3Xs34ZjnwWNSupM7J1e9bbofD9u64ljpwgUUIRsBn50hgDgc88AMGD5yQ3Jbq8vLv6Iq-qODCyTkkiRee3QqaUrZAig==?fccs=W251bGwsbnVsbCxudWxsLG51bGwsbnVsbCxudWxsLFsxNzEwMDUxOTMzLDc4MjAwMDAwMF0sbnVsbCxudWxsLG51bGwsW251bGwsWzcsMTEsNl0sbnVsbCxudWxsLG51bGwsbnVsbCxudWxsLG51bGwsbnVsbCxudWxsLG51bGwsMV0sImh0dHBzOi8vdHZ0cm9wZXMub3JnLyIsbnVsbCxbWzgsImJ3ck1jczZaY1lnIl0sWzksImVuLVVTIl0sWzcsIjE3Il0sWzExLCJbXSJdLFsxOSwiMiJdLFsxMywiW1wiREJBQkJnfkJVb0FBQUNBXCIsW1s4LFsxNzEwMDUxOTI3LDcwMDE5ODAwMF1dXV0iXV1d"></script><script async="" src="https://fundingchoicesmessages.google.com/f/AGSKWxUiLvorM80yJeJiPfvyXakfpWQmf5f8igJjhinv6QB66aWQBX4TOLEx2LMVrJFZjkvnNGrnSsKhnj6vuipuGXivD3PAd9jIds1dqcy5aG_Upusd3FnYAVzSjT-2h5RZFACJAVRRuA==?fccs=W251bGwsbnVsbCxudWxsLG51bGwsbnVsbCxudWxsLFsxNzEwMDUxOTMzLDgzMzAwMDAwMF0sbnVsbCxudWxsLG51bGwsW251bGwsWzcsMTEsNiw5XSxudWxsLDIsbnVsbCwiZW4iLG51bGwsbnVsbCxudWxsLG51bGwsbnVsbCwxXSwiaHR0cHM6Ly90dnRyb3Blcy5vcmcvIixudWxsLFtbOCwiYndyTWNzNlpjWWciXSxbOSwiZW4tVVMiXSxbNywiMTciXSxbMTEsIltdIl0sWzE5LCIyIl0sWzEzLCJbXCJEQkFCQmd-QlVvQUFBQ0FcIixbWzgsWzE3MTAwNTE5MjcsNzAwMTk4MDAwXV1dXSJdXV0"></script></head>
+ <body class="">
+        <i id="user-prefs" class="browser-chrome"></i>
+    <script>updateUserPrefs();</script>
+
+    <div id="fb-root"></div>
+
+    <div id="modal-box"></div>
+
+    <header id="main-header-bar" class="headroom-element HomePage">
+        <div id="main-header-bar-inner">
+
+            <span id="header-spacer-left" class="header-spacer"></span>
+
+            <a href="#mobile-menu" id="main-mobile-toggle" class="mobile-menu-toggle-button tablet-on"><span></span><span></span><span></span></a>
+
+            <a href="/" id="main-header-logoButton" class="no-dev"></a>
+
+            <span id="header-spacer-right" class="header-spacer"></span>
+
+            <nav id="main-header-nav" class="tablet-off">
+                <a href="/pmwiki/pmwiki.php/Main/Tropes">Tropes</a>
+                <a href="/pmwiki/pmwiki.php/Main/Media">Media</a>
+                <a href="/pmwiki/browse.php" class="nav-browse">Browse</a>
+                <a href="/pmwiki/index_report.php">Indexes</a>
+                <a href="/pmwiki/topics.php">Forums</a>
+                <a href="/pmwiki/recent_videos.php" class="nav-browse">Videos</a>
+            </nav>
+
+            <div id="main-header-bar-right">
+                                <div id="signup-login-box" class="font-xs mobile-off">
+                    <a href="/pmwiki/login.php" class="hover-underline bold" data-modal-target="signup">Join</a>
+                    <a href="/pmwiki/login.php" class="hover-underline bold" data-modal-target="login">Login</a>
+                </div>
+                
+                                <div id="signup-login-mobileToggle" class="mobile-on inline">
+                    <a href="/pmwiki/login.php" data-modal-target="login"><i class="fa fa-user"></i></a>
+                </div>
+                
+                <div id="search-box">
+                    <form class="search" action="/pmwiki/search_result.php">
+                        <input type="text" name="q" class="search-box" placeholder="Search" value="" required="">
+                        <input type="submit" class="submit-button" value="">
+                                                <input type="hidden" name="search_type" value="article">
+                        <input type="hidden" name="page_type" value="all">
+                                                <input type="hidden" name="cx" value="partner-pub-6610802604051523:amzitfn8e7v">
+                        <input type="hidden" name="cof" value="FORID:10">
+                        <input type="hidden" name="ie" value="ISO-8859-1">
+                        <input name="siteurl" type="hidden" value="">
+                        <input name="ref" type="hidden" value="">
+                        <input name="ss" type="hidden" value="">
+                    </form>
+                    <a href="#close-search" class="mobile-on mobile-search-toggle close-x"><i class="fa fa-close"></i></a>
+                </div>
+
+                <div id="random-box">
+                    <a href="/pmwiki/pmwiki.php/Main/LongerThanLifeSentence" class="button-random-trope" rel="nofollow" onclick="ga('send', 'event', 'button', 'click', 'random trope');"></a>
+                    <a href="/pmwiki/pmwiki.php/VideoGame/KosodateQuizMyAngel" class="button-random-media" rel="nofollow" onclick="ga('send', 'event', 'button', 'click', 'random media');"></a>
+                </div>
+
+            </div>
+
+        </div>
+
+        <div id="mobile-menu" class="tablet-on"><div class="mobile-menu-options">
+
+    <div class="nav-wrapper">
+        <a href="/pmwiki/pmwiki.php/Main/Tropes" class="xl">Tropes</a>
+        <a href="/pmwiki/pmwiki.php/Main/Media" class="xl">Media</a>
+        <a href="/pmwiki/browse.php" class="xl">Browse</a>
+        <a href="/pmwiki/index_report.php" class="xl">Indexes</a>
+        <a href="/pmwiki/topics.php" class="xl">Forums</a>
+        <a href="/pmwiki/recent_videos.php" class="xl">Videos</a>
+
+        <a href="/pmwiki/query.php?type=att">Ask The Tropers</a>
+        <a href="/pmwiki/query.php?type=tf">Trope Finder</a>
+        <a href="/pmwiki/query.php?type=ykts">You Know That Show...</a>
+        <a href="/pmwiki/tlp_activity.php">Trope Launch Pad</a>
+        <a href="/pmwiki/query.php?type=wl">Wishlist</a>
+        <a href="/pmwiki/review_activity.php">Reviews</a> 
+        
+        <a href="#tools" data-click-toggle="active">Tools <i class="fa fa-chevron-down"></i></a>
+        <div class="tools-dropdown mobile-dropdown-linkList">
+            <a href="/pmwiki/cutlist.php">Cut List</a>
+            <a href="/pmwiki/changes.php">New Edits</a>
+            <a href="/pmwiki/recent_edit_reasons.php">Edit Reasons</a>
+            <a href="/pmwiki/launches.php">Launches</a>
+            <a href="/pmwiki/img_list.php">Images List</a>
+            <a href="/pmwiki/crown_activity.php">Crowner Activity</a>
+            <a href="/pmwiki/no_types.php">Un-typed Pages</a>
+            <a href="/pmwiki/page_type_audit.php">Recent Page Type Changes</a>
+            <a href="/pmwiki/changelog.php">Changelog</a>
+        </div>
+
+        <a href="#tips" data-click-toggle="active">Tips <i class="fa fa-chevron-down"></i></a>
+        <div class="tips-dropdown mobile-dropdown-linkList">
+                <a href="/pmwiki/pmwiki.php/Administrivia/CreatingNewRedirects">Creating New Redirects</a>
+                <a href="/pmwiki/pmwiki.php/Administrivia/Crosswicking">Cross Wicking</a>
+                <a href="/pmwiki/pmwiki.php/Administrivia/TipsForEditing">Tips for Editing</a>
+                <a href="/pmwiki/pmwiki.php/Administrivia/TextFormattingRules">Text Formatting Rules</a>
+                <a href="/pmwiki/pmwiki.php/Administrivia/TVTropesGlossary?from=Main.TVTropesGlossary">Glossary</a>
+                <a href="/pmwiki/pmwiki.php/Administrivia/EditReasonsAndWhyYouShouldUseThem">Edit Reasons</a>
+                <a href="/pmwiki/pmwiki.php/Administrivia/HandlingSpoilers">Handling Spoilers</a>
+                <a href="/pmwiki/pmwiki.php/Main/WordCruft">Word Cruft</a>
+                <a href="/pmwiki/pmwiki.php/Main/Administrivia">Administrivia</a>
+                <a href="/pmwiki/pmwiki.php/Main/FAQ">FAQ</a>
+        </div>
+        
+        <a href="#hq" data-click-toggle="active">Tropes HQ <i class="fa fa-chevron-down"></i></a>
+
+        <div class="tools-dropdown mobile-dropdown-linkList">
+            <a href="/pmwiki/about.php">About Us</a>
+            <a href="/pmwiki/contact.php">Contact Us</a>
+            <a href="mailto:advertising@proper.io">Advertise</a>
+            <a href="/pmwiki/dmca.php">DMCA Notice</a>
+            <a href="/pmwiki/privacypolicy.php">Privacy Policy</a>
+            <a href="/pmwiki/query.php?type=bug">Report Bug</a>
+        </div>
+
+        <a href="/pmwiki/ad-free-subscribe.php">Go Ad-Free</a>
+        <a href="/pmwiki/changelog.php">Changelog</a>
+
+        <div class="toggle-switches">
+            <ul class="mobile-menu display-toggles">
+                <li>Show Spoilers <div id="mobile-toggle-showspoilers" class="display-toggle show-spoilers"></div></li>
+                <li>Night Vision <div id="mobile-toggle-nightvision" class="display-toggle night-vision"></div></li>
+                <li>Sticky Header <div id="mobile-toggle-stickyheader" class="display-toggle sticky-header"></div></li>
+                <li>Highlight Links <div id="mobile-toggle-highlightlinks" class="display-toggle highlight-links"></div></li>
+            </ul>
+            <script>updateMobilePrefs();</script>
+        </div>
+
+    </div>
+
+</div>
+</div>
+
+    </header>
+
+    <div id="homepage-introBox-mobile" class="mobile-on">
+                  <img src="/images/logo-white-big.png" class="logo-big">
+          <h1 class="tagline">THE ALL DEVOURING<br class="tiny-on"><span class="tiny-off"> </span>POP-CULTURE WIKI</h1>
+        
+        <form class="search" action="/pmwiki/search_result.php" style="margin:10px -5px -6px -5px;">
+            <input type="text" name="q" class="search-box" placeholder="Search" value="" required="">
+            <input type="submit" class="submit-button" value="">
+                        <input type="hidden" name="search_type" value="article">
+            <input type="hidden" name="page_type" value="all">
+                        <input type="hidden" name="cx" value="partner-pub-6610802604051523:amzitfn8e7v">
+            <input type="hidden" name="cof" value="FORID:10">
+            <input type="hidden" name="ie" value="ISO-8859-1">
+            <input name="siteurl" type="hidden" value="">
+            <input name="ref" type="hidden" value="">
+            <input name="ss" type="hidden" value="">
+        </form>
+
+                <ul class="homepage-mobile-actions">
+          <li><a href="/pmwiki/pmwiki.php/SugarWiki/SweetExists">
+                <i class="homepage_action_bar io icon-sugar"></i> SugarWiki</a></li><li><a href="/pmwiki/pmwiki.php/DarthWiki/ThisExists">
+                <i class="homepage_action_bar io icon-darth"></i> DarthWiki</a></li><li><a href="/pmwiki/pmwiki.php/YMMV/HomePage">
+                <i class="homepage_action_bar io icon-icon-gaspump"></i> YMMV</a></li><li><a href="/pmwiki/pmwiki.php/Main/WildMassGuessing">
+                <i class="homepage_action_bar io icon-icon-bigfoot"></i> WMG</a></li><li><a href="/pmwiki/pmwiki.php/Main/Trivia">
+                <i class="homepage_action_bar io icon-icon-triviaB"></i> Trivia</a></li>        </ul>
+            </div>
+    
+                <div id="outer_sticky" style="">
+            <div id="close_sticky" onclick="ads_project.close_sticky(); return false;"><i class="fa fa-close"></i></div>
+            
+            <script>
+                if(is_mobile()) {
+                    document.write("<div id=\"sticky_ad_container\" class=\"htlad-tvtropes_m_sticky\" data-targeting='{\"sticky_refresh\": \"01\"}'></div>");
+                }
+                else {
+                    document.write("<div id=\"sticky_ad_container\" class=\"htlad-tvtropes_dt_sticky\" data-targeting='{\"sticky_refresh\": \"01\"}'></div>");
+                }
+            </script><div id="sticky_ad_container" class="htlad-tvtropes_dt_sticky" data-targeting="{&quot;sticky_refresh&quot;: &quot;01&quot;}"><div class="htl-ad ams-sticky" id="htlad-1" data-unit="tvtropes_dt_sticky" name="htlunit-tvtropes_dt_sticky" data-eager="" data-sizes="768x0:728x90|981x0:728x90,970x90" data-prebid="768x0:tvtropes_dt_sticky|981x0:tvtropes_dt_sticky" data-sticky="" data-sticky-permanent="" data-sticky-hours="0" data-targeting="{&quot;sticky_refresh&quot;:&quot;01&quot;}"><div class="htl-ad-gpt htl-size-1x1" id="htlad-1-gpt" data-google-query-id="CPfl4e2H6YQDFWw6RAgdCoELcw"><div id="google_ads_iframe_/1005222/tvtropes_dt_sticky_0__container__" style="border: 0pt none; margin: auto; text-align: center;"><iframe id="google_ads_iframe_/1005222/tvtropes_dt_sticky_0" name="google_ads_iframe_/1005222/tvtropes_dt_sticky_0" title="3rd party ad content" width="728" height="90" scrolling="no" marginwidth="0" marginheight="0" frameborder="0" aria-label="Advertisement" tabindex="0" data-load-complete="true" data-google-container-id="1" style="border: 0px; vertical-align: bottom;"></iframe></div></div></div></div>
+        </div>
+
+                <div id="tvtropes_oop_ad_slot" style="display: none;"></div>
+    <div id="header-fad-wrapper" class="fad">
+    <div id="header-fad">
+    <div class="fad-size-970x90" style="height:20px">&nbsp;</div>    </div>
+</div>
+
+<div id="main-container">
+
+        <div id="homepage-introBox" class="mobile-off">
+
+        <img src="/images/logo-white-big.png" class="logo-big">
+        <p class="welcome-message">Welcome to TV Tropes</p>
+        <h1 class="tagline">THE ALL DEVOURING POP-CULTURE WIKI</h1>
+
+    </div>
+    
+        <div id="action-bar-top" class="action-bar mobile-off">
+
+        <div class="action-bar-right">
+            <p>Follow TV Tropes</p>
+            <a href="https://www.facebook.com/TVTropes" class="button-fb">
+                <i class="fa fa-facebook"></i></a>
+            <a href="https://www.twitter.com/TVTropes" class="button-tw">
+                <i class="fa fa-twitter"></i></a>
+        </div>
+
+                <nav class="actions-wrapper" itemscope="" itemtype="http://schema.org/SiteNavigationElement">
+            <ul id="top_main_list" class="page-actions">
+            <li><a href="/pmwiki/pmwiki.php/SugarWiki/SweetExists">
+                <i class="homepage_action_bar io icon-sugar"></i> SugarWiki</a></li><li><a href="/pmwiki/pmwiki.php/DarthWiki/ThisExists">
+                <i class="homepage_action_bar io icon-darth"></i> DarthWiki</a></li><li><a href="/pmwiki/pmwiki.php/YMMV/HomePage">
+                <i class="homepage_action_bar io icon-icon-gaspump"></i> YMMV</a></li><li><a href="/pmwiki/pmwiki.php/Main/WildMassGuessing">
+                <i class="homepage_action_bar io icon-icon-bigfoot"></i> WMG</a></li><li><a href="/pmwiki/pmwiki.php/Main/Trivia">
+                <i class="homepage_action_bar io icon-icon-triviaB"></i> Trivia</a></li>                </ul>
+                            <ul id="top_more_list" class="more_menu hidden_more_list">
+                            </ul>
+        </nav> 
+
+        <div class="WikiWordModalStub"></div>
+        <div class="ImgUploadModalStub" data-page-type="HomePage"></div>
+
+        <div class="login-alert" style="display: none;">
+            You need to <a href="/pmwiki/login.php" style="color:#21A0E8">login</a> to do this. <a href="/pmwiki/login.php?tab=register_account" style="color:#21A0E8">Get Known</a> if you don't have an account
+        </div>
+
+    </div>
+    
+    <div id="main-content" class="page-HomePage ">
+
+        
+        
+        <div id="main-entry" class="with-sidebar">
+
+        <div id="main-article" class="article-content">
+
+    <!-- HIDDEN INPUTS FOR JS -->
+    <input type="hidden" id="groupname-hidden" value="Main">
+    <input type="hidden" id="title-hidden" value="HomePage">
+    <input type="hidden" id="article_id" value="">
+
+    
+    <div id="featured-tropes" class="two-column with-line">
+
+        <div class="column-box left featured-trope">
+            <span class="box-title">Today's Featured Trope</span>
+            <h2 class="entry-title">
+                <a href="/pmwiki/pmwiki.php/Main/ClingyAquaticLife">Clingy Aquatic Life</a>
+            </h2>
+
+                                        <div class="featured-trope-image">
+                                      <img src="https://static.tvtropes.org/pmwiki/pub/images/madagascar_beachscene.jpg" width="350" height="276">
+                                  </div>
+                        <div class="body"><p>A character that ends up in a body of water may not emerge alone. They might come out with animals or plants attached to them. It may be grabbing on to them, draped over them, or even in their mouth! The types of creatures vary too — they can be anything from starfish to octopuses to crabs, and even seaweed or other plants!
+</p><p>It's more often than not </p></div>
+
+             <a href="/pmwiki/pmwiki.php/Main/ClingyAquaticLife" class="more-link">More <i class="fa fa-angle-double-right"></i></a>
+
+        </div>
+                
+        <div class="column-box right featured-trope">
+            <span class="box-title">Newest Trope</span>
+            <h2 class="entry-title">
+                <a href="/pmwiki/pmwiki.php/Main/ForcedDancePartner">Forced Dance Partner</a>
+            </h2>
+
+                                    <div class="body"><p>
+</p><p>There are a lot of reasons characters may not want to dance. Dancing is exhausting, takes a lot if skill, and can look embaressing if you're new to it — especially when surrounded by tons of other people.
+</p><p></p><p>In other cases, the dance partner could be an <a class="twikilink" href="/pmwiki/pmwiki.php/Main/AbhorrentAdmirer" title="/pmwiki/pmwiki.php/Main/AbhorrentAdmirer">Abhorrent Admirer</a>, the type that doesn't care if they say no. If there's an audience, they may expect them to cave into the social pressure, they want to show off their beloved to everyone else, maybe it's a power play, or maybe they think they're that </p></div>
+
+            <a href="/pmwiki/pmwiki.php/Main/ForcedDancePartner" class="more-link">More <i class="fa fa-angle-double-right"></i></a>
+
+        </div>
+
+                <script type="text/javascript">
+        var wrapper = document.querySelector('.featured-trope');
+        var ps      = wrapper.querySelectorAll('p');
+        for (var p = 0; p < ps.length; p++) { if (ps[p].innerText === '') {ps[p].remove();}}
+        </script>
+
+    </div>
+
+    
+
+    
+        <div class="font-m bold">
+            Latest Trope Edits
+            <a href="/pmwiki/changes.php" class="float-right">Recent Edits <i class="fa fa-angle-double-right"></i></a>
+        </div>
+
+        <div class="table-wrapper"><table class="font-s mobile-font-m mobile-flexbox no-border-lines">
+
+            <thead class="hidden">
+                <tr>
+                    <th data-mobile-width="100" data-mobile-order="1" class="mobile-width-100 mobile-order-1">1</th>
+                    <th data-mobile-width="100" data-mobile-order="2" data-align="right" data-mobile-align="left" class="mobile-align-left mobile-width-100 mobile-order-2" style="text-align: right;">2</th>
+                </tr>
+            </thead>
+
+            <tbody>
+                                <tr>
+                    <td class="mobile-width-100 mobile-order-1"><a class="mobile-font-s" href="/pmwiki/pmwiki.php/YMMV/DonGiovanni">YMMV: DonGiovanni</a> 
+                        <span class="font-xs text-light">Revision [69]</span></td>
+                    <td data-align="right" class="mobile-align-left mobile-width-100 mobile-order-2" style="text-align: right;"><span class="font-s mobile-font-xs text-light bold">1 second ago</span></td>
+                </tr>
+                                <tr>
+                    <td class="mobile-width-100 mobile-order-1"><a class="mobile-font-s" href="/pmwiki/pmwiki.php/VideoGame/StarShiftSeries">VideoGame: StarShiftSeries</a> 
+                        <span class="font-xs text-light">Revision [17]</span></td>
+                    <td data-align="right" class="mobile-align-left mobile-width-100 mobile-order-2" style="text-align: right;"><span class="font-s mobile-font-xs text-light bold">3 seconds ago</span></td>
+                </tr>
+                                <tr>
+                    <td class="mobile-width-100 mobile-order-1"><a class="mobile-font-s" href="/pmwiki/pmwiki.php/Funny/NakedLunch">Funny: NakedLunch</a> 
+                        <span class="font-xs text-light">Revision [12]</span></td>
+                    <td data-align="right" class="mobile-align-left mobile-width-100 mobile-order-2" style="text-align: right;"><span class="font-s mobile-font-xs text-light bold">7 seconds ago</span></td>
+                </tr>
+                                <tr>
+                    <td class="mobile-width-100 mobile-order-1"><a class="mobile-font-s" href="/pmwiki/pmwiki.php/VideoGame/StarShiftRebellion">VideoGame: StarShiftRebellion</a> 
+                        <span class="font-xs text-light">Revision [2]</span></td>
+                    <td data-align="right" class="mobile-align-left mobile-width-100 mobile-order-2" style="text-align: right;"><span class="font-s mobile-font-xs text-light bold">19 seconds ago</span></td>
+                </tr>
+                                <tr>
+                    <td class="mobile-width-100 mobile-order-1"><a class="mobile-font-s" href="/pmwiki/pmwiki.php/Awesome/CursedPrincessClub">Awesome: CursedPrincessClub</a> 
+                        <span class="font-xs text-light">Revision [17]</span></td>
+                    <td data-align="right" class="mobile-align-left mobile-width-100 mobile-order-2" style="text-align: right;"><span class="font-s mobile-font-xs text-light bold">21 seconds ago</span></td>
+                </tr>
+                            </tbody>
+
+        </table></div>
+
+        <div class="gutter-topx2 font-m bold">
+            Latest Forums Activity
+            <a href="pmwiki/topics.php" class="float-right">Forums <i class="fa fa-angle-double-right"></i></a>
+        </div>
+
+        <div class="table-wrapper"><table class="font-s mobile-font-m mobile-flexbox no-border-lines">
+
+            <thead class="hidden">
+                <tr>
+                    <th data-mobile-width="100" data-mobile-order="1" class="mobile-width-100 mobile-order-1">1</th>
+                    <th data-mobile-width="100" data-mobile-order="2" data-align="right" data-mobile-align="left" class="mobile-align-left mobile-width-100 mobile-order-2" style="text-align: right;">2</th>
+                </tr>
+            </thead>
+
+            <tbody>
+                                <tr>
+                    <td class="mobile-width-100 mobile-order-1">
+                        <a class="mobile-font-s" href="/pmwiki/conversations.php?topic=0000000000000000000000d1">
+                          Video Games                          <i class="fa fa-angle-right"></i></a>
+                        <a class="font-m mobile-font-s" href="/pmwiki/posts.php?discussion=15603161420A04003400&amp;page=1546">
+                          Fire Emblem Three Houses (Spoiler Thread)                        </a>
+                    </td>
+                    <td data-align="right" class="mobile-align-left mobile-width-100 mobile-order-2" style="text-align: right;">
+                        <span class="font-s mobile-font-xs text-light bold">1 second ago</span>
+                    </td>
+                </tr>
+                                <tr>
+                    <td class="mobile-width-100 mobile-order-1">
+                        <a class="mobile-font-s" href="/pmwiki/conversations.php?topic=fgames">
+                          Forum Games                          <i class="fa fa-angle-right"></i></a>
+                        <a class="font-m mobile-font-s" href="/pmwiki/posts.php?discussion=16731248170A06293300&amp;page=959">
+                          Elimination Game, Mk. II                        </a>
+                    </td>
+                    <td data-align="right" class="mobile-align-left mobile-width-100 mobile-order-2" style="text-align: right;">
+                        <span class="font-s mobile-font-xs text-light bold">4 seconds ago</span>
+                    </td>
+                </tr>
+                                <tr>
+                    <td class="mobile-width-100 mobile-order-1">
+                        <a class="mobile-font-s" href="/pmwiki/conversations.php?topic=0000000000000000000004ul">
+                          Role Playing                          <i class="fa fa-angle-right"></i></a>
+                        <a class="font-m mobile-font-s" href="/pmwiki/posts.php?discussion=16693368920A41996000&amp;page=32">
+                          Pokemon: The Omega League                        </a>
+                    </td>
+                    <td data-align="right" class="mobile-align-left mobile-width-100 mobile-order-2" style="text-align: right;">
+                        <span class="font-s mobile-font-xs text-light bold">6 seconds ago</span>
+                    </td>
+                </tr>
+                                <tr>
+                    <td class="mobile-width-100 mobile-order-1">
+                        <a class="mobile-font-s" href="/pmwiki/conversations.php?topic=00000000000000000000002v">
+                          Manga &amp; Anime                          <i class="fa fa-angle-right"></i></a>
+                        <a class="font-m mobile-font-s" href="/pmwiki/posts.php?discussion=13332538330A28085200&amp;page=4528">
+                          The Toonami Thread                         </a>
+                    </td>
+                    <td data-align="right" class="mobile-align-left mobile-width-100 mobile-order-2" style="text-align: right;">
+                        <span class="font-s mobile-font-xs text-light bold">28 seconds ago</span>
+                    </td>
+                </tr>
+                                <tr>
+                    <td class="mobile-width-100 mobile-order-1">
+                        <a class="mobile-font-s" href="/pmwiki/conversations.php?topic=fgames">
+                          Forum Games                          <i class="fa fa-angle-right"></i></a>
+                        <a class="font-m mobile-font-s" href="/pmwiki/posts.php?discussion=16983684090A15513100&amp;page=828">
+                          Guess the Mythological Character                        </a>
+                    </td>
+                    <td data-align="right" class="mobile-align-left mobile-width-100 mobile-order-2" style="text-align: right;">
+                        <span class="font-s mobile-font-xs text-light bold">58 seconds ago</span>
+                    </td>
+                </tr>
+                            </tbody>
+
+        </table></div>
+
+        <div class="gutter-topx2 font-m bold">
+            Launch Pad Activity
+            <a href="pmwiki/tlp_activity.php" class="float-right">Launch Pad <i class="fa fa-angle-double-right"></i></a>
+        </div>
+        <div class="table-wrapper"><table class="font-s mobile-font-m mobile-flexbox no-border-lines">
+
+            <thead class="hidden">
+                <tr>
+                    <th data-mobile-width="100" data-mobile-order="1" class="mobile-width-100 mobile-order-1">1</th>
+                    <th data-mobile-width="100" data-mobile-order="2" data-align="right" data-mobile-align="left" class="mobile-align-left mobile-width-100 mobile-order-2" style="text-align: right;">2</th>
+                </tr>
+            </thead>
+
+            <tbody>
+
+                                <tr>
+                    <td class="mobile-width-100 mobile-order-1"><a class="mobile-font-s" href="/pmwiki/discussion.php?id=a09aw0wcztm09tqvm9zinhsp">Grumpy Growler</a> <span class="font-xs text-light"> Created 7 hours ago</span></td>
+                    <td data-align="right" class="mobile-align-left mobile-width-100 mobile-order-2" style="text-align: right;"><span class="font-s mobile-font-xs text-light bold">4 minutes ago</span></td>
+                </tr>
+                                <tr>
+                    <td class="mobile-width-100 mobile-order-1"><a class="mobile-font-s" href="/pmwiki/discussion.php?id=3rwo49nd4z2y9anhle9a8725"> Fighting Your Future Self</a> <span class="font-xs text-light"> Created 1 day ago</span></td>
+                    <td data-align="right" class="mobile-align-left mobile-width-100 mobile-order-2" style="text-align: right;"><span class="font-s mobile-font-xs text-light bold">24 minutes ago</span></td>
+                </tr>
+                                <tr>
+                    <td class="mobile-width-100 mobile-order-1"><a class="mobile-font-s" href="/pmwiki/discussion.php?id=wawkjatmh2l6ppk9wy182s3c">Forced Dance Partner</a> <span class="font-xs text-light"> Created 5 days ago</span></td>
+                    <td data-align="right" class="mobile-align-left mobile-width-100 mobile-order-2" style="text-align: right;"><span class="font-s mobile-font-xs text-light bold">34 minutes ago</span></td>
+                </tr>
+                                <tr>
+                    <td class="mobile-width-100 mobile-order-1"><a class="mobile-font-s" href="/pmwiki/discussion.php?id=fmulnhvxpay294wkr4xs0pqs">Kiddy Coveralls</a> <span class="font-xs text-light"> Created 3 days ago</span></td>
+                    <td data-align="right" class="mobile-align-left mobile-width-100 mobile-order-2" style="text-align: right;"><span class="font-s mobile-font-xs text-light bold">1 hour ago</span></td>
+                </tr>
+                                <tr>
+                    <td class="mobile-width-100 mobile-order-1"><a class="mobile-font-s" href="/pmwiki/discussion.php?id=hx8nwlqv7fe6cb6x6bebrkrg">Accidental Rumor</a> <span class="font-xs text-light"> Created 3 days ago</span></td>
+                    <td data-align="right" class="mobile-align-left mobile-width-100 mobile-order-2" style="text-align: right;"><span class="font-s mobile-font-xs text-light bold">1 hour ago</span></td>
+                </tr>
+                
+            </tbody>
+
+        </table></div>
+
+    
+       <div class="gutter-topx2 font-m bold">
+        Latest Video Examples
+        <a href="/pmwiki/recent_videos.php" class="float-right">Recent Videos <i class="fa fa-angle-double-right"></i></a>
+    </div>
+   
+    <div id="block-view-cont" class="row video-gallery lazy-video-script" data-callback="lazy_load_d7fea17c_df70d0d0_NaN">
+         
+                    <div class="video-block-cont" data-video-id="01bh45">
+        
+    <div class="thumbnail">
+
+                <div class="thumb-wrapper">
+            <a href="#video-link" data-video-id="01bh45" data-vimeo-id="" data-video-descrip="John Preston uncovers a secret stash of emotionally-stimulating contraband and he takes the time to listen to an old record of Ludwig van Beethoven. Having spent most of his life under an emotion-suppressing drug enforced by the state, it moves him to tears." data-video-title="Beethoven's Ninth" data-video-url="https://d1w6li7s85ibls.cloudfront.net/qvbr/01bh45_640x360p_qvbr.mp4" data-mpd-url="https://d1w6li7s85ibls.cloudfront.net/dash/01bh45.mpd" data-hls-url="https://d1w6li7s85ibls.cloudfront.net/hls/01bh45.m3u8" data-video-thumbnail="untitled_4_62.png" data-video-trope="Main/SurprisinglyMovingSong" data-video-tropename="Surprisingly Moving Song" data-video-approval="APPROVED" data-video-troper-rating="" data-video-average-rating="5.00" data-video-rating-count="2" data-video-media-sources="Film/Equilibrium" class="video-launch-link video-overlay-link">
+                <img class="play-button-img" src="/images/play-button-logo.png" alt="play">
+                <img class="thumb-wrapper-img lazy-image" data-src="/pmwiki/pub/images/untitled_4_62.png" alt="...">
+            </a>
+        </div>
+
+                        
+        
+        
+        <div class="video-info-row">
+                            
+                    <div class="caption">
+            <p class="time-added">Posted 3 hours ago</p>
+            <div class="clearfix"></div>
+          </div>
+          <a href="#video-link" data-video-id="01bh45" data-vimeo-id="" data-video-descrip="John Preston uncovers a secret stash of emotionally-stimulating contraband and he takes the time to listen to an old record of Ludwig van Beethoven. Having spent most of his life under an emotion-suppressing drug enforced by the state, it moves him to tears." data-video-title="Beethoven's Ninth" data-video-url="https://d1w6li7s85ibls.cloudfront.net/qvbr/01bh45_640x360p_qvbr.mp4" data-mpd-url="https://d1w6li7s85ibls.cloudfront.net/dash/01bh45.mpd" data-hls-url="https://d1w6li7s85ibls.cloudfront.net/hls/01bh45.m3u8" data-video-thumbnail="untitled_4_62.png" data-video-trope="Main/SurprisinglyMovingSong" data-video-tropename="Surprisingly Moving Song" data-video-approval="APPROVED" data-video-troper-rating="" data-video-average-rating="5.00" data-video-rating-count="2" data-video-media-sources="Film/Equilibrium" class="video-launch-link video-overlay-link font-m bold">Beethoven's Ninth          </a>
+          
+          <div class="video-title-line">
+            <div class="index-title-row">
+                <p>Example of:</p>
+                <a href="/pmwiki/pmwiki.php/Main/SurprisinglyMovingSong" class="font-m bold">Surprisingly Moving Song</a>
+            </div>
+          </div>
+        </div>
+        
+        
+                    </div>
+</div>
+                    <div class="video-block-cont" data-video-id="qxnas2">
+        
+    <div class="thumbnail">
+
+                <div class="thumb-wrapper">
+            <a href="#video-link" data-video-id="qxnas2" data-vimeo-id="" data-video-descrip="Weird Al sings about how much he doesn't like &amp;quot;Achy Breaky Heart&amp;quot;." data-video-title="Achy Breaky Song" data-video-url="https://d1w6li7s85ibls.cloudfront.net/qvbr/qxnas2_640x360p_qvbr.mp4" data-mpd-url="https://d1w6li7s85ibls.cloudfront.net/dash/qxnas2.mpd" data-hls-url="https://d1w6li7s85ibls.cloudfront.net/hls/qxnas2.m3u8" data-video-thumbnail="https://static.tvtropes.org/trope_videos_transcoded/images/sd/qxnas2.jpg" data-video-trope="Main/CharactersMostHatedSong" data-video-tropename="Character’s Most Hated Song" data-video-approval="APPROVED" data-video-troper-rating="" data-video-average-rating="5.00" data-video-rating-count="1" data-video-media-sources="Music/Alapalooza,Music/WeirdAlYankovic" class="video-launch-link video-overlay-link">
+                <img class="play-button-img" src="/images/play-button-logo.png" alt="play">
+                <img class="thumb-wrapper-img lazy-image" data-src="https://static.tvtropes.org/trope_videos_transcoded/images/sd/qxnas2.jpg" alt="...">
+            </a>
+        </div>
+
+                        
+        
+        
+        <div class="video-info-row">
+                            
+                    <div class="caption">
+            <p class="time-added">Posted 3 hours ago</p>
+            <div class="clearfix"></div>
+          </div>
+          <a href="#video-link" data-video-id="qxnas2" data-vimeo-id="" data-video-descrip="Weird Al sings about how much he doesn't like &amp;quot;Achy Breaky Heart&amp;quot;." data-video-title="Achy Breaky Song" data-video-url="https://d1w6li7s85ibls.cloudfront.net/qvbr/qxnas2_640x360p_qvbr.mp4" data-mpd-url="https://d1w6li7s85ibls.cloudfront.net/dash/qxnas2.mpd" data-hls-url="https://d1w6li7s85ibls.cloudfront.net/hls/qxnas2.m3u8" data-video-thumbnail="https://static.tvtropes.org/trope_videos_transcoded/images/sd/qxnas2.jpg" data-video-trope="Main/CharactersMostHatedSong" data-video-tropename="Character’s Most Hated Song" data-video-approval="APPROVED" data-video-troper-rating="" data-video-average-rating="5.00" data-video-rating-count="1" data-video-media-sources="Music/Alapalooza,Music/WeirdAlYankovic" class="video-launch-link video-overlay-link font-m bold">Achy Breaky Song          </a>
+          
+          <div class="video-title-line">
+            <div class="index-title-row">
+                <p>Example of:</p>
+                <a href="/pmwiki/pmwiki.php/Main/CharactersMostHatedSong" class="font-m bold">Character’s Most Hated Song</a>
+            </div>
+          </div>
+        </div>
+        
+        
+                    </div>
+</div>
+                    <div class="video-block-cont" data-video-id="upmkpz">
+        
+    <div class="thumbnail">
+
+                <div class="thumb-wrapper">
+            <a href="#video-link" data-video-id="upmkpz" data-vimeo-id="" data-video-descrip="Dipper has brought several disposable cameras with him so he and his friends can easily photograph the Gobblewonker." data-video-title="Disposable Cameras" data-video-url="https://d1w6li7s85ibls.cloudfront.net/qvbr/upmkpz_640x360p_qvbr.mp4" data-mpd-url="https://d1w6li7s85ibls.cloudfront.net/dash/upmkpz.mpd" data-hls-url="https://d1w6li7s85ibls.cloudfront.net/hls/upmkpz.m3u8" data-video-thumbnail="https://static.tvtropes.org/trope_videos_transcoded/images/sd/upmkpz.jpg" data-video-trope="Main/CrazyPrepared" data-video-tropename="Crazy-Prepared" data-video-approval="APPROVED" data-video-troper-rating="" data-video-average-rating="5.00" data-video-rating-count="3" data-video-media-sources="Main/VerbalBackspace,Recap/GravityFallsS1E2TheLegendOfTheGobblewonker,WesternAnimation/GravityFalls" class="video-launch-link video-overlay-link">
+                <img class="play-button-img" src="/images/play-button-logo.png" alt="play">
+                <img class="thumb-wrapper-img lazy-image" data-src="https://static.tvtropes.org/trope_videos_transcoded/images/sd/upmkpz.jpg" alt="...">
+            </a>
+        </div>
+
+                        
+        
+        
+        <div class="video-info-row">
+                            
+                    <div class="caption">
+            <p class="time-added">Posted 3 hours ago</p>
+            <div class="clearfix"></div>
+          </div>
+          <a href="#video-link" data-video-id="upmkpz" data-vimeo-id="" data-video-descrip="Dipper has brought several disposable cameras with him so he and his friends can easily photograph the Gobblewonker." data-video-title="Disposable Cameras" data-video-url="https://d1w6li7s85ibls.cloudfront.net/qvbr/upmkpz_640x360p_qvbr.mp4" data-mpd-url="https://d1w6li7s85ibls.cloudfront.net/dash/upmkpz.mpd" data-hls-url="https://d1w6li7s85ibls.cloudfront.net/hls/upmkpz.m3u8" data-video-thumbnail="https://static.tvtropes.org/trope_videos_transcoded/images/sd/upmkpz.jpg" data-video-trope="Main/CrazyPrepared" data-video-tropename="Crazy-Prepared" data-video-approval="APPROVED" data-video-troper-rating="" data-video-average-rating="5.00" data-video-rating-count="3" data-video-media-sources="Main/VerbalBackspace,Recap/GravityFallsS1E2TheLegendOfTheGobblewonker,WesternAnimation/GravityFalls" class="video-launch-link video-overlay-link font-m bold">Disposable Cameras          </a>
+          
+          <div class="video-title-line">
+            <div class="index-title-row">
+                <p>Example of:</p>
+                <a href="/pmwiki/pmwiki.php/Main/CrazyPrepared" class="font-m bold">Crazy-Prepared</a>
+            </div>
+          </div>
+        </div>
+        
+        
+                    </div>
+</div>
+                    <div class="video-block-cont" data-video-id="z7jaqb">
+        
+    <div class="thumbnail">
+
+                <div class="thumb-wrapper">
+            <a href="#video-link" data-video-id="z7jaqb" data-vimeo-id="" data-video-descrip="When Queen Elizabeth learns of the Duke of Windsor's Nazi connections and treasonous plans, she cuts him off for good." data-video-title="The Duke of Windsor" data-video-url="https://d1w6li7s85ibls.cloudfront.net/qvbr/z7jaqb_640x360p_qvbr.mp4" data-mpd-url="https://d1w6li7s85ibls.cloudfront.net/dash/z7jaqb.mpd" data-hls-url="https://d1w6li7s85ibls.cloudfront.net/hls/z7jaqb.m3u8" data-video-thumbnail="https://static.tvtropes.org/trope_videos_transcoded/images/sd/z7jaqb.jpg" data-video-trope="Main/ThisIsUnforgivable" data-video-tropename="This Is Unforgivable!" data-video-approval="APPROVED" data-video-troper-rating="" data-video-average-rating="2.33" data-video-rating-count="3" data-video-media-sources="Series/TheCrown2016" class="video-launch-link video-overlay-link">
+                <img class="play-button-img" src="/images/play-button-logo.png" alt="play">
+                <img class="thumb-wrapper-img lazy-image" data-src="https://static.tvtropes.org/trope_videos_transcoded/images/sd/z7jaqb.jpg" alt="...">
+            </a>
+        </div>
+
+                        
+        
+        
+        <div class="video-info-row">
+                            
+                    <div class="caption">
+            <p class="time-added">Posted 3 hours ago</p>
+            <div class="clearfix"></div>
+          </div>
+          <a href="#video-link" data-video-id="z7jaqb" data-vimeo-id="" data-video-descrip="When Queen Elizabeth learns of the Duke of Windsor's Nazi connections and treasonous plans, she cuts him off for good." data-video-title="The Duke of Windsor" data-video-url="https://d1w6li7s85ibls.cloudfront.net/qvbr/z7jaqb_640x360p_qvbr.mp4" data-mpd-url="https://d1w6li7s85ibls.cloudfront.net/dash/z7jaqb.mpd" data-hls-url="https://d1w6li7s85ibls.cloudfront.net/hls/z7jaqb.m3u8" data-video-thumbnail="https://static.tvtropes.org/trope_videos_transcoded/images/sd/z7jaqb.jpg" data-video-trope="Main/ThisIsUnforgivable" data-video-tropename="This Is Unforgivable!" data-video-approval="APPROVED" data-video-troper-rating="" data-video-average-rating="2.33" data-video-rating-count="3" data-video-media-sources="Series/TheCrown2016" class="video-launch-link video-overlay-link font-m bold">The Duke of Windsor          </a>
+          
+          <div class="video-title-line">
+            <div class="index-title-row">
+                <p>Example of:</p>
+                <a href="/pmwiki/pmwiki.php/Main/ThisIsUnforgivable" class="font-m bold">This Is Unforgivable!</a>
+            </div>
+          </div>
+        </div>
+        
+        
+                    </div>
+</div>
+                    <div class="video-block-cont" data-video-id="2umx40">
+        
+    <div class="thumbnail">
+
+                <div class="thumb-wrapper">
+            <a href="#video-link" data-video-id="2umx40" data-vimeo-id="" data-video-descrip="Gyro sings to Johnny a song he made up about mozzarella cheese." data-video-title="Pizza Mozzarella" data-video-url="https://d1w6li7s85ibls.cloudfront.net/qvbr/2umx40_640x360p_qvbr.mp4" data-mpd-url="https://d1w6li7s85ibls.cloudfront.net/dash/2umx40.mpd" data-hls-url="https://d1w6li7s85ibls.cloudfront.net/hls/2umx40.m3u8" data-video-thumbnail="https://static.tvtropes.org/trope_videos_transcoded/images/sd/2umx40.jpg" data-video-trope="Main/OdeToFood" data-video-tropename="Ode to Food" data-video-approval="APPROVED" data-video-troper-rating="" data-video-average-rating="4.50" data-video-rating-count="2" data-video-media-sources="VideoGame/JoJosBizarreAdventureEyesOfHeaven" class="video-launch-link video-overlay-link">
+                <img class="play-button-img" src="/images/play-button-logo.png" alt="play">
+                <img class="thumb-wrapper-img lazy-image" data-src="https://static.tvtropes.org/trope_videos_transcoded/images/sd/2umx40.jpg" alt="...">
+            </a>
+        </div>
+
+                        
+        
+        
+        <div class="video-info-row">
+                            
+                    <div class="caption">
+            <p class="time-added">Posted 3 hours ago</p>
+            <div class="clearfix"></div>
+          </div>
+          <a href="#video-link" data-video-id="2umx40" data-vimeo-id="" data-video-descrip="Gyro sings to Johnny a song he made up about mozzarella cheese." data-video-title="Pizza Mozzarella" data-video-url="https://d1w6li7s85ibls.cloudfront.net/qvbr/2umx40_640x360p_qvbr.mp4" data-mpd-url="https://d1w6li7s85ibls.cloudfront.net/dash/2umx40.mpd" data-hls-url="https://d1w6li7s85ibls.cloudfront.net/hls/2umx40.m3u8" data-video-thumbnail="https://static.tvtropes.org/trope_videos_transcoded/images/sd/2umx40.jpg" data-video-trope="Main/OdeToFood" data-video-tropename="Ode to Food" data-video-approval="APPROVED" data-video-troper-rating="" data-video-average-rating="4.50" data-video-rating-count="2" data-video-media-sources="VideoGame/JoJosBizarreAdventureEyesOfHeaven" class="video-launch-link video-overlay-link font-m bold">Pizza Mozzarella          </a>
+          
+          <div class="video-title-line">
+            <div class="index-title-row">
+                <p>Example of:</p>
+                <a href="/pmwiki/pmwiki.php/Main/OdeToFood" class="font-m bold">Ode to Food</a>
+            </div>
+          </div>
+        </div>
+        
+        
+                    </div>
+</div>
+            </div>
+    <a href="/pmwiki/recent_videos.php" class="">More Videos <i class="fa fa-angle-double-right"></i></a>
+ 
+
+    <div class="section-block">
+
+        <p class="font-s text-light separator">Tropes Community Podcasts</p>
+
+                                    <div>
+
+                    <img data-src="/img/ontherocks.png" alt="Podcast Profile Photo" class="podcast_photo float-left lazy-image" style="margin: 0 16px 8px 0;width: 140px;height: 140px;max-width: none;">
+
+                    <h2 class="font-l bold" style="clear:right;">
+                        Episode 406: Episode 356 - Helldivers 2                        <span class="text-light font-xs float-right">March 05, 2024</span>
+                    </h2>
+                    <div class="gutter-top podcast-description">This week we're reviewing one of the biggest surprises of 2024: Helldivers 2! Does this game support-drop it like it's hot or is it stuck on the wrong end of a Bile Spewer? For Democracy!Liber-tea…</div>
+                    <a href="https://www.podomatic.com/podcasts/podcast62661/episodes/2024-03-05T10_30_54-08_00" class="more-link font-xs">More <i class="fa fa-angle-double-right"></i></a>
+                    <audio style="width: 100%; margin: 10px 0px;" controls="" preload="none">
+                        <source src="https://podcast62661.podomatic.com/enclosure/2024-03-05T10_30_54-08_00.m4a?_=1709663456.16953287" type="audio/mp3">
+                    </audio>
+
+                </div>
+
+                <hr class="full-width" style="margin-top:2px">
+
+                            <div>
+
+                    <img data-src="/img/on-the-tropes.png" alt="Podcast Profile Photo" class="podcast_photo float-left lazy-image" style="margin: 0 16px 8px 0;width: 140px;height: 140px;max-width: none;">
+
+                    <h2 class="font-l bold" style="clear:right;">
+                        Episode 235: Best of 2021 Part 2                        <span class="text-light font-xs float-right">February 24, 2022</span>
+                    </h2>
+                    <div class="gutter-top podcast-description">The gang discuss more of the best from 2021, and award this year's Golden TropieBe sure to subscribe and rate us on your favorite pod catcher and feel free to support us over at Patreon.com/OnTheTropes! Buy some…</div>
+                    <a href="https://www.podomatic.com/podcasts/onthetropes/episodes/2022-02-24T11_00_00-08_00" class="more-link font-xs">More <i class="fa fa-angle-double-right"></i></a>
+                    <audio style="width: 100%; margin: 10px 0px;" controls="" preload="none">
+                        <source src="https://onthetropes.podomatic.com/enclosure/2022-02-24T11_00_00-08_00.mp3?_=1645700456.15964736" type="audio/mp3">
+                    </audio>
+
+                </div>
+
+                <hr class="full-width" style="margin-top:2px">
+
+                    
+        <div class="text-right" style="margin-top:-16px;padding-bottom:8px">
+            <a href="pmwiki/showcase.php" class="float-right font-xs bold">Community Showcase <i class="fa fa-angle-double-right font-xs"></i></a>
+        </div>
+
+    </div>
+</div>
+
+                
+
+                
+            </div>
+
+                
+                        <div id="main-content-sidebar"><div class="sidebar-item display-options">
+  <ul class="sidebar display-toggles">
+    <li>Show Spoilers <div id="sidebar-toggle-showspoilers" class="display-toggle show-spoilers"></div></li>
+    <li>Night Vision <div id="sidebar-toggle-nightvision" class="display-toggle night-vision"></div></li>
+    <li>Sticky Header <div id="sidebar-toggle-stickyheader" class="display-toggle sticky-header"></div></li>
+    <li>Wide Load <div id="sidebar-toggle-wideload" class="display-toggle wide-load"></div></li>
+  </ul>
+  <script>updateDesktopPrefs();</script>
+</div>
+
+        <div class="sidebar-item quick-links" itemtype="http://schema.org/SiteNavigationElement">
+
+        <p class="sidebar-item-title" data-title="Important Links">Important Links</p>
+
+        <div class="padded">
+            <a href="/pmwiki/query.php?type=att">Ask The Tropers</a>
+            <a href="/pmwiki/query.php?type=tf">Trope Finder</a>
+            <a href="/pmwiki/query.php?type=ykts">You Know That Show...</a>
+            <a href="/pmwiki/tlp_activity.php">Trope Launch Pad</a>
+            <a href="/pmwiki/query.php?type=wl">Wishlist</a>
+            <a href="/pmwiki/review_activity.php">Reviews</a>
+            <a href="/pmwiki/ad-free-subscribe.php">Go Ad Free!</a>
+            <div class="crucial_browsing_dropdown">
+                <a href="javascript:void(0);" onclick="double_dropdown(); return false;" id="crucial_browsing_dropdown"><span class="new_blue">Crucial Browsing</span><i class="fa fa-angle-down"></i></a>
+                <ul id="main_dropdown">
+                    <li class="first_dropdown"><a href="javascript:void(0);" data-click-toggle="active">Genre</a>
+                        <ul>
+                            <li><a href="/pmwiki/pmwiki.php/Main/ActionAdventureTropes" title="Main/ActionAdventureTropes">Action Adventure</a></li>
+                            <li><a href="/pmwiki/pmwiki.php/Main/ComedyTropes" title="Main/ComedyTropes">Comedy</a></li>
+                            <li><a href="/pmwiki/pmwiki.php/Main/CommercialsTropes" title="Main/CommercialsTropes">Commercials</a></li>
+                            <li><a href="/pmwiki/pmwiki.php/Main/CrimeAndPunishmentTropes" title="Main/CrimeAndPunishmentTropes">Crime &amp; Punishment</a></li>
+                            <li><a href="/pmwiki/pmwiki.php/Main/DramaTropes" title="Main/DramaTropes">Drama</a></li>
+                            <li><a href="/pmwiki/pmwiki.php/Main/HorrorTropes" title="Main/HorrorTropes">Horror</a></li>
+                            <li><a href="/pmwiki/pmwiki.php/Main/LoveTropes" title="Main/LoveTropes">Love</a></li>
+                            <li><a href="/pmwiki/pmwiki.php/Main/NewsTropes" title="Main/NewsTropes">News</a></li>
+                            <li><a href="/pmwiki/pmwiki.php/Main/ProfessionalWrestling" title="Main/ProfessionalWrestling">Professional Wrestling</a></li>
+                            <li><a href="/pmwiki/pmwiki.php/Main/SpeculativeFictionTropes" title="Main/SpeculativeFictionTropes">Speculative Fiction</a></li>
+                            <li><a href="/pmwiki/pmwiki.php/Main/SportsStoryTropes" title="Main/SportsStoryTropes">Sports Story</a></li>
+                            <li><a href="/pmwiki/pmwiki.php/Main/WarTropes" title="Main/WarTropes">War</a></li>
+                            <li><a href="/pmwiki/lbs.php" data-modal-target="login">Live Blogs</a></li>
+                        </ul>
+                    </li>
+
+                    <li class="first_dropdown"><a href="javascript:void(0);" data-click-toggle="active">Media</a>
+                        <ul>
+                            <li><a href="/pmwiki/pmwiki.php/Main/Media" title="Main/Media">All Media</a></li>
+                            <li><a href="/pmwiki/pmwiki.php/Main/AnimationTropes" title="Main/AnimationTropes">Animation (Western)</a></li>
+                            <li><a href="/pmwiki/pmwiki.php/Main/Anime" title="Main/Anime">Anime</a></li>
+                            <li><a href="/pmwiki/pmwiki.php/Main/ComicBookTropes" title="Main/ComicBookTropes">Comic Book</a></li>
+                            <li><a href="/pmwiki/pmwiki.php/Main/FanFic" title="FanFic/FanFics">Fan Fics</a></li>
+                            <li><a href="/pmwiki/pmwiki.php/Main/Film" title="Main/Film">Film</a></li>
+                            <li><a href="/pmwiki/pmwiki.php/Main/GameTropes" title="Main/GameTropes">Game</a></li>
+                            <li><a href="/pmwiki/pmwiki.php/Main/Literature" title="Main/Literature">Literature</a></li>
+                            <li><a href="/pmwiki/pmwiki.php/Main/MusicAndSoundEffects" title="Main/MusicAndSoundEffects">Music And Sound Effects</a></li>
+                            <li><a href="/pmwiki/pmwiki.php/Main/NewMediaTropes" title="Main/NewMediaTropes">New Media</a></li>
+                            <li><a href="/pmwiki/pmwiki.php/Main/PrintMediaTropes" title="Main/PrintMediaTropes">Print Media</a></li>
+                            <li><a href="/pmwiki/pmwiki.php/Main/Radio" title="Main/Radio">Radio</a></li>
+                            <li><a href="/pmwiki/pmwiki.php/Main/SequentialArt" title="Main/SequentialArt">Sequential Art</a></li>
+                            <li><a href="/pmwiki/pmwiki.php/Main/TabletopGames" title="Main/TabletopGames">Tabletop Games</a></li>
+                            <li><a href="/pmwiki/pmwiki.php/UsefulNotes/Television" title="Main/Television">Television</a></li>
+                            <li><a href="/pmwiki/pmwiki.php/Main/Theater" title="Main/Theater">Theater</a></li>
+                            <li><a href="/pmwiki/pmwiki.php/Main/VideogameTropes" title="Main/VideogameTropes">Videogame</a></li>
+                            <li><a href="/pmwiki/pmwiki.php/Main/Webcomics" title="Main/Webcomics">Webcomics</a></li>
+                        </ul>
+                    </li>
+
+                    <li class="first_dropdown"><a href="javascript:void(0);" data-click-toggle="active">Narrative</a>
+                        <ul>
+                            <li><a href="/pmwiki/pmwiki.php/Main/UniversalTropes" title="Main/UniversalTropes">Universal</a></li>
+                            <li><a href="/pmwiki/pmwiki.php/Main/AppliedPhlebotinum" title="Main/AppliedPhlebotinum">Applied Phlebotinum</a></li>
+                            <li><a href="/pmwiki/pmwiki.php/Main/CharacterizationTropes" title="Main/CharacterizationTropes">Characterization</a></li>
+                            <li><a href="/pmwiki/pmwiki.php/Main/Characters" title="Main/Characters">Characters</a></li>
+                            <li><a href="/pmwiki/pmwiki.php/Main/CharactersAsDevice" title="Main/CharactersAsDevice">Characters As Device</a></li>
+                            <li><a href="/pmwiki/pmwiki.php/Main/Dialogue" title="Main/Dialogue">Dialogue</a></li>
+                            <li><a href="/pmwiki/pmwiki.php/Main/Motifs" title="Main/Motifs">Motifs</a></li>
+                            <li><a href="/pmwiki/pmwiki.php/Main/NarrativeDevices" title="Main/NarrativeDevices">Narrative Devices</a></li>
+                            <li><a href="/pmwiki/pmwiki.php/Main/Paratext" title="Main/Paratext">Paratext</a></li>
+                            <li><a href="/pmwiki/pmwiki.php/Main/Plots" title="Main/Plots">Plots</a></li>
+                            <li><a href="/pmwiki/pmwiki.php/Main/Settings" title="Main/Settings">Settings</a></li>
+                            <li><a href="/pmwiki/pmwiki.php/Main/Spectacle" title="Main/Spectacle">Spectacle</a></li>
+                        </ul>
+                    </li>
+
+                    <li class="first_dropdown"><a href="javascript:void(0);" data-click-toggle="active">Other Categories</a>
+                        <ul>
+                            <li><a href="/pmwiki/pmwiki.php/Main/BritishTellyTropes" title="Main/BritishTellyTropes">British Telly</a></li>
+                            <li><a href="/pmwiki/pmwiki.php/Main/TheContributors" title="Main/TheContributors">The Contributors</a></li>
+                            <li><a href="/pmwiki/pmwiki.php/Main/CreatorSpeak" title="Main/CreatorSpeak">Creator Speak</a></li>
+                            <li><a href="/pmwiki/pmwiki.php/Main/Creators" title="Main/Creators">Creators</a></li>
+                            <li><a href="/pmwiki/pmwiki.php/Main/DerivativeWorks" title="Main/DerivativeWorks">Derivative Works</a></li>
+                            <li><a href="/pmwiki/pmwiki.php/Main/LanguageTropes" title="Main/LanguageTropes">Language</a></li>
+                            <li><a href="/pmwiki/pmwiki.php/Main/LawsAndFormulas" title="Main/LawsAndFormulas">Laws And Formulas</a></li>
+                            <li><a href="/pmwiki/pmwiki.php/Main/ShowBusiness" title="Main/ShowBusiness">Show Business</a></li>
+                            <li><a href="/pmwiki/pmwiki.php/Main/SplitPersonalityTropes" title="Main/SplitPersonalityTropes">Split Personality</a></li>
+                            <li><a href="/pmwiki/pmwiki.php/Main/StockRoom" title="Main/StockRoom">Stock Room</a></li>
+                            <li><a href="/pmwiki/pmwiki.php/Main/TropeTropes" title="Main/TropeTropes">Trope</a></li>
+                            <li><a href="/pmwiki/pmwiki.php/Main/Tropes" title="Main/Tropes">Tropes</a></li>
+                            <li><a href="/pmwiki/pmwiki.php/Main/TruthAndLies" title="Main/TruthAndLies">Truth And Lies</a></li>
+                            <li><a href="/pmwiki/pmwiki.php/Main/TruthInTelevision" title="Main/TruthInTelevision">Truth In Television</a></li>
+                        </ul>
+                    </li>
+
+                    <li class="first_dropdown"><a href="javascript:void(0);" data-click-toggle="active">Topical Tropes</a>
+                        <ul>
+                            <li><a href="/pmwiki/pmwiki.php/Main/BetrayalTropes" title="Main/BetrayalTropes">Betrayal</a></li>
+                            <li><a href="/pmwiki/pmwiki.php/Main/CensorshipTropes" title="Main/CensorshipTropes">Censorship</a></li>
+                            <li><a href="/pmwiki/pmwiki.php/Main/CombatTropes" title="Main/CombatTropes">Combat</a></li>
+                            <li><a href="/pmwiki/pmwiki.php/Main/DeathTropes" title="Main/DeathTropes">Death</a></li>
+                            <li><a href="/pmwiki/pmwiki.php/Main/FamilyTropes" title="Main/FamilyTropes">Family</a></li>
+                            <li><a href="/pmwiki/pmwiki.php/Main/FateAndProphecyTropes" title="Main/FateAndProphecyTropes">Fate And Prophecy</a></li>
+                            <li><a href="/pmwiki/pmwiki.php/Main/FoodTropes" title="Main/FoodTropes">Food</a></li>
+                            <li><a href="/pmwiki/pmwiki.php/Main/HolidayTropes" title="Main/HolidayTropes">Holiday</a></li>
+                            <li><a href="/pmwiki/pmwiki.php/Main/MemoryTropes" title="Main/MemoryTropes">Memory</a></li>
+                            <li><a href="/pmwiki/pmwiki.php/Main/MoneyTropes" title="Main/MoneyTropes">Money</a></li>
+                            <li><a href="/pmwiki/pmwiki.php/Main/MoralityTropes" title="Main/MoralityTropes">Morality</a></li>
+                            <li><a href="/pmwiki/pmwiki.php/Main/PoliticsTropes" title="Main/PoliticsTropes">Politics</a></li>
+                            <li><a href="/pmwiki/pmwiki.php/Main/ReligionTropes" title="Main/ReligionTropes">Religion</a></li>
+                            <li><a href="/pmwiki/pmwiki.php/Main/SchoolTropes" title="Main/SchoolTropes">School</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="resources_dropdown">
+                <a href="javascript:void(0);" onclick="second_double_dropdown(); return false;" id="resources_dropdown"><span class="new_blue blue">Resources</span><i class="fa fa-angle-down"></i></a>
+
+                <ul id="second_main_dropdown" class="padded font-s" itemscope="" itemtype="http://schema.org/SiteNavigationElement">
+                                        <li class="second_dropdown"><a href="#test" data-click-toggle="active">Tools</a>
+                        <ul>
+                            <li><a href="/pmwiki/pmwiki.php/Administrivia/IttyBittyWikiTools">Wiki Tools</a></li>
+                            <li><a href="/pmwiki/cutlist.php">Cut List</a></li>
+                            <li><a href="/pmwiki/changes.php">New Edits</a></li>
+                            <li><a href="/pmwiki/recent_edit_reasons.php">Edit Reasons</a></li>
+                            <li><a href="/pmwiki/isolated_pages.php">Isolated Pages</a></li> 
+                            <li><a href="/pmwiki/launches.php">Launches</a></li>
+                            <li><a href="/pmwiki/img_list.php">Images List</a></li>
+                            <li><a href="/pmwiki/recent_videos.php">Recent Videos</a></li>
+                            <li><a href="/pmwiki/crown_activity.php">Crowner Activity</a></li>
+                            <li><a href="/pmwiki/no_types.php">Un-typed Pages</a></li>
+                            <li><a href="/pmwiki/page_type_audit.php">Recent Page Type Changes</a></li>
+                        </ul>
+                    </li>
+                    <li class="second_dropdown"><a href="javascript:void(0);" data-click-toggle="active">Templates</a>
+                        <ul>
+                            <li><a href="/pmwiki/pmwiki.php/Main/TropeEntryTemplate">Trope Entry</a></li>
+                            <li><a href="/pmwiki/pmwiki.php/Main/ProgramEntryTemplate">Works</a></li>
+                            <li><a href="/pmwiki/pmwiki.php/Administrivia/CharacterSheetTemplate">Character Sheet</a></li>
+                            <li><a href="/pmwiki/pmwiki.php/Administrivia/PlayingWithWikiTemplate">Playing With</a></li>
+                            <li><a href="/pmwiki/pmwiki.php/FanficRecs/TemplatePageForNewFandomRecommendations">Fandom</a></li>
+                        </ul>
+                    </li>
+                    <li class="second_dropdown"><a href="javascript:void(0);" data-click-toggle="active">Tips</a>
+                        <ul>
+                            <li><a href="/pmwiki/pmwiki.php/Administrivia/CreatingNewRedirects">Creating New Redirects</a></li>
+                            <li><a href="/pmwiki/pmwiki.php/Administrivia/Crosswicking">Cross Wicking</a></li>
+                            <li><a href="/pmwiki/pmwiki.php/Administrivia/TipsForEditing">Tips for Editing</a></li>
+                            <li><a href="/pmwiki/pmwiki.php/Administrivia/TextFormattingRules">Text Formatting Rules</a></li>
+                            <li><a href="/pmwiki/pmwiki.php/Administrivia/TVTropesGlossary">Glossary</a></li>
+                            <li><a href="/pmwiki/pmwiki.php/Administrivia/EditReasonsAndWhyYouShouldUseThem">Edit Reasons</a></li>
+                            <li><a href="/pmwiki/pmwiki.php/Administrivia/HandlingSpoilers">Handling Spoilers</a></li>
+                            <li><a href="/pmwiki/pmwiki.php/Administrivia/WordCruft">Word Cruft</a></li>
+                            <li><a href="/pmwiki/pmwiki.php/Main/Administrivia">Administrivia</a></li>
+                            <li><a href="/pmwiki/pmwiki.php/Main/FAQ">FAQ</a></li>
+                        </ul>
+                    </li>
+                    <li class="second_dropdown"><a href="/pmwiki/changelog.php">Changelog</a></li>
+                    <li class="second_dropdown"><a href="/pmwiki/query.php?type=bug">Report Bug</a></li>
+                    <li class="second_dropdown"><a href="/pmwiki/conversations.php?topic=renames">Trope Repair Shop</a></li>
+                    <li class="second_dropdown"><a href="/pmwiki/conversations.php?topic=images">Image Pickin'</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div id="asteri-sidebar" style="display:none">
+            <p style="margin-top: 20px;" class="sidebar-item-title" data-title="Advertisement">Advertisement:</p>
+            <div id="asteri_cont"></div>
+        </div>
+        <script>
+            //asteri enabled
+            if((tvtropes_config.asteri_stream_enabled || tvtropes_config.get_asteri_stream == 'live')) {
+                //aster stream currently live and not a logged-in troper
+                if(!tvtropes_config.is_logged_in && cookies.read('asteri_event_active') != '') {
+                    document.getElementById('asteri-sidebar').style.display="";
+                }
+            }
+        </script>
+
+    </div>
+
+        
+            
+
+    
+        
+            <script>
+    if(!is_mobile()) {
+
+        //don't insert if content is too small on page
+        var tropes_insert_side_ad=true;
+        if(document.getElementById("main-article") && document.getElementById("main-article").clientHeight) {
+            var sidebar_height=document.getElementById("main-article").clientHeight;
+            if(sidebar_height>0 && sidebar_height<500) {
+                tropes_insert_side_ad=false;
+                console.log('ad parser: content too small for sidebar ad');
+            }
+        }
+
+        if(tropes_insert_side_ad) {
+
+       document.write(`
+        <div id="stick-cont"  class="sidebar-item sb-fad-unit">
+            <p class="sidebar-item-title" data-title="Advertisement">Advertisement:</p>
+            <div id="stick-bar" class="sidebar-section">
+                <div class="square_fad fad-size-300x600 fad-section text-center">
+                    <div class='tvtropes-ad-unit '>
+                      <div id='tvtropes_dt_inview' class='htlad-tvtropes_dt_inview'></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        `);
+        }
+
+    }
+    </script>
+        <div id="stick-cont" class="sidebar-item sb-fad-unit">
+            <p class="sidebar-item-title" data-title="Advertisement">Advertisement:</p>
+            <div id="stick-bar" class="sidebar-section">
+                <div class="square_fad fad-size-300x600 fad-section text-center">
+                    <div class="tvtropes-ad-unit ">
+                      <div id="tvtropes_dt_inview" class="htlad-tvtropes_dt_inview"><div class="htl-ad" id="htlad-2" data-unit="tvtropes_dt_inview" name="htlunit-tvtropes_dt_inview" data-lazy-pixels="50" data-sizes="981x0:300x250,300x600" data-prebid="981x0:tvtropes_dt_inview" data-refresh="viewable" data-refresh-secs="40" data-refresh-max="30"><div class="htl-ad-gpt" id="htlad-2-gpt"></div></div></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+    
+
+</div>
+        
+    </div>
+
+        <div id="action-bar-bottom" class="action-bar tablet-off">
+        <a href="#top-of-page" class="scroll-to-top dead-button" onclick="$('html, body').animate({scrollTop : 0},500);">Top</a>
+    <nav class="actions-wrapper" itemscope="" itemtype="http://schema.org/SiteNavigationElement">
+            <ul id="bottom_main_list" class="page-actions">
+            <li><a href="/pmwiki/pmwiki.php/SugarWiki/SweetExists">
+                <i class="homepage_action_bar io icon-sugar"></i> SugarWiki</a></li><li><a href="/pmwiki/pmwiki.php/DarthWiki/ThisExists">
+                <i class="homepage_action_bar io icon-darth"></i> DarthWiki</a></li><li><a href="/pmwiki/pmwiki.php/YMMV/HomePage">
+                <i class="homepage_action_bar io icon-icon-gaspump"></i> YMMV</a></li><li><a href="/pmwiki/pmwiki.php/Main/WildMassGuessing">
+                <i class="homepage_action_bar io icon-icon-bigfoot"></i> WMG</a></li><li><a href="/pmwiki/pmwiki.php/Main/Trivia">
+                <i class="homepage_action_bar io icon-icon-triviaB"></i> Trivia</a></li>                </ul>
+                            <ul id="bottom_more_list" class="more_menu hidden_more_list">
+                            </ul>
+        </nav></div>
+    
+</div>    <footer id="main-footer">
+        <div id="main-footer-inner">
+
+
+            <div class="footer-left">
+
+                <a href="/" class="img-link"><img data-src="/img/tvtropes-footer-logo.png" alt="TV Tropes" class="logo_image lazy-image" title="TV Tropes"></a>
+
+                <form action="index.html" id="cse-search-box-mobile" class="navbar-form newsletter-signup validate modal-replies" name="" role="" data-ajax-get="/ajax/subscribe_email.php">
+
+                    <button class="btn-submit newsletter-signup-submit-button" type="submit" id="subscribe-btn"><i class="fa fa-paper-plane"></i></button>
+                    <input id="subscription-email" type="text" class="form-control" name="q" size="31" placeholder="Subscribe" value="" validate-type="email">
+
+                </form>
+
+                <ul class="social-buttons">
+                   <li><a class="btn fb" target="_blank" onclick="_gaq.push(['_trackEvent', 'btn-social-icon', 'click', 'btn-facebook']);" href="https://www.facebook.com/tvtropes"><i class="fa fa-facebook"></i></a></li>
+                   <li><a class="btn tw" target="_blank" onclick="_gaq.push(['_trackEvent', 'btn-social-icon', 'click', 'btn-twitter']);" href="https://www.twitter.com/tvtropes"><i class="fa fa-twitter"></i></a> </li>
+                                                      </ul>
+
+            </div>
+
+            <hr>
+
+            <ul class="footer-menu" itemscope="" itemtype="http://schema.org/SiteNavigationElement">
+                <li><h4 class="footer-menu-header">TVTropes</h4></li>
+                <li><a href="/pmwiki/pmwiki.php/Main/Administrivia">About TVTropes</a></li>
+                <li><a href="/pmwiki/pmwiki.php/Administrivia/TheGoalsOfTVTropes">TVTropes Goals</a></li>
+                <li><a href="/pmwiki/pmwiki.php/Administrivia/TheTropingCode">Troping Code</a></li>
+                <li><a href="/pmwiki/pmwiki.php/Administrivia/TVTropesCustoms">TVTropes Customs</a></li>
+                <li><a href="/pmwiki/pmwiki.php/JustForFun/TropesOfLegend">Tropes of Legend</a></li>
+                <li><a href="/pmwiki/ad-free-subscribe.php">Go Ad-Free</a></li>
+                            </ul>
+
+            <hr>
+
+            <ul class="footer-menu" itemscope="" itemtype="http://schema.org/SiteNavigationElement">
+                <li><h4 class="footer-menu-header">Community</h4></li>
+                <li><a href="/pmwiki/query.php?type=att">Ask The Tropers</a></li>
+                <li><a href="/pmwiki/tlp_activity.php">Trope Launch Pad</a></li>
+                <li><a href="/pmwiki/query.php?type=tf">Trope Finder</a></li>
+                <li><a href="/pmwiki/query.php?type=ykts">You Know That Show</a></li>
+                <li><a href="/pmwiki/lbs.php" data-modal-target="login">Live Blogs</a></li>
+                <li><a href="/pmwiki/query.php?type=wl">Wishlist</a></li>
+                <li><a href="/pmwiki/review_activity.php">Reviews</a></li>
+                <li><a href="/pmwiki/topics.php">Forum</a></li>
+            </ul>
+
+            <hr>
+
+            <ul class="footer-menu" itemscope="" itemtype="http://schema.org/SiteNavigationElement">
+                <li><h4 class="footer-menu-header">Tropes HQ</h4></li>
+                <li><a href="/pmwiki/about.php">About Us</a></li>
+                                <li><a href="/pmwiki/contact.php">Contact Us</a></li>
+                <li><a href="/pmwiki/query.php?type=bug">Report Bug</a></li>
+                <li><a href="/pmwiki/changelog.php">Changelog</a></li>
+                <li><a href="/pmwiki/dmca.php">DMCA Notice</a></li>
+                <li><a href="/pmwiki/privacypolicy.php">Privacy Policy</a></li>
+
+            </ul>
+
+        </div>
+
+        <div id="desktop-on-mobile-toggle" class="text-center gutter-top gutter-bottom tablet-on">
+          <a href="/pmwiki/switchDeviceCss.php?mobileVersion=1" rel="nofollow">Switch to <span class="txt-desktop">Desktop</span><span class="txt-mobile">Mobile</span> Version</a>
+        </div>
+
+        <div class="legal">
+            <p>TVTropes is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 3.0 Unported License. <br>Permissions beyond the scope of this license may be available from <a xmlns:cc="http://creativecommons.org/ns#" href="mailto:thestaff@tvtropes.org" rel="cc:morePermissions"> thestaff@tvtropes.org</a>.</p>
+            <br>
+            <div class="privacy_wrapper">
+            </div>
+        </div>
+    </footer>
+    
+    
+    <style>
+      div.fc-ccpa-root {
+        position: absolute !important;
+        bottom: 93px !important;
+        margin: auto !important;
+        width: 100% !important;
+        z-index: 9999 !important;
+        overflow: hidden !important;
+      }
+      .fc-ccpa-root .fc-dns-dialog .fc-dns-link p{
+        outline: none !important;
+        text-decoration: underline !important;
+        font-size: .7em !important;
+        font-family: sans-serif !important;
+      }
+      .fc-ccpa-root .fc-dns-dialog .fc-dns-link .fc-button-background {
+        background: none !important;
+      }
+    </style>
+
+        <div id="_pm_videoViewer" class="full-screen">
+
+  <a href="#close" class="close" id="_pm_videoViewer-close"></a>
+
+  <div class="_pmvv-body">
+
+    <div class="_pmvv-vidbox">
+
+        <div id="overlay_outer_player_max">
+	<div id="overlay_outer_player_wrapper">
+		<div id="tvtropes_overlay_player" data-video-id="tvtropes-videos-01bh45" data-video-image="https://mediaproxy.tvtropes.org/width/600/https://tvtropes.org/pmwiki/pub/images/untitled_4_62.png" data-video-title="Beethoven's Ninth" data-video-url="https://d1w6li7s85ibls.cloudfront.net/qvbr/01bh45_640x360p_qvbr.mp4" data-mpd-url="https://d1w6li7s85ibls.cloudfront.net/dash/01bh45.mpd" data-hls-url="https://d1w6li7s85ibls.cloudfront.net/hls/01bh45.m3u8" data-small-player="never" data-track-events="1" data-do-not-loop="1" data-starting-quality="1" data-autoplay="true">
+		</div>
+	</div>
+</div>
+
+<div class="_pmvv-vidbox-desc">
+
+	<h1 id="overlay-title">Beethoven's Ninth</h1>
+	<p id="overlay-descrip" class="_pmvv-vidbox-descTxt">
+	    John Preston uncovers a secret stash of emotionally-stimulating contraband and he takes the time to listen to an old record of Ludwig van Beethoven. Having spent most of his life under an emotion-suppressing drug enforced by the state, it moves him to tears.	</p>
+
+      <div class="rating-row" data-video-id="01bh45">
+        <input type="hidden" name="is_logged_in" value="0">
+        <p>How well does it match the trope?</p>
+				<div id="star-rating-group">
+						<div class="trope-rate">
+							<input type="radio" id="lamp5" name="rate" value="5">
+							<label for="lamp5" title="Absolutely">★</label>
+							<input type="radio" id="lamp4" name="rate" value="4">
+							<label for="lamp4" title="Yes">★</label>
+							<input type="radio" id="lamp3" name="rate" value="3">
+							<label for="lamp3" title="Kind of">★</label>
+							<input type="radio" id="lamp2" name="rate" value="2">
+							<label for="lamp2" title="Not really">★</label>
+							<input type="radio" id="lamp1" name="rate" value="1">
+							<label for="lamp1" title="No">★</label>
+													</div>
+
+                        <div id="star-rating-total">
+                                                            5 (2 votes)
+                                                    </div>
+
+					</div>
+				</div>
+				
+		<div class="example-media-row">
+			<div class="example-overlay">
+				<p>Example of:</p> 
+				<div id="overlay-trope">Main / SurprisinglyMovingSong</div>
+			</div>
+			<div class="media_second_wrapper">
+				<div class="media-sources-overlay example-overlay">
+					<p>Media sources:</p>
+					<div id="overlay-media"></div>
+				</div>
+				<div class="example-overlay">
+					<div id="secondary_tropes_row"></div>
+					<div id="overlay-second"></div>
+				</div>
+			</div>
+		</div>
+	<p class="_pmvv-vidbox-stats text-right font-s" style="padding-top:8px; border-top: solid 1px rgba(255,255,255,0.2)">
+	<!--    <i class="fa fa-eye"></i> 11,241-->
+
+
+			    <a href="#video-feedback" class="float-right" data-modal-target="login">Report</a>
+
+	</p>
+    
+</div>
+
+
+    </div>
+
+  </div>
+
+    <div class="_pmvv-foot">
+
+    <div class="_pmvv-foot-scrollwrapper">
+                <a href="#video-link" data-video-id="01bh45" data-vimeo-id="" data-video-descrip="John Preston uncovers a secret stash of emotionally-stimulating contraband and he takes the time to listen to an old record of Ludwig van Beethoven. Having spent most of his life under an emotion-suppressing drug enforced by the state, it moves him to tears." data-video-title="Beethoven's Ninth" data-video-url="https://d1w6li7s85ibls.cloudfront.net/qvbr/01bh45_640x360p_qvbr.mp4" data-mpd-url="https://d1w6li7s85ibls.cloudfront.net/dash/01bh45.mpd" data-hls-url="https://d1w6li7s85ibls.cloudfront.net/hls/01bh45.m3u8" data-video-thumbnail="https://mediaproxy.tvtropes.org/width/250/https://tvtropes.org/pmwiki/pub/images/untitled_4_62.png" data-video-trope="Main/SurprisinglyMovingSong" data-video-tropename="Surprisingly Moving Song" data-video-approval="APPROVED" data-video-troper-rating="" data-video-average-rating="5.00" data-video-rating-count="2" data-video-media-sources="Film/Equilibrium" class="video-launch-link video-overlay-link video-background-image lazy-image" data-src="https://mediaproxy.tvtropes.org/width/250/https://tvtropes.org/pmwiki/pub/images/untitled_4_62.png">
+            <p><span class="bold">Beethoven's Ninth</span></p>
+          </a>
+                <a href="#video-link" data-video-id="qxnas2" data-vimeo-id="" data-video-descrip="Weird Al sings about how much he doesn't like &amp;quot;Achy Breaky Heart&amp;quot;." data-video-title="Achy Breaky Song" data-video-url="https://d1w6li7s85ibls.cloudfront.net/qvbr/qxnas2_640x360p_qvbr.mp4" data-mpd-url="https://d1w6li7s85ibls.cloudfront.net/dash/qxnas2.mpd" data-hls-url="https://d1w6li7s85ibls.cloudfront.net/hls/qxnas2.m3u8" data-video-thumbnail="https://static.tvtropes.org/trope_videos_transcoded/images/sd/qxnas2.jpg" data-video-trope="Main/CharactersMostHatedSong" data-video-tropename="Character’s Most Hated Song" data-video-approval="APPROVED" data-video-troper-rating="" data-video-average-rating="5.00" data-video-rating-count="1" data-video-media-sources="Music/Alapalooza,Music/WeirdAlYankovic" class="video-launch-link video-overlay-link video-background-image lazy-image" data-src="https://static.tvtropes.org/trope_videos_transcoded/images/sd/qxnas2.jpg">
+            <p><span class="bold">Achy Breaky Song</span></p>
+          </a>
+                <a href="#video-link" data-video-id="upmkpz" data-vimeo-id="" data-video-descrip="Dipper has brought several disposable cameras with him so he and his friends can easily photograph the Gobblewonker." data-video-title="Disposable Cameras" data-video-url="https://d1w6li7s85ibls.cloudfront.net/qvbr/upmkpz_640x360p_qvbr.mp4" data-mpd-url="https://d1w6li7s85ibls.cloudfront.net/dash/upmkpz.mpd" data-hls-url="https://d1w6li7s85ibls.cloudfront.net/hls/upmkpz.m3u8" data-video-thumbnail="https://static.tvtropes.org/trope_videos_transcoded/images/sd/upmkpz.jpg" data-video-trope="Main/CrazyPrepared" data-video-tropename="Crazy-Prepared" data-video-approval="APPROVED" data-video-troper-rating="" data-video-average-rating="5.00" data-video-rating-count="3" data-video-media-sources="Main/VerbalBackspace,Recap/GravityFallsS1E2TheLegendOfTheGobblewonker,WesternAnimation/GravityFalls" class="video-launch-link video-overlay-link video-background-image lazy-image" data-src="https://static.tvtropes.org/trope_videos_transcoded/images/sd/upmkpz.jpg">
+            <p><span class="bold">Disposable Cameras</span></p>
+          </a>
+                <a href="#video-link" data-video-id="z7jaqb" data-vimeo-id="" data-video-descrip="When Queen Elizabeth learns of the Duke of Windsor's Nazi connections and treasonous plans, she cuts him off for good." data-video-title="The Duke of Windsor" data-video-url="https://d1w6li7s85ibls.cloudfront.net/qvbr/z7jaqb_640x360p_qvbr.mp4" data-mpd-url="https://d1w6li7s85ibls.cloudfront.net/dash/z7jaqb.mpd" data-hls-url="https://d1w6li7s85ibls.cloudfront.net/hls/z7jaqb.m3u8" data-video-thumbnail="https://static.tvtropes.org/trope_videos_transcoded/images/sd/z7jaqb.jpg" data-video-trope="Main/ThisIsUnforgivable" data-video-tropename="This Is Unforgivable!" data-video-approval="APPROVED" data-video-troper-rating="" data-video-average-rating="2.33" data-video-rating-count="3" data-video-media-sources="Series/TheCrown2016" class="video-launch-link video-overlay-link video-background-image lazy-image" data-src="https://static.tvtropes.org/trope_videos_transcoded/images/sd/z7jaqb.jpg">
+            <p><span class="bold">The Duke of Win...</span></p>
+          </a>
+                <a href="#video-link" data-video-id="2umx40" data-vimeo-id="" data-video-descrip="Gyro sings to Johnny a song he made up about mozzarella cheese." data-video-title="Pizza Mozzarella" data-video-url="https://d1w6li7s85ibls.cloudfront.net/qvbr/2umx40_640x360p_qvbr.mp4" data-mpd-url="https://d1w6li7s85ibls.cloudfront.net/dash/2umx40.mpd" data-hls-url="https://d1w6li7s85ibls.cloudfront.net/hls/2umx40.m3u8" data-video-thumbnail="https://static.tvtropes.org/trope_videos_transcoded/images/sd/2umx40.jpg" data-video-trope="Main/OdeToFood" data-video-tropename="Ode to Food" data-video-approval="APPROVED" data-video-troper-rating="" data-video-average-rating="4.50" data-video-rating-count="2" data-video-media-sources="VideoGame/JoJosBizarreAdventureEyesOfHeaven" class="video-launch-link video-overlay-link video-background-image lazy-image" data-src="https://static.tvtropes.org/trope_videos_transcoded/images/sd/2umx40.jpg">
+            <p><span class="bold">Pizza Mozzarella</span></p>
+          </a>
+          </div>
+
+  </div>
+  
+</div>
+
+        
+    
+        <script type="text/javascript">
+
+        var cleanCreativeEnabled = "";
+        var donation = "";
+        var live_ads = "1";
+        var img_domain = "https://static.tvtropes.org";
+        var snoozed = cookies.read('snoozedabm');
+        var elem = document.createElement('script');
+        elem.async = true;
+
+        elem.src = 'https://assets.tvtropes.org/design/assets/bundle.js?rev=457c3126c794172cd32651e95c6816619910a291';
+
+        elem.onload = function() {
+                                 }
+        document.getElementsByTagName('head')[0].appendChild(elem);
+
+
+        // Load the script for the outstream playerfor tracking purposes
+        // Create a new script element
+        var script_element = document.createElement("script");
+            script_element.src = "https://lh.bigcrunch.com/main.js";
+            script_element.type = "text/javascript";
+            script_element.id = "bigcrunchtag";
+            script_element.setAttribute("data-property-id", "34a5ddec-697b-424e-81d2-e6bb46a1b83e");
+
+        // Append the script element to the head of the document
+        document.getElementsByTagName('head')[0].appendChild(script_element);
+    </script>
+
+
+    
+    
+
+    
+    
+  <script type="text/javascript">
+      function send_analytics_event(user_type, donation){
+          // if(user_type == 'uncached' || user_type == 'cached'){
+          //   ga('send', 'event', 'caching', 'load', user_type, {'nonInteraction': 1});
+          //   return;
+          // }
+          var event_name = user_type;
+
+          if(donation == 'true'){
+              event_name += "_donation"
+          }else if(typeof(valid_user) == 'undefined'){
+              event_name += "_blocked"
+          }else if(valid_user == true){
+              event_name += "_unblocked";
+          }else{
+              event_name = "_unknown"
+          }
+          ga('send', 'event', 'ads', 'load', event_name, {'nonInteraction': 1});
+      }
+
+    
+    send_analytics_event("guest", "false");
+      </script>
+
+
+
+<!-- Quantcast Tag -->
+<script type="text/javascript">
+  window._qevents = window._qevents || [];
+
+  (function() {
+    var elem = document.createElement('script');
+    elem.src = (document.location.protocol == "https:" ? "https://secure" : "http://edge") + ".quantserve.com/quant.js";
+    elem.async = true;
+    elem.type = "text/javascript";
+    var scpt = document.getElementsByTagName('script')[0];
+    scpt.parentNode.insertBefore(elem, scpt);
+  })();
+
+  window._qevents.push({
+      qacct:"p-mEzuYq24VEJ-3"
+  });
+</script>
+
+<noscript>
+  <div style="display:none;">
+    <img src="//pixel.quantserve.com/pixel/p-mEzuYq24VEJ-3.gif" border="0" height="1" width="1" alt="Quantcast"/>
+  </div>
+</noscript>
+<!-- End Quantcast tag -->
+
+
+<!-- Begin comScore Tag -->
+<script>
+  var _comscore = _comscore || [];
+  _comscore.push({ c1: "2", c2: "38282685" });
+  (function() {
+    var s = document.createElement("script"), el = document.getElementsByTagName("script")[0]; s.async = true;
+    s.src = "https://sb.scorecardresearch.com/cs/38282685/beacon.js";
+    el.parentNode.insertBefore(s, el);
+  })();
+</script><iframe src="https://2341357a1e5d78dda67aa6547b9eb65a.safeframe.googlesyndication.com/safeframe/1-0-40/html/container.html" style="visibility: hidden; display: none;"></iframe>
+<noscript>
+  <img src="https://sb.scorecardresearch.com/p?c1=2&amp;c2=38282685&amp;cv=3.6.0&amp;cj=1">
+</noscript>
+<!-- End comScore Tag -->
+
+
+<span style="display: none; word-break: break-all; white-space: pre-wrap; visibility: hidden;"></span><iframe name="googlefcPresent" style="display: none; width: 0px; height: 0px; border: none; z-index: -1000; left: -1000px; top: -1000px;"></iframe><iframe name="__tcfapiLocator" src="about:blank" style="display: none; width: 0px; height: 0px; border: none; z-index: -1000; left: -1000px; top: -1000px;"></iframe><iframe name="__uspapiLocator" src="about:blank" style="display: none; width: 0px; height: 0px; border: none; z-index: -1000; left: -1000px; top: -1000px;"></iframe><iframe name="__gppLocator" src="about:blank" style="display: none; width: 0px; height: 0px; border: none; z-index: -1000; left: -1000px; top: -1000px;"></iframe><iframe name="googlefcInactive" src="about:blank" style="display: none; width: 0px; height: 0px; border: none; z-index: -1000; left: -1000px; top: -1000px;"></iframe><iframe name="googlefcLoaded" src="about:blank" style="display: none; width: 0px; height: 0px; border: none; z-index: -1000; left: -1000px; top: -1000px;"></iframe><div class="fc-ccpa-root"><div class="fc-dialog-container"><div class="fc-dialog fc-dns-dialog" style=""><button class="fc-dns-link" role="button" aria-label="Do Not Sell or Share My Personal Information" tabindex="0"><div class="fc-button-background"> </div><p>Do Not Sell or Share My Personal Information</p></button></div><div class="fc-dialog fc-confirmation-dialog" style="display: none !important;"><div class="fc-dialog-overlay"></div><div class="fc-confirmation-dialog-container"><div class="fc-confirmation-dialog-content" role="dialog" aria-label="Opt out of the sale or sharing of personal information We won't sell or share your personal information to inform the ads you see. You may still see interest-based ads if your information is sold or shared by other companies or was sold or shared previously.Dismiss. Opt out." tabindex="0"><div class="fc-dialog-header"><div class="fc-header-image-container"><img class="fc-header-image" alt="Opt out of the sale or sharing of personal information" src="https://lh3.googleusercontent.com/-aQtkkKGNC5IjgHIz13xkLzDpAaV_lrxv_Li9uxT3Bmgxnolj_NngITFAThsLp1da85tmV-3hlvy-DO-8_vxYmrjRhqfYLRgPBxq-hWCpRO9NQcjSLl1=h60"></div><h1>Opt out of the sale or sharing of personal information</h1></div><div class="fc-dialog-body"><p>We won't sell or share your personal information to inform the ads you see. You may still see interest-based ads if your information is sold or shared by other companies or was sold or shared previously.</p></div><div class="fc-footer-buttons"><button class="fc-cta-button fc-cta-close" role="button" aria-label="Dismiss" tabindex="0"><div class="fc-button-background"> </div><p class="fc-button-label">Dismiss</p></button><button class="fc-cta-button fc-cta-opt-out" role="button" aria-label="Opt out" tabindex="0"><div class="fc-button-background"> </div><p class="fc-button-label">Opt out</p></button></div></div></div></div></div></div><iframe src="https://s.amazon-adsystem.com/iu3?cm3ppd=1&amp;d=dtb-pub&amp;csif=t&amp;gdpr=0&amp;dl=n-simpli.fi_n-baidu_cnv_n-Rise" style="display: none;"></iframe><iframe name="google_ads_top_frame" id="google_ads_top_frame" style="display: none; position: fixed; left: -999px; top: -999px; width: 0px; height: 0px;"></iframe><script type="text/javascript" src="https://mb.moatads.com/n.js?e=35&amp;ol=1361899412&amp;qn=%604%7BZEYwoqI%24%5BK%2BdLLU)%2CMm~tW%2490vv9L%24%2FoDb%2FDXwJN%5EpBKUYBgDzb%23Ls1(u0EnUa%3Fwb%26k!C%24%26J%3BuFdSh%3F%24b%40o~%2Fj%24Co%3DN_Q%247NCLm%3C6Hu_SOy7jhLs1%7B)%3Ee3wW0uC%2BA5%3Deu!LfBB2%2B%7BLT7%25%40qwMoI3%2B%3BggqhB3U4(%5B*rUo8rY2baurIczc%5EjrG%3Dn%3Ch%2CekO2m%2F%26u~q%60RP%3CG.FTVGX%5E8Y.N%2CzKydjXB3UN%5EMk3ojtgbzbSSr1r4V%40bLwA&amp;tf=1_nMzjG---CSa7H-nHVQZC-bW7qhB-LRwqH-nMzjG-&amp;vi=111111&amp;rc=0%2C1%2C0%2C5%2C747835005%2C1%2C2%2C0%2Cprobably%2Cprobably&amp;rb=1-jWcFgxJkDqqRb9TZjaOdT2EB%2BBOA3JNdQP%2Fi2v2zr%2Bdj46WSY9fIj4B2PAB1iav4pxs%3D&amp;rs=1-vmZzsGqfu1cv0g%3D%3D&amp;sc=1&amp;os=1-3Q%3D%3D&amp;qp=10000&amp;is=BBBBB2BBEYBvGl2BBCkqtUTE1RmsqbKW8BsrBu0rCFE48CRBeeBS2hWTMBBQeQBBn2soYggyUig0CBlWZ0uBBCCCCCCOgRBBiOfnE6Bkg7Oxib8MwBtJYHCBdm5kBhIcC9Y8oBXckXBR76iUUsJBCBBBBBBBBBWBBBj3BBBZeGV2BBBCMciUBBBjgEBBBBBB94UMgTdJMtEcpMBBBQBBBniOccBBBBBB47kNwxBbBBBBBBBBBhcjG6BBJM2L4Bk8BwCBQmIoRBBCzBz1BBCTClBBrbBBC4ehueB57NG9aJfR0BqEKiuwBBBB&amp;iv=8&amp;qt=0&amp;gz=1&amp;hh=0&amp;hn=0&amp;tw=&amp;qc=0&amp;qd=0&amp;qf=1200&amp;qe=702&amp;qh=1200&amp;qg=2625&amp;qm=480&amp;qa=1440&amp;qb=900&amp;qi=1440&amp;qj=875&amp;to=000&amp;po=1-0020002000002120&amp;vy=ot%24b%5Bh%40%22oDgO%3DLlE6%3AvyDN(%2B(a4%5D0cxz%3B(NFSjl8%3BY%3EhyMmxFvny(r%24J)%2C4i8ocS!%5BFZKU37B%2BMm%3CeFWO0%40M%7CQhB&amp;ql=%3B%5BpwxnRd%7Dt%3Aa%5DmJVOG)%2C~%405%2F%5BGI%3F6C(TgPB*e%5D1(rI%24(rj2Iy!pw%40aOS%3DyNX8Y%7BQgPB*e%5D1(rI%24(rj%5EB61%2F%3DSqcMr1%7B%2CJA%24Jz_%255tTL%3Fwbs_T%234%25%60X%3CA&amp;qo=0&amp;qr=0&amp;i=QUANTCAST3&amp;hp=1&amp;wf=0&amp;ra=1&amp;pxm=1&amp;sgs=3&amp;vb=2&amp;cm=15&amp;kq=2&amp;hq=0&amp;hs=0&amp;hu=0&amp;hr=0&amp;ht=1&amp;dnt=0&amp;bq=0&amp;f=0&amp;j=&amp;t=1710051928993&amp;de=382030489139&amp;m=0&amp;ar=0c7a73c5c3d-clean&amp;iw=ac07d2e&amp;q=2&amp;cb=0&amp;ym=0&amp;cu=1710051928993&amp;ll=2&amp;lm=0&amp;ln=1&amp;r=0&amp;em=0&amp;en=1&amp;d=p-e9KDqb0WIZVj6%3Aqfm%3Ae87bed78-0197-43d1-b120-ded8701ec108%3Ac2381b53-1d1c-44d0-84f5-c4e90dbbc5ee&amp;cadf=-&amp;zGSRC=1&amp;gu=https%3A%2F%2Ftvtropes.org%2F&amp;id=1&amp;ii=4&amp;bo=tvtropes.org&amp;bd=-&amp;zMoatOrigSlicer1=N%2FA&amp;zMoatOrigSlicer2=N%2FA&amp;gw=quantcastv2691176990399&amp;fd=1&amp;it=500&amp;ti=0&amp;ih=2&amp;pe=1%3A-%3A-%3A0%3A968&amp;jk=-1&amp;jm=-1&amp;fs=205668&amp;na=695218317&amp;cs=0&amp;ord=1710051928993&amp;jv=292798692&amp;callback=DOMlessLLDcallback_97946194"></script><script type="text/javascript" src="https://mb.moatads.com/s/v2?url=https%3A%2F%2Ftvtropes.org%2F&amp;pcode=quantcastv2691176990399&amp;ord=1710051928993&amp;jv=2136685664&amp;callback=BrandSafetyNadoscallback_97946194"></script><img width="0" height="0" src="//ams-pageview-public.s3.amazonaws.com/1x1-pixel.png?id=86f39e3d3fea" alt="." style="height: 0px; width: 0px; border: 0px; display: none;"><iframe src="https://www.google.com/recaptcha/api2/aframe" width="0" height="0" style="display: none;"></iframe></body></html>

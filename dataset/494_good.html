@@ -1,0 +1,268 @@
+<html data-adblockkey="MFwwDQYJKoZIhvcNAQEBBQADSwAwSAJBANDrp2lz7AOmADaN8tA50LsWcjLFyQFcb/P2Txc58oYOeILb3vBw7J6f4pamkAQVSQuqYsKx3YzdUHCvbVZvFUsCAwEAAQ==_vMZ3n0iQIs5/VMGxxHWTHq85qSCuKqaYUl4/63R2UW90mvfuY6Abq0H/nQPBprS2WX9mtpqCX3sXmFGaHC91FQ==" lang="en" style="background: #2B2B2B;"><head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAIAAACQd1PeAAAADElEQVQI12P4//8/AAX+Av7czFnnAAAAAElFTkSuQmCC">
+    <link rel="preconnect" href="https://www.google.com" crossorigin="">
+<title>Sematicscholar.org</title><meta name="description" content="See relevant content for Sematicscholar.org"><style>* {
+  font-smoothing: antialiased;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+html, body {
+  width: 100%;
+  margin: 0;
+}
+
+html {
+  background-color: #2B2B2B;
+  height: 100%;
+}
+
+body {
+  min-height: 90%;
+  font-family: Arial, sans-serif;
+  letter-spacing: 1.2px;
+  color: #ccc;
+  text-align: center;
+}
+
+/* App Target - This starts hidden until we apply a class to "activate" it */
+
+#target {
+  opacity: 0;
+  visibility: hidden;
+}
+
+/* Status Messages - These are displayed when we are not rendering ad blocks or Related Search */
+
+#pk-status-message {
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Sales Box - Default State */
+
+#sales-box {
+  display: block;
+  width: 100%;
+  padding: 3px;
+  text-align: center;
+  text-decoration: none;
+  color: #8EABC0;
+}
+
+#sales-box a {
+  display: block;
+  width: 100%;
+  text-decoration: inherit;
+  color: #8EABC0;
+  cursor: pointer;
+}
+
+/* Sales Box - Highlighted State */
+
+#sales-box.is-highlighted {
+  position: relative;
+  z-index: 1;
+  background: #032438 linear-gradient(to top, #044368 0%, #000 100%);
+  box-shadow: 0 0 15px 0 #000;
+  border-bottom: 3px solid #262626;
+}
+
+#sales-box.is-highlighted a {
+  line-height: 1.3;
+  display: inline-block;
+  font-size: 18px;
+  color: #fff;
+  text-shadow: 1px 1px 0 rgba(0, 0, 0, 0.5);
+  background: none;
+}
+
+/* Ellipsis Loader */
+
+.pk-loader {
+  display: inline-block;
+  position: relative;
+  width: 80px;
+  height: 80px;
+}
+
+.pk-loader div {
+  position: absolute;
+  top: 33px;
+  width: 13px;
+  height: 13px;
+  border-radius: 50%;
+  background: #ccc;
+  animation-timing-function: cubic-bezier(0, 1, 1, 0);
+}
+
+.pk-loader div:nth-child(1) {
+  left: 8px;
+  animation: pk-anim-1 0.6s infinite;
+}
+
+.pk-loader div:nth-child(2) {
+  left: 8px;
+  animation: pk-anim-2 0.6s infinite;
+}
+
+.pk-loader div:nth-child(3) {
+  left: 32px;
+  animation: pk-anim-2 0.6s infinite;
+}
+
+.pk-loader div:nth-child(4) {
+  left: 56px;
+  animation: pk-anim-1 0.6s infinite;
+  animation-direction: reverse;
+}
+
+.pk-loader-text {
+  position: fixed;
+  font-size: 12px;
+  right: 20px;
+  bottom: 20px;
+  font-weight: lighter;
+}
+
+/* Utilities */
+
+.pk-message-title {
+  font-size: 2em;
+  font-weight: bold;
+}
+
+.pk-page-ready {
+  opacity: 1 !important;
+  visibility: visible !important;
+}
+
+@media only screen and (max-width: 600px) {
+  .hidden-xs {
+    opacity: 0;
+    visibility: hidden;
+  }
+}
+
+/* Animation */
+
+@keyframes pk-anim-1 {
+  0% {
+      transform: scale(0);
+  }
+  100% {
+      transform: scale(1);
+  }
+}
+
+@keyframes pk-anim-2 {
+  0% {
+      transform: translate(0, 0);
+  }
+  100% {
+      transform: translate(24px, 0);
+  }
+}
+</style><style>:root {
+  --rswidth: 700px;
+}
+
+body, html {
+    font-family: sans-serif, 'Arial';
+    height: 100%;
+    background-color: #2B2B2B;
+    margin: 0 !important;
+    position: relative;
+    overflow-x: hidden;
+}
+#target {
+    position: relative;
+    height: auto;
+    margin: 0 auto !important;
+}
+main {
+    text-align: center;
+    margin: 0 auto;
+    min-height: 100vh;
+    display: flex;
+    position: relative;
+    z-index: 2;
+    align-items: center;
+    justify-content: start;
+    flex-direction: column;
+}
+header {
+    text-align: center;
+    padding: 45px 0;
+}
+header h1 {
+    font-size: 29px;
+    color: #ccc;
+    text-transform: uppercase;
+    margin: 0;
+}
+main section {
+    flex: 1;
+    padding: 20px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    flex-direction: column;
+}
+section .ad-block {
+    width: 100%;
+    max-width: 500px;
+    height: 100%;
+
+}
+#rs {
+    width: 100%;
+    max-width: var(--rswidth);
+    min-height: 100px;
+    height: 100%;
+}
+footer {
+    font-size: 14px;
+    text-align: center;
+    padding: 30px 0px;
+    width: 100%;
+    color: #555;
+}
+footer a {
+    color: #555;
+}</style></head>
+<body>
+<div id="target" style="opacity: 0" class="pk-page-ready"><main>
+            <header>
+            <h1>Sematicscholar.org</h1>
+        </header>
+        <section>
+        <div class="ad-block">
+            <div class="ads">
+                <div id="ad-1"></div>
+                <div id="ad-2"></div>
+            </div>
+        </div>
+        <div id="rs" style="height: auto;"><iframe frameborder="0" marginwidth="0" marginheight="0" allowtransparency="true" scrolling="no" width="100%" name="{&quot;name&quot;:&quot;master-1&quot;,&quot;master-1&quot;:{&quot;container&quot;:&quot;rs&quot;,&quot;styleId&quot;:&quot;3113057640&quot;,&quot;personalizedAds&quot;:false,&quot;channel&quot;:&quot;pid-bodis-gcontrol202,pid-bodis-gcontrol97,pid-bodis-gcontrol307,pid-bodis-gcontrol152,pid-bodis-gcontrol429&quot;,&quot;domainName&quot;:&quot;ww25.sematicscholar.org&quot;,&quot;fexp&quot;:&quot;21404,17301383,17301421,17301431,17301433,17301436,71847096&quot;,&quot;masterNumber&quot;:1,&quot;number&quot;:3,&quot;pubId&quot;:&quot;dp-bodis30_3ph&quot;,&quot;role&quot;:&quot;m&quot;,&quot;hl&quot;:&quot;en&quot;,&quot;client_gdprApplies&quot;:0,&quot;willBeDropped&quot;:false,&quot;resultsPageBaseUrl&quot;:&quot;http://ww25.sematicscholar.org?caf&amp;subid1=20240310-1823-56b6-b6e6-74b46c1e5482&quot;,&quot;columns&quot;:1,&quot;horizontalAlignment&quot;:&quot;left&quot;,&quot;resultsPageQueryParam&quot;:&quot;query&quot;,&quot;terms&quot;:&quot;&quot;,&quot;kw&quot;:&quot;&quot;,&quot;ie&quot;:&quot;UTF-8&quot;,&quot;maxTermLength&quot;:50,&quot;maxTop&quot;:null,&quot;minTop&quot;:null,&quot;oe&quot;:&quot;UTF-8&quot;,&quot;type&quot;:&quot;relatedsearch&quot;,&quot;linkTarget&quot;:&quot;_blank&quot;,&quot;fontSizeTitle&quot;:18,&quot;fontSizeAttribution&quot;:13,&quot;uiOptimize&quot;:false,&quot;domainRegistrant&quot;:&quot;as-drid-2497786236455022&quot;}}" id="master-1" src="https://www.adsensecustomsearchads.com/afs/ads?adtest=off&amp;psid=3113057640&amp;pcsa=false&amp;channel=pid-bodis-gcontrol202%2Cpid-bodis-gcontrol97%2Cpid-bodis-gcontrol307%2Cpid-bodis-gcontrol152%2Cpid-bodis-gcontrol429&amp;client=dp-bodis30_3ph&amp;r=m&amp;hl=en&amp;rpbu=http%3A%2F%2Fww25.sematicscholar.org%3Fcaf%26subid1%3D20240310-1823-56b6-b6e6-74b46c1e5482&amp;max_radlink_len=50&amp;type=3&amp;uiopt=false&amp;swp=as-drid-2497786236455022&amp;oe=UTF-8&amp;ie=UTF-8&amp;fexp=21404%2C17301383%2C17301421%2C17301431%2C17301433%2C17301436%2C71847096&amp;client_gdprApplies=0&amp;format=r3&amp;nocache=1401710055438186&amp;num=0&amp;output=afd_ads&amp;domain_name=ww25.sematicscholar.org&amp;v=3&amp;bsl=8&amp;pac=0&amp;u_his=2&amp;u_tz=-480&amp;dt=1710055438187&amp;u_w=1440&amp;u_h=900&amp;biw=1200&amp;bih=702&amp;psw=1200&amp;psh=632&amp;frm=0&amp;uio=-&amp;cont=rs&amp;drt=0&amp;jsid=caf&amp;jsv=610814804&amp;rurl=http%3A%2F%2Fww25.sematicscholar.org%2F%3Fsubid1%3D20240310-1823-56b6-b6e6-74b46c1e5482" style="visibility: visible; height: 480px; display: block;" title=""></iframe></div>
+    </section>
+    <footer>
+        <span>Copyright 2024</span><span style="padding:0px 8px;">•</span><a href="/privacy" target="_blank">Privacy Policy</a><span style="padding:0px 8px;">•</span><a href="/legal" target="_blank">Legal</a>
+        <p id="imprint-text"></p>
+    </footer>
+</main></div>
+<script src="https://partner.googleadservices.com/gampad/cookie.js?domain=ww25.sematicscholar.org&amp;client=dp-bodis30_3ph&amp;product=SAS&amp;callback=__sasCookie"></script><script>window.park = "eyJ1dWlkIjoiY2E4Yjc3MDMtMGIxYy00MDE5LThhYWMtOWZhM2Y4YTJiNWRmIiwicGFnZV90aW1lIjoxNzEwMDU1NDM3LCJwYWdlX3VybCI6Imh0dHA6Ly93dzI1LnNlbWF0aWNzY2hvbGFyLm9yZy8/c3ViaWQxPTIwMjQwMzEwLTE4MjMtNTZiNi1iNmU2LTc0YjQ2YzFlNTQ4MiIsInBhZ2VfbWV0aG9kIjoiR0VUIiwicGFnZV9yZXF1ZXN0Ijp7InN1YmlkMSI6IjIwMjQwMzEwLTE4MjMtNTZiNi1iNmU2LTc0YjQ2YzFlNTQ4MiJ9LCJwYWdlX2hlYWRlcnMiOnt9LCJob3N0Ijoid3cyNS5zZW1hdGljc2Nob2xhci5vcmciLCJpcCI6IjUyLjExOS4xMTcuMTE1In0K";</script>
+<script src="/bkvNXozGV.js"></script>
+
+
+<script type="text/javascript" src="https://www.google.com/adsense/domains/caf.js"></script><div style="margin-top: 30px;">
+        <div id="sales-box" class="BOTTOM ">
+          <a href="/listing" target="_blank" rel="noopener">The domain Sematicscholar.org may be for sale. Click here to inquire about this domain.</a>
+        </div>
+      </div></body></html>

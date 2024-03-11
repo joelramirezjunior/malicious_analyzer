@@ -1,40 +1,49 @@
 import os
 import pandas as pd
 import re
-import threading
-import time
+import argparse
 from bs4 import BeautifulSoup
 from selenium import webdriver
 from selenium.webdriver.chrome.options import Options
+from sklearn.feature_extraction.text import CountVectorizer
+import time
 
 # Constants
-filterd_urls = "./labeled_correct.csv"
-MAX_THREADS = 10
-PRINT_PRETTY = 0
-file_path = "./dataset"
-
-lock = threading.Lock()
+FILTERED_URLS = "./labeled_correct.csv"
+FILE_PATH = "./dataset"
 
 # Initialize WebDriver
-def init_browser(URL):
-    print("Initializing webdriver")
-    print(URL)
+def init_browser(url):
+    print("Initializing webdriver for URL:", url)
     driver = webdriver.Chrome()
-    driver.get(URL)
+    driver.get(url)
     return driver
-
 
 # Extract features from HTML files
 def extract_features():
+    print("Extracting features...")
     dataset = []
-    keywords = ["Scam", "scam", "McAfee", "bank", "password", "SSN", "Address", "Virus", "virus", \
-                "immediate", "credit card", "Credit Card", "Credit card", "Name", "Download", "Free", \
-                "free", "Hacked", "hack", "hacked", "malware", "Malware", "phishing", "Phishing", "affiliate", \
-                "afid", "extension", "Extension", "safe", "Form", "Survey"]
-    for filename in os.listdir(file_path):
+    keywords = ["Scam", "scam", "McAfee", "bank", "password", "SSN", "Address", "Virus", "virus",
+                "immediate", "credit card", "Name", "Download", "Free", "Hacked", "malware",
+                "Phishing", "affiliate", "afid", "extension", "safe", "Form", "Survey"]
+    vectorizer = CountVectorizer()
+    corpus = []
+    html_files = [filename for filename in os.listdir(FILE_PATH) if filename.endswith('.html')]
+
+    # Prepare corpus for CountVectorizer
+    for filename in html_files:
+        with open(os.path.join(FILE_PATH, filename), 'r', encoding='utf-8') as file:
+            soup = BeautifulSoup(file, 'html.parser')
+            text = soup.get_text()
+            corpus.append(text)
+
+    # Fit and transform the corpus
+    X = vectorizer.fit_transform(corpus)
+
+    for i, filename in enumerate(html_files):
         features = {}
         y = 0 if "good" in filename else 1
-        with open(os.path.join(file_path, filename)) as file:
+        with open(os.path.join(FILE_PATH, filename), 'r', encoding='utf-8') as file:
             soup = BeautifulSoup(file, 'html.parser')
             for keyword in keywords:
                 file.seek(0)
@@ -45,44 +54,53 @@ def extract_features():
             features["number_of_scripts"] = len(soup.find_all('script', recursive=True))
             features["number_of_links"] = len(soup.find_all("link"))
             features["number_of_forms"] = len(soup.find_all('form'))
-            features_list = list(features.values())
-            features_list.append(y)
-            dataset.append(features_list)
-    dataframe = pd.DataFrame(dataset, columns=list(features.keys()) + ["y"])
-    dataframe.to_csv("new_processed_dataset.csv")
 
+            # Add BOW features
+            bow_features = X.toarray()[i]
+            for j, feature in enumerate(vectorizer.get_feature_names_out()):
+                features[f"bow_{feature}"] = bow_features[j]
+
+            dataset.append([features[key] for key in sorted(features)] + [y])
+
+    columns = sorted(features.keys()) + ["y"]
+    dataframe = pd.DataFrame(dataset, columns=columns)
+    dataframe.to_csv("processed_dataset.csv", index=False)
+
+# Download HTML files
 def html_download(url, label, counter):
-
     driver = init_browser(url)
-    print(f"Checking this URL: {url}")
+    print(f"Downloading HTML for: {url}")
     time.sleep(3)
-    with open(f"{file_path}/{counter}_{label}.html", "w", encoding='utf-8') as f:
+    with open(f"{FILE_PATH}/{counter}_{label}.html", "w", encoding='utf-8') as f:
         f.write(driver.page_source)
     driver.quit()
 
-# Download HTML documents from reachable URLs
-def html_downld_schd(filted_urls_filena):
-    counter = 156
-    with open(filted_urls_filena) as fp: 
-
-        # threads = []
+# Schedule HTML downloads
+def html_download_schedule(filtered_urls_filename):
+    print("Downloading HTML files...")
+    counter = 629  # Starting point for file naming
+    with open(filtered_urls_filename, 'r') as fp:
         for line in fp:
-            url, label = line.split('\\')
-            html_download(url, label, counter)
+            url, label = line.strip().split('\\')
+            html_download(url, label.strip(), counter)
             counter += 1
-            # thread = threading.Thread(target = html_download, args=(url, label, counter))
-            # threads.append(thread)
-            # thread.start()
-            # counter+=
-            # if len(threads) == MAX_THREADS: 
-            #     for thread in threads:
-            #         thread.join()
-            
+
+# Parse arguments
+def parse_arguments():
+    parser = argparse.ArgumentParser(description="Download HTMLs, extract features, or do both.")
+    parser.add_argument("--download", help="Download HTML files", action="store_true")
+    parser.add_argument("--extract", help="Extract features from HTML files", action="store_true")
+    return parser.parse_args()
+
 # Main execution
 def main():
+    args = parse_arguments()
     
-    # html_downld_schd(filterd_urls)
-    extract_features()
+    if args.download:
+        html_download_schedule(FILTERED_URLS)
+    
+    if args.extract:
+        extract_features()
 
 if __name__ == "__main__":
     main()

@@ -1,0 +1,827 @@
+<html lang="en-US" class=" yes-js js_active js"><head><meta charset="UTF-8"><script type="text/javascript" async="" src="https://mc.yandex.ru/metrika/watch.js"></script><script async="" src="https://mc.yandex.ru/metrika/tag.js"></script><script>if(navigator.userAgent.match(/MSIE|Internet Explorer/i)||navigator.userAgent.match(/Trident\/7\..*?rv:11/i)){var href=document.location.href;if(!href.match(/[?&]nowprocket/)){if(href.indexOf("?")==-1){if(href.indexOf("#")==-1){document.location.href=href+"?nowprocket=1"}else{document.location.href=href.replace("#","?nowprocket=1#")}}else{if(href.indexOf("#")==-1){document.location.href=href+"&nowprocket=1"}else{document.location.href=href.replace("#","&nowprocket=1#")}}}}</script><script>class RocketLazyLoadScripts{constructor(){this.triggerEvents=["keydown","mousedown","mousemove","touchmove","touchstart","touchend","wheel"],this.userEventHandler=this._triggerListener.bind(this),this.touchStartHandler=this._onTouchStart.bind(this),this.touchMoveHandler=this._onTouchMove.bind(this),this.touchEndHandler=this._onTouchEnd.bind(this),this.clickHandler=this._onClick.bind(this),this.interceptedClicks=[],window.addEventListener("pageshow",(e=>{this.persisted=e.persisted})),window.addEventListener("DOMContentLoaded",(()=>{this._preconnect3rdParties()})),this.delayedScripts={normal:[],async:[],defer:[]},this.allJQueries=[]}_addUserInteractionListener(e){document.hidden?e._triggerListener():(this.triggerEvents.forEach((t=>window.addEventListener(t,e.userEventHandler,{passive:!0}))),window.addEventListener("touchstart",e.touchStartHandler,{passive:!0}),window.addEventListener("mousedown",e.touchStartHandler),document.addEventListener("visibilitychange",e.userEventHandler))}_removeUserInteractionListener(){this.triggerEvents.forEach((e=>window.removeEventListener(e,this.userEventHandler,{passive:!0}))),document.removeEventListener("visibilitychange",this.userEventHandler)}_onTouchStart(e){"HTML"!==e.target.tagName&&(window.addEventListener("touchend",this.touchEndHandler),window.addEventListener("mouseup",this.touchEndHandler),window.addEventListener("touchmove",this.touchMoveHandler,{passive:!0}),window.addEventListener("mousemove",this.touchMoveHandler),e.target.addEventListener("click",this.clickHandler),this._renameDOMAttribute(e.target,"onclick","rocket-onclick"))}_onTouchMove(e){window.removeEventListener("touchend",this.touchEndHandler),window.removeEventListener("mouseup",this.touchEndHandler),window.removeEventListener("touchmove",this.touchMoveHandler,{passive:!0}),window.removeEventListener("mousemove",this.touchMoveHandler),e.target.removeEventListener("click",this.clickHandler),this._renameDOMAttribute(e.target,"rocket-onclick","onclick")}_onTouchEnd(e){window.removeEventListener("touchend",this.touchEndHandler),window.removeEventListener("mouseup",this.touchEndHandler),window.removeEventListener("touchmove",this.touchMoveHandler,{passive:!0}),window.removeEventListener("mousemove",this.touchMoveHandler)}_onClick(e){e.target.removeEventListener("click",this.clickHandler),this._renameDOMAttribute(e.target,"rocket-onclick","onclick"),this.interceptedClicks.push(e),e.preventDefault(),e.stopPropagation(),e.stopImmediatePropagation()}_replayClicks(){window.removeEventListener("touchstart",this.touchStartHandler,{passive:!0}),window.removeEventListener("mousedown",this.touchStartHandler),this.interceptedClicks.forEach((e=>{e.target.dispatchEvent(new MouseEvent("click",{view:e.view,bubbles:!0,cancelable:!0}))}))}_renameDOMAttribute(e,t,n){e.hasAttribute&&e.hasAttribute(t)&&(event.target.setAttribute(n,event.target.getAttribute(t)),event.target.removeAttribute(t))}_triggerListener(){this._removeUserInteractionListener(this),"loading"===document.readyState?document.addEventListener("DOMContentLoaded",this._loadEverythingNow.bind(this)):this._loadEverythingNow()}_preconnect3rdParties(){let e=[];document.querySelectorAll("script[type=rocketlazyloadscript]").forEach((t=>{if(t.hasAttribute("src")){const n=new URL(t.src).origin;n!==location.origin&&e.push({src:n,crossOrigin:t.crossOrigin||"module"===t.getAttribute("data-rocket-type")})}})),e=[...new Map(e.map((e=>[JSON.stringify(e),e]))).values()],this._batchInjectResourceHints(e,"preconnect")}async _loadEverythingNow(){this.lastBreath=Date.now(),this._delayEventListeners(),this._delayJQueryReady(this),this._handleDocumentWrite(),this._registerAllDelayedScripts(),this._preloadAllScripts(),await this._loadScriptsFromList(this.delayedScripts.normal),await this._loadScriptsFromList(this.delayedScripts.defer),await this._loadScriptsFromList(this.delayedScripts.async);try{await this._triggerDOMContentLoaded(),await this._triggerWindowLoad()}catch(e){}window.dispatchEvent(new Event("rocket-allScriptsLoaded")),this._replayClicks()}_registerAllDelayedScripts(){document.querySelectorAll("script[type=rocketlazyloadscript]").forEach((e=>{e.hasAttribute("src")?e.hasAttribute("async")&&!1!==e.async?this.delayedScripts.async.push(e):e.hasAttribute("defer")&&!1!==e.defer||"module"===e.getAttribute("data-rocket-type")?this.delayedScripts.defer.push(e):this.delayedScripts.normal.push(e):this.delayedScripts.normal.push(e)}))}async _transformScript(e){return await this._littleBreath(),new Promise((t=>{const n=document.createElement("script");[...e.attributes].forEach((e=>{let t=e.nodeName;"type"!==t&&("data-rocket-type"===t&&(t="type"),n.setAttribute(t,e.nodeValue))})),e.hasAttribute("src")?(n.addEventListener("load",t),n.addEventListener("error",t)):(n.text=e.text,t());try{e.parentNode.replaceChild(n,e)}catch(e){t()}}))}async _loadScriptsFromList(e){const t=e.shift();return t?(await this._transformScript(t),this._loadScriptsFromList(e)):Promise.resolve()}_preloadAllScripts(){this._batchInjectResourceHints([...this.delayedScripts.normal,...this.delayedScripts.defer,...this.delayedScripts.async],"preload")}_batchInjectResourceHints(e,t){var n=document.createDocumentFragment();e.forEach((e=>{if(e.src){const i=document.createElement("link");i.href=e.src,i.rel=t,"preconnect"!==t&&(i.as="script"),e.getAttribute&&"module"===e.getAttribute("data-rocket-type")&&(i.crossOrigin=!0),e.crossOrigin&&(i.crossOrigin=e.crossOrigin),n.appendChild(i)}})),document.head.appendChild(n)}_delayEventListeners(){let e={};function t(t,n){!function(t){function n(n){return e[t].eventsToRewrite.indexOf(n)>=0?"rocket-"+n:n}e[t]||(e[t]={originalFunctions:{add:t.addEventListener,remove:t.removeEventListener},eventsToRewrite:[]},t.addEventListener=function(){arguments[0]=n(arguments[0]),e[t].originalFunctions.add.apply(t,arguments)},t.removeEventListener=function(){arguments[0]=n(arguments[0]),e[t].originalFunctions.remove.apply(t,arguments)})}(t),e[t].eventsToRewrite.push(n)}function n(e,t){let n=e[t];Object.defineProperty(e,t,{get:()=>n||function(){},set(i){e["rocket"+t]=n=i}})}t(document,"DOMContentLoaded"),t(window,"DOMContentLoaded"),t(window,"load"),t(window,"pageshow"),t(document,"readystatechange"),n(document,"onreadystatechange"),n(window,"onload"),n(window,"onpageshow")}_delayJQueryReady(e){let t=window.jQuery;Object.defineProperty(window,"jQuery",{get:()=>t,set(n){if(n&&n.fn&&!e.allJQueries.includes(n)){n.fn.ready=n.fn.init.prototype.ready=function(t){e.domReadyFired?t.bind(document)(n):document.addEventListener("rocket-DOMContentLoaded",(()=>t.bind(document)(n)))};const t=n.fn.on;n.fn.on=n.fn.init.prototype.on=function(){if(this[0]===window){function e(e){return e.split(" ").map((e=>"load"===e||0===e.indexOf("load.")?"rocket-jquery-load":e)).join(" ")}"string"==typeof arguments[0]||arguments[0]instanceof String?arguments[0]=e(arguments[0]):"object"==typeof arguments[0]&&Object.keys(arguments[0]).forEach((t=>{delete Object.assign(arguments[0],{[e(t)]:arguments[0][t]})[t]}))}return t.apply(this,arguments),this},e.allJQueries.push(n)}t=n}})}async _triggerDOMContentLoaded(){this.domReadyFired=!0,await this._littleBreath(),document.dispatchEvent(new Event("rocket-DOMContentLoaded")),await this._littleBreath(),window.dispatchEvent(new Event("rocket-DOMContentLoaded")),await this._littleBreath(),document.dispatchEvent(new Event("rocket-readystatechange")),await this._littleBreath(),document.rocketonreadystatechange&&document.rocketonreadystatechange()}async _triggerWindowLoad(){await this._littleBreath(),window.dispatchEvent(new Event("rocket-load")),await this._littleBreath(),window.rocketonload&&window.rocketonload(),await this._littleBreath(),this.allJQueries.forEach((e=>e(window).trigger("rocket-jquery-load"))),await this._littleBreath();const e=new Event("rocket-pageshow");e.persisted=this.persisted,window.dispatchEvent(e),await this._littleBreath(),window.rocketonpageshow&&window.rocketonpageshow({persisted:this.persisted})}_handleDocumentWrite(){const e=new Map;document.write=document.writeln=function(t){const n=document.currentScript,i=document.createRange(),r=n.parentElement;let o=e.get(n);void 0===o&&(o=n.nextSibling,e.set(n,o));const s=document.createDocumentFragment();i.setStart(s,0),s.appendChild(i.createContextualFragment(t)),r.insertBefore(s,o)}}async _littleBreath(){Date.now()-this.lastBreath>45&&(await this._requestAnimFrame(),this.lastBreath=Date.now())}async _requestAnimFrame(){return document.hidden?new Promise((e=>setTimeout(e))):new Promise((e=>requestAnimationFrame(e)))}static run(){const e=new RocketLazyLoadScripts;e._addUserInteractionListener(e)}}RocketLazyLoadScripts.run();</script>
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="profile" href="https://gmpg.org/xfn/11">
+    <link rel="pingback" href="https://legitrcvendorsusa.com/xmlrpc.php">
+    				<script>document.documentElement.className = document.documentElement.className + ' yes-js js_active js'</script>
+				<meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+
+	<!-- This site is optimized with the Yoast SEO Premium plugin v18.7 (Yoast SEO v19.1) - https://yoast.com/wordpress/plugins/seo/ -->
+	<title>legit research chemical vendors in USA</title><link rel="preload" as="style" href="https://fonts.googleapis.com/css?family=Lato%3A400italic%2C700italic%2C400%2C700%7COpen%20Sans%3A400italic%2C700italic%2C400%2C700&amp;subset=latin%2Clatin-ext&amp;display=swap"><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato%3A400italic%2C700italic%2C400%2C700%7COpen%20Sans%3A400italic%2C700italic%2C400%2C700&amp;subset=latin%2Clatin-ext&amp;display=swap" media="all" onload="this.media='all'"><noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato%3A400italic%2C700italic%2C400%2C700%7COpen%20Sans%3A400italic%2C700italic%2C400%2C700&#038;subset=latin%2Clatin-ext&#038;display=swap" /></noscript>
+	<meta name="description" content="buy research chemicals online from legit based in USA who sell at cheap prices with anonymous payment methods like bitcoins.">
+	<link rel="canonical" href="https://legitrcvendorsusa.com/">
+	<link rel="next" href="https://legitrcvendorsusa.com/page/2/">
+	<meta property="og:locale" content="en_US">
+	<meta property="og:type" content="website">
+	<meta property="og:title" content="Legit Research Chemicals Vendors in USA">
+	<meta property="og:description" content="buy research chemicals online from legit based in USA who sell at cheap prices with anonymous payment methods like bitcoins.">
+	<meta property="og:url" content="https://legitrcvendorsusa.com/">
+	<meta property="og:site_name" content="Legit Research Chemical Vendors in USA">
+	<meta property="article:modified_time" content="2024-03-01T10:58:19+00:00">
+	<meta name="twitter:card" content="summary_large_image">
+	<meta name="twitter:label1" content="Est. reading time">
+	<meta name="twitter:data1" content="2 minutes">
+	<script type="application/ld+json" class="yoast-schema-graph">{"@context":"https://schema.org","@graph":[{"@type":"WebSite","@id":"https://legitrcvendorsusa.com/#website","url":"https://legitrcvendorsusa.com/","name":"Legit Research Chemical Vendors in USA","description":"","potentialAction":[{"@type":"SearchAction","target":{"@type":"EntryPoint","urlTemplate":"https://legitrcvendorsusa.com/?s={search_term_string}"},"query-input":"required name=search_term_string"}],"inLanguage":"en-US"},{"@type":"WebPage","@id":"https://legitrcvendorsusa.com/#webpage","url":"https://legitrcvendorsusa.com/","name":"legit research chemical vendors in USA","isPartOf":{"@id":"https://legitrcvendorsusa.com/#website"},"datePublished":"2020-03-02T15:24:34+00:00","dateModified":"2024-03-01T10:58:19+00:00","description":"buy research chemicals online from legit based in USA who sell at cheap prices with anonymous payment methods like bitcoins.","breadcrumb":{"@id":"https://legitrcvendorsusa.com/#breadcrumb"},"inLanguage":"en-US","potentialAction":[{"@type":"ReadAction","target":["https://legitrcvendorsusa.com/"]}]},{"@type":"BreadcrumbList","@id":"https://legitrcvendorsusa.com/#breadcrumb","itemListElement":[{"@type":"ListItem","position":1,"name":"Home"}]}]}</script>
+	<!-- / Yoast SEO Premium plugin. -->
+
+
+<link rel="dns-prefetch" href="//ajax.googleapis.com">
+<link rel="dns-prefetch" href="//fonts.googleapis.com">
+<link rel="dns-prefetch" href="//fonts.gstatic.com">
+<link href="https://fonts.gstatic.com" crossorigin="" rel="preconnect">
+<link rel="alternate" type="application/rss+xml" title="Legit Research Chemical Vendors in USA » Feed" href="https://legitrcvendorsusa.com/feed/">
+<link rel="alternate" type="application/rss+xml" title="Legit Research Chemical Vendors in USA » Comments Feed" href="https://legitrcvendorsusa.com/comments/feed/">
+<link rel="alternate" type="application/rss+xml" title="Legit Research Chemical Vendors in USA » Products Feed" href="https://legitrcvendorsusa.com/legit-research-chemical-vendors/feed/">
+<style type="text/css">
+img.wp-smiley,
+img.emoji {
+	display: inline !important;
+	border: none !important;
+	box-shadow: none !important;
+	height: 1em !important;
+	width: 1em !important;
+	margin: 0 .07em !important;
+	vertical-align: -0.1em !important;
+	background: none !important;
+	padding: 0 !important;
+}
+</style>
+	<link rel="stylesheet" id="sbi_styles-css" href="https://legitrcvendorsusa.com/wp-content/plugins/instagram-feed/css/sbi-styles.min.css?ver=6.2.8" type="text/css" media="all">
+<link rel="stylesheet" id="wp-block-library-css" href="https://legitrcvendorsusa.com/wp-includes/css/dist/block-library/style.min.css?ver=5.8.9" type="text/css" media="all">
+<link data-minify="1" rel="stylesheet" id="wc-blocks-vendors-style-css" href="https://legitrcvendorsusa.com/wp-content/cache/min/1/wp-content/plugins/woocommerce/packages/woocommerce-blocks/build/wc-blocks-vendors-style.css?ver=1708134252" type="text/css" media="all">
+<link data-minify="1" rel="stylesheet" id="wc-blocks-style-css" href="https://legitrcvendorsusa.com/wp-content/cache/min/1/wp-content/plugins/woocommerce/packages/woocommerce-blocks/build/wc-blocks-style.css?ver=1708134252" type="text/css" media="all">
+<link data-minify="1" rel="stylesheet" id="yith-wcan-shortcodes-css" href="https://legitrcvendorsusa.com/wp-content/cache/min/1/wp-content/plugins/yith-woocommerce-ajax-navigation/assets/css/shortcodes.css?ver=1708134252" type="text/css" media="all">
+<style id="yith-wcan-shortcodes-inline-css" type="text/css">
+:root{
+	--yith-wcan-filters_colors_titles: #434343;
+	--yith-wcan-filters_colors_background: #FFFFFF;
+	--yith-wcan-filters_colors_accent: #A7144C;
+	--yith-wcan-filters_colors_accent_r: 167;
+	--yith-wcan-filters_colors_accent_g: 20;
+	--yith-wcan-filters_colors_accent_b: 76;
+	--yith-wcan-color_swatches_border_radius: 100%;
+	--yith-wcan-color_swatches_size: 30px;
+	--yith-wcan-labels_style_background: #FFFFFF;
+	--yith-wcan-labels_style_background_hover: #A7144C;
+	--yith-wcan-labels_style_background_active: #A7144C;
+	--yith-wcan-labels_style_text: #434343;
+	--yith-wcan-labels_style_text_hover: #FFFFFF;
+	--yith-wcan-labels_style_text_active: #FFFFFF;
+	--yith-wcan-anchors_style_text: #434343;
+	--yith-wcan-anchors_style_text_hover: #A7144C;
+	--yith-wcan-anchors_style_text_active: #A7144C;
+}
+</style>
+<link data-minify="1" rel="stylesheet" id="jquery-selectBox-css" href="https://legitrcvendorsusa.com/wp-content/cache/min/1/wp-content/plugins/yith-woocommerce-wishlist/assets/css/jquery.selectBox.css?ver=1708134252" type="text/css" media="all">
+<link data-minify="1" rel="stylesheet" id="yith-wcwl-font-awesome-css" href="https://legitrcvendorsusa.com/wp-content/cache/min/1/wp-content/plugins/yith-woocommerce-wishlist/assets/css/font-awesome.css?ver=1708134252" type="text/css" media="all">
+<link data-minify="1" rel="stylesheet" id="woocommerce_prettyPhoto_css-css" href="https://legitrcvendorsusa.com/wp-content/cache/min/1/wp-content/plugins/woocommerce/assets/css/prettyPhoto.css?ver=1708134252" type="text/css" media="all">
+<link data-minify="1" rel="stylesheet" id="yith-wcwl-main-css" href="https://legitrcvendorsusa.com/wp-content/cache/min/1/wp-content/plugins/yith-woocommerce-wishlist/assets/css/style.css?ver=1708134252" type="text/css" media="all">
+<style id="yith-wcwl-main-inline-css" type="text/css">
+.yith-wcwl-share li a{color: #FFFFFF;}.yith-wcwl-share li a:hover{color: #FFFFFF;}.yith-wcwl-share a.facebook{background: #39599E; background-color: #39599E;}.yith-wcwl-share a.facebook:hover{background: #39599E; background-color: #39599E;}.yith-wcwl-share a.twitter{background: #45AFE2; background-color: #45AFE2;}.yith-wcwl-share a.twitter:hover{background: #39599E; background-color: #39599E;}.yith-wcwl-share a.pinterest{background: #AB2E31; background-color: #AB2E31;}.yith-wcwl-share a.pinterest:hover{background: #39599E; background-color: #39599E;}.yith-wcwl-share a.email{background: #FBB102; background-color: #FBB102;}.yith-wcwl-share a.email:hover{background: #39599E; background-color: #39599E;}.yith-wcwl-share a.whatsapp{background: #00A901; background-color: #00A901;}.yith-wcwl-share a.whatsapp:hover{background: #39599E; background-color: #39599E;}
+</style>
+<link data-minify="1" rel="stylesheet" id="contact-form-7-css" href="https://legitrcvendorsusa.com/wp-content/cache/min/1/wp-content/plugins/contact-form-7/includes/css/styles.css?ver=1708134252" type="text/css" media="all">
+<link data-minify="1" rel="stylesheet" id="jquery-ui-datepicker-style-css" href="https://legitrcvendorsusa.com/wp-content/cache/min/1/ajax/libs/jqueryui/1.10.3/themes/flick/jquery-ui.css?ver=1708134253" type="text/css" media="all">
+<link data-minify="1" rel="stylesheet" id="custom_payment_front_css-css" href="https://legitrcvendorsusa.com/wp-content/cache/min/1/wp-content/plugins/woocommerce-custom-payment-gateway-pro/includes/assets/css/front.css?ver=1708134253" type="text/css" media="all">
+<link rel="stylesheet" id="hint-css-css" href="https://legitrcvendorsusa.com/wp-content/plugins/woocommerce-custom-payment-gateway-pro/includes/assets/css/hint.min.css?ver=5.8.9" type="text/css" media="all">
+<link data-minify="1" rel="stylesheet" id="woof-css" href="https://legitrcvendorsusa.com/wp-content/cache/min/1/wp-content/plugins/woocommerce-products-filter/css/front.css?ver=1708134253" type="text/css" media="all">
+<style id="woof-inline-css" type="text/css">
+
+.woof_products_top_panel li span, .woof_products_top_panel2 li span{background: url(https://legitrcvendorsusa.com/wp-content/plugins/woocommerce-products-filter/img/delete.png);background-size: 14px 14px;background-repeat: no-repeat;background-position: right;}
+.woof_edit_view{
+                    display: none;
+                }
+</style>
+<link rel="stylesheet" id="chosen-drop-down-css" href="https://legitrcvendorsusa.com/wp-content/plugins/woocommerce-products-filter/js/chosen/chosen.min.css?ver=1.3.5.1" type="text/css" media="all">
+<link data-minify="1" rel="stylesheet" id="woof_by_author_html_items-css" href="https://legitrcvendorsusa.com/wp-content/cache/min/1/wp-content/plugins/woocommerce-products-filter/ext/by_author/css/by_author.css?ver=1708134253" type="text/css" media="all">
+<link data-minify="1" rel="stylesheet" id="woof_by_instock_html_items-css" href="https://legitrcvendorsusa.com/wp-content/cache/min/1/wp-content/plugins/woocommerce-products-filter/ext/by_instock/css/by_instock.css?ver=1708134253" type="text/css" media="all">
+<link data-minify="1" rel="stylesheet" id="woof_by_onsales_html_items-css" href="https://legitrcvendorsusa.com/wp-content/cache/min/1/wp-content/plugins/woocommerce-products-filter/ext/by_onsales/css/by_onsales.css?ver=1708134253" type="text/css" media="all">
+<link data-minify="1" rel="stylesheet" id="woof_by_text_html_items-css" href="https://legitrcvendorsusa.com/wp-content/cache/min/1/wp-content/plugins/woocommerce-products-filter/ext/by_text/assets/css/front.css?ver=1708134253" type="text/css" media="all">
+<link data-minify="1" rel="stylesheet" id="woof_label_html_items-css" href="https://legitrcvendorsusa.com/wp-content/cache/min/1/wp-content/plugins/woocommerce-products-filter/ext/label/css/html_types/label.css?ver=1708134253" type="text/css" media="all">
+<link data-minify="1" rel="stylesheet" id="woof_select_radio_check_html_items-css" href="https://legitrcvendorsusa.com/wp-content/cache/min/1/wp-content/plugins/woocommerce-products-filter/ext/select_radio_check/css/html_types/select_radio_check.css?ver=1708134253" type="text/css" media="all">
+<link data-minify="1" rel="stylesheet" id="woof_sd_html_items_checkbox-css" href="https://legitrcvendorsusa.com/wp-content/cache/min/1/wp-content/plugins/woocommerce-products-filter/ext/smart_designer/css/elements/checkbox.css?ver=1708134253" type="text/css" media="all">
+<link data-minify="1" rel="stylesheet" id="woof_sd_html_items_radio-css" href="https://legitrcvendorsusa.com/wp-content/cache/min/1/wp-content/plugins/woocommerce-products-filter/ext/smart_designer/css/elements/radio.css?ver=1708134253" type="text/css" media="all">
+<link data-minify="1" rel="stylesheet" id="woof_sd_html_items_switcher-css" href="https://legitrcvendorsusa.com/wp-content/cache/min/1/wp-content/plugins/woocommerce-products-filter/ext/smart_designer/css/elements/switcher.css?ver=1708134253" type="text/css" media="all">
+<link data-minify="1" rel="stylesheet" id="woof_sd_html_items_color-css" href="https://legitrcvendorsusa.com/wp-content/cache/min/1/wp-content/plugins/woocommerce-products-filter/ext/smart_designer/css/elements/color.css?ver=1708134253" type="text/css" media="all">
+<link data-minify="1" rel="stylesheet" id="woof_sd_html_items_tooltip-css" href="https://legitrcvendorsusa.com/wp-content/cache/min/1/wp-content/plugins/woocommerce-products-filter/ext/smart_designer/css/tooltip.css?ver=1708134253" type="text/css" media="all">
+<link data-minify="1" rel="stylesheet" id="woof_sd_html_items_front-css" href="https://legitrcvendorsusa.com/wp-content/cache/min/1/wp-content/plugins/woocommerce-products-filter/ext/smart_designer/css/front.css?ver=1708134253" type="text/css" media="all">
+<link data-minify="1" rel="stylesheet" id="woof-switcher23-css" href="https://legitrcvendorsusa.com/wp-content/cache/min/1/wp-content/plugins/woocommerce-products-filter/css/switcher.css?ver=1708134253" type="text/css" media="all">
+<link data-minify="1" rel="stylesheet" id="woocommerce-layout-css" href="https://legitrcvendorsusa.com/wp-content/cache/min/1/wp-content/plugins/woocommerce/assets/css/woocommerce-layout.css?ver=1708134253" type="text/css" media="all">
+<link data-minify="1" rel="stylesheet" id="woocommerce-smallscreen-css" href="https://legitrcvendorsusa.com/wp-content/cache/min/1/wp-content/plugins/woocommerce/assets/css/woocommerce-smallscreen.css?ver=1708134253" type="text/css" media="only screen and (max-width: 768px)">
+<link data-minify="1" rel="stylesheet" id="woocommerce-general-css" href="https://legitrcvendorsusa.com/wp-content/cache/min/1/wp-content/plugins/woocommerce/assets/css/woocommerce.css?ver=1708134253" type="text/css" media="all">
+<style id="woocommerce-inline-inline-css" type="text/css">
+.woocommerce form .form-row .required { visibility: visible; }
+</style>
+<link data-minify="1" rel="stylesheet" id="wen-business-fontawesome-css" href="https://legitrcvendorsusa.com/wp-content/cache/min/1/wp-content/themes/wen-business-pro/third-party/font-awesome/css/font-awesome.min.css?ver=1708134253" type="text/css" media="all">
+
+<link data-minify="1" rel="stylesheet" id="wen-business-style-css" href="https://legitrcvendorsusa.com/wp-content/cache/min/1/wp-content/themes/wen-business-pro/style.css?ver=1708134253" type="text/css" media="all">
+<link rel="stylesheet" id="wen-business-mmenu-style-css" href="https://legitrcvendorsusa.com/wp-content/themes/wen-business-pro/third-party/mmenu/css/jquery.mmenu.min.css?ver=4.7.5" type="text/css" media="all">
+<link data-minify="1" rel="stylesheet" id="wen-business-responsive-style-css" href="https://legitrcvendorsusa.com/wp-content/cache/min/1/wp-content/themes/wen-business-pro/assets/css/responsive.css?ver=1708134253" type="text/css" media="all">
+<link data-minify="1" rel="stylesheet" id="simple-social-icons-font-css" href="https://legitrcvendorsusa.com/wp-content/cache/min/1/wp-content/plugins/simple-social-icons/css/style.css?ver=1708134253" type="text/css" media="all">
+<style id="rocket-lazyload-inline-css" type="text/css">
+.rll-youtube-player{position:relative;padding-bottom:56.23%;height:0;overflow:hidden;max-width:100%;}.rll-youtube-player:focus-within{outline: 2px solid currentColor;outline-offset: 5px;}.rll-youtube-player iframe{position:absolute;top:0;left:0;width:100%;height:100%;z-index:100;background:0 0}.rll-youtube-player img{bottom:0;display:block;left:0;margin:auto;max-width:100%;width:100%;position:absolute;right:0;top:0;border:none;height:auto;-webkit-transition:.4s all;-moz-transition:.4s all;transition:.4s all}.rll-youtube-player img:hover{-webkit-filter:brightness(75%)}.rll-youtube-player .play{height:100%;width:100%;left:0;top:0;position:absolute;background:url(https://legitrcvendorsusa.com/wp-content/plugins/wp-rocket/assets/img/youtube.png) no-repeat center;background-color: transparent !important;cursor:pointer;border:none;}
+</style>
+<script type="text/javascript" id="woof-husky-js-extra">
+/* <![CDATA[ */
+var woof_husky_txt = {"ajax_url":"https:\/\/legitrcvendorsusa.com\/wp-admin\/admin-ajax.php","plugin_uri":"https:\/\/legitrcvendorsusa.com\/wp-content\/plugins\/woocommerce-products-filter\/ext\/by_text\/","loader":"https:\/\/legitrcvendorsusa.com\/wp-content\/plugins\/woocommerce-products-filter\/ext\/by_text\/assets\/img\/ajax-loader.gif","not_found":"Nothing found!","prev":"Prev","next":"Next","site_link":"https:\/\/legitrcvendorsusa.com","default_data":{"placeholder":"","behavior":"title","search_by_full_word":0,"autocomplete":1,"how_to_open_links":0,"taxonomy_compatibility":0,"sku_compatibility":0,"custom_fields":"","search_desc_variant":0,"view_text_length":10,"min_symbols":3,"max_posts":10,"image":"","notes_for_customer":"","template":"default","max_open_height":300,"page":0}};
+/* ]]> */
+</script>
+<script data-minify="1" type="text/javascript" src="https://legitrcvendorsusa.com/wp-content/cache/min/1/wp-content/plugins/woocommerce-products-filter/ext/by_text/assets/js/husky.js?ver=1708134253" id="woof-husky-js"></script>
+<script type="text/javascript" src="https://legitrcvendorsusa.com/wp-includes/js/jquery/jquery.min.js?ver=3.6.0" id="jquery-core-js"></script>
+<script type="text/javascript" src="https://legitrcvendorsusa.com/wp-includes/js/jquery/jquery-migrate.min.js?ver=3.3.2" id="jquery-migrate-js"></script>
+<script type="text/javascript" src="https://legitrcvendorsusa.com/wp-includes/js/jquery/ui/core.min.js?ver=1.12.1" id="jquery-ui-core-js"></script>
+<script type="text/javascript" src="https://legitrcvendorsusa.com/wp-includes/js/jquery/ui/datepicker.min.js?ver=1.12.1" id="jquery-ui-datepicker-js"></script>
+<script type="text/javascript" id="jquery-ui-datepicker-js-after">
+jQuery(document).ready(function(jQuery){jQuery.datepicker.setDefaults({"closeText":"Close","currentText":"Today","monthNames":["January","February","March","April","May","June","July","August","September","October","November","December"],"monthNamesShort":["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"],"nextText":"Next","prevText":"Previous","dayNames":["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"],"dayNamesShort":["Sun","Mon","Tue","Wed","Thu","Fri","Sat"],"dayNamesMin":["S","M","T","W","T","F","S"],"dateFormat":"MM d, yy","firstDay":1,"isRTL":false});});
+</script>
+<script data-minify="1" type="text/javascript" src="https://legitrcvendorsusa.com/wp-content/cache/min/1/wp-content/plugins/woocommerce-custom-payment-gateway-pro/includes/assets/js/custom-payment-front.js?ver=1708134253" id="custom_payment_front_js-js"></script>
+<link rel="https://api.w.org/" href="https://legitrcvendorsusa.com/wp-json/"><link rel="EditURI" type="application/rsd+xml" title="RSD" href="https://legitrcvendorsusa.com/xmlrpc.php?rsd">
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="https://legitrcvendorsusa.com/wp-includes/wlwmanifest.xml"> 
+<meta name="generator" content="WordPress 5.8.9">
+<meta name="generator" content="WooCommerce 6.6.1">
+
+<link rel="preload" as="font" href="https://legitrcvendorsusa.com/wp-content/themes/wen-business-pro/third-party/font-awesome/fonts/fontawesome-webfont.woff2?v=4.7.0" crossorigin="">  <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+  <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://legitrcvendorsusa.com/wp-content/themes/wen-business-pro/assets/js/html5shiv.js"></script>
+      <script src="https://legitrcvendorsusa.com/wp-content/themes/wen-business-pro/assets/js/respond.js"></script>
+      <![endif]-->
+
+      	<noscript><style>.woocommerce-product-gallery{ opacity: 1 !important; }</style></noscript>
+	<style type="text/css">.recentcomments a{display:inline !important;padding:0 !important;margin:0 !important;}</style><!-- Yandex.Metrika counter by Yandex Metrica Plugin -->
+<script type="text/javascript">
+    (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+        m[i].l=1*new Date();k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})
+    (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
+
+    ym(68594620, "init", {
+        id:68594620,
+        clickmap:true,
+        trackLinks:true,
+        accurateTrackBounce:false,
+        webvisor:true,
+	            ecommerce: "dataLayer"
+	        });
+</script>
+<noscript><div><img src="https://mc.yandex.ru/watch/68594620" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+<!-- /Yandex.Metrika counter -->
+<meta name="google-site-verification" content="ePukRPixo2SWX5N4_wHFS9Nd9Uc9rJFI2kIywzRG4M8">
+
+
+<!-- Google tag (gtag.js) -->
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-DJZRHN9DLH"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-DJZRHN9DLH');
+</script><link rel="icon" href="https://legitrcvendorsusa.com/wp-content/uploads/2020/10/cropped-LEGit-rc-10-32x32.png" sizes="32x32">
+<link rel="icon" href="https://legitrcvendorsusa.com/wp-content/uploads/2020/10/cropped-LEGit-rc-10-192x192.png" sizes="192x192">
+<link rel="apple-touch-icon" href="https://legitrcvendorsusa.com/wp-content/uploads/2020/10/cropped-LEGit-rc-10-180x180.png">
+<meta name="msapplication-TileImage" content="https://legitrcvendorsusa.com/wp-content/uploads/2020/10/cropped-LEGit-rc-10-270x270.png">
+<style type="text/css">.header-top-inner .wen_business_widget_social a:before{font-size:15px;}</style><!-- Yandex.Metrika counter --> <script type="text/javascript"> (function (d, w, c) { (w[c] = w[c] || []).push(function() { try { w.yaCounter68594620 = new Ya.Metrika({id:68594620, clickmap:true, trackLinks:true, webvisor:true, accurateTrackBounce:true }); } catch(e) { } }); var n = d.getElementsByTagName("script")[0], s = d.createElement("script"), f = function () { n.parentNode.insertBefore(s, n); }; s.type = "text/javascript"; s.async = true; s.src = "https://mc.yandex.ru/metrika/watch.js"; if (w.opera == "[object Opera]") { d.addEventListener("DOMContentLoaded", f, false); } else { f(); } })(document, window, "yandex_metrika_callbacks"); </script> <noscript><div><img src="https://mc.yandex.ru/watch/68594620" style="position:absolute; left:-9999px;" alt="" /></div></noscript> <!-- /Yandex.Metrika counter --><noscript><style id="rocket-lazyload-nojs-css">.rll-youtube-player, [data-lazy-src]{display:none !important;}</style></noscript><link href="https://legitrcvendorsusa.com/wp-content/cache/min/1/wp-content/plugins/woocommerce-products-filter/ext/by_text/assets/js/husky.js?ver=1708134253" rel="preload" as="script"><link href="https://legitrcvendorsusa.com/wp-includes/js/jquery/jquery.min.js?ver=3.6.0" rel="preload" as="script"><link href="https://legitrcvendorsusa.com/wp-includes/js/jquery/jquery-migrate.min.js?ver=3.3.2" rel="preload" as="script"><link href="https://legitrcvendorsusa.com/wp-includes/js/jquery/ui/core.min.js?ver=1.12.1" rel="preload" as="script"><link href="https://legitrcvendorsusa.com/wp-includes/js/jquery/ui/datepicker.min.js?ver=1.12.1" rel="preload" as="script"><link href="https://legitrcvendorsusa.com/wp-content/cache/min/1/wp-content/plugins/woocommerce-custom-payment-gateway-pro/includes/assets/js/custom-payment-front.js?ver=1708134253" rel="preload" as="script"><link href="https://legitrcvendorsusa.com/wp-content/plugins/woocommerce/assets/js/accounting/accounting.min.js?ver=0.4.2" rel="preload" as="script"><link href="https://legitrcvendorsusa.com/wp-content/plugins/woocommerce/assets/js/selectWoo/selectWoo.full.min.js?ver=1.0.9-wc.6.6.1" rel="preload" as="script"><link href="https://legitrcvendorsusa.com/wp-content/plugins/yith-woocommerce-ajax-navigation/assets/js/yith-wcan-shortcodes.min.js?ver=4.11.0" rel="preload" as="script"><link href="https://legitrcvendorsusa.com/wp-content/plugins/yith-woocommerce-wishlist/assets/js/jquery.selectBox.min.js?ver=1.2.0" rel="preload" as="script"><link href="https://legitrcvendorsusa.com/wp-content/plugins/woocommerce/assets/js/prettyPhoto/jquery.prettyPhoto.min.js?ver=3.1.6" rel="preload" as="script"><link href="https://legitrcvendorsusa.com/wp-content/plugins/yith-woocommerce-wishlist/assets/js/jquery.yith-wcwl.min.js?ver=3.10.0" rel="preload" as="script"><link href="https://legitrcvendorsusa.com/wp-includes/js/dist/vendor/regenerator-runtime.min.js?ver=0.13.7" rel="preload" as="script"><link href="https://legitrcvendorsusa.com/wp-includes/js/dist/vendor/wp-polyfill.min.js?ver=3.15.0" rel="preload" as="script"><link href="https://legitrcvendorsusa.com/wp-content/cache/min/1/wp-content/plugins/contact-form-7/includes/js/index.js?ver=1708134253" rel="preload" as="script"><link href="https://legitrcvendorsusa.com/wp-content/plugins/woocommerce/assets/js/jquery-blockui/jquery.blockUI.min.js?ver=2.7.0-wc.6.6.1" rel="preload" as="script"><link href="https://legitrcvendorsusa.com/wp-content/plugins/woocommerce/assets/js/js-cookie/js.cookie.min.js?ver=2.1.4-wc.6.6.1" rel="preload" as="script"><link href="https://legitrcvendorsusa.com/wp-content/plugins/woocommerce/assets/js/frontend/woocommerce.min.js?ver=6.6.1" rel="preload" as="script"><link href="https://legitrcvendorsusa.com/wp-content/plugins/woocommerce/assets/js/frontend/cart-fragments.min.js?ver=6.6.1" rel="preload" as="script"><link href="https://legitrcvendorsusa.com/wp-content/themes/wen-business-pro/assets/js/jquery.placeholder.min.js?ver=2.1.1" rel="preload" as="script"><link href="https://legitrcvendorsusa.com/wp-content/themes/wen-business-pro/assets/js/navigation.min.js?ver=20120206" rel="preload" as="script"><link href="https://legitrcvendorsusa.com/wp-content/themes/wen-business-pro/assets/js/skip-link-focus-fix.min.js?ver=20130115" rel="preload" as="script"><link href="https://legitrcvendorsusa.com/wp-content/themes/wen-business-pro/third-party/cycle2/js/jquery.cycle2.min.js?ver=2.1.6" rel="preload" as="script"><link href="https://legitrcvendorsusa.com/wp-content/themes/wen-business-pro/third-party/mmenu/js/jquery.mmenu.min.js?ver=4.7.5" rel="preload" as="script"><link href="https://legitrcvendorsusa.com/wp-content/themes/wen-business-pro/assets/js/custom.min.js?ver=1.0.0" rel="preload" as="script"><link href="https://legitrcvendorsusa.com/wp-content/plugins/woocommerce-products-filter/js/tooltip/js/tooltipster.bundle.min.js?ver=1.3.5.1" rel="preload" as="script"><link href="https://legitrcvendorsusa.com/wp-content/cache/min/1/wp-content/plugins/woocommerce-products-filter/js/front.js?ver=1708134253" rel="preload" as="script"><link href="https://legitrcvendorsusa.com/wp-content/cache/min/1/wp-content/plugins/woocommerce-products-filter/js/html_types/radio.js?ver=1708134253" rel="preload" as="script"><link href="https://legitrcvendorsusa.com/wp-content/cache/min/1/wp-content/plugins/woocommerce-products-filter/js/html_types/checkbox.js?ver=1708134253" rel="preload" as="script"><link href="https://legitrcvendorsusa.com/wp-content/cache/min/1/wp-content/plugins/woocommerce-products-filter/js/html_types/select.js?ver=1708134253" rel="preload" as="script"><link href="https://legitrcvendorsusa.com/wp-content/cache/min/1/wp-content/plugins/woocommerce-products-filter/js/html_types/mselect.js?ver=1708134253" rel="preload" as="script"><link href="https://legitrcvendorsusa.com/wp-content/cache/min/1/wp-content/plugins/woocommerce-products-filter/ext/by_author/js/by_author.js?ver=1708134253" rel="preload" as="script"><link href="https://legitrcvendorsusa.com/wp-content/cache/min/1/wp-content/plugins/woocommerce-products-filter/ext/by_instock/js/by_instock.js?ver=1708134253" rel="preload" as="script"><link href="https://legitrcvendorsusa.com/wp-content/cache/min/1/wp-content/plugins/woocommerce-products-filter/ext/by_onsales/js/by_onsales.js?ver=1708134253" rel="preload" as="script"><link href="https://legitrcvendorsusa.com/wp-content/cache/min/1/wp-content/plugins/woocommerce-products-filter/ext/by_text/assets/js/front.js?ver=1708134253" rel="preload" as="script"><link href="https://legitrcvendorsusa.com/wp-content/cache/min/1/wp-content/plugins/woocommerce-products-filter/ext/label/js/html_types/label.js?ver=1708134253" rel="preload" as="script"><link href="https://legitrcvendorsusa.com/wp-content/cache/min/1/wp-content/plugins/woocommerce-products-filter/ext/sections/js/sections.js?ver=1708134253" rel="preload" as="script"><link href="https://legitrcvendorsusa.com/wp-content/cache/min/1/wp-content/plugins/woocommerce-products-filter/ext/select_radio_check/js/html_types/select_radio_check.js?ver=1708134253" rel="preload" as="script"><link href="https://legitrcvendorsusa.com/wp-content/cache/min/1/wp-content/plugins/woocommerce-products-filter/ext/smart_designer/js/front.js?ver=1708134253" rel="preload" as="script"><link href="https://legitrcvendorsusa.com/wp-content/cache/min/1/wp-content/plugins/woocommerce-products-filter/js/chosen/chosen.jquery.js?ver=1708134253" rel="preload" as="script"><link href="https://legitrcvendorsusa.com/wp-content/plugins/woocommerce-products-filter/js/ion.range-slider/js/ion.rangeSlider.min.js?ver=1.3.5.1" rel="preload" as="script"><link href="https://legitrcvendorsusa.com/wp-content/cache/min/1/wp-content/plugins/woocommerce-products-filter/ext/slideout/js/jquery.tabSlideOut.js?ver=1708134253" rel="preload" as="script"><link href="https://legitrcvendorsusa.com/wp-content/cache/min/1/wp-content/plugins/woocommerce-products-filter/ext/slideout/js/slideout.js?ver=1708134253" rel="preload" as="script"><link href="https://www.googletagmanager.com/gtag/js?id=G-DJZRHN9DLH" rel="preload" as="script"><link href="https://legitrcvendorsusa.com/wp-content/cache/min/1/js/1.js?ver=1708134253" rel="preload" as="script"><link href="https://www.googletagmanager.com" rel="preconnect"><meta http-equiv="origin-trial" content="AymqwRC7u88Y4JPvfIF2F37QKylC04248hLCdJAsh8xgOfe/dVJPV3XS3wLFca1ZMVOtnBfVjaCMTVudWM//5g4AAAB7eyJvcmlnaW4iOiJodHRwczovL3d3dy5nb29nbGV0YWdtYW5hZ2VyLmNvbTo0NDMiLCJmZWF0dXJlIjoiUHJpdmFjeVNhbmRib3hBZHNBUElzIiwiZXhwaXJ5IjoxNjk1MTY3OTk5LCJpc1RoaXJkUGFydHkiOnRydWV9"><script type="text/javascript" src="https://www.trustedsite.com/rpc/tmjs/legitrcvendorsusa.com/visit?rand=1710050105326"></script></head>
+
+<body data-rsssl="1" class="home archive post-type-archive post-type-archive-product theme-wen-business-pro woocommerce-shop woocommerce woocommerce-page woocommerce-js yith-wcan-free site-layout-fluid global-layout-right-sidebar elementor-default elementor-kit-617"><div id="mob-menu" class="mm-menu mm-horizontal mm-offcanvas"><ul id="menu-menu-1" class="menu mm-list mm-panel mm-opened mm-current"><li id="menu-item-31" class="menu-item menu-item-type-custom menu-item-object-custom current-menu-item current_page_item menu-item-home menu-item-31"><a href="https://legitrcvendorsusa.com/" aria-current="page">Home</a></li>
+<li id="menu-item-33" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-33"><a class="mm-subopen" href="#mm-0"></a><a href="https://legitrcvendorsusa.com/categories/">Categories</a>
+
+</li>
+<li id="menu-item-32" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-32"><a href="https://legitrcvendorsusa.com/about-us/">About Us</a></li>
+<li id="menu-item-249" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-249"><a href="https://legitrcvendorsusa.com/my-cart/">My Cart</a></li>
+<li id="menu-item-34" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-34"><a href="https://legitrcvendorsusa.com/contact-us/">Contact Us</a></li>
+<li id="menu-item-48" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-48"><a href="https://legitrcvendorsusa.com/our-reviews/">Our Reviews</a></li>
+</ul><ul class="sub-menu mm-list mm-panel mm-hidden" id="mm-0"><li class="mm-subtitle"><a class="mm-subclose" href="#menu-menu-1">Categories</a></li>
+	<li id="menu-item-39" class="menu-item menu-item-type-taxonomy menu-item-object-product_cat menu-item-39"><a href="https://legitrcvendorsusa.com/product-category/cannabinoids/">Cannabinoids</a></li>
+	<li id="menu-item-43" class="menu-item menu-item-type-taxonomy menu-item-object-product_cat menu-item-43"><a href="https://legitrcvendorsusa.com/product-category/benzodiazepines/">Benzodiazepines</a></li>
+	<li id="menu-item-602" class="menu-item menu-item-type-taxonomy menu-item-object-product_cat menu-item-602"><a href="https://legitrcvendorsusa.com/product-category/stimulants/">Stimulants</a></li>
+	<li id="menu-item-603" class="menu-item menu-item-type-taxonomy menu-item-object-product_cat menu-item-603"><a href="https://legitrcvendorsusa.com/product-category/psychedelic/">Psychedelic</a></li>
+	<li id="menu-item-2723" class="menu-item menu-item-type-taxonomy menu-item-object-product_cat menu-item-2723"><a href="https://legitrcvendorsusa.com/product-category/opioids/">Opioids</a></li>
+	<li id="menu-item-2853" class="menu-item menu-item-type-taxonomy menu-item-object-product_cat menu-item-2853"><a href="https://legitrcvendorsusa.com/product-category/dissociative/">dissociative</a></li>
+	<li id="menu-item-42" class="menu-item menu-item-type-taxonomy menu-item-object-product_cat menu-item-42"><a href="https://legitrcvendorsusa.com/product-category/blotter-chemicals/">Blotter chemicals</a></li>
+	<li id="menu-item-40" class="menu-item menu-item-type-taxonomy menu-item-object-product_cat menu-item-40"><a href="https://legitrcvendorsusa.com/product-category/4-ho-series/">4-HO Series</a></li>
+	<li id="menu-item-41" class="menu-item menu-item-type-taxonomy menu-item-object-product_cat menu-item-41"><a href="https://legitrcvendorsusa.com/product-category/4-aco-series/">4-ACO Series</a></li>
+	<li id="menu-item-84" class="menu-item menu-item-type-taxonomy menu-item-object-product_cat menu-item-84"><a href="https://legitrcvendorsusa.com/product-category/2cs-series/">2Cs Series</a></li>
+</ul></div>
+
+
+        <div id="page" class="hfeed site container-fluid mm-page mm-slideout">
+        <a class="skip-link screen-reader-text" href="#content">Skip to content</a>    <a href="#mob-menu" id="mobile-trigger"><i class="fa fa-bars"></i></a>
+    <div style="display:none;" class="">
+      <!-- #mob-menu -->
+    </div>
+
+    
+  
+    
+      <div id="header-top-content">
+        <div class="container">
+          <div class="header-top">
+
+              <div class="header-top-inner">
+                                  <div class="widget wen_business_widget_social"></div>                                                  <div id="header-search-form">
+                    <form role="search" method="get" id="searchform" class="searchform" action="https://legitrcvendorsusa.com/">
+    <label class="screen-reader-text" for="s">Search for:</label>
+        <input type="text" value="" name="s" id="s" placeholder="Search..." class="search-field">
+    <input type="submit" id="searchsubmit" value="" class="search-submit">
+</form>
+                  </div><!-- #header-search-form -->
+                              </div><!-- .header-top-inner -->
+
+          </div><!-- .header-top -->
+        </div><!-- .container -->
+      </div><!-- #header-top-content -->
+
+    
+
+    <header id="masthead" class="site-header" role="banner"><div class="container">        <div class="site-branding show-tagline-separator">
+        	<div class="site-logo">
+    	    	</div><!-- .site-logo -->
+    
+      <div class="title-description-wrap">
+                  <h1 class="site-title">
+            <a href="https://legitrcvendorsusa.com/" rel="home">Legit Research Chemical Vendors in USA</a>
+          </h1>
+        
+                           <h2 class="site-description"></h2>
+               </div><!-- .title-description-wrap -->
+
+    </div><!-- .site-branding -->
+
+          <div id="site-navigation" role="navigation">
+          <nav class="main-navigation"><ul id="menu-menu-2" class=""><li class="menu-item menu-item-type-custom menu-item-object-custom current-menu-item current_page_item menu-item-home menu-item-31"><a href="https://legitrcvendorsusa.com/" aria-current="page">Home</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-33"><a href="https://legitrcvendorsusa.com/categories/">Categories</a>
+<ul class="sub-menu">
+	<li class="menu-item menu-item-type-taxonomy menu-item-object-product_cat menu-item-39"><a href="https://legitrcvendorsusa.com/product-category/cannabinoids/">Cannabinoids</a></li>
+	<li class="menu-item menu-item-type-taxonomy menu-item-object-product_cat menu-item-43"><a href="https://legitrcvendorsusa.com/product-category/benzodiazepines/">Benzodiazepines</a></li>
+	<li class="menu-item menu-item-type-taxonomy menu-item-object-product_cat menu-item-602"><a href="https://legitrcvendorsusa.com/product-category/stimulants/">Stimulants</a></li>
+	<li class="menu-item menu-item-type-taxonomy menu-item-object-product_cat menu-item-603"><a href="https://legitrcvendorsusa.com/product-category/psychedelic/">Psychedelic</a></li>
+	<li class="menu-item menu-item-type-taxonomy menu-item-object-product_cat menu-item-2723"><a href="https://legitrcvendorsusa.com/product-category/opioids/">Opioids</a></li>
+	<li class="menu-item menu-item-type-taxonomy menu-item-object-product_cat menu-item-2853"><a href="https://legitrcvendorsusa.com/product-category/dissociative/">dissociative</a></li>
+	<li class="menu-item menu-item-type-taxonomy menu-item-object-product_cat menu-item-42"><a href="https://legitrcvendorsusa.com/product-category/blotter-chemicals/">Blotter chemicals</a></li>
+	<li class="menu-item menu-item-type-taxonomy menu-item-object-product_cat menu-item-40"><a href="https://legitrcvendorsusa.com/product-category/4-ho-series/">4-HO Series</a></li>
+	<li class="menu-item menu-item-type-taxonomy menu-item-object-product_cat menu-item-41"><a href="https://legitrcvendorsusa.com/product-category/4-aco-series/">4-ACO Series</a></li>
+	<li class="menu-item menu-item-type-taxonomy menu-item-object-product_cat menu-item-84"><a href="https://legitrcvendorsusa.com/product-category/2cs-series/">2Cs Series</a></li>
+</ul>
+</li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-32"><a href="https://legitrcvendorsusa.com/about-us/">About Us</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-249"><a href="https://legitrcvendorsusa.com/my-cart/">My Cart</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-34"><a href="https://legitrcvendorsusa.com/contact-us/">Contact Us</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-48"><a href="https://legitrcvendorsusa.com/our-reviews/">Our Reviews</a></li>
+</ul></nav>      </div><!-- #site-navigation -->
+    
+      </div><!-- .container --></header><!-- #masthead -->    
+    
+  <div id="content" class="site-content"><div class="container"><div class="row">    
+<div id="primary" class="content-area col-sm-8"><header class="woocommerce-products-header">
+			<h1 class="woocommerce-products-header__title page-title">Legit Research Chemicals Vendors in USA</h1>
+	
+	<div class="page-description"><h2 id="h-what-are-research-chemicals">What are research chemicals ?</h2>
+<p>Research chemicals&nbsp;are&nbsp;<a href="https://en.wikipedia.org/wiki/Chemical_substance">chemical substances</a>&nbsp;. Scientists use them for medical and scientific&nbsp;<a href="https://en.wikipedia.org/wiki/Research">research purposes</a> when they get them from legit vendors. A research chemical is not intended for human or veterinary use. Research chemicals require this distinction on the labels. Thus, it exempts them from regulation under parts 100-740 in Title 21 of the Code of Federal Regulations. Governments authorise chemical companies to put this on all product labels.</p>
+<p>However, humans do derive several advantages from the consumption of research chemicals. Consumers have testified that some chemicals aid in anxiety, stimulation, medically etc. We regularly advice all recreational users of these chemicals to use them with moderation in order to avoid any possible addiction. </p>
+<h2>How to buy research chemicals: </h2>
+<p>There are several ways to buy research chemicals be it officially or none officially depending on the intended use and quantity required. Schools, research laboratories and other credited institutions will get research chemicals from national or international companies. This requires appropriate licensing. Some of these institutions will also buy from local vendors or small companies simply because the purchase process is very easy and fast. Individuals with appropriate licensing also buy research chemicals from established companies internationally or from local vendors. </p>
+<p>The majority of purchase is done mostly from legit research chemical vendors and black onion markets or from local plugs selling around their city areas. Online resources are so many and potential clients should make sure they buy from reputable companies. With the onset of many chemical scams online; We are carrying out a campaign to screen legit research chemical vendors and non legit companies in order to save the fate of innocent clients from fraudulent activities from fake chemical companies. You could always <a href="https://legitrcvendorsusa.com/contact-us/">contact us</a> for any inquiry or to even check the legitimacy of any other company.</p>
+</div></header>
+
+<div class="woof_products_top_panel_content">
+    </div>
+<div class="woof_products_top_panel" style="display: none;"></div><div class="woocommerce-notices-wrapper"></div><p class="woocommerce-result-count">
+	Showing 1–16 of 97 results</p>
+<form class="woocommerce-ordering" method="get">
+	<select name="orderby" class="orderby" aria-label="Shop order">
+					<option value="popularity" selected="selected">Sort by popularity</option>
+					<option value="rating">Sort by average rating</option>
+					<option value="date">Sort by latest</option>
+					<option value="price">Sort by price: low to high</option>
+					<option value="price-desc">Sort by price: high to low</option>
+			</select>
+	<input type="hidden" name="paged" value="1">
+	</form>
+<ul class="products columns-4">
+<li class="product type-product post-737 status-publish first instock product_cat-4-aco-series product_tag-4-acetoxy-dmt product_tag-4-aco product_tag-o-acetylpsilocin product_tag-psilacetin product_tag-synthetic-shrooms has-post-thumbnail sale taxable shipping-taxable purchasable product-type-variable">
+	<a href="https://legitrcvendorsusa.com/product/4-aco-dmt/" class="woocommerce-LoopProduct-link woocommerce-loop-product__link">
+	<span class="onsale">Sale!</span>
+	<img width="300" height="300" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20300%20300'%3E%3C/svg%3E" class="attachment-woocommerce_thumbnail size-woocommerce_thumbnail" alt="4-AcO-DMT for sale online" data-lazy-srcset="https://legitrcvendorsusa.com/wp-content/uploads/2020/10/4-ACO-DMT-1-300x300.png 300w, https://legitrcvendorsusa.com/wp-content/uploads/2020/10/4-ACO-DMT-1-150x150.png 150w, https://legitrcvendorsusa.com/wp-content/uploads/2020/10/4-ACO-DMT-1-100x100.png 100w, https://legitrcvendorsusa.com/wp-content/uploads/2020/10/4-ACO-DMT-1.png 473w" data-lazy-sizes="(max-width: 300px) 100vw, 300px" fetchpriority="high" data-lazy-src="https://legitrcvendorsusa.com/wp-content/uploads/2020/10/4-ACO-DMT-1-300x300.png"><noscript><img width="300" height="300" src="https://legitrcvendorsusa.com/wp-content/uploads/2020/10/4-ACO-DMT-1-300x300.png" class="attachment-woocommerce_thumbnail size-woocommerce_thumbnail" alt="4-AcO-DMT for sale online" srcset="https://legitrcvendorsusa.com/wp-content/uploads/2020/10/4-ACO-DMT-1-300x300.png 300w, https://legitrcvendorsusa.com/wp-content/uploads/2020/10/4-ACO-DMT-1-150x150.png 150w, https://legitrcvendorsusa.com/wp-content/uploads/2020/10/4-ACO-DMT-1-100x100.png 100w, https://legitrcvendorsusa.com/wp-content/uploads/2020/10/4-ACO-DMT-1.png 473w" sizes="(max-width: 300px) 100vw, 300px" fetchpriority="high" /></noscript><h2 class="woocommerce-loop-product__title">4-ACO-DMT</h2>
+	<span class="price"><span class="woocommerce-Price-amount amount"><bdi><span class="woocommerce-Price-currencySymbol">$</span>190</bdi></span> – <span class="woocommerce-Price-amount amount"><bdi><span class="woocommerce-Price-currencySymbol">$</span>3,500</bdi></span></span>
+</a><a href="https://legitrcvendorsusa.com/product/4-aco-dmt/" data-quantity="1" class="button product_type_variable add_to_cart_button" data-product_id="737" data-product_sku="" aria-label="Select options for “4-ACO-DMT”" rel="nofollow">Select options</a></li>
+<li class="product type-product post-503 status-publish instock product_cat-uncategorized has-post-thumbnail sale taxable shipping-taxable purchasable product-type-variable">
+	<a href="https://legitrcvendorsusa.com/product/desoxyn-methamphetamine-hcl-tablets-usp/" class="woocommerce-LoopProduct-link woocommerce-loop-product__link">
+	<span class="onsale">Sale!</span>
+	<img width="300" height="300" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20300%20300'%3E%3C/svg%3E" class="attachment-woocommerce_thumbnail size-woocommerce_thumbnail" alt="desoxyn 5mg tabs" data-lazy-srcset="https://legitrcvendorsusa.com/wp-content/uploads/2020/07/desoxyn-5mg-tabs-300x300.jpg 300w, https://legitrcvendorsusa.com/wp-content/uploads/2020/07/desoxyn-5mg-tabs-150x150.jpg 150w, https://legitrcvendorsusa.com/wp-content/uploads/2020/07/desoxyn-5mg-tabs-100x100.jpg 100w" data-lazy-sizes="(max-width: 300px) 100vw, 300px" data-lazy-src="https://legitrcvendorsusa.com/wp-content/uploads/2020/07/desoxyn-5mg-tabs-300x300.jpg"><noscript><img width="300" height="300" src="https://legitrcvendorsusa.com/wp-content/uploads/2020/07/desoxyn-5mg-tabs-300x300.jpg" class="attachment-woocommerce_thumbnail size-woocommerce_thumbnail" alt="desoxyn 5mg tabs" srcset="https://legitrcvendorsusa.com/wp-content/uploads/2020/07/desoxyn-5mg-tabs-300x300.jpg 300w, https://legitrcvendorsusa.com/wp-content/uploads/2020/07/desoxyn-5mg-tabs-150x150.jpg 150w, https://legitrcvendorsusa.com/wp-content/uploads/2020/07/desoxyn-5mg-tabs-100x100.jpg 100w" sizes="(max-width: 300px) 100vw, 300px" /></noscript><h2 class="woocommerce-loop-product__title">Desoxyn (methamphetamine) 5mg HCL tablets, USP</h2>
+	<span class="price"><span class="woocommerce-Price-amount amount"><bdi><span class="woocommerce-Price-currencySymbol">$</span>150</bdi></span> – <span class="woocommerce-Price-amount amount"><bdi><span class="woocommerce-Price-currencySymbol">$</span>900</bdi></span></span>
+</a><a href="https://legitrcvendorsusa.com/product/desoxyn-methamphetamine-hcl-tablets-usp/" data-quantity="1" class="button product_type_variable add_to_cart_button" data-product_id="503" data-product_sku="" aria-label="Select options for “Desoxyn (methamphetamine) 5mg HCL tablets, USP”" rel="nofollow">Select options</a></li>
+<li class="product type-product post-367 status-publish instock product_cat-benzodiazepines has-post-thumbnail sale taxable shipping-taxable purchasable product-type-variable">
+	<a href="https://legitrcvendorsusa.com/product/etizolam/" class="woocommerce-LoopProduct-link woocommerce-loop-product__link">
+	<span class="onsale">Sale!</span>
+	<img width="300" height="300" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20300%20300'%3E%3C/svg%3E" class="attachment-woocommerce_thumbnail size-woocommerce_thumbnail" alt="etizolam 2mg pellets" data-lazy-srcset="https://legitrcvendorsusa.com/wp-content/uploads/2020/07/Etizolam--300x300.jpg 300w, https://legitrcvendorsusa.com/wp-content/uploads/2020/07/Etizolam--1024x1024.jpg 1024w, https://legitrcvendorsusa.com/wp-content/uploads/2020/07/Etizolam--150x150.jpg 150w, https://legitrcvendorsusa.com/wp-content/uploads/2020/07/Etizolam--768x768.jpg 768w, https://legitrcvendorsusa.com/wp-content/uploads/2020/07/Etizolam--1536x1536.jpg 1536w, https://legitrcvendorsusa.com/wp-content/uploads/2020/07/Etizolam-.jpg 2048w, https://legitrcvendorsusa.com/wp-content/uploads/2020/07/Etizolam--600x600.jpg 600w, https://legitrcvendorsusa.com/wp-content/uploads/2020/07/Etizolam--100x100.jpg 100w" data-lazy-sizes="(max-width: 300px) 100vw, 300px" data-lazy-src="https://legitrcvendorsusa.com/wp-content/uploads/2020/07/Etizolam--300x300.jpg"><noscript><img width="300" height="300" src="https://legitrcvendorsusa.com/wp-content/uploads/2020/07/Etizolam--300x300.jpg" class="attachment-woocommerce_thumbnail size-woocommerce_thumbnail" alt="etizolam 2mg pellets" srcset="https://legitrcvendorsusa.com/wp-content/uploads/2020/07/Etizolam--300x300.jpg 300w, https://legitrcvendorsusa.com/wp-content/uploads/2020/07/Etizolam--1024x1024.jpg 1024w, https://legitrcvendorsusa.com/wp-content/uploads/2020/07/Etizolam--150x150.jpg 150w, https://legitrcvendorsusa.com/wp-content/uploads/2020/07/Etizolam--768x768.jpg 768w, https://legitrcvendorsusa.com/wp-content/uploads/2020/07/Etizolam--1536x1536.jpg 1536w, https://legitrcvendorsusa.com/wp-content/uploads/2020/07/Etizolam-.jpg 2048w, https://legitrcvendorsusa.com/wp-content/uploads/2020/07/Etizolam--600x600.jpg 600w, https://legitrcvendorsusa.com/wp-content/uploads/2020/07/Etizolam--100x100.jpg 100w" sizes="(max-width: 300px) 100vw, 300px" /></noscript><h2 class="woocommerce-loop-product__title">Etizolam</h2>
+	<span class="price"><span class="woocommerce-Price-amount amount"><bdi><span class="woocommerce-Price-currencySymbol">$</span>150</bdi></span> – <span class="woocommerce-Price-amount amount"><bdi><span class="woocommerce-Price-currencySymbol">$</span>1,600</bdi></span></span>
+</a><a href="https://legitrcvendorsusa.com/product/etizolam/" data-quantity="1" class="button product_type_variable add_to_cart_button" data-product_id="367" data-product_sku="" aria-label="Select options for “Etizolam”" rel="nofollow">Select options</a></li>
+<li class="product type-product post-487 status-publish last instock product_cat-uncategorized has-post-thumbnail sale taxable shipping-taxable purchasable product-type-variable">
+	<a href="https://legitrcvendorsusa.com/product/2fma-2-fluoromethamphetamine/" class="woocommerce-LoopProduct-link woocommerce-loop-product__link">
+	<span class="onsale">Sale!</span>
+	<img width="270" height="187" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20270%20187'%3E%3C/svg%3E" class="attachment-woocommerce_thumbnail size-woocommerce_thumbnail" alt="DKAPBP" data-lazy-src="https://legitrcvendorsusa.com/wp-content/uploads/2020/07/2FMA.png"><noscript><img width="270" height="187" src="https://legitrcvendorsusa.com/wp-content/uploads/2020/07/2FMA.png" class="attachment-woocommerce_thumbnail size-woocommerce_thumbnail" alt="DKAPBP" /></noscript><h2 class="woocommerce-loop-product__title">2FMA (2-Fluoromethamphetamine)</h2>
+	<span class="price"><span class="woocommerce-Price-amount amount"><bdi><span class="woocommerce-Price-currencySymbol">$</span>150</bdi></span> – <span class="woocommerce-Price-amount amount"><bdi><span class="woocommerce-Price-currencySymbol">$</span>1,800</bdi></span></span>
+</a><a href="https://legitrcvendorsusa.com/product/2fma-2-fluoromethamphetamine/" data-quantity="1" class="button product_type_variable add_to_cart_button" data-product_id="487" data-product_sku="" aria-label="Select options for “2FMA (2-Fluoromethamphetamine)”" rel="nofollow">Select options</a></li>
+<li class="product type-product post-357 status-publish first instock product_cat-benzodiazepines has-post-thumbnail sale taxable shipping-taxable purchasable product-type-variable">
+	<a href="https://legitrcvendorsusa.com/product/pyrazolam/" class="woocommerce-LoopProduct-link woocommerce-loop-product__link">
+	<span class="onsale">Sale!</span>
+	<img width="225" height="225" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20225%20225'%3E%3C/svg%3E" class="attachment-woocommerce_thumbnail size-woocommerce_thumbnail" alt="pyrazolam" data-lazy-srcset="https://legitrcvendorsusa.com/wp-content/uploads/2020/07/pyrazolam-.jpg 225w, https://legitrcvendorsusa.com/wp-content/uploads/2020/07/pyrazolam--150x150.jpg 150w, https://legitrcvendorsusa.com/wp-content/uploads/2020/07/pyrazolam--100x100.jpg 100w" data-lazy-sizes="(max-width: 225px) 100vw, 225px" data-lazy-src="https://legitrcvendorsusa.com/wp-content/uploads/2020/07/pyrazolam-.jpg"><noscript><img width="225" height="225" src="https://legitrcvendorsusa.com/wp-content/uploads/2020/07/pyrazolam-.jpg" class="attachment-woocommerce_thumbnail size-woocommerce_thumbnail" alt="pyrazolam" srcset="https://legitrcvendorsusa.com/wp-content/uploads/2020/07/pyrazolam-.jpg 225w, https://legitrcvendorsusa.com/wp-content/uploads/2020/07/pyrazolam--150x150.jpg 150w, https://legitrcvendorsusa.com/wp-content/uploads/2020/07/pyrazolam--100x100.jpg 100w" sizes="(max-width: 225px) 100vw, 225px" /></noscript><h2 class="woocommerce-loop-product__title">Pyrazolam</h2>
+	<span class="price"><span class="woocommerce-Price-amount amount"><bdi><span class="woocommerce-Price-currencySymbol">$</span>150</bdi></span> – <span class="woocommerce-Price-amount amount"><bdi><span class="woocommerce-Price-currencySymbol">$</span>2,100</bdi></span></span>
+</a><a href="https://legitrcvendorsusa.com/product/pyrazolam/" data-quantity="1" class="button product_type_variable add_to_cart_button" data-product_id="357" data-product_sku="" aria-label="Select options for “Pyrazolam”" rel="nofollow">Select options</a></li>
+<li class="product type-product post-650 status-publish instock product_cat-4-ho-series product_tag-4-homet product_tag-4-ho-met product_tag-4ho-met has-post-thumbnail sale taxable shipping-taxable purchasable product-type-variable">
+	<a href="https://legitrcvendorsusa.com/product/buy-4-ho-met-online-usa/" class="woocommerce-LoopProduct-link woocommerce-loop-product__link">
+	<span class="onsale">Sale!</span>
+	<img width="300" height="300" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20300%20300'%3E%3C/svg%3E" class="attachment-woocommerce_thumbnail size-woocommerce_thumbnail" alt="4-HO-MET" data-lazy-srcset="https://legitrcvendorsusa.com/wp-content/uploads/2020/10/4-HO-MET-1-300x300.png 300w, https://legitrcvendorsusa.com/wp-content/uploads/2020/10/4-HO-MET-1-150x150.png 150w, https://legitrcvendorsusa.com/wp-content/uploads/2020/10/4-HO-MET-1-100x100.png 100w, https://legitrcvendorsusa.com/wp-content/uploads/2020/10/4-HO-MET-1.png 500w" data-lazy-sizes="(max-width: 300px) 100vw, 300px" data-lazy-src="https://legitrcvendorsusa.com/wp-content/uploads/2020/10/4-HO-MET-1-300x300.png"><noscript><img width="300" height="300" src="https://legitrcvendorsusa.com/wp-content/uploads/2020/10/4-HO-MET-1-300x300.png" class="attachment-woocommerce_thumbnail size-woocommerce_thumbnail" alt="4-HO-MET" srcset="https://legitrcvendorsusa.com/wp-content/uploads/2020/10/4-HO-MET-1-300x300.png 300w, https://legitrcvendorsusa.com/wp-content/uploads/2020/10/4-HO-MET-1-150x150.png 150w, https://legitrcvendorsusa.com/wp-content/uploads/2020/10/4-HO-MET-1-100x100.png 100w, https://legitrcvendorsusa.com/wp-content/uploads/2020/10/4-HO-MET-1.png 500w" sizes="(max-width: 300px) 100vw, 300px" /></noscript><h2 class="woocommerce-loop-product__title">4-HO-MET</h2>
+	<span class="price"><span class="woocommerce-Price-amount amount"><bdi><span class="woocommerce-Price-currencySymbol">$</span>120</bdi></span> – <span class="woocommerce-Price-amount amount"><bdi><span class="woocommerce-Price-currencySymbol">$</span>1,800</bdi></span></span>
+</a><a href="https://legitrcvendorsusa.com/product/buy-4-ho-met-online-usa/" data-quantity="1" class="button product_type_variable add_to_cart_button" data-product_id="650" data-product_sku="" aria-label="Select options for “4-HO-MET”" rel="nofollow">Select options</a></li>
+<li class="product type-product post-686 status-publish instock product_cat-blotter-chemicals product_tag-acid product_tag-dots product_tag-lucy product_tag-microdots product_tag-tabs product_tag-trips has-post-thumbnail sale taxable shipping-taxable purchasable product-type-variable">
+	<a href="https://legitrcvendorsusa.com/product/1p-lsd/" class="woocommerce-LoopProduct-link woocommerce-loop-product__link">
+	<span class="onsale">Sale!</span>
+	<img width="220" height="164" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20220%20164'%3E%3C/svg%3E" class="attachment-woocommerce_thumbnail size-woocommerce_thumbnail" alt="1plsd for sale" data-lazy-src="https://legitrcvendorsusa.com/wp-content/uploads/2020/10/1plsd.jpg"><noscript><img width="220" height="164" src="https://legitrcvendorsusa.com/wp-content/uploads/2020/10/1plsd.jpg" class="attachment-woocommerce_thumbnail size-woocommerce_thumbnail" alt="1plsd for sale" /></noscript><h2 class="woocommerce-loop-product__title">1PLSD</h2>
+	<span class="price"><span class="woocommerce-Price-amount amount"><bdi><span class="woocommerce-Price-currencySymbol">$</span>180</bdi></span> – <span class="woocommerce-Price-amount amount"><bdi><span class="woocommerce-Price-currencySymbol">$</span>1,000</bdi></span></span>
+</a><a href="https://legitrcvendorsusa.com/product/1p-lsd/" data-quantity="1" class="button product_type_variable add_to_cart_button" data-product_id="686" data-product_sku="" aria-label="Select options for “1PLSD”" rel="nofollow">Select options</a></li>
+<li class="product type-product post-726 status-publish last instock product_cat-blotter-chemicals product_tag-2-3-fea product_tag-2-3-fea-pellets product_tag-2fea product_tag-3-fea has-post-thumbnail sale taxable shipping-taxable purchasable product-type-variable">
+	<a href="https://legitrcvendorsusa.com/product/2-fea-and-3-fea-pellets/" class="woocommerce-LoopProduct-link woocommerce-loop-product__link">
+	<span class="onsale">Sale!</span>
+	<img width="199" height="253" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20199%20253'%3E%3C/svg%3E" class="attachment-woocommerce_thumbnail size-woocommerce_thumbnail" alt="2 fea and 3 fea pellets" data-lazy-src="https://legitrcvendorsusa.com/wp-content/uploads/2020/10/2-3-fea-pellets-2.jpg"><noscript><img width="199" height="253" src="https://legitrcvendorsusa.com/wp-content/uploads/2020/10/2-3-fea-pellets-2.jpg" class="attachment-woocommerce_thumbnail size-woocommerce_thumbnail" alt="2 fea and 3 fea pellets" /></noscript><h2 class="woocommerce-loop-product__title">2/3 FEA PELLETS</h2>
+	<span class="price"><span class="woocommerce-Price-amount amount"><bdi><span class="woocommerce-Price-currencySymbol">$</span>100</bdi></span> – <span class="woocommerce-Price-amount amount"><bdi><span class="woocommerce-Price-currencySymbol">$</span>250</bdi></span></span>
+</a><a href="https://legitrcvendorsusa.com/product/2-fea-and-3-fea-pellets/" data-quantity="1" class="button product_type_variable add_to_cart_button" data-product_id="726" data-product_sku="" aria-label="Select options for “2/3 FEA PELLETS”" rel="nofollow">Select options</a></li>
+<li class="product type-product post-468 status-publish first instock product_cat-cannabinoids product_tag-2-flava product_tag-fifa-2-fluo product_tag-flo product_tag-flux product_tag-rdj has-post-thumbnail sale taxable shipping-taxable purchasable product-type-variable">
+	<a href="https://legitrcvendorsusa.com/product/2-fluoroamphetamine-2fa/" class="woocommerce-LoopProduct-link woocommerce-loop-product__link">
+	<span class="onsale">Sale!</span>
+	<img width="199" height="253" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20199%20253'%3E%3C/svg%3E" class="attachment-woocommerce_thumbnail size-woocommerce_thumbnail" alt="2-Fluoroamphetamine (2FA)" data-lazy-src="https://legitrcvendorsusa.com/wp-content/uploads/2020/07/2FA.jpg"><noscript><img width="199" height="253" src="https://legitrcvendorsusa.com/wp-content/uploads/2020/07/2FA.jpg" class="attachment-woocommerce_thumbnail size-woocommerce_thumbnail" alt="2-Fluoroamphetamine (2FA)" /></noscript><h2 class="woocommerce-loop-product__title">2-Fluoroamphetamine HCL 2FA</h2>
+	<span class="price"><span class="woocommerce-Price-amount amount"><bdi><span class="woocommerce-Price-currencySymbol">$</span>180</bdi></span> – <span class="woocommerce-Price-amount amount"><bdi><span class="woocommerce-Price-currencySymbol">$</span>2,200</bdi></span></span>
+</a><a href="https://legitrcvendorsusa.com/product/2-fluoroamphetamine-2fa/" data-quantity="1" class="button product_type_variable add_to_cart_button" data-product_id="468" data-product_sku="" aria-label="Select options for “2-Fluoroamphetamine HCL 2FA”" rel="nofollow">Select options</a></li>
+<li class="product type-product post-510 status-publish instock product_cat-psychedelic has-post-thumbnail sale taxable shipping-taxable purchasable product-type-variable">
+	<a href="https://legitrcvendorsusa.com/product/1cp-lsd/" class="woocommerce-LoopProduct-link woocommerce-loop-product__link">
+	<span class="onsale">Sale!</span>
+	<img width="225" height="225" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20225%20225'%3E%3C/svg%3E" class="attachment-woocommerce_thumbnail size-woocommerce_thumbnail" alt="1CP-LSD" data-lazy-srcset="https://legitrcvendorsusa.com/wp-content/uploads/2020/07/1CP-LSD.jpg 225w, https://legitrcvendorsusa.com/wp-content/uploads/2020/07/1CP-LSD-150x150.jpg 150w, https://legitrcvendorsusa.com/wp-content/uploads/2020/07/1CP-LSD-100x100.jpg 100w" data-lazy-sizes="(max-width: 225px) 100vw, 225px" data-lazy-src="https://legitrcvendorsusa.com/wp-content/uploads/2020/07/1CP-LSD.jpg"><noscript><img width="225" height="225" src="https://legitrcvendorsusa.com/wp-content/uploads/2020/07/1CP-LSD.jpg" class="attachment-woocommerce_thumbnail size-woocommerce_thumbnail" alt="1CP-LSD" srcset="https://legitrcvendorsusa.com/wp-content/uploads/2020/07/1CP-LSD.jpg 225w, https://legitrcvendorsusa.com/wp-content/uploads/2020/07/1CP-LSD-150x150.jpg 150w, https://legitrcvendorsusa.com/wp-content/uploads/2020/07/1CP-LSD-100x100.jpg 100w" sizes="(max-width: 225px) 100vw, 225px" /></noscript><h2 class="woocommerce-loop-product__title">1CP-LSD</h2>
+	<span class="price"><span class="woocommerce-Price-amount amount"><bdi><span class="woocommerce-Price-currencySymbol">$</span>100</bdi></span> – <span class="woocommerce-Price-amount amount"><bdi><span class="woocommerce-Price-currencySymbol">$</span>1,600</bdi></span></span>
+</a><a href="https://legitrcvendorsusa.com/product/1cp-lsd/" data-quantity="1" class="button product_type_variable add_to_cart_button" data-product_id="510" data-product_sku="" aria-label="Select options for “1CP-LSD”" rel="nofollow">Select options</a></li>
+<li class="product type-product post-317 status-publish instock product_cat-5-meo-series product_cat-uncategorized has-post-thumbnail sale taxable shipping-taxable purchasable product-type-variable">
+	<a href="https://legitrcvendorsusa.com/product/5-meo-dmt/" class="woocommerce-LoopProduct-link woocommerce-loop-product__link">
+	<span class="onsale">Sale!</span>
+	<img width="225" height="225" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20225%20225'%3E%3C/svg%3E" class="attachment-woocommerce_thumbnail size-woocommerce_thumbnail" alt="5-meo-dmt" data-lazy-srcset="https://legitrcvendorsusa.com/wp-content/uploads/2020/07/5-meo-dmt.jpg 225w, https://legitrcvendorsusa.com/wp-content/uploads/2020/07/5-meo-dmt-150x150.jpg 150w, https://legitrcvendorsusa.com/wp-content/uploads/2020/07/5-meo-dmt-100x100.jpg 100w" data-lazy-sizes="(max-width: 225px) 100vw, 225px" data-lazy-src="https://legitrcvendorsusa.com/wp-content/uploads/2020/07/5-meo-dmt.jpg"><noscript><img width="225" height="225" src="https://legitrcvendorsusa.com/wp-content/uploads/2020/07/5-meo-dmt.jpg" class="attachment-woocommerce_thumbnail size-woocommerce_thumbnail" alt="5-meo-dmt" srcset="https://legitrcvendorsusa.com/wp-content/uploads/2020/07/5-meo-dmt.jpg 225w, https://legitrcvendorsusa.com/wp-content/uploads/2020/07/5-meo-dmt-150x150.jpg 150w, https://legitrcvendorsusa.com/wp-content/uploads/2020/07/5-meo-dmt-100x100.jpg 100w" sizes="(max-width: 225px) 100vw, 225px" /></noscript><h2 class="woocommerce-loop-product__title">5-meo-dmt</h2>
+	<span class="price"><span class="woocommerce-Price-amount amount"><bdi><span class="woocommerce-Price-currencySymbol">$</span>190</bdi></span> – <span class="woocommerce-Price-amount amount"><bdi><span class="woocommerce-Price-currencySymbol">$</span>2,200</bdi></span></span>
+</a><a href="https://legitrcvendorsusa.com/product/5-meo-dmt/" data-quantity="1" class="button product_type_variable add_to_cart_button" data-product_id="317" data-product_sku="" aria-label="Select options for “5-meo-dmt”" rel="nofollow">Select options</a></li>
+<li class="product type-product post-224 status-publish last instock product_cat-uncategorized has-post-thumbnail sale taxable shipping-taxable purchasable product-type-variable">
+	<a href="https://legitrcvendorsusa.com/product/6-apb/" class="woocommerce-LoopProduct-link woocommerce-loop-product__link">
+	<span class="onsale">Sale!</span>
+	<img width="300" height="300" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20300%20300'%3E%3C/svg%3E" class="attachment-woocommerce_thumbnail size-woocommerce_thumbnail" alt="6-APB" data-lazy-srcset="https://legitrcvendorsusa.com/wp-content/uploads/2020/04/6-APB-300x300.jpg 300w, https://legitrcvendorsusa.com/wp-content/uploads/2020/04/6-APB-150x150.jpg 150w, https://legitrcvendorsusa.com/wp-content/uploads/2020/04/6-APB-100x100.jpg 100w" data-lazy-sizes="(max-width: 300px) 100vw, 300px" data-lazy-src="https://legitrcvendorsusa.com/wp-content/uploads/2020/04/6-APB-300x300.jpg"><noscript><img width="300" height="300" src="https://legitrcvendorsusa.com/wp-content/uploads/2020/04/6-APB-300x300.jpg" class="attachment-woocommerce_thumbnail size-woocommerce_thumbnail" alt="6-APB" srcset="https://legitrcvendorsusa.com/wp-content/uploads/2020/04/6-APB-300x300.jpg 300w, https://legitrcvendorsusa.com/wp-content/uploads/2020/04/6-APB-150x150.jpg 150w, https://legitrcvendorsusa.com/wp-content/uploads/2020/04/6-APB-100x100.jpg 100w" sizes="(max-width: 300px) 100vw, 300px" /></noscript><h2 class="woocommerce-loop-product__title">6-APB</h2>
+	<span class="price"><span class="woocommerce-Price-amount amount"><bdi><span class="woocommerce-Price-currencySymbol">$</span>150</bdi></span> – <span class="woocommerce-Price-amount amount"><bdi><span class="woocommerce-Price-currencySymbol">$</span>2,400</bdi></span></span>
+</a><a href="https://legitrcvendorsusa.com/product/6-apb/" data-quantity="1" class="button product_type_variable add_to_cart_button" data-product_id="224" data-product_sku="" aria-label="Select options for “6-APB”" rel="nofollow">Select options</a></li>
+<li class="product type-product post-151 status-publish first instock product_cat-cannabinoids has-post-thumbnail sale taxable shipping-taxable purchasable product-type-variable">
+	<a href="https://legitrcvendorsusa.com/product/5-cl-adb-a/" class="woocommerce-LoopProduct-link woocommerce-loop-product__link">
+	<span class="onsale">Sale!</span>
+	<img width="288" height="300" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20288%20300'%3E%3C/svg%3E" class="attachment-woocommerce_thumbnail size-woocommerce_thumbnail" alt="5-cl-adb-a" data-lazy-src="https://legitrcvendorsusa.com/wp-content/uploads/2020/03/5CL-ADB-A-288x300.png"><noscript><img width="288" height="300" src="https://legitrcvendorsusa.com/wp-content/uploads/2020/03/5CL-ADB-A-288x300.png" class="attachment-woocommerce_thumbnail size-woocommerce_thumbnail" alt="5-cl-adb-a" /></noscript><h2 class="woocommerce-loop-product__title">5-cl-adb-a</h2>
+	<span class="price"><span class="woocommerce-Price-amount amount"><bdi><span class="woocommerce-Price-currencySymbol">$</span>150</bdi></span> – <span class="woocommerce-Price-amount amount"><bdi><span class="woocommerce-Price-currencySymbol">$</span>1,900</bdi></span></span>
+</a><a href="https://legitrcvendorsusa.com/product/5-cl-adb-a/" data-quantity="1" class="button product_type_variable add_to_cart_button" data-product_id="151" data-product_sku="" aria-label="Select options for “5-cl-adb-a”" rel="nofollow">Select options</a></li>
+<li class="product type-product post-167 status-publish instock product_cat-uncategorized has-post-thumbnail sale taxable shipping-taxable purchasable product-type-variable">
+	<a href="https://legitrcvendorsusa.com/product/acrylfentanyl-powder/" class="woocommerce-LoopProduct-link woocommerce-loop-product__link">
+	<span class="onsale">Sale!</span>
+	<img width="300" height="300" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20300%20300'%3E%3C/svg%3E" class="attachment-woocommerce_thumbnail size-woocommerce_thumbnail" alt="Acrylfentanyl Powder" data-lazy-srcset="https://legitrcvendorsusa.com/wp-content/uploads/2020/03/Acrylfentanyl-2-300x300.jpg 300w, https://legitrcvendorsusa.com/wp-content/uploads/2020/03/Acrylfentanyl-2-150x150.jpg 150w, https://legitrcvendorsusa.com/wp-content/uploads/2020/03/Acrylfentanyl-2.jpg 500w" data-lazy-sizes="(max-width: 300px) 100vw, 300px" data-lazy-src="https://legitrcvendorsusa.com/wp-content/uploads/2020/03/Acrylfentanyl-2-300x300.jpg"><noscript><img width="300" height="300" src="https://legitrcvendorsusa.com/wp-content/uploads/2020/03/Acrylfentanyl-2-300x300.jpg" class="attachment-woocommerce_thumbnail size-woocommerce_thumbnail" alt="Acrylfentanyl Powder" srcset="https://legitrcvendorsusa.com/wp-content/uploads/2020/03/Acrylfentanyl-2-300x300.jpg 300w, https://legitrcvendorsusa.com/wp-content/uploads/2020/03/Acrylfentanyl-2-150x150.jpg 150w, https://legitrcvendorsusa.com/wp-content/uploads/2020/03/Acrylfentanyl-2.jpg 500w" sizes="(max-width: 300px) 100vw, 300px" /></noscript><h2 class="woocommerce-loop-product__title">Acrylfentanyl Powder</h2>
+	<span class="price"><span class="woocommerce-Price-amount amount"><bdi><span class="woocommerce-Price-currencySymbol">$</span>250</bdi></span> – <span class="woocommerce-Price-amount amount"><bdi><span class="woocommerce-Price-currencySymbol">$</span>7,500</bdi></span></span>
+</a><a href="https://legitrcvendorsusa.com/product/acrylfentanyl-powder/" data-quantity="1" class="button product_type_variable add_to_cart_button" data-product_id="167" data-product_sku="" aria-label="Select options for “Acrylfentanyl Powder”" rel="nofollow">Select options</a></li>
+<li class="product type-product post-366 status-publish instock product_cat-benzodiazepines has-post-thumbnail sale taxable shipping-taxable purchasable product-type-variable">
+	<a href="https://legitrcvendorsusa.com/product/metizolam/" class="woocommerce-LoopProduct-link woocommerce-loop-product__link">
+	<span class="onsale">Sale!</span>
+	<img width="300" height="300" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20300%20300'%3E%3C/svg%3E" class="attachment-woocommerce_thumbnail size-woocommerce_thumbnail" alt="buy metizolam online" data-lazy-srcset="https://legitrcvendorsusa.com/wp-content/uploads/2020/07/Metizolam_buy_online-300x300.jpg 300w, https://legitrcvendorsusa.com/wp-content/uploads/2020/07/Metizolam_buy_online-150x150.jpg 150w, https://legitrcvendorsusa.com/wp-content/uploads/2020/07/Metizolam_buy_online-100x100.jpg 100w" data-lazy-sizes="(max-width: 300px) 100vw, 300px" data-lazy-src="https://legitrcvendorsusa.com/wp-content/uploads/2020/07/Metizolam_buy_online-300x300.jpg"><noscript><img width="300" height="300" src="https://legitrcvendorsusa.com/wp-content/uploads/2020/07/Metizolam_buy_online-300x300.jpg" class="attachment-woocommerce_thumbnail size-woocommerce_thumbnail" alt="buy metizolam online" srcset="https://legitrcvendorsusa.com/wp-content/uploads/2020/07/Metizolam_buy_online-300x300.jpg 300w, https://legitrcvendorsusa.com/wp-content/uploads/2020/07/Metizolam_buy_online-150x150.jpg 150w, https://legitrcvendorsusa.com/wp-content/uploads/2020/07/Metizolam_buy_online-100x100.jpg 100w" sizes="(max-width: 300px) 100vw, 300px" /></noscript><h2 class="woocommerce-loop-product__title">Metizolam</h2>
+	<span class="price"><span class="woocommerce-Price-amount amount"><bdi><span class="woocommerce-Price-currencySymbol">$</span>190</bdi></span> – <span class="woocommerce-Price-amount amount"><bdi><span class="woocommerce-Price-currencySymbol">$</span>2,800</bdi></span></span>
+</a><a href="https://legitrcvendorsusa.com/product/metizolam/" data-quantity="1" class="button product_type_variable add_to_cart_button" data-product_id="366" data-product_sku="" aria-label="Select options for “Metizolam”" rel="nofollow">Select options</a></li>
+<li class="product type-product post-212 status-publish last instock product_cat-uncategorized has-post-thumbnail sale taxable shipping-taxable purchasable product-type-variable">
+	<a href="https://legitrcvendorsusa.com/product/34-ctmp/" class="woocommerce-LoopProduct-link woocommerce-loop-product__link">
+	<span class="onsale">Sale!</span>
+	<img width="300" height="214" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20300%20214'%3E%3C/svg%3E" class="attachment-woocommerce_thumbnail size-woocommerce_thumbnail" alt="3,4-ctmp" data-lazy-src="https://legitrcvendorsusa.com/wp-content/uploads/2020/04/3-4-ctmp.png"><noscript><img width="300" height="214" src="https://legitrcvendorsusa.com/wp-content/uploads/2020/04/3-4-ctmp.png" class="attachment-woocommerce_thumbnail size-woocommerce_thumbnail" alt="3,4-ctmp" /></noscript><h2 class="woocommerce-loop-product__title">3,4-ctmp</h2>
+	<span class="price"><span class="woocommerce-Price-amount amount"><bdi><span class="woocommerce-Price-currencySymbol">$</span>170</bdi></span> – <span class="woocommerce-Price-amount amount"><bdi><span class="woocommerce-Price-currencySymbol">$</span>2,000</bdi></span></span>
+</a><a href="https://legitrcvendorsusa.com/product/34-ctmp/" data-quantity="1" class="button product_type_variable add_to_cart_button" data-product_id="212" data-product_sku="" aria-label="Select options for “3,4-ctmp”" rel="nofollow">Select options</a></li>
+</ul>
+<nav class="woocommerce-pagination">
+	<ul class="page-numbers">
+	<li><span aria-current="page" class="page-numbers current">1</span></li>
+	<li><a class="page-numbers" href="https://legitrcvendorsusa.com/page/2/">2</a></li>
+	<li><a class="page-numbers" href="https://legitrcvendorsusa.com/page/3/">3</a></li>
+	<li><a class="page-numbers" href="https://legitrcvendorsusa.com/page/4/">4</a></li>
+	<li><a class="page-numbers" href="https://legitrcvendorsusa.com/page/5/">5</a></li>
+	<li><a class="page-numbers" href="https://legitrcvendorsusa.com/page/6/">6</a></li>
+	<li><a class="page-numbers" href="https://legitrcvendorsusa.com/page/7/">7</a></li>
+	<li><a class="next page-numbers" href="https://legitrcvendorsusa.com/page/2/">→</a></li>
+</ul>
+</nav>
+</div><!-- #primary -->
+
+<div id="sidebar-primary" role="complementary" class="widget-area sidebar col-sm-4">
+  
+    <aside id="search-2" class="widget widget_search"><form role="search" method="get" id="searchform" class="searchform" action="https://legitrcvendorsusa.com/">
+    <label class="screen-reader-text" for="s">Search for:</label>
+        <input type="text" value="" name="s" id="s" placeholder="Search..." class="search-field">
+    <input type="submit" id="searchsubmit" value="" class="search-submit">
+</form>
+</aside><aside id="wen-business-contact-5" class="widget wen_business_widget_contact"><h3 class="widget-title">Call OR Text</h3><div class="contact-widget"><ul><li class="contact-address"><p>5418 N. Clark Street, Chicago, IL 60660</p>
+</li><li class="contact-phone">+1(312) 741-9292</li><li class="contact-email">deancarlson101@gmail.com</li><li class="contact-time">24/7</li></ul></div></aside><aside id="wen-business-social-5" class="widget wen_business_widget_social"><h3 class="widget-title">Instant Chat NOW</h3><h4 class="widget-subtitle">wickr: deancarlson101</h4></aside><aside id="woocommerce_products-5" class="widget woocommerce widget_products"><h3 class="widget-title">Products</h3><ul class="product_list_widget"><li>
+	
+	<a href="https://legitrcvendorsusa.com/product/fxe/">
+		<img width="300" height="300" src="https://legitrcvendorsusa.com/wp-content/uploads/2024/02/ketamine-300x300.jpeg" class="attachment-woocommerce_thumbnail size-woocommerce_thumbnail entered lazyloaded" alt="fxe" data-lazy-srcset="https://legitrcvendorsusa.com/wp-content/uploads/2024/02/ketamine-300x300.jpeg 300w, https://legitrcvendorsusa.com/wp-content/uploads/2024/02/ketamine-150x150.jpeg 150w, https://legitrcvendorsusa.com/wp-content/uploads/2024/02/ketamine-100x100.jpeg 100w" data-lazy-sizes="(max-width: 300px) 100vw, 300px" data-lazy-src="https://legitrcvendorsusa.com/wp-content/uploads/2024/02/ketamine-300x300.jpeg" data-ll-status="loaded" sizes="(max-width: 300px) 100vw, 300px" srcset="https://legitrcvendorsusa.com/wp-content/uploads/2024/02/ketamine-300x300.jpeg 300w, https://legitrcvendorsusa.com/wp-content/uploads/2024/02/ketamine-150x150.jpeg 150w, https://legitrcvendorsusa.com/wp-content/uploads/2024/02/ketamine-100x100.jpeg 100w"><noscript><img width="300" height="300" src="https://legitrcvendorsusa.com/wp-content/uploads/2024/02/ketamine-300x300.jpeg" class="attachment-woocommerce_thumbnail size-woocommerce_thumbnail" alt="fxe" srcset="https://legitrcvendorsusa.com/wp-content/uploads/2024/02/ketamine-300x300.jpeg 300w, https://legitrcvendorsusa.com/wp-content/uploads/2024/02/ketamine-150x150.jpeg 150w, https://legitrcvendorsusa.com/wp-content/uploads/2024/02/ketamine-100x100.jpeg 100w" sizes="(max-width: 300px) 100vw, 300px" /></noscript>		<span class="product-title">FXE</span>
+	</a>
+
+				
+	<span class="woocommerce-Price-amount amount"><bdi><span class="woocommerce-Price-currencySymbol">$</span>250</bdi></span> – <span class="woocommerce-Price-amount amount"><bdi><span class="woocommerce-Price-currencySymbol">$</span>1,600</bdi></span>
+	</li>
+<li>
+	
+	<a href="https://legitrcvendorsusa.com/product/ketamine/">
+		<img width="300" height="300" src="https://legitrcvendorsusa.com/wp-content/uploads/2024/02/ketamine-300x300.jpeg" class="attachment-woocommerce_thumbnail size-woocommerce_thumbnail entered lazyloaded" alt="fxe" data-lazy-srcset="https://legitrcvendorsusa.com/wp-content/uploads/2024/02/ketamine-300x300.jpeg 300w, https://legitrcvendorsusa.com/wp-content/uploads/2024/02/ketamine-150x150.jpeg 150w, https://legitrcvendorsusa.com/wp-content/uploads/2024/02/ketamine-100x100.jpeg 100w" data-lazy-sizes="(max-width: 300px) 100vw, 300px" data-lazy-src="https://legitrcvendorsusa.com/wp-content/uploads/2024/02/ketamine-300x300.jpeg" data-ll-status="loaded" sizes="(max-width: 300px) 100vw, 300px" srcset="https://legitrcvendorsusa.com/wp-content/uploads/2024/02/ketamine-300x300.jpeg 300w, https://legitrcvendorsusa.com/wp-content/uploads/2024/02/ketamine-150x150.jpeg 150w, https://legitrcvendorsusa.com/wp-content/uploads/2024/02/ketamine-100x100.jpeg 100w"><noscript><img width="300" height="300" src="https://legitrcvendorsusa.com/wp-content/uploads/2024/02/ketamine-300x300.jpeg" class="attachment-woocommerce_thumbnail size-woocommerce_thumbnail" alt="fxe" srcset="https://legitrcvendorsusa.com/wp-content/uploads/2024/02/ketamine-300x300.jpeg 300w, https://legitrcvendorsusa.com/wp-content/uploads/2024/02/ketamine-150x150.jpeg 150w, https://legitrcvendorsusa.com/wp-content/uploads/2024/02/ketamine-100x100.jpeg 100w" sizes="(max-width: 300px) 100vw, 300px" /></noscript>		<span class="product-title">ketamine</span>
+	</a>
+
+				
+	<span class="woocommerce-Price-amount amount"><bdi><span class="woocommerce-Price-currencySymbol">$</span>200</bdi></span> – <span class="woocommerce-Price-amount amount"><bdi><span class="woocommerce-Price-currencySymbol">$</span>1,700</bdi></span>
+	</li>
+<li>
+	
+	<a href="https://legitrcvendorsusa.com/product/a-pihp/">
+		<img width="300" height="300" src="https://legitrcvendorsusa.com/wp-content/uploads/2024/02/a-pihp-300x300.webp" class="attachment-woocommerce_thumbnail size-woocommerce_thumbnail entered lazyloaded" alt="" data-lazy-srcset="https://legitrcvendorsusa.com/wp-content/uploads/2024/02/a-pihp-300x300.webp 300w, https://legitrcvendorsusa.com/wp-content/uploads/2024/02/a-pihp-150x150.webp 150w, https://legitrcvendorsusa.com/wp-content/uploads/2024/02/a-pihp-100x100.webp 100w" data-lazy-sizes="(max-width: 300px) 100vw, 300px" data-lazy-src="https://legitrcvendorsusa.com/wp-content/uploads/2024/02/a-pihp-300x300.webp" data-ll-status="loaded" sizes="(max-width: 300px) 100vw, 300px" srcset="https://legitrcvendorsusa.com/wp-content/uploads/2024/02/a-pihp-300x300.webp 300w, https://legitrcvendorsusa.com/wp-content/uploads/2024/02/a-pihp-150x150.webp 150w, https://legitrcvendorsusa.com/wp-content/uploads/2024/02/a-pihp-100x100.webp 100w"><noscript><img width="300" height="300" src="https://legitrcvendorsusa.com/wp-content/uploads/2024/02/a-pihp-300x300.webp" class="attachment-woocommerce_thumbnail size-woocommerce_thumbnail" alt="" srcset="https://legitrcvendorsusa.com/wp-content/uploads/2024/02/a-pihp-300x300.webp 300w, https://legitrcvendorsusa.com/wp-content/uploads/2024/02/a-pihp-150x150.webp 150w, https://legitrcvendorsusa.com/wp-content/uploads/2024/02/a-pihp-100x100.webp 100w" sizes="(max-width: 300px) 100vw, 300px" /></noscript>		<span class="product-title">a-pihp</span>
+	</a>
+
+				
+	<span class="woocommerce-Price-amount amount"><bdi><span class="woocommerce-Price-currencySymbol">$</span>450</bdi></span> – <span class="woocommerce-Price-amount amount"><bdi><span class="woocommerce-Price-currencySymbol">$</span>650</bdi></span>
+	</li>
+<li>
+	
+	<a href="https://legitrcvendorsusa.com/product/a-pcyp/">
+		<img width="300" height="300" src="https://legitrcvendorsusa.com/wp-content/uploads/2024/02/a-pcyp-300x300.png" class="attachment-woocommerce_thumbnail size-woocommerce_thumbnail entered lazyloaded" alt="a-pcyp" data-lazy-srcset="https://legitrcvendorsusa.com/wp-content/uploads/2024/02/a-pcyp-300x300.png 300w, https://legitrcvendorsusa.com/wp-content/uploads/2024/02/a-pcyp-150x150.png 150w, https://legitrcvendorsusa.com/wp-content/uploads/2024/02/a-pcyp-100x100.png 100w" data-lazy-sizes="(max-width: 300px) 100vw, 300px" data-lazy-src="https://legitrcvendorsusa.com/wp-content/uploads/2024/02/a-pcyp-300x300.png" data-ll-status="loaded" sizes="(max-width: 300px) 100vw, 300px" srcset="https://legitrcvendorsusa.com/wp-content/uploads/2024/02/a-pcyp-300x300.png 300w, https://legitrcvendorsusa.com/wp-content/uploads/2024/02/a-pcyp-150x150.png 150w, https://legitrcvendorsusa.com/wp-content/uploads/2024/02/a-pcyp-100x100.png 100w"><noscript><img width="300" height="300" src="https://legitrcvendorsusa.com/wp-content/uploads/2024/02/a-pcyp-300x300.png" class="attachment-woocommerce_thumbnail size-woocommerce_thumbnail" alt="a-pcyp" srcset="https://legitrcvendorsusa.com/wp-content/uploads/2024/02/a-pcyp-300x300.png 300w, https://legitrcvendorsusa.com/wp-content/uploads/2024/02/a-pcyp-150x150.png 150w, https://legitrcvendorsusa.com/wp-content/uploads/2024/02/a-pcyp-100x100.png 100w" sizes="(max-width: 300px) 100vw, 300px" /></noscript>		<span class="product-title">a-pcyp</span>
+	</a>
+
+				
+	<span class="woocommerce-Price-amount amount"><bdi><span class="woocommerce-Price-currencySymbol">$</span>250</bdi></span> – <span class="woocommerce-Price-amount amount"><bdi><span class="woocommerce-Price-currencySymbol">$</span>1,450</bdi></span>
+	</li>
+<li>
+	
+	<a href="https://legitrcvendorsusa.com/product/eutylone/">
+		<img width="300" height="300" src="https://legitrcvendorsusa.com/wp-content/uploads/2024/02/Eutylone-300x300.jpeg" class="attachment-woocommerce_thumbnail size-woocommerce_thumbnail entered lazyloaded" alt="Eutylone" data-lazy-srcset="https://legitrcvendorsusa.com/wp-content/uploads/2024/02/Eutylone-300x300.jpeg 300w, https://legitrcvendorsusa.com/wp-content/uploads/2024/02/Eutylone-150x150.jpeg 150w, https://legitrcvendorsusa.com/wp-content/uploads/2024/02/Eutylone-100x100.jpeg 100w, https://legitrcvendorsusa.com/wp-content/uploads/2024/02/Eutylone.jpeg 500w" data-lazy-sizes="(max-width: 300px) 100vw, 300px" data-lazy-src="https://legitrcvendorsusa.com/wp-content/uploads/2024/02/Eutylone-300x300.jpeg" data-ll-status="loaded" sizes="(max-width: 300px) 100vw, 300px" srcset="https://legitrcvendorsusa.com/wp-content/uploads/2024/02/Eutylone-300x300.jpeg 300w, https://legitrcvendorsusa.com/wp-content/uploads/2024/02/Eutylone-150x150.jpeg 150w, https://legitrcvendorsusa.com/wp-content/uploads/2024/02/Eutylone-100x100.jpeg 100w, https://legitrcvendorsusa.com/wp-content/uploads/2024/02/Eutylone.jpeg 500w"><noscript><img width="300" height="300" src="https://legitrcvendorsusa.com/wp-content/uploads/2024/02/Eutylone-300x300.jpeg" class="attachment-woocommerce_thumbnail size-woocommerce_thumbnail" alt="Eutylone" srcset="https://legitrcvendorsusa.com/wp-content/uploads/2024/02/Eutylone-300x300.jpeg 300w, https://legitrcvendorsusa.com/wp-content/uploads/2024/02/Eutylone-150x150.jpeg 150w, https://legitrcvendorsusa.com/wp-content/uploads/2024/02/Eutylone-100x100.jpeg 100w, https://legitrcvendorsusa.com/wp-content/uploads/2024/02/Eutylone.jpeg 500w" sizes="(max-width: 300px) 100vw, 300px" /></noscript>		<span class="product-title">Eutylone</span>
+	</a>
+
+				
+	<span class="woocommerce-Price-amount amount"><bdi><span class="woocommerce-Price-currencySymbol">$</span>250</bdi></span> – <span class="woocommerce-Price-amount amount"><bdi><span class="woocommerce-Price-currencySymbol">$</span>1,050</bdi></span>
+	</li>
+<li>
+	
+	<a href="https://legitrcvendorsusa.com/product/3f-pihp/">
+		<img width="300" height="300" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20300%20300'%3E%3C/svg%3E" class="attachment-woocommerce_thumbnail size-woocommerce_thumbnail" alt="3f-pihp" data-lazy-srcset="https://legitrcvendorsusa.com/wp-content/uploads/2024/02/4f-mph-300x300.jpeg 300w, https://legitrcvendorsusa.com/wp-content/uploads/2024/02/4f-mph-150x150.jpeg 150w, https://legitrcvendorsusa.com/wp-content/uploads/2024/02/4f-mph-100x100.jpeg 100w" data-lazy-sizes="(max-width: 300px) 100vw, 300px" data-lazy-src="https://legitrcvendorsusa.com/wp-content/uploads/2024/02/4f-mph-300x300.jpeg"><noscript><img width="300" height="300" src="https://legitrcvendorsusa.com/wp-content/uploads/2024/02/4f-mph-300x300.jpeg" class="attachment-woocommerce_thumbnail size-woocommerce_thumbnail" alt="3f-pihp" srcset="https://legitrcvendorsusa.com/wp-content/uploads/2024/02/4f-mph-300x300.jpeg 300w, https://legitrcvendorsusa.com/wp-content/uploads/2024/02/4f-mph-150x150.jpeg 150w, https://legitrcvendorsusa.com/wp-content/uploads/2024/02/4f-mph-100x100.jpeg 100w" sizes="(max-width: 300px) 100vw, 300px" /></noscript>		<span class="product-title">3f-pihp</span>
+	</a>
+
+				
+	<span class="woocommerce-Price-amount amount"><bdi><span class="woocommerce-Price-currencySymbol">$</span>250</bdi></span> – <span class="woocommerce-Price-amount amount"><bdi><span class="woocommerce-Price-currencySymbol">$</span>1,050</bdi></span>
+	</li>
+<li>
+	
+	<a href="https://legitrcvendorsusa.com/product/4f-mph/">
+		<img width="300" height="300" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20300%20300'%3E%3C/svg%3E" class="attachment-woocommerce_thumbnail size-woocommerce_thumbnail" alt="3f-pihp" data-lazy-srcset="https://legitrcvendorsusa.com/wp-content/uploads/2024/02/4f-mph-300x300.jpeg 300w, https://legitrcvendorsusa.com/wp-content/uploads/2024/02/4f-mph-150x150.jpeg 150w, https://legitrcvendorsusa.com/wp-content/uploads/2024/02/4f-mph-100x100.jpeg 100w" data-lazy-sizes="(max-width: 300px) 100vw, 300px" data-lazy-src="https://legitrcvendorsusa.com/wp-content/uploads/2024/02/4f-mph-300x300.jpeg"><noscript><img width="300" height="300" src="https://legitrcvendorsusa.com/wp-content/uploads/2024/02/4f-mph-300x300.jpeg" class="attachment-woocommerce_thumbnail size-woocommerce_thumbnail" alt="3f-pihp" srcset="https://legitrcvendorsusa.com/wp-content/uploads/2024/02/4f-mph-300x300.jpeg 300w, https://legitrcvendorsusa.com/wp-content/uploads/2024/02/4f-mph-150x150.jpeg 150w, https://legitrcvendorsusa.com/wp-content/uploads/2024/02/4f-mph-100x100.jpeg 100w" sizes="(max-width: 300px) 100vw, 300px" /></noscript>		<span class="product-title">4f-mph</span>
+	</a>
+
+				
+	<span class="woocommerce-Price-amount amount"><bdi><span class="woocommerce-Price-currencySymbol">$</span>250</bdi></span> – <span class="woocommerce-Price-amount amount"><bdi><span class="woocommerce-Price-currencySymbol">$</span>1,050</bdi></span>
+	</li>
+<li>
+	
+	<a href="https://legitrcvendorsusa.com/product/fish-scale-cocaine/">
+		<img width="300" height="300" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20300%20300'%3E%3C/svg%3E" class="attachment-woocommerce_thumbnail size-woocommerce_thumbnail" alt="fish scale cocaine" data-lazy-srcset="https://legitrcvendorsusa.com/wp-content/uploads/2024/02/fish-scale-cocaine--300x300.webp 300w, https://legitrcvendorsusa.com/wp-content/uploads/2024/02/fish-scale-cocaine--150x150.webp 150w, https://legitrcvendorsusa.com/wp-content/uploads/2024/02/fish-scale-cocaine--100x100.webp 100w" data-lazy-sizes="(max-width: 300px) 100vw, 300px" data-lazy-src="https://legitrcvendorsusa.com/wp-content/uploads/2024/02/fish-scale-cocaine--300x300.webp"><noscript><img width="300" height="300" src="https://legitrcvendorsusa.com/wp-content/uploads/2024/02/fish-scale-cocaine--300x300.webp" class="attachment-woocommerce_thumbnail size-woocommerce_thumbnail" alt="fish scale cocaine" srcset="https://legitrcvendorsusa.com/wp-content/uploads/2024/02/fish-scale-cocaine--300x300.webp 300w, https://legitrcvendorsusa.com/wp-content/uploads/2024/02/fish-scale-cocaine--150x150.webp 150w, https://legitrcvendorsusa.com/wp-content/uploads/2024/02/fish-scale-cocaine--100x100.webp 100w" sizes="(max-width: 300px) 100vw, 300px" /></noscript>		<span class="product-title">fish scale cocaine</span>
+	</a>
+
+				
+	<span class="woocommerce-Price-amount amount"><bdi><span class="woocommerce-Price-currencySymbol">$</span>350</bdi></span> – <span class="woocommerce-Price-amount amount"><bdi><span class="woocommerce-Price-currencySymbol">$</span>1,600</bdi></span>
+	</li>
+<li>
+	
+	<a href="https://legitrcvendorsusa.com/product/mdma-crystal/">
+		<img width="300" height="286" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20300%20286'%3E%3C/svg%3E" class="attachment-woocommerce_thumbnail size-woocommerce_thumbnail" alt="MDMA Crystal" data-lazy-src="https://legitrcvendorsusa.com/wp-content/uploads/2024/02/MDMA-Crystal-300x286.jpeg"><noscript><img width="300" height="286" src="https://legitrcvendorsusa.com/wp-content/uploads/2024/02/MDMA-Crystal-300x286.jpeg" class="attachment-woocommerce_thumbnail size-woocommerce_thumbnail" alt="MDMA Crystal" /></noscript>		<span class="product-title">MDMA Crystal</span>
+	</a>
+
+				
+	<span class="woocommerce-Price-amount amount"><bdi><span class="woocommerce-Price-currencySymbol">$</span>300</bdi></span> – <span class="woocommerce-Price-amount amount"><bdi><span class="woocommerce-Price-currencySymbol">$</span>1,250</bdi></span>
+	</li>
+<li>
+	
+	<a href="https://legitrcvendorsusa.com/product/crystal-meth/">
+		<img width="300" height="300" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20300%20300'%3E%3C/svg%3E" class="attachment-woocommerce_thumbnail size-woocommerce_thumbnail" alt="crystal meth" data-lazy-srcset="https://legitrcvendorsusa.com/wp-content/uploads/2024/02/crystal-meth-300x300.jpeg 300w, https://legitrcvendorsusa.com/wp-content/uploads/2024/02/crystal-meth-150x150.jpeg 150w, https://legitrcvendorsusa.com/wp-content/uploads/2024/02/crystal-meth-100x100.jpeg 100w" data-lazy-sizes="(max-width: 300px) 100vw, 300px" data-lazy-src="https://legitrcvendorsusa.com/wp-content/uploads/2024/02/crystal-meth-300x300.jpeg"><noscript><img width="300" height="300" src="https://legitrcvendorsusa.com/wp-content/uploads/2024/02/crystal-meth-300x300.jpeg" class="attachment-woocommerce_thumbnail size-woocommerce_thumbnail" alt="crystal meth" srcset="https://legitrcvendorsusa.com/wp-content/uploads/2024/02/crystal-meth-300x300.jpeg 300w, https://legitrcvendorsusa.com/wp-content/uploads/2024/02/crystal-meth-150x150.jpeg 150w, https://legitrcvendorsusa.com/wp-content/uploads/2024/02/crystal-meth-100x100.jpeg 100w" sizes="(max-width: 300px) 100vw, 300px" /></noscript>		<span class="product-title">crystal meth</span>
+	</a>
+
+				
+	<span class="woocommerce-Price-amount amount"><bdi><span class="woocommerce-Price-currencySymbol">$</span>220</bdi></span> – <span class="woocommerce-Price-amount amount"><bdi><span class="woocommerce-Price-currencySymbol">$</span>750</bdi></span>
+	</li>
+<li>
+	
+	<a href="https://legitrcvendorsusa.com/product/ecstasy/">
+		<img width="300" height="300" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20300%20300'%3E%3C/svg%3E" class="attachment-woocommerce_thumbnail size-woocommerce_thumbnail" alt="Ecstasy" data-lazy-srcset="https://legitrcvendorsusa.com/wp-content/uploads/2024/02/Ecstacy--300x300.jpeg 300w, https://legitrcvendorsusa.com/wp-content/uploads/2024/02/Ecstacy--150x150.jpeg 150w, https://legitrcvendorsusa.com/wp-content/uploads/2024/02/Ecstacy--100x100.jpeg 100w" data-lazy-sizes="(max-width: 300px) 100vw, 300px" data-lazy-src="https://legitrcvendorsusa.com/wp-content/uploads/2024/02/Ecstacy--300x300.jpeg"><noscript><img width="300" height="300" src="https://legitrcvendorsusa.com/wp-content/uploads/2024/02/Ecstacy--300x300.jpeg" class="attachment-woocommerce_thumbnail size-woocommerce_thumbnail" alt="Ecstasy" srcset="https://legitrcvendorsusa.com/wp-content/uploads/2024/02/Ecstacy--300x300.jpeg 300w, https://legitrcvendorsusa.com/wp-content/uploads/2024/02/Ecstacy--150x150.jpeg 150w, https://legitrcvendorsusa.com/wp-content/uploads/2024/02/Ecstacy--100x100.jpeg 100w" sizes="(max-width: 300px) 100vw, 300px" /></noscript>		<span class="product-title">Ecstasy</span>
+	</a>
+
+				
+	<span class="woocommerce-Price-amount amount"><bdi><span class="woocommerce-Price-currencySymbol">$</span>250</bdi></span> – <span class="woocommerce-Price-amount amount"><bdi><span class="woocommerce-Price-currencySymbol">$</span>650</bdi></span>
+	</li>
+<li>
+	
+	<a href="https://legitrcvendorsusa.com/product/adderall/">
+		<img width="300" height="300" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20300%20300'%3E%3C/svg%3E" class="attachment-woocommerce_thumbnail size-woocommerce_thumbnail" alt="Adderall 30mg" data-lazy-srcset="https://legitrcvendorsusa.com/wp-content/uploads/2024/02/Adderall-30mg-300x300.jpeg 300w, https://legitrcvendorsusa.com/wp-content/uploads/2024/02/Adderall-30mg-150x150.jpeg 150w, https://legitrcvendorsusa.com/wp-content/uploads/2024/02/Adderall-30mg-100x100.jpeg 100w" data-lazy-sizes="(max-width: 300px) 100vw, 300px" data-lazy-src="https://legitrcvendorsusa.com/wp-content/uploads/2024/02/Adderall-30mg-300x300.jpeg"><noscript><img width="300" height="300" src="https://legitrcvendorsusa.com/wp-content/uploads/2024/02/Adderall-30mg-300x300.jpeg" class="attachment-woocommerce_thumbnail size-woocommerce_thumbnail" alt="Adderall 30mg" srcset="https://legitrcvendorsusa.com/wp-content/uploads/2024/02/Adderall-30mg-300x300.jpeg 300w, https://legitrcvendorsusa.com/wp-content/uploads/2024/02/Adderall-30mg-150x150.jpeg 150w, https://legitrcvendorsusa.com/wp-content/uploads/2024/02/Adderall-30mg-100x100.jpeg 100w" sizes="(max-width: 300px) 100vw, 300px" /></noscript>		<span class="product-title">Adderall</span>
+	</a>
+
+				
+	<span class="woocommerce-Price-amount amount"><bdi><span class="woocommerce-Price-currencySymbol">$</span>350</bdi></span> – <span class="woocommerce-Price-amount amount"><bdi><span class="woocommerce-Price-currencySymbol">$</span>1,300</bdi></span>
+	</li>
+<li>
+	
+	<a href="https://legitrcvendorsusa.com/product/metonitazepyne/">
+		<img width="300" height="300" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20300%20300'%3E%3C/svg%3E" class="attachment-woocommerce_thumbnail size-woocommerce_thumbnail" alt="Metonitazepyne" data-lazy-srcset="https://legitrcvendorsusa.com/wp-content/uploads/2024/02/Metonitazepyne-300x300.jpeg 300w, https://legitrcvendorsusa.com/wp-content/uploads/2024/02/Metonitazepyne-150x150.jpeg 150w, https://legitrcvendorsusa.com/wp-content/uploads/2024/02/Metonitazepyne-100x100.jpeg 100w" data-lazy-sizes="(max-width: 300px) 100vw, 300px" data-lazy-src="https://legitrcvendorsusa.com/wp-content/uploads/2024/02/Metonitazepyne-300x300.jpeg"><noscript><img width="300" height="300" src="https://legitrcvendorsusa.com/wp-content/uploads/2024/02/Metonitazepyne-300x300.jpeg" class="attachment-woocommerce_thumbnail size-woocommerce_thumbnail" alt="Metonitazepyne" srcset="https://legitrcvendorsusa.com/wp-content/uploads/2024/02/Metonitazepyne-300x300.jpeg 300w, https://legitrcvendorsusa.com/wp-content/uploads/2024/02/Metonitazepyne-150x150.jpeg 150w, https://legitrcvendorsusa.com/wp-content/uploads/2024/02/Metonitazepyne-100x100.jpeg 100w" sizes="(max-width: 300px) 100vw, 300px" /></noscript>		<span class="product-title">Metonitazepyne</span>
+	</a>
+
+				
+	<span class="woocommerce-Price-amount amount"><bdi><span class="woocommerce-Price-currencySymbol">$</span>200</bdi></span> – <span class="woocommerce-Price-amount amount"><bdi><span class="woocommerce-Price-currencySymbol">$</span>650</bdi></span>
+	</li>
+<li>
+	
+	<a href="https://legitrcvendorsusa.com/product/protonitazepyne/">
+		<img width="300" height="300" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20300%20300'%3E%3C/svg%3E" class="attachment-woocommerce_thumbnail size-woocommerce_thumbnail" alt="Protonitazene" data-lazy-srcset="https://legitrcvendorsusa.com/wp-content/uploads/2024/02/Protonitazepyne-300x300.jpeg 300w, https://legitrcvendorsusa.com/wp-content/uploads/2024/02/Protonitazepyne-150x150.jpeg 150w, https://legitrcvendorsusa.com/wp-content/uploads/2024/02/Protonitazepyne-768x768.jpeg 768w, https://legitrcvendorsusa.com/wp-content/uploads/2024/02/Protonitazepyne-600x600.jpeg 600w, https://legitrcvendorsusa.com/wp-content/uploads/2024/02/Protonitazepyne-100x100.jpeg 100w, https://legitrcvendorsusa.com/wp-content/uploads/2024/02/Protonitazepyne.jpeg 800w" data-lazy-sizes="(max-width: 300px) 100vw, 300px" data-lazy-src="https://legitrcvendorsusa.com/wp-content/uploads/2024/02/Protonitazepyne-300x300.jpeg"><noscript><img width="300" height="300" src="https://legitrcvendorsusa.com/wp-content/uploads/2024/02/Protonitazepyne-300x300.jpeg" class="attachment-woocommerce_thumbnail size-woocommerce_thumbnail" alt="Protonitazene" srcset="https://legitrcvendorsusa.com/wp-content/uploads/2024/02/Protonitazepyne-300x300.jpeg 300w, https://legitrcvendorsusa.com/wp-content/uploads/2024/02/Protonitazepyne-150x150.jpeg 150w, https://legitrcvendorsusa.com/wp-content/uploads/2024/02/Protonitazepyne-768x768.jpeg 768w, https://legitrcvendorsusa.com/wp-content/uploads/2024/02/Protonitazepyne-600x600.jpeg 600w, https://legitrcvendorsusa.com/wp-content/uploads/2024/02/Protonitazepyne-100x100.jpeg 100w, https://legitrcvendorsusa.com/wp-content/uploads/2024/02/Protonitazepyne.jpeg 800w" sizes="(max-width: 300px) 100vw, 300px" /></noscript>		<span class="product-title">Protonitazepyne</span>
+	</a>
+
+				
+	<span class="woocommerce-Price-amount amount"><bdi><span class="woocommerce-Price-currencySymbol">$</span>200</bdi></span> – <span class="woocommerce-Price-amount amount"><bdi><span class="woocommerce-Price-currencySymbol">$</span>650</bdi></span>
+	</li>
+<li>
+	
+	<a href="https://legitrcvendorsusa.com/product/metonitazene/">
+		<img width="300" height="300" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20300%20300'%3E%3C/svg%3E" class="attachment-woocommerce_thumbnail size-woocommerce_thumbnail" alt="metonitazene" data-lazy-srcset="https://legitrcvendorsusa.com/wp-content/uploads/2024/02/metonitazene-300x300.jpeg 300w, https://legitrcvendorsusa.com/wp-content/uploads/2024/02/metonitazene-150x150.jpeg 150w, https://legitrcvendorsusa.com/wp-content/uploads/2024/02/metonitazene-100x100.jpeg 100w" data-lazy-sizes="(max-width: 300px) 100vw, 300px" data-lazy-src="https://legitrcvendorsusa.com/wp-content/uploads/2024/02/metonitazene-300x300.jpeg"><noscript><img width="300" height="300" src="https://legitrcvendorsusa.com/wp-content/uploads/2024/02/metonitazene-300x300.jpeg" class="attachment-woocommerce_thumbnail size-woocommerce_thumbnail" alt="metonitazene" srcset="https://legitrcvendorsusa.com/wp-content/uploads/2024/02/metonitazene-300x300.jpeg 300w, https://legitrcvendorsusa.com/wp-content/uploads/2024/02/metonitazene-150x150.jpeg 150w, https://legitrcvendorsusa.com/wp-content/uploads/2024/02/metonitazene-100x100.jpeg 100w" sizes="(max-width: 300px) 100vw, 300px" /></noscript>		<span class="product-title">metonitazene</span>
+	</a>
+
+				
+	<span class="woocommerce-Price-amount amount"><bdi><span class="woocommerce-Price-currencySymbol">$</span>200</bdi></span> – <span class="woocommerce-Price-amount amount"><bdi><span class="woocommerce-Price-currencySymbol">$</span>650</bdi></span>
+	</li>
+<li>
+	
+	<a href="https://legitrcvendorsusa.com/product/black-tar-heroin/">
+		<img width="300" height="300" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20300%20300'%3E%3C/svg%3E" class="attachment-woocommerce_thumbnail size-woocommerce_thumbnail" alt="Black tar heroin" data-lazy-srcset="https://legitrcvendorsusa.com/wp-content/uploads/2024/02/Black-tar-heroin-300x300.jpeg 300w, https://legitrcvendorsusa.com/wp-content/uploads/2024/02/Black-tar-heroin-150x150.jpeg 150w, https://legitrcvendorsusa.com/wp-content/uploads/2024/02/Black-tar-heroin-100x100.jpeg 100w" data-lazy-sizes="(max-width: 300px) 100vw, 300px" data-lazy-src="https://legitrcvendorsusa.com/wp-content/uploads/2024/02/Black-tar-heroin-300x300.jpeg"><noscript><img width="300" height="300" src="https://legitrcvendorsusa.com/wp-content/uploads/2024/02/Black-tar-heroin-300x300.jpeg" class="attachment-woocommerce_thumbnail size-woocommerce_thumbnail" alt="Black tar heroin" srcset="https://legitrcvendorsusa.com/wp-content/uploads/2024/02/Black-tar-heroin-300x300.jpeg 300w, https://legitrcvendorsusa.com/wp-content/uploads/2024/02/Black-tar-heroin-150x150.jpeg 150w, https://legitrcvendorsusa.com/wp-content/uploads/2024/02/Black-tar-heroin-100x100.jpeg 100w" sizes="(max-width: 300px) 100vw, 300px" /></noscript>		<span class="product-title">Black tar Heroin</span>
+	</a>
+
+				
+	<span class="woocommerce-Price-amount amount"><bdi><span class="woocommerce-Price-currencySymbol">$</span>220</bdi></span> – <span class="woocommerce-Price-amount amount"><bdi><span class="woocommerce-Price-currencySymbol">$</span>1,700</bdi></span>
+	</li>
+<li>
+	
+	<a href="https://legitrcvendorsusa.com/product/o-dsmt/">
+		<img width="300" height="300" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20300%20300'%3E%3C/svg%3E" class="attachment-woocommerce_thumbnail size-woocommerce_thumbnail" alt="ODSMT powder" data-lazy-srcset="https://legitrcvendorsusa.com/wp-content/uploads/2024/02/ODSMT-300x300.jpeg 300w, https://legitrcvendorsusa.com/wp-content/uploads/2024/02/ODSMT-150x150.jpeg 150w, https://legitrcvendorsusa.com/wp-content/uploads/2024/02/ODSMT-100x100.jpeg 100w" data-lazy-sizes="(max-width: 300px) 100vw, 300px" data-lazy-src="https://legitrcvendorsusa.com/wp-content/uploads/2024/02/ODSMT-300x300.jpeg"><noscript><img width="300" height="300" src="https://legitrcvendorsusa.com/wp-content/uploads/2024/02/ODSMT-300x300.jpeg" class="attachment-woocommerce_thumbnail size-woocommerce_thumbnail" alt="ODSMT powder" srcset="https://legitrcvendorsusa.com/wp-content/uploads/2024/02/ODSMT-300x300.jpeg 300w, https://legitrcvendorsusa.com/wp-content/uploads/2024/02/ODSMT-150x150.jpeg 150w, https://legitrcvendorsusa.com/wp-content/uploads/2024/02/ODSMT-100x100.jpeg 100w" sizes="(max-width: 300px) 100vw, 300px" /></noscript>		<span class="product-title">O-DSMT</span>
+	</a>
+
+				
+	<span class="woocommerce-Price-amount amount"><bdi><span class="woocommerce-Price-currencySymbol">$</span>300</bdi></span> – <span class="woocommerce-Price-amount amount"><bdi><span class="woocommerce-Price-currencySymbol">$</span>650</bdi></span>
+	</li>
+<li>
+	
+	<a href="https://legitrcvendorsusa.com/product/suboxone-strips/">
+		<img width="300" height="300" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20300%20300'%3E%3C/svg%3E" class="attachment-woocommerce_thumbnail size-woocommerce_thumbnail" alt="Suboxone strips" data-lazy-srcset="https://legitrcvendorsusa.com/wp-content/uploads/2024/02/Suboxone-strips-300x300.png 300w, https://legitrcvendorsusa.com/wp-content/uploads/2024/02/Suboxone-strips-150x150.png 150w, https://legitrcvendorsusa.com/wp-content/uploads/2024/02/Suboxone-strips-100x100.png 100w" data-lazy-sizes="(max-width: 300px) 100vw, 300px" data-lazy-src="https://legitrcvendorsusa.com/wp-content/uploads/2024/02/Suboxone-strips-300x300.png"><noscript><img width="300" height="300" src="https://legitrcvendorsusa.com/wp-content/uploads/2024/02/Suboxone-strips-300x300.png" class="attachment-woocommerce_thumbnail size-woocommerce_thumbnail" alt="Suboxone strips" srcset="https://legitrcvendorsusa.com/wp-content/uploads/2024/02/Suboxone-strips-300x300.png 300w, https://legitrcvendorsusa.com/wp-content/uploads/2024/02/Suboxone-strips-150x150.png 150w, https://legitrcvendorsusa.com/wp-content/uploads/2024/02/Suboxone-strips-100x100.png 100w" sizes="(max-width: 300px) 100vw, 300px" /></noscript>		<span class="product-title">Suboxone strips</span>
+	</a>
+
+				
+	<span class="woocommerce-Price-amount amount"><bdi><span class="woocommerce-Price-currencySymbol">$</span>150</bdi></span> – <span class="woocommerce-Price-amount amount"><bdi><span class="woocommerce-Price-currencySymbol">$</span>650</bdi></span>
+	</li>
+<li>
+	
+	<a href="https://legitrcvendorsusa.com/product/oxycodone-fent-presses/">
+		<img width="300" height="226" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20300%20226'%3E%3C/svg%3E" class="attachment-woocommerce_thumbnail size-woocommerce_thumbnail" alt="oxycodone fent presses" data-lazy-src="https://legitrcvendorsusa.com/wp-content/uploads/2024/02/oxycodone-fent-free--300x226.jpeg"><noscript><img width="300" height="226" src="https://legitrcvendorsusa.com/wp-content/uploads/2024/02/oxycodone-fent-free--300x226.jpeg" class="attachment-woocommerce_thumbnail size-woocommerce_thumbnail" alt="oxycodone fent presses" /></noscript>		<span class="product-title">oxycodone fent presses</span>
+	</a>
+
+				
+	<span class="woocommerce-Price-amount amount"><bdi><span class="woocommerce-Price-currencySymbol">$</span>200</bdi></span> – <span class="woocommerce-Price-amount amount"><bdi><span class="woocommerce-Price-currencySymbol">$</span>1,100</bdi></span>
+	</li>
+<li>
+	
+	<a href="https://legitrcvendorsusa.com/product/oxycodone-fent-free-presses/">
+		<img width="300" height="226" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20300%20226'%3E%3C/svg%3E" class="attachment-woocommerce_thumbnail size-woocommerce_thumbnail" alt="oxycodone fent presses" data-lazy-src="https://legitrcvendorsusa.com/wp-content/uploads/2024/02/oxycodone-fent-free--300x226.jpeg"><noscript><img width="300" height="226" src="https://legitrcvendorsusa.com/wp-content/uploads/2024/02/oxycodone-fent-free--300x226.jpeg" class="attachment-woocommerce_thumbnail size-woocommerce_thumbnail" alt="oxycodone fent presses" /></noscript>		<span class="product-title">oxycodone fent free presses</span>
+	</a>
+
+				
+	<span class="woocommerce-Price-amount amount"><bdi><span class="woocommerce-Price-currencySymbol">$</span>300</bdi></span> – <span class="woocommerce-Price-amount amount"><bdi><span class="woocommerce-Price-currencySymbol">$</span>900</bdi></span>
+	</li>
+</ul></aside><aside id="recent-comments-2" class="widget widget_recent_comments"><h3 class="widget-title">Reviews from our clients</h3><ul id="recentcomments"></ul></aside>
+  </div><!-- #sidebar-primary -->
+
+
+<script nitro-exclude="">
+    document.cookie = 'nitroCachedPage=' + (!window.NITROPACK_STATE ? '0' : '1') + '; path=/; SameSite=Lax';
+</script>
+
+  </div><!-- .row --></div><!-- .container --></div><!-- #content -->
+
+  <footer id="colophon" class="site-footer" role="contentinfo"><div class="container">        <div class="row ">
+      <div class="col-sm-6 copyright-column">
+                  <div class="copyright">
+            Copyright © 2024 <a href="https://legitrcvendorsusa.com/" title="Legit Research Chemical Vendors in USA">Legit Research Chemical Vendors in USA</a>. All Rights Reserved.          </div><!-- .copyright -->
+        
+      </div><!-- .col-sm-6 -->
+      <div class="col-sm-6 powered-by-column">
+
+          <div class="site-info">
+                      </div><!-- .site-info -->
+
+      </div><!-- .col-sm-6 -->
+    </div><!-- .row -->
+      </div><!-- .container --></footer><!-- #colophon -->
+
+</div><!-- #page --><a href="#" class="scrollup" id="btn-scrollup"><i class="fa fa-chevron-circle-up"></i></a>
+<script data-minify="1" type="text/javascript" src="https://legitrcvendorsusa.com/wp-content/cache/min/1/js/1.js?ver=1708134253" async=""></script><!-- Instagram Feed JS -->
+<script type="text/javascript">
+var sbiajaxurl = "https://legitrcvendorsusa.com/wp-admin/admin-ajax.php";
+</script>
+<script type="application/ld+json">{"@context":"https:\/\/schema.org\/","@type":"WebSite","name":"Legit Research Chemical Vendors in USA","url":"https:\/\/legitrcvendorsusa.com","potentialAction":{"@type":"SearchAction","target":"https:\/\/legitrcvendorsusa.com\/?s={search_term_string}&amp;post_type=product","query-input":"required name=search_term_string"}}</script><style type="text/css" media="screen"></style>	<script type="text/javascript">
+		(function () {
+			var c = document.body.className;
+			c = c.replace(/woocommerce-no-js/, 'woocommerce-js');
+			document.body.className = c;
+		})();
+	</script>
+	<link data-minify="1" rel="stylesheet" id="woof_sections_style-css" href="https://legitrcvendorsusa.com/wp-content/cache/min/1/wp-content/plugins/woocommerce-products-filter/ext/sections/css/sections.css?ver=1708134253" type="text/css" media="all">
+<link rel="stylesheet" id="woof_tooltip-css-css" href="https://legitrcvendorsusa.com/wp-content/plugins/woocommerce-products-filter/js/tooltip/css/tooltipster.bundle.min.css?ver=1.3.5.1" type="text/css" media="all">
+<link rel="stylesheet" id="woof_tooltip-css-noir-css" href="https://legitrcvendorsusa.com/wp-content/plugins/woocommerce-products-filter/js/tooltip/css/plugins/tooltipster/sideTip/themes/tooltipster-sideTip-noir.min.css?ver=1.3.5.1" type="text/css" media="all">
+<link data-minify="1" rel="stylesheet" id="ion.range-slider-css" href="https://legitrcvendorsusa.com/wp-content/cache/min/1/wp-content/plugins/woocommerce-products-filter/js/ion.range-slider/css/ion.rangeSlider.css?ver=1708134253" type="text/css" media="all">
+<link data-minify="1" rel="stylesheet" id="woof-front-builder-css-css" href="https://legitrcvendorsusa.com/wp-content/cache/min/1/wp-content/plugins/woocommerce-products-filter/ext/front_builder/css/front-builder.css?ver=1708134253" type="text/css" media="all">
+<link data-minify="1" rel="stylesheet" id="woof-slideout-tab-css-css" href="https://legitrcvendorsusa.com/wp-content/cache/min/1/wp-content/plugins/woocommerce-products-filter/ext/slideout/css/jquery.tabSlideOut.css?ver=1708134253" type="text/css" media="all">
+<link data-minify="1" rel="stylesheet" id="woof-slideout-css-css" href="https://legitrcvendorsusa.com/wp-content/cache/min/1/wp-content/plugins/woocommerce-products-filter/ext/slideout/css/slideout.css?ver=1708134253" type="text/css" media="all">
+<script type="text/javascript" src="https://legitrcvendorsusa.com/wp-content/plugins/woocommerce/assets/js/accounting/accounting.min.js?ver=0.4.2" id="accounting-js"></script>
+<script type="text/javascript" src="https://legitrcvendorsusa.com/wp-content/plugins/woocommerce/assets/js/selectWoo/selectWoo.full.min.js?ver=1.0.9-wc.6.6.1" id="selectWoo-js"></script>
+<script type="text/javascript" id="yith-wcan-shortcodes-js-extra">
+/* <![CDATA[ */
+var yith_wcan_shortcodes = {"query_param":"yith_wcan","supported_taxonomies":["product_cat","product_tag"],"content":"#content","change_browser_url":"1","instant_filters":"1","ajax_filters":"1","show_clear_filter":"","scroll_top":"","scroll_target":"","modal_on_mobile":"","session_param":"","show_current_children":"","loader":"","toggles_open_on_modal":"","mobile_media_query":"991","base_url":"https:\/\/legitrcvendorsusa.com\/legit-research-chemical-vendors\/","terms_per_page":"10","currency_format":{"symbol":"&#36;","decimal":".","thousand":",","precision":0,"format":"%s%v"},"labels":{"empty_option":"All","search_placeholder":"Search...","no_items":"No item found","show_more":"Show %d more","close":"Close","save":"Save","show_results":"Show results","clear_selection":"Clear","clear_all_selections":"Clear All"}};
+/* ]]> */
+</script>
+<script type="text/javascript" src="https://legitrcvendorsusa.com/wp-content/plugins/yith-woocommerce-ajax-navigation/assets/js/yith-wcan-shortcodes.min.js?ver=4.11.0" id="yith-wcan-shortcodes-js"></script>
+<script type="text/javascript" src="https://legitrcvendorsusa.com/wp-content/plugins/yith-woocommerce-wishlist/assets/js/jquery.selectBox.min.js?ver=1.2.0" id="jquery-selectBox-js"></script>
+<script type="text/javascript" src="//legitrcvendorsusa.com/wp-content/plugins/woocommerce/assets/js/prettyPhoto/jquery.prettyPhoto.min.js?ver=3.1.6" id="prettyPhoto-js"></script>
+<script type="text/javascript" id="jquery-yith-wcwl-js-extra">
+/* <![CDATA[ */
+var yith_wcwl_l10n = {"ajax_url":"\/wp-admin\/admin-ajax.php","redirect_to_cart":"no","multi_wishlist":"","hide_add_button":"1","enable_ajax_loading":"","ajax_loader_url":"https:\/\/legitrcvendorsusa.com\/wp-content\/plugins\/yith-woocommerce-wishlist\/assets\/images\/ajax-loader-alt.svg","remove_from_wishlist_after_add_to_cart":"1","is_wishlist_responsive":"1","time_to_close_prettyphoto":"3000","fragments_index_glue":".","reload_on_found_variation":"1","mobile_media_query":"768","labels":{"cookie_disabled":"We are sorry, but this feature is available only if cookies on your browser are enabled.","added_to_cart_message":"<div class=\"woocommerce-notices-wrapper\"><div class=\"woocommerce-message\" role=\"alert\">Product added to cart successfully<\/div><\/div>"},"actions":{"add_to_wishlist_action":"add_to_wishlist","remove_from_wishlist_action":"remove_from_wishlist","reload_wishlist_and_adding_elem_action":"reload_wishlist_and_adding_elem","load_mobile_action":"load_mobile","delete_item_action":"delete_item","save_title_action":"save_title","save_privacy_action":"save_privacy","load_fragments":"load_fragments"},"nonce":{"add_to_wishlist_nonce":"7a506e04ae","remove_from_wishlist_nonce":"3b4ee9e516","reload_wishlist_and_adding_elem_nonce":"d6574d91f6","load_mobile_nonce":"8af6083c18","delete_item_nonce":"5cec0bc7a8","save_title_nonce":"52fbce4faf","save_privacy_nonce":"174c931573","load_fragments_nonce":"8d66a63683"}};
+/* ]]> */
+</script>
+<script type="text/javascript" src="https://legitrcvendorsusa.com/wp-content/plugins/yith-woocommerce-wishlist/assets/js/jquery.yith-wcwl.min.js?ver=3.10.0" id="jquery-yith-wcwl-js"></script>
+<script type="text/javascript" src="https://legitrcvendorsusa.com/wp-includes/js/dist/vendor/regenerator-runtime.min.js?ver=0.13.7" id="regenerator-runtime-js"></script>
+<script type="text/javascript" src="https://legitrcvendorsusa.com/wp-includes/js/dist/vendor/wp-polyfill.min.js?ver=3.15.0" id="wp-polyfill-js"></script>
+<script type="text/javascript" id="contact-form-7-js-extra">
+/* <![CDATA[ */
+var wpcf7 = {"api":{"root":"https:\/\/legitrcvendorsusa.com\/wp-json\/","namespace":"contact-form-7\/v1"},"cached":"1"};
+/* ]]> */
+</script>
+<script data-minify="1" type="text/javascript" src="https://legitrcvendorsusa.com/wp-content/cache/min/1/wp-content/plugins/contact-form-7/includes/js/index.js?ver=1708134253" id="contact-form-7-js"></script>
+<script type="text/javascript" src="https://legitrcvendorsusa.com/wp-content/plugins/woocommerce/assets/js/jquery-blockui/jquery.blockUI.min.js?ver=2.7.0-wc.6.6.1" id="jquery-blockui-js"></script>
+<script type="text/javascript" src="https://legitrcvendorsusa.com/wp-content/plugins/woocommerce/assets/js/js-cookie/js.cookie.min.js?ver=2.1.4-wc.6.6.1" id="js-cookie-js"></script>
+<script type="text/javascript" id="woocommerce-js-extra">
+/* <![CDATA[ */
+var woocommerce_params = {"ajax_url":"\/wp-admin\/admin-ajax.php","wc_ajax_url":"\/?wc-ajax=%%endpoint%%"};
+/* ]]> */
+</script>
+<script type="text/javascript" src="https://legitrcvendorsusa.com/wp-content/plugins/woocommerce/assets/js/frontend/woocommerce.min.js?ver=6.6.1" id="woocommerce-js"></script>
+<script type="text/javascript" id="wc-cart-fragments-js-extra">
+/* <![CDATA[ */
+var wc_cart_fragments_params = {"ajax_url":"\/wp-admin\/admin-ajax.php","wc_ajax_url":"\/?wc-ajax=%%endpoint%%","cart_hash_key":"wc_cart_hash_19490ee09ef245523b0da4053f87fd85","fragment_name":"wc_fragments_19490ee09ef245523b0da4053f87fd85","request_timeout":"5000"};
+/* ]]> */
+</script>
+<script type="text/javascript" src="https://legitrcvendorsusa.com/wp-content/plugins/woocommerce/assets/js/frontend/cart-fragments.min.js?ver=6.6.1" id="wc-cart-fragments-js"></script>
+<script type="text/javascript" id="rocket-browser-checker-js-after">
+"use strict";var _createClass=function(){function defineProperties(target,props){for(var i=0;i<props.length;i++){var descriptor=props[i];descriptor.enumerable=descriptor.enumerable||!1,descriptor.configurable=!0,"value"in descriptor&&(descriptor.writable=!0),Object.defineProperty(target,descriptor.key,descriptor)}}return function(Constructor,protoProps,staticProps){return protoProps&&defineProperties(Constructor.prototype,protoProps),staticProps&&defineProperties(Constructor,staticProps),Constructor}}();function _classCallCheck(instance,Constructor){if(!(instance instanceof Constructor))throw new TypeError("Cannot call a class as a function")}var RocketBrowserCompatibilityChecker=function(){function RocketBrowserCompatibilityChecker(options){_classCallCheck(this,RocketBrowserCompatibilityChecker),this.passiveSupported=!1,this._checkPassiveOption(this),this.options=!!this.passiveSupported&&options}return _createClass(RocketBrowserCompatibilityChecker,[{key:"_checkPassiveOption",value:function(self){try{var options={get passive(){return!(self.passiveSupported=!0)}};window.addEventListener("test",null,options),window.removeEventListener("test",null,options)}catch(err){self.passiveSupported=!1}}},{key:"initRequestIdleCallback",value:function(){!1 in window&&(window.requestIdleCallback=function(cb){var start=Date.now();return setTimeout(function(){cb({didTimeout:!1,timeRemaining:function(){return Math.max(0,50-(Date.now()-start))}})},1)}),!1 in window&&(window.cancelIdleCallback=function(id){return clearTimeout(id)})}},{key:"isDataSaverModeOn",value:function(){return"connection"in navigator&&!0===navigator.connection.saveData}},{key:"supportsLinkPrefetch",value:function(){var elem=document.createElement("link");return elem.relList&&elem.relList.supports&&elem.relList.supports("prefetch")&&window.IntersectionObserver&&"isIntersecting"in IntersectionObserverEntry.prototype}},{key:"isSlowConnection",value:function(){return"connection"in navigator&&"effectiveType"in navigator.connection&&("2g"===navigator.connection.effectiveType||"slow-2g"===navigator.connection.effectiveType)}}]),RocketBrowserCompatibilityChecker}();
+</script>
+<script type="text/javascript" id="rocket-preload-links-js-extra">
+/* <![CDATA[ */
+var RocketPreloadLinksConfig = {"excludeUris":"\/(?:.+\/)?feed(?:\/(?:.+\/?)?)?$|\/(?:.+\/)?embed\/|\/my-checkout-page\/|\/my-cart\/|\/wc-api\/v(.*)|\/(index\\.php\/)?wp\\-json(\/.*|$)|\/wp-admin\/|\/logout\/|\/wp-login.php|\/refer\/|\/go\/|\/recommend\/|\/recommends\/","usesTrailingSlash":"1","imageExt":"jpg|jpeg|gif|png|tiff|bmp|webp|avif","fileExt":"jpg|jpeg|gif|png|tiff|bmp|webp|avif|php|pdf|html|htm","siteUrl":"https:\/\/legitrcvendorsusa.com","onHoverDelay":"100","rateThrottle":"3"};
+/* ]]> */
+</script>
+<script type="text/javascript" id="rocket-preload-links-js-after">
+(function() {
+"use strict";var r="function"==typeof Symbol&&"symbol"==typeof Symbol.iterator?function(e){return typeof e}:function(e){return e&&"function"==typeof Symbol&&e.constructor===Symbol&&e!==Symbol.prototype?"symbol":typeof e},e=function(){function i(e,t){for(var n=0;n<t.length;n++){var i=t[n];i.enumerable=i.enumerable||!1,i.configurable=!0,"value"in i&&(i.writable=!0),Object.defineProperty(e,i.key,i)}}return function(e,t,n){return t&&i(e.prototype,t),n&&i(e,n),e}}();function i(e,t){if(!(e instanceof t))throw new TypeError("Cannot call a class as a function")}var t=function(){function n(e,t){i(this,n),this.browser=e,this.config=t,this.options=this.browser.options,this.prefetched=new Set,this.eventTime=null,this.threshold=1111,this.numOnHover=0}return e(n,[{key:"init",value:function(){!this.browser.supportsLinkPrefetch()||this.browser.isDataSaverModeOn()||this.browser.isSlowConnection()||(this.regex={excludeUris:RegExp(this.config.excludeUris,"i"),images:RegExp(".("+this.config.imageExt+")$","i"),fileExt:RegExp(".("+this.config.fileExt+")$","i")},this._initListeners(this))}},{key:"_initListeners",value:function(e){-1<this.config.onHoverDelay&&document.addEventListener("mouseover",e.listener.bind(e),e.listenerOptions),document.addEventListener("mousedown",e.listener.bind(e),e.listenerOptions),document.addEventListener("touchstart",e.listener.bind(e),e.listenerOptions)}},{key:"listener",value:function(e){var t=e.target.closest("a"),n=this._prepareUrl(t);if(null!==n)switch(e.type){case"mousedown":case"touchstart":this._addPrefetchLink(n);break;case"mouseover":this._earlyPrefetch(t,n,"mouseout")}}},{key:"_earlyPrefetch",value:function(t,e,n){var i=this,r=setTimeout(function(){if(r=null,0===i.numOnHover)setTimeout(function(){return i.numOnHover=0},1e3);else if(i.numOnHover>i.config.rateThrottle)return;i.numOnHover++,i._addPrefetchLink(e)},this.config.onHoverDelay);t.addEventListener(n,function e(){t.removeEventListener(n,e,{passive:!0}),null!==r&&(clearTimeout(r),r=null)},{passive:!0})}},{key:"_addPrefetchLink",value:function(i){return this.prefetched.add(i.href),new Promise(function(e,t){var n=document.createElement("link");n.rel="prefetch",n.href=i.href,n.onload=e,n.onerror=t,document.head.appendChild(n)}).catch(function(){})}},{key:"_prepareUrl",value:function(e){if(null===e||"object"!==(void 0===e?"undefined":r(e))||!1 in e||-1===["http:","https:"].indexOf(e.protocol))return null;var t=e.href.substring(0,this.config.siteUrl.length),n=this._getPathname(e.href,t),i={original:e.href,protocol:e.protocol,origin:t,pathname:n,href:t+n};return this._isLinkOk(i)?i:null}},{key:"_getPathname",value:function(e,t){var n=t?e.substring(this.config.siteUrl.length):e;return n.startsWith("/")||(n="/"+n),this._shouldAddTrailingSlash(n)?n+"/":n}},{key:"_shouldAddTrailingSlash",value:function(e){return this.config.usesTrailingSlash&&!e.endsWith("/")&&!this.regex.fileExt.test(e)}},{key:"_isLinkOk",value:function(e){return null!==e&&"object"===(void 0===e?"undefined":r(e))&&(!this.prefetched.has(e.href)&&e.origin===this.config.siteUrl&&-1===e.href.indexOf("?")&&-1===e.href.indexOf("#")&&!this.regex.excludeUris.test(e.href)&&!this.regex.images.test(e.href))}}],[{key:"run",value:function(){"undefined"!=typeof RocketPreloadLinksConfig&&new n(new RocketBrowserCompatibilityChecker({capture:!0,passive:!0}),RocketPreloadLinksConfig).init()}}]),n}();t.run();
+}());
+</script>
+<script type="text/javascript" src="https://legitrcvendorsusa.com/wp-content/themes/wen-business-pro/assets/js/jquery.placeholder.min.js?ver=2.1.1" id="wen-business-placeholder-js"></script>
+<script type="text/javascript" src="https://legitrcvendorsusa.com/wp-content/themes/wen-business-pro/assets/js/navigation.min.js?ver=20120206" id="wen-business-navigation-js"></script>
+<script type="text/javascript" src="https://legitrcvendorsusa.com/wp-content/themes/wen-business-pro/assets/js/skip-link-focus-fix.min.js?ver=20130115" id="wen-business-skip-link-focus-fix-js"></script>
+<script type="text/javascript" src="https://legitrcvendorsusa.com/wp-content/themes/wen-business-pro/third-party/cycle2/js/jquery.cycle2.min.js?ver=2.1.6" id="wen-business-cycle2-script-js"></script>
+<script type="text/javascript" src="https://legitrcvendorsusa.com/wp-content/themes/wen-business-pro/third-party/mmenu/js/jquery.mmenu.min.js?ver=4.7.5" id="wen-business-mmenu-script-js"></script>
+<script type="text/javascript" src="https://legitrcvendorsusa.com/wp-content/themes/wen-business-pro/assets/js/custom.min.js?ver=1.0.0" id="wen-business-custom-js-js"></script>
+<script type="text/javascript" src="https://legitrcvendorsusa.com/wp-includes/js/wp-embed.min.js?ver=5.8.9" id="wp-embed-js"></script>
+<script type="text/javascript" src="https://legitrcvendorsusa.com/wp-content/plugins/woocommerce-products-filter/js/tooltip/js/tooltipster.bundle.min.js?ver=1.3.5.1" id="woof_tooltip-js-js"></script>
+<script type="text/javascript" id="woof_front-js-extra">
+/* <![CDATA[ */
+var woof_filter_titles = [];
+var woof_ext_filter_titles = {"woof_author":"By author","stock":"In stock","onsales":"On sale","byrating":"By rating","woof_text":"By text"};
+/* ]]> */
+</script>
+<script type="text/javascript" id="woof_front-js-before">
+        var woof_is_permalink =1;
+        var woof_shop_page = "";
+                var woof_m_b_container =".woocommerce-products-header";
+        var woof_really_curr_tax = {};
+        var woof_current_page_link = location.protocol + '//' + location.host + location.pathname;
+        /*lets remove pagination from woof_current_page_link*/
+        woof_current_page_link = woof_current_page_link.replace(/\page\/[0-9]+/, "");
+                        woof_current_page_link = "https://legitrcvendorsusa.com/";
+                        var woof_link = 'https://legitrcvendorsusa.com/wp-content/plugins/woocommerce-products-filter/';
+        
+        var woof_ajaxurl = "https://legitrcvendorsusa.com/wp-admin/admin-ajax.php";
+
+        var woof_lang = {
+        'orderby': "orderby",
+        'date': "date",
+        'perpage': "per page",
+        'pricerange': "price range",
+        'menu_order': "menu order",
+        'popularity': "popularity",
+        'rating': "rating",
+        'price': "price low to high",
+        'price-desc': "price high to low",
+        'clear_all': "Clear All",
+        'list_opener': "Сhild list opener",
+        };
+
+        if (typeof woof_lang_custom == 'undefined') {
+        var woof_lang_custom = {};/*!!important*/
+        }
+
+        var woof_is_mobile = 0;
+        
+
+
+        var woof_show_price_search_button = 0;
+        var woof_show_price_search_type = 0;
+        
+        var woof_show_price_search_type = 0;
+        var swoof_search_slug = "swoof";
+
+        
+        var icheck_skin = {};
+                    icheck_skin = 'none';
+        
+        var woof_select_type = 'chosen';
+
+
+                var woof_current_values = '[]';
+                var woof_lang_loading = "Loading ...";
+
+        
+        var woof_lang_show_products_filter = "show products filter";
+        var woof_lang_hide_products_filter = "hide products filter";
+        var woof_lang_pricerange = "price range";
+
+        var woof_use_beauty_scroll =0;
+
+        var woof_autosubmit =1;
+        var woof_ajaxurl = "https://legitrcvendorsusa.com/wp-admin/admin-ajax.php";
+        /*var woof_submit_link = "";*/
+        var woof_is_ajax = 0;
+        var woof_ajax_redraw = 0;
+        var woof_ajax_page_num =1;
+        var woof_ajax_first_done = false;
+        var woof_checkboxes_slide_flag = 1;
+
+
+        /*toggles*/
+        var woof_toggle_type = "text";
+
+        var woof_toggle_closed_text = "+";
+        var woof_toggle_opened_text = "-";
+
+        var woof_toggle_closed_image = "https://legitrcvendorsusa.com/wp-content/plugins/woocommerce-products-filter/img/plus.svg";
+        var woof_toggle_opened_image = "https://legitrcvendorsusa.com/wp-content/plugins/woocommerce-products-filter/img/minus.svg";
+
+
+        /*indexes which can be displayed in red buttons panel*/
+                var woof_accept_array = ["min_price", "orderby", "perpage", "woof_author","stock","onsales","byrating","woof_text","min_rating","product_visibility","product_cat","product_tag"];
+
+        
+        /*for extensions*/
+
+        var woof_ext_init_functions = null;
+                    woof_ext_init_functions = '{"by_author":"woof_init_author","by_instock":"woof_init_instock","by_onsales":"woof_init_onsales","by_text":"woof_init_text","label":"woof_init_labels","select_radio_check":"woof_init_select_radio_check"}';
+        
+
+        
+        var woof_overlay_skin = "default";
+
+        ;var woof_front_sd_is_a=1;var woof_front_show_notes=1;var woof_lang_front_builder_del="Are you sure you want to delete this filter-section?";var woof_lang_front_builder_options="Options";var woof_lang_front_builder_option="Option";var woof_lang_front_builder_section_options="Section Options";var woof_lang_front_builder_description="Description";var woof_lang_front_builder_close="Close";var woof_lang_front_builder_suggest="Suggest the feature";var woof_lang_front_builder_good_to_use="good to use in content areas";var woof_lang_front_builder_confirm_sd="Smart Designer item will be created and attached to this filter section and will cancel current type, proceed?";var woof_lang_front_builder_creating="Creating";var woof_lang_front_builder_shortcode="Shortcode";var woof_lang_front_builder_layout="Layout";var woof_lang_front_builder_filter_section="Section options";var woof_lang_front_builder_filter_redrawing="filter redrawing";var woof_lang_front_builder_filter_redrawn="redrawn";var woof_lang_front_builder_filter_redrawn="redrawn";var woof_lang_front_builder_title_top_info="this functionality is only visible for the site administrator";var woof_lang_front_builder_title_top_info_demo="demo mode is activated, and results are visible only to you";;var woof_lang_front_builder_select="+ Add filter section";;
+ function woof_js_after_ajax_done() { jQuery(document).trigger('woof_ajax_done'); 
+
+}
+</script>
+<script data-minify="1" type="text/javascript" src="https://legitrcvendorsusa.com/wp-content/cache/min/1/wp-content/plugins/woocommerce-products-filter/js/front.js?ver=1708134253" id="woof_front-js"></script>
+<script data-minify="1" type="text/javascript" src="https://legitrcvendorsusa.com/wp-content/cache/min/1/wp-content/plugins/woocommerce-products-filter/js/html_types/radio.js?ver=1708134253" id="woof_radio_html_items-js"></script>
+<script data-minify="1" type="text/javascript" src="https://legitrcvendorsusa.com/wp-content/cache/min/1/wp-content/plugins/woocommerce-products-filter/js/html_types/checkbox.js?ver=1708134253" id="woof_checkbox_html_items-js"></script>
+<script data-minify="1" type="text/javascript" src="https://legitrcvendorsusa.com/wp-content/cache/min/1/wp-content/plugins/woocommerce-products-filter/js/html_types/select.js?ver=1708134253" id="woof_select_html_items-js"></script>
+<script data-minify="1" type="text/javascript" src="https://legitrcvendorsusa.com/wp-content/cache/min/1/wp-content/plugins/woocommerce-products-filter/js/html_types/mselect.js?ver=1708134253" id="woof_mselect_html_items-js"></script>
+<script data-minify="1" type="text/javascript" src="https://legitrcvendorsusa.com/wp-content/cache/min/1/wp-content/plugins/woocommerce-products-filter/ext/by_author/js/by_author.js?ver=1708134253" id="woof_by_author_html_items-js"></script>
+<script data-minify="1" type="text/javascript" src="https://legitrcvendorsusa.com/wp-content/cache/min/1/wp-content/plugins/woocommerce-products-filter/ext/by_instock/js/by_instock.js?ver=1708134253" id="woof_by_instock_html_items-js"></script>
+<script data-minify="1" type="text/javascript" src="https://legitrcvendorsusa.com/wp-content/cache/min/1/wp-content/plugins/woocommerce-products-filter/ext/by_onsales/js/by_onsales.js?ver=1708134253" id="woof_by_onsales_html_items-js"></script>
+<script data-minify="1" type="text/javascript" src="https://legitrcvendorsusa.com/wp-content/cache/min/1/wp-content/plugins/woocommerce-products-filter/ext/by_text/assets/js/front.js?ver=1708134253" id="woof_by_text_html_items-js"></script>
+<script data-minify="1" type="text/javascript" src="https://legitrcvendorsusa.com/wp-content/cache/min/1/wp-content/plugins/woocommerce-products-filter/ext/label/js/html_types/label.js?ver=1708134253" id="woof_label_html_items-js"></script>
+<script data-minify="1" type="text/javascript" src="https://legitrcvendorsusa.com/wp-content/cache/min/1/wp-content/plugins/woocommerce-products-filter/ext/sections/js/sections.js?ver=1708134253" id="woof_sections_html_items-js"></script>
+<script data-minify="1" type="text/javascript" src="https://legitrcvendorsusa.com/wp-content/cache/min/1/wp-content/plugins/woocommerce-products-filter/ext/select_radio_check/js/html_types/select_radio_check.js?ver=1708134253" id="woof_select_radio_check_html_items-js"></script>
+<script data-minify="1" type="text/javascript" src="https://legitrcvendorsusa.com/wp-content/cache/min/1/wp-content/plugins/woocommerce-products-filter/ext/smart_designer/js/front.js?ver=1708134253" id="woof_sd_html_items-js"></script>
+<script data-minify="1" type="text/javascript" src="https://legitrcvendorsusa.com/wp-content/cache/min/1/wp-content/plugins/woocommerce-products-filter/js/chosen/chosen.jquery.js?ver=1708134253" id="chosen-drop-down-js"></script>
+<script type="text/javascript" src="https://legitrcvendorsusa.com/wp-content/plugins/woocommerce-products-filter/js/ion.range-slider/js/ion.rangeSlider.min.js?ver=1.3.5.1" id="ion.range-slider-js"></script>
+<script data-minify="1" type="text/javascript" src="https://legitrcvendorsusa.com/wp-content/cache/min/1/wp-content/plugins/woocommerce-products-filter/ext/slideout/js/jquery.tabSlideOut.js?ver=1708134253" id="woof-slideout-js-js"></script>
+<script data-minify="1" type="text/javascript" src="https://legitrcvendorsusa.com/wp-content/cache/min/1/wp-content/plugins/woocommerce-products-filter/ext/slideout/js/slideout.js?ver=1708134253" id="woof-slideout-init-js"></script>
+<script>window.lazyLoadOptions={elements_selector:"img[data-lazy-src],.rocket-lazyload,iframe[data-lazy-src]",data_src:"lazy-src",data_srcset:"lazy-srcset",data_sizes:"lazy-sizes",class_loading:"lazyloading",class_loaded:"lazyloaded",threshold:300,callback_loaded:function(element){if(element.tagName==="IFRAME"&&element.dataset.rocketLazyload=="fitvidscompatible"){if(element.classList.contains("lazyloaded")){if(typeof window.jQuery!="undefined"){if(jQuery.fn.fitVids){jQuery(element).parent().fitVids()}}}}}};window.addEventListener('LazyLoad::Initialized',function(e){var lazyLoadInstance=e.detail.instance;if(window.MutationObserver){var observer=new MutationObserver(function(mutations){var image_count=0;var iframe_count=0;var rocketlazy_count=0;mutations.forEach(function(mutation){for(var i=0;i<mutation.addedNodes.length;i++){if(typeof mutation.addedNodes[i].getElementsByTagName!=='function'){continue}
+if(typeof mutation.addedNodes[i].getElementsByClassName!=='function'){continue}
+images=mutation.addedNodes[i].getElementsByTagName('img');is_image=mutation.addedNodes[i].tagName=="IMG";iframes=mutation.addedNodes[i].getElementsByTagName('iframe');is_iframe=mutation.addedNodes[i].tagName=="IFRAME";rocket_lazy=mutation.addedNodes[i].getElementsByClassName('rocket-lazyload');image_count+=images.length;iframe_count+=iframes.length;rocketlazy_count+=rocket_lazy.length;if(is_image){image_count+=1}
+if(is_iframe){iframe_count+=1}}});if(image_count>0||iframe_count>0||rocketlazy_count>0){lazyLoadInstance.update()}});var b=document.getElementsByTagName("body")[0];var config={childList:!0,subtree:!0};observer.observe(b,config)}},!1)</script><script data-no-minify="1" async="" src="https://legitrcvendorsusa.com/wp-content/plugins/wp-rocket/assets/js/lazyload/17.5/lazyload.min.js"></script><script>function lazyLoadThumb(e){var t='<img data-lazy-src="https://i.ytimg.com/vi/ID/hqdefault.jpg" alt="" width="480" height="360"><noscript><img src="https://i.ytimg.com/vi/ID/hqdefault.jpg" alt="" width="480" height="360"></noscript>',a='<button class="play" aria-label="play Youtube video"></button>';return t.replace("ID",e)+a}function lazyLoadYoutubeIframe(){var e=document.createElement("iframe"),t="ID?autoplay=1";t+=0===this.parentNode.dataset.query.length?'':'&'+this.parentNode.dataset.query;e.setAttribute("src",t.replace("ID",this.parentNode.dataset.src)),e.setAttribute("frameborder","0"),e.setAttribute("allowfullscreen","1"),e.setAttribute("allow", "accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"),this.parentNode.parentNode.replaceChild(e,this.parentNode)}document.addEventListener("DOMContentLoaded",function(){var e,t,p,a=document.getElementsByClassName("rll-youtube-player");for(t=0;t<a.length;t++)e=document.createElement("div"),e.setAttribute("data-id",a[t].dataset.id),e.setAttribute("data-query", a[t].dataset.query),e.setAttribute("data-src", a[t].dataset.src),e.innerHTML=lazyLoadThumb(a[t].dataset.id),a[t].appendChild(e),p=e.querySelector('.play'),p.onclick=lazyLoadYoutubeIframe});</script><script>class RocketElementorAnimation{constructor(){this.deviceMode=document.createElement("span"),this.deviceMode.id="elementor-device-mode",this.deviceMode.setAttribute("class","elementor-screen-only"),document.body.appendChild(this.deviceMode)}_detectAnimations(){let t=getComputedStyle(this.deviceMode,":after").content.replace(/"/g,"");this.animationSettingKeys=this._listAnimationSettingsKeys(t),document.querySelectorAll(".elementor-invisible[data-settings]").forEach(t=>{const e=t.getBoundingClientRect();if(e.bottom>=0&&e.top<=window.innerHeight)try{this._animateElement(t)}catch(t){}})}_animateElement(t){const e=JSON.parse(t.dataset.settings),i=e._animation_delay||e.animation_delay||0,n=e[this.animationSettingKeys.find(t=>e[t])];if("none"===n)return void t.classList.remove("elementor-invisible");t.classList.remove(n),this.currentAnimation&&t.classList.remove(this.currentAnimation),this.currentAnimation=n;let s=setTimeout(()=>{t.classList.remove("elementor-invisible"),t.classList.add("animated",n),this._removeAnimationSettings(t,e)},i);window.addEventListener("rocket-startLoading",function(){clearTimeout(s)})}_listAnimationSettingsKeys(t="mobile"){const e=[""];switch(t){case"mobile":e.unshift("_mobile");case"tablet":e.unshift("_tablet");case"desktop":e.unshift("_desktop")}const i=[];return["animation","_animation"].forEach(t=>{e.forEach(e=>{i.push(t+e)})}),i}_removeAnimationSettings(t,e){this._listAnimationSettingsKeys().forEach(t=>delete e[t]),t.dataset.settings=JSON.stringify(e)}static run(){const t=new RocketElementorAnimation;requestAnimationFrame(t._detectAnimations.bind(t))}}document.addEventListener("DOMContentLoaded",RocketElementorAnimation.run);</script>
+
+
+<span id="elementor-device-mode" class="elementor-screen-only"></span><div id="mm-blocker" class="mm-slideout"></div><div id="woof_html_buffer" class="woof_info_popup" style="display: none;"></div></body></html>
