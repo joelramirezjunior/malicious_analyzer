@@ -15,8 +15,12 @@ import shap
 import argparse
 import os
 
+import joblib
+# After fitting your CountVectorizer in the training script
+
+
 # Ensuring compatibility with TensorFlow v2 behavior
-# tf.compat.v1.disable_v2_behavior()
+tf.compat.v1.disable_v2_behavior()
 
 # List of features to be used for training and prediction
 features = ["Scam", "scam", "McAfee", "bank", "password", "SSN", "Address", "Virus", "virus", "immediate", "credit card", "Credit Card", "Credit card", "Name", "Download", "Free", "free", "Hacked", "hack", "hacked", "malware", "Malware", "phishing", "Phishing", "affiliate", "afid", "extension", "Extension", "safe", "Form", "Survey", "number_of_divs", "number_of_scripts_in_divs", "number_of_scripts", "number_of_links", "number_of_forms"]
@@ -71,13 +75,13 @@ def create_model(input_shape):
     print("Model created.")
     return model
 
-def explainer(model, X_train, X_test):
-    # Assuming `X_train` is your training data and `model` is your trained Keras model
-    explainer = shap.DeepExplainer(model, X_train)
-    shap_values = explainer.shap_values(X_test)
-
-    # Summarize the effects of all the features
-    shap.summary_plot(shap_values, X_test, feature_names=features)
+# def explainer(model, X_train, X_test):
+#     # Assuming `X_train` is your training data and `model` is your trained Keras model
+#     explainer = shap.DeepExplainer(model, X_train)
+#     shap_values = explainer.shap_values(X_test)
+    
+#     # Summarize the effects of all the features
+#     shap.summary_plot(shap_values, X_test, feature_names=features)
 
 
 def main(iterations=100, target_accuracy=0.95, load_model_path=None):

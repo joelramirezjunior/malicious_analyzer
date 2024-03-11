@@ -4,36 +4,51 @@ import pandas as pd
 import re
 from bs4 import BeautifulSoup
 from tensorflow.keras.models import load_model
+import joblib
+import numpy as np
 
 app = Flask(__name__)
 CORS(app)  # Enable CORS for all routes
 
 model = load_model('./best_model.h5')
 
-keywords = ["Scam", "scam", "McAfee", "bank", "password", "SSN", "Address", "Virus", "virus", \
-                "immediate", "credit card", "Credit Card", "Credit card", "Name", "Download", "Free", \
-                "free", "Hacked", "hack", "hacked", "malware", "Malware", "phishing", "Phishing", "affiliate", \
-                "afid", "extension", "Extension", "safe", "Form", "Survey"]
+keywords = ["Scam", "scam", "McAfee", "bank", "password", "SSN", "Address", "Virus", "virus",
+                "immediate", "credit card", "Name", "Download", "Free", "Hacked", "malware",
+                "Phishing", "affiliate", "afid", "extension", "safe", "Form", "Survey"]
 
+# Load the fitted CountVectorizer
+import joblib
+vectorizer = joblib.load('vectorizer.pkl')
+
+# Extract features from HTML files
 def extract_features(html_content):
-
     print(type(html_content))
     soup = BeautifulSoup(html_content, 'html.parser')  
-
     features = {}
+
+    # Transform the HTML content using the loaded vectorizer
+    # Since `vectorizer` expects an iterable, you pass the HTML content inside a list
+    X = vectorizer.transform([soup.get_text()])
+
+    # Extract keyword-based features
     for keyword in keywords:
         features[keyword] = len(re.findall(r'\b' + re.escape(keyword) + r'\b', html_content, re.IGNORECASE))
-    
-    divs = soup.find_all('div')
-    features["number_of_divs"] = len(divs)
-    features["number_of_scripts_in_divs"] = sum(len(div.find_all('script', recursive=False)) for div in divs)
+
+    # Extract HTML structure-based features
+    features["number_of_divs"] = len(soup.find_all('div'))
+    features["number_of_scripts_in_divs"] = sum(len(div.find_all('script', recursive=False)) for div in soup.find_all('div'))
     features["number_of_scripts"] = len(soup.find_all('script', recursive=True))
     features["number_of_links"] = len(soup.find_all("link"))
     features["number_of_forms"] = len(soup.find_all('form'))
 
-    dataframe = pd.DataFrame([features], columns=list(features.keys()))
-    print(list(features.keys()))        
-    print(dataframe)
+    # Add BOW features from the vectorizer to your features dictionary
+    bow_features = X.toarray()[0]  # Since we only have one sample, take the first row
+    for j, feature in enumerate(vectorizer.get_feature_names_out()):
+        features[f"bow_{feature}"] = bow_features[j]
+
+    # Create a DataFrame for the extracted features
+    dataframe = pd.DataFrame([features], columns=sorted(features.keys()))
+    
     return dataframe
 
 

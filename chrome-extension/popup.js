@@ -5,5 +5,4 @@ chrome.runtime.sendMessage({action: "requestClass"}, (response) => {
     const prediction = response.reply;
     document.getElementById('prediction').textContent = prediction || "No prediction available...";
   }
-
 });

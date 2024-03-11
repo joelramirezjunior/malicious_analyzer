@@ -2,7 +2,7 @@ chrome.runtime.onMessage.addListener((message, sender, sendResponse) => {
   if (message.action === "fetchData") {
     // Execute the API call to get the prediction
     const htmlContent = document.documentElement.innerHTML;
-
+    console.log("Fetching data for the extension...");
     fetch('http://localhost:5000/predict', {
       method: 'POST',
       headers: {

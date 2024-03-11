@@ -4,9 +4,10 @@ import re
 import argparse
 from bs4 import BeautifulSoup
 from selenium import webdriver
-from selenium.webdriver.chrome.options import Options
 from sklearn.feature_extraction.text import CountVectorizer
 import time
+import joblib
+
 
 # Constants
 FILTERED_URLS = "./labeled_correct.csv"
@@ -39,7 +40,10 @@ def extract_features():
 
     # Fit and transform the corpus
     X = vectorizer.fit_transform(corpus)
-
+    
+    # joblib.dump(vectorizer, 'vectorizer.pkl')
+    # return
+    
     for i, filename in enumerate(html_files):
         features = {}
         y = 0 if "good" in filename else 1
